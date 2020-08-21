@@ -1,4 +1,5 @@
-﻿using System;
+﻿using entrega_01_grupo_2;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -15,10 +16,11 @@ namespace Entrega1
             bool addRiver = false;
             bool addLake = false;
             String response = "X";
-            string aviso = "Ojo que puede que no se pueda ver todo, para eso haga clic derecho en la consola y, en 'Propiedades', bajar la letra";
+            string aviso = "Ojo que puede que no se pueda ver todo, para eso haga clic derecho en la consola y, " +
+                "en 'Propiedades', bajar la letra";
             Console.WriteLine(aviso);
 
-            while(response != "Y" && response != "N")
+            while (response != "Y" && response != "N")
             {
                 Console.WriteLine("¿desea agregar un rio?  [Y/N]");
                 response = Console.ReadLine().ToUpper();
@@ -28,7 +30,7 @@ namespace Entrega1
                 }
                 else if (response == "N")
                 {
-                    addLake = false;
+                    addRiver = false;
                 }
                 else
                 {
@@ -38,7 +40,7 @@ namespace Entrega1
 
             response = "X";
 
-            while(response != "Y" && response != "N")
+            while (response != "Y" && response != "N")
             {
                 Console.WriteLine("¿desea agregar un lago? [Y/N]");
                 response = Console.ReadLine().ToUpper();
@@ -58,11 +60,11 @@ namespace Entrega1
 
             response = "X";
 
-            Terrain t = new Terrain();
+            MapCreator mc = new MapCreator(addRiver);
 
-            Console.WriteLine(t);
+            Console.WriteLine(mc);
 
-            Farm f = new Farm();
+            //Farm f = new Farm(0, 0);
             //River r = new River();
             Console.ReadKey();
         }
