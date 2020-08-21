@@ -62,7 +62,7 @@ namespace Entrega1
 
             Console.WriteLine(t);
 
-            //Farm f = new Farm(0, 0);
+            Farm f = new Farm();
             //River r = new River();
             Console.ReadKey();
         }

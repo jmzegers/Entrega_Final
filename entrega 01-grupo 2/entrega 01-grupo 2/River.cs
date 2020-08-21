@@ -15,9 +15,6 @@ namespace Entrega1
             int farmPlaceX = RandNum.Next(0, 8);
             int farmPlaceY = RandNum.Next(0, 7);
 
-            Farm f = new Farm(farmPlaceX, farmPlaceY);
-
-
             if (HoV == 0)
             {
                 bool a = true;

@@ -5,3 +5,10 @@ C:\Users\Seb\Desktop\UANDES Extra\2020\Primer Semestre\POO\proyecto-entrega-1-gr
 C:\Users\Seb\Desktop\UANDES Extra\2020\Primer Semestre\POO\proyecto-entrega-1-grupo-2\entrega 01-grupo 2\entrega 01-grupo 2\obj\Debug\entrega 01-grupo 2.csproj.CoreCompileInputs.cache
 C:\Users\Seb\Desktop\UANDES Extra\2020\Primer Semestre\POO\proyecto-entrega-1-grupo-2\entrega 01-grupo 2\entrega 01-grupo 2\obj\Debug\entrega 01-grupo 2.exe
 C:\Users\Seb\Desktop\UANDES Extra\2020\Primer Semestre\POO\proyecto-entrega-1-grupo-2\entrega 01-grupo 2\entrega 01-grupo 2\obj\Debug\entrega 01-grupo 2.pdb
+C:\Users\56984\Desktop\proyecto-entrega-1-grupo-2\entrega 01-grupo 2\entrega 01-grupo 2\bin\Debug\entrega 01-grupo 2.exe.config
+C:\Users\56984\Desktop\proyecto-entrega-1-grupo-2\entrega 01-grupo 2\entrega 01-grupo 2\bin\Debug\entrega 01-grupo 2.exe
+C:\Users\56984\Desktop\proyecto-entrega-1-grupo-2\entrega 01-grupo 2\entrega 01-grupo 2\bin\Debug\entrega 01-grupo 2.pdb
+C:\Users\56984\Desktop\proyecto-entrega-1-grupo-2\entrega 01-grupo 2\entrega 01-grupo 2\obj\Debug\entrega 01-grupo 2.csprojAssemblyReference.cache
+C:\Users\56984\Desktop\proyecto-entrega-1-grupo-2\entrega 01-grupo 2\entrega 01-grupo 2\obj\Debug\entrega 01-grupo 2.csproj.CoreCompileInputs.cache
+C:\Users\56984\Desktop\proyecto-entrega-1-grupo-2\entrega 01-grupo 2\entrega 01-grupo 2\obj\Debug\entrega 01-grupo 2.exe
+C:\Users\56984\Desktop\proyecto-entrega-1-grupo-2\entrega 01-grupo 2\entrega 01-grupo 2\obj\Debug\entrega 01-grupo 2.pdb

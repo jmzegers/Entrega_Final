@@ -5,14 +5,14 @@ using System.Text;
 namespace Entrega1
 {
 
-
-
     class Farm
     {
-        public Farm(int farmPlaceX, int farmPlaceY)
+        public Farm()
         {
             Console.BackgroundColor = ConsoleColor.Green;
             Random randNum = new Random();
+            int farmPlaceX = randNum.Next(0, 9);
+            int farmPlaceY = randNum.Next(0, 8);
 
             Terrain t = new Terrain();
             List<List<int>> rowList = t.RowListCreator();
