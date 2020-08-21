@@ -18,7 +18,6 @@ namespace Entrega1
             Farm f = new Farm(farmPlaceX, farmPlaceY);
 
 
-
             if (HoV == 0)
             {
                 bool a = true;
