@@ -24,6 +24,7 @@ namespace entrega_01_grupo_2
 
             Random randNum = new Random();
             int HoV = randNum.Next(0, 2);
+            int block = randNum.Next(3, 3);
             //0 es vertical, 1 es horizontal
 
             int farmPlaceX = randNum.Next(0, 8);
@@ -67,10 +68,6 @@ namespace entrega_01_grupo_2
                     }
                 }
             }
-
-
-
-
             int a = 0;
 
             while (a < rowList.Count)
@@ -92,7 +89,8 @@ namespace entrega_01_grupo_2
                             }
                             else
                             {
-                                DefaultColor();
+                                Console.BackgroundColor = ConsoleColor.Green;
+                                Console.ForegroundColor = ConsoleColor.Black;
                             }
                         }
 
@@ -120,7 +118,7 @@ namespace entrega_01_grupo_2
 
                         else if (b > firstCol && b < firstCol + 5)
                         {
-                            if(HoV == 0)
+                            if(HoV == 0 )
                             {
                                 Console.BackgroundColor = ConsoleColor.Blue;
                                 Console.ForegroundColor = ConsoleColor.Blue;
@@ -128,7 +126,8 @@ namespace entrega_01_grupo_2
 
                             else
                             {
-                                DefaultColor();
+                                Console.BackgroundColor = ConsoleColor.Green;
+                                Console.ForegroundColor = ConsoleColor.Black;
                             }
                         }
 

@@ -17,7 +17,7 @@ namespace Entrega1
             bool addLake = false;
             String response = "X";
             string aviso = "Ojo que puede que no se pueda ver todo, para eso haga clic derecho en la consola y, " +
-                "en 'Propiedades', bajar la letra";
+                "en 'Propiedades', bajar la letra (por ejemplo en 10)";
             Console.WriteLine(aviso);
 
             while (response != "Y" && response != "N")
