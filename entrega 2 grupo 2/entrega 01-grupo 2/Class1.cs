@@ -91,7 +91,7 @@ namespace entrega_01_grupo_2
                     {
                         if (HoV == 0) //Vertical
                         {
-                            if (b > firstCol && b < firstCol + 5)
+                            if (b > firstCol && b < firstCol + 6)
                             {
                                 Console.BackgroundColor = ConsoleColor.Blue;
                                 Console.ForegroundColor = ConsoleColor.Blue;
@@ -105,7 +105,7 @@ namespace entrega_01_grupo_2
 
                         else //Horizontal
                         {
-                            if (a > firstCol && a < firstCol + 5)
+                            if (a > firstCol && a < firstCol + 6)
                             {
                                 Console.BackgroundColor = ConsoleColor.Blue;
                                 Console.ForegroundColor = ConsoleColor.Blue;
@@ -127,7 +127,7 @@ namespace entrega_01_grupo_2
                                 Console.ForegroundColor = ConsoleColor.Blue;
                             }
 
-                            else if (b > lakeCol && b < lakeCol + 15)
+                            else if (b > firstCol && b < firstCol + 6)
                             {
                                 if (LoV == 3)
                                 {
@@ -136,10 +136,15 @@ namespace entrega_01_grupo_2
                                         Console.BackgroundColor = ConsoleColor.Green;
                                         Console.ForegroundColor = ConsoleColor.Black;
                                     }
-                                    else
+                                    else if (HoV != 0)
                                     {
                                         Console.BackgroundColor = ConsoleColor.Green;
                                         Console.ForegroundColor = ConsoleColor.Black;
+                                    }
+                                    else
+                                    {
+                                        Console.BackgroundColor = ConsoleColor.Blue;
+                                        Console.ForegroundColor = ConsoleColor.Blue;
                                     }
 
                                 }
@@ -167,7 +172,7 @@ namespace entrega_01_grupo_2
                             Console.ForegroundColor = ConsoleColor.DarkGray;
                         }
 
-                        else if (b > firstCol && b < firstCol + 5)
+                        else if (b > firstCol && b < firstCol + 6)
                         {
                             if(HoV == 0)
                             { 
