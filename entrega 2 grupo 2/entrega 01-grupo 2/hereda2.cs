@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace entrega_01_grupo_2
 {
-    public class producto
+    public class Producto
     {
-        public void Name(string nombre)
+        public string Name(string nombre)
         {
-            Console.WriteLine($"su nombre es: {nombre}");
         }
 
         public void PurchasePrices(int preciocompra)

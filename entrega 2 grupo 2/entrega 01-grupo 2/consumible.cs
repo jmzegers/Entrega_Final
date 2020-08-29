@@ -6,44 +6,44 @@ using System.Threading.Tasks;
 
 namespace entrega_01_grupo_2
 {
-    class consumible
+    class Consumible
     {
-        public class Fertilizer
+        public int Fertilizer()
         {
 
         }
 
-        public class AnimalFood
+        public int AnimalFood()
         {
 
         }
 
-        public class Irrigation
+        public int Irrigation()
         {
 
         }
 
-        public class WaterForAnimals
+        public int WaterForAnimals()
         {
 
         }
 
-        public class pesticide
+        public int pesticide()
         {
 
         }
 
-        public class herbicide
+        public int herbicide()
         {
 
         }
 
-        public class fungicide
+        public int fungicide()
         {
             
         }
 
-        public class vaccine
+        public int vaccine()
         {
 
         }
