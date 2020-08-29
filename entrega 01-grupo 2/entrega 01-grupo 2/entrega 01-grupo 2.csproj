@@ -44,11 +44,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="River.cs" />
+    <Compile Include="Class2.cs" />
+    <Compile Include="Class3.cs" />
+    <Compile Include="consumible.cs" />
+    <Compile Include="edificacion.cs" />
+    <Compile Include="hereda2.cs" />
+    <Compile Include="herencia.cs" />
+    <Compile Include="Mercado.cs" />
+    <Compile Include="producto.cs" />
     <Compile Include="Terrain.cs" />
     <Compile Include="Farm.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tiempo %28turnos%29.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

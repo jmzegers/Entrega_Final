@@ -20,7 +20,7 @@ namespace Entrega1
             int firstRowNum = farmPlaceX * 10;
             int lastRowNum = firstRowNum + 29;
             int firstColNum = farmPlaceY * 10;
-            int lastColNum = firstColNum + 19;
+            int lastColNum = firstColNum + 29;
 
             int a = 0;
             while (a < rowList.Count)
