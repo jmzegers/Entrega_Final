@@ -40,11 +40,9 @@ namespace entrega_01_grupo_2
             lakePlaceY = lakePlaceY * 10;
 
             int firstCol = 0;
-            int lakeCol = 0;
             if (HoV == 0)
             {
                 bool a2 = true;
-                bool a3 = true;
                 while (a2 == true)
                 {
                     firstCol = randNum.Next(0, 99);
@@ -82,8 +80,6 @@ namespace entrega_01_grupo_2
             {
                 List<int> row = rowList[a];
                 int b = 0;
-                int c = 0;
-                int d = 0;
                 while(b < row.Count)
                 {
                     // create River (crea lago)

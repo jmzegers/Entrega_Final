@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace entrega_01_grupo_2
 {
-    class hereda
+    public class edificacion
     {
         public void Name(string nombre)
         {

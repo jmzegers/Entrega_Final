@@ -50,6 +50,7 @@
     <Compile Include="herencia.cs" />
     <Compile Include="Mercado.cs" />
     <Compile Include="producto.cs" />
+    <Compile Include="Seeds.cs" />
     <Compile Include="Terrain.cs" />
     <Compile Include="Farm.cs" />
     <Compile Include="Program.cs" />
