@@ -8,7 +8,7 @@ namespace entrega_01_grupo_2
 {
     class producto
     {
-        public class Seeds : hereda2
+        public class Seeds : Producto
         {
             public void ProbabilityOfWorms(int probabilidadG)
             {

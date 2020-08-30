@@ -8,7 +8,7 @@ namespace entrega_01_grupo_2
 {
     public class Plantation : edificacion
     {
-         public Plantation(string name, int price)
+         public Plantation
         {
           
             
