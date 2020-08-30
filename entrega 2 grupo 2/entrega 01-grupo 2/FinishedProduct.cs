@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace entrega_01_grupo_2
 {
-    class StorageBuilding
+    class FinishedProduct
     {
-
     }
 }
