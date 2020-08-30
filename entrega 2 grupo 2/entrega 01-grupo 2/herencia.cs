@@ -8,62 +8,72 @@ namespace entrega_01_grupo_2
 {
     public class edificacion
     {
-        public void Name(string nombre)
+        public string Name(string nombre)
         {
             Console.WriteLine($"nombre es:  {nombre}");
+            return nombre;
         }
 
         protected int a;
-        public void Water(int agua)
+        public int Water(int agua)
         {
             Console.WriteLine($"agua de...: {agua}");
+            return agua;
         }
 
         protected int b;
-        public void Health(int salud)
+        public int Health(int salud)
         {
             Console.WriteLine($"salud de...: {salud}");
+            return salud;
         }
 
         protected int c;
-        public void Maturity (int madurez)
+        public int Maturity (int madurez)
         {
             Console.WriteLine($"madurez de...: {madurez}");
+            return madurez;
         }
 
         protected int d;
-        public void PurchasePrice(int preciocompra)
+        public int PurchasePrice(int preciocompra)
         {
             Console.WriteLine($"precio de compra es de...: ${preciocompra}");
+            return preciocompra;
         }
 
         protected int e;
-        public void Disease(int enfermedad)
+        public int Disease(int enfermedad)
         {
             Console.WriteLine($" enfermedad de...: {enfermedad}");
+            return enfermedad;
         }
 
         protected int f;
-        public void NutrientsFoods(int comida)
+        public int NutrientsFoods(int comida)
         {
             Console.WriteLine($"necesidad de nutrientes/alimento de...: {comida}");
+            return comida;
         }
 
-        public void Kind(string tipo)
+        public string Kind(string tipo)
         {
             Console.WriteLine($"es una: {tipo}");
+            return tipo;
         }
 
         protected int g;
-        public void SalePrice(int precioventa)
+        public int SalePrice(int precioventa)
         {
             Console.WriteLine($"el precio de venta es de...: {precioventa}");
+            return precioventa;
         }
 
         protected int h;
-        public void FinalProduction(int calidad)
+        public int FinalProduction(int calidad)
         {
             Console.WriteLine($"la calidad del producto es de...: {calidad}");
+            return calidad;
         }
     }
 }

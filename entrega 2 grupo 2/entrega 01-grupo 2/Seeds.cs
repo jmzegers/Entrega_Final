@@ -8,23 +8,23 @@ namespace entrega_01_grupo_2
 {
     public class Plantation : edificacion
     {
-         public Plantation
+         public Plantation()
         {
           
             
         }
-        public int Worm()
+        public int Worm(int gu)
         {
             Random R = new Random();
             int gusano = R.Next(0, 101);
-            return gusano;
+            return gusano-gu;
         }
 
-        public int weed()
+        public int weed(int w)
         {
             Random R = new Random();
             int maleza = R.Next(0, 101);
-            return maleza;
+            return maleza-w;
         }
 
     }
