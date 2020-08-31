@@ -27,6 +27,13 @@ namespace entrega_01_grupo_2
             return maleza-w;
         }
 
+        public override int getNutrientsFoods()
+        {
+            Random N = new Random();
+            int nutrients = N.Next(10, 101);
+            return nutrients;
+        }
+
     }
 
 

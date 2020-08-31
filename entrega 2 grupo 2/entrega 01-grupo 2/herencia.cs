@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace entrega_01_grupo_2
 {
-    public class edificacion
+    public abstract class edificacion
     {
         public string Name(string nombre)
         {
@@ -50,11 +50,7 @@ namespace entrega_01_grupo_2
         }
 
         protected int f;
-        public int NutrientsFoods(int comida)
-        {
-            Console.WriteLine($"necesidad de nutrientes/alimento de...: {comida}");
-            return comida;
-        }
+        public abstract int getNutrientsFoods();
 
         public string Kind(string tipo)
         {
