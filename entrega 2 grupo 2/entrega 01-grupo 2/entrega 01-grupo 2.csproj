@@ -44,15 +44,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="cattle.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="RiverLake.cs" />
     <Compile Include="consumible.cs" />
-    <Compile Include="edificacion.cs" />
     <Compile Include="FinishedProduct.cs" />
     <Compile Include="hereda2.cs" />
-    <Compile Include="herencia.cs" />
+    <Compile Include="edificacion.cs" />
     <Compile Include="Mercado.cs" />
     <Compile Include="producto.cs" />
-    <Compile Include="Seeds.cs" />
+    <Compile Include="plantation.cs" />
     <Compile Include="StorageBuilding.cs" />
     <Compile Include="Terrain.cs" />
     <Compile Include="Farm.cs" />
