@@ -6,18 +6,23 @@ using System.Threading.Tasks;
 
 namespace entrega_01_grupo_2
 {
-    public class Plantation : edificacion
+    public class Plantation : Edification
     {
-         public Plantation()
+        public Plantation(double worm, double weed)
         {
-          
-            
+
         }
-        public int Worm(int gu)
+        
+        public bool Worm(int gu)
         {
             Random R = new Random();
+            bool hasWorms = false;
             int gusano = R.Next(0, 101);
-            return gusano-gu;
+            if (gusano <= gu)
+            {
+                hasWorms = true;
+            }
+            return hasWorms;
         }
 
         public int weed(int w)

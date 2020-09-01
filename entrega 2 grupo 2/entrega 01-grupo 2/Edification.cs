@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace entrega_01_grupo_2
 {
-    public abstract class edificacion
+    public abstract class Edification
     {
         public string Name(string nombre)
         {

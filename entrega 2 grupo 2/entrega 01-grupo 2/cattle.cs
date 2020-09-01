@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace entrega_01_grupo_2
 { 
-    public class Cattle : edificacion
+    public class Cattle : Edification
     {
         public int Cattle(int unidad)
         {
