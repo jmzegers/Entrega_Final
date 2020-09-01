@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace entrega_01_grupo_2
 {
-    class Consumible
+    class Water : Consumable
     {
-        protected Consumible(int price, bool use = true)
+        public Water(int price, bool use, int amount, string target) : base(price, use)
         {
 
         }

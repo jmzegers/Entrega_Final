@@ -45,7 +45,7 @@
   <ItemGroup>
     <Compile Include="cattle.cs" />
     <Compile Include="RiverLake.cs" />
-    <Compile Include="consumible.cs" />
+    <Compile Include="Consumable.cs" />
     <Compile Include="FinishedProduct.cs" />
     <Compile Include="hereda2.cs" />
     <Compile Include="edificacion.cs" />
@@ -58,6 +58,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="juego %28turnos%29.cs" />
+    <Compile Include="Water.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
