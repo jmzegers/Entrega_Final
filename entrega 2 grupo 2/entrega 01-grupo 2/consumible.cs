@@ -8,46 +8,9 @@ namespace entrega_01_grupo_2
 {
     class Consumible
     {
-        public int Fertilizer()
+        protected Consumible(int price, bool use = true)
         {
 
         }
-
-        public int AnimalFood()
-        {
-
-        }
-
-        public int Irrigation()
-        {
-
-        }
-
-        public int WaterForAnimals()
-        {
-
-        }
-
-        public int pesticide()
-        {
-
-        }
-
-        public int herbicide()
-        {
-
-        }
-
-        public int fungicide()
-        {
-            
-        }
-
-        public int vaccine()
-        {
-
-        }
-
-
     }
 }
