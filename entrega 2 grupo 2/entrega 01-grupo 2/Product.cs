@@ -15,10 +15,11 @@ namespace entrega_01_grupo_2
         protected int MinWaterLv;
         protected int WaterPenalty;
         protected int ProductionTime;
-        protected int DeseaseProbability;
-        protected int DeseasePenalty;
+        protected int DiseaseProbability;
+        protected int DiseasePenalty;
 
-        public Product(string name, int purchase_price, int base_selling_price, int water_use_per_turn, int min_water_lv, int water_penalty, int production_time, int desease_probability, int desease_penalty)
+        public Product(string name, int purchase_price, int base_selling_price, int water_use_per_turn, int min_water_lv, 
+            int water_penalty, int production_time, int disease_probability, int disease_penalty)
         {
             this.Name = name;
             this.PurchasePrice = purchase_price;
@@ -27,8 +28,8 @@ namespace entrega_01_grupo_2
             this.MinWaterLv = min_water_lv;
             this.WaterPenalty = water_penalty;
             this.ProductionTime = production_time;
-            this.DeseaseProbability = desease_probability;
-            this.DeseasePenalty = desease_penalty;
+            this.DiseaseProbability = disease_probability;
+            this.DiseasePenalty = disease_penalty;
         }
 
         public string GetName()
@@ -66,14 +67,14 @@ namespace entrega_01_grupo_2
             return ProductionTime;
         }
 
-        public int GetDeseaseProbability()
+        public int GetDiseaseProbability()
         {
-            return DeseaseProbability;
+            return DiseaseProbability;
         }
 
-        public int GetDeseasePenalty()
+        public int GetDiseasePenalty()
         {
-            return DeseasePenalty;
+            return DiseasePenalty;
         }
     }
 }
