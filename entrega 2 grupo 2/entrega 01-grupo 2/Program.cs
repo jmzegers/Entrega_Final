@@ -66,7 +66,6 @@ namespace Entrega1
             Console.ReadKey();
             Console.WriteLine("hola mundo");
             Console.ReadKey();
-
         }
     }
 }

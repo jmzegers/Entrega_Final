@@ -43,17 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animal.cs" />
     <Compile Include="Cattle.cs" />
     <Compile Include="Food.cs" />
     <Compile Include="PestControl.cs" />
+    <Compile Include="Product.cs" />
     <Compile Include="RiverLake.cs" />
     <Compile Include="Consumable.cs" />
     <Compile Include="FinishedProduct.cs" />
-    <Compile Include="hereda2.cs" />
     <Compile Include="Edification.cs" />
     <Compile Include="Mercado.cs" />
-    <Compile Include="producto.cs" />
     <Compile Include="Plantation.cs" />
+    <Compile Include="Seed.cs" />
     <Compile Include="StorageBuilding.cs" />
     <Compile Include="Terrain.cs" />
     <Compile Include="Farm.cs" />
