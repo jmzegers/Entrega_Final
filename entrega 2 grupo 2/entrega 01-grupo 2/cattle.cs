@@ -8,17 +8,14 @@ namespace entrega_01_grupo_2
 { 
     public class Cattle : Edification
     {
-        public int Cattle(int unidad)
+        public Cattle(int unidad)
         {
             Console.WriteLine($"el ganado tiene {unidad}, de animales");
-            return unidad;
         }
 
-        public override int getNutrientsFoods()
+        public int CurrentNutrients(int nutrientsPerTurn, int nutrientsNow)
         {
-            Random A = new Random();
-            int nutrients = A.Next(10, 101);
-            return nutrients;
+            return nutrientsNow - nutrientsPerTurn;
         }
     }
 

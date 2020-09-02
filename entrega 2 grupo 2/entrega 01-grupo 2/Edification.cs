@@ -50,7 +50,6 @@ namespace entrega_01_grupo_2
         }
 
         protected int f;
-        public abstract int getNutrientsFoods();
 
         public string Kind(string tipo)
         {

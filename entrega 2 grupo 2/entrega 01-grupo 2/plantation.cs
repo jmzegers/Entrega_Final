@@ -8,7 +8,7 @@ namespace entrega_01_grupo_2
 {
     public class Plantation : Edification
     {
-        public Plantation(double worm, double weed)
+        public Plantation(bool worm, bool weed, int nutrients = 100)
         {
 
         }
@@ -25,18 +25,21 @@ namespace entrega_01_grupo_2
             return hasWorms;
         }
 
-        public int weed(int w)
+        public bool Weed(int w)
         {
             Random R = new Random();
+            bool hasWeeds = false;
             int maleza = R.Next(0, 101);
-            return maleza-w;
+            if (maleza <= w)
+            {
+                hasWeeds = true;
+            }
+            return hasWeeds;
         }
 
-        public override int getNutrientsFoods()
+        public int currentNutrients(int nutrientsPerTurn, int nutrientsNow)
         {
-            Random N = new Random();
-            int nutrients = N.Next(10, 101);
-            return nutrients;
+            return nutrientsNow - nutrientsPerTurn;
         }
 
     }

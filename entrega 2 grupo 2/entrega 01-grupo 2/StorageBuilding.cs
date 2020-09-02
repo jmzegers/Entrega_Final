@@ -8,6 +8,11 @@ namespace entrega_01_grupo_2
 {
     class StorageBuilding
     {
+        public StorageBuilding(string name, int purchasePrice, int salePrice, int capacity)
+        {
+
+        }
+
         public string NameBuilding(string edificio)
         {
             return edificio;
