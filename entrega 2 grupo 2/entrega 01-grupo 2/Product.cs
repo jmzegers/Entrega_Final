@@ -1,0 +1,79 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace entrega_01_grupo_2
+{
+    class Product
+    {
+        protected string Name;
+        protected int PurchasePrice;
+        protected int BaseSellingPrice;
+        protected int WaterConsumptionPerTurn;
+        protected int MinWaterLv;
+        protected int WaterPenalty;
+        protected int ProductionTime;
+        protected int DeseaseProbability;
+        protected int DeseasePenalty;
+
+        public Product(string name, int purchase_price, int base_selling_price, int water_use_per_turn, int min_water_lv, int water_penalty, int production_time, int desease_probability, int desease_penalty)
+        {
+            this.Name = name;
+            this.PurchasePrice = purchase_price;
+            this.BaseSellingPrice = base_selling_price;
+            this.WaterConsumptionPerTurn = water_use_per_turn;
+            this.MinWaterLv = min_water_lv;
+            this.WaterPenalty = water_penalty;
+            this.ProductionTime = production_time;
+            this.DeseaseProbability = desease_probability;
+            this.DeseasePenalty = desease_penalty;
+        }
+
+        public string GetName()
+        {
+            return Name;
+        }
+
+        public int GetPurchasePrice()
+        {
+            return PurchasePrice;
+        }
+
+        public int GetBaseSellingPrice()
+        {
+            return BaseSellingPrice;
+        }
+
+        public int GetWaterConsumptionPerTurn()
+        {
+            return WaterConsumptionPerTurn;
+        }
+
+        public int GetMinWaterLv()
+        {
+            return  MinWaterLv;
+        }
+
+        public int GetWaterPenalty()
+        {
+            return WaterPenalty;
+        }
+
+        public int GetProductionTime()
+        {
+            return ProductionTime;
+        }
+
+        public int GetDeseaseProbability()
+        {
+            return DeseaseProbability;
+        }
+
+        public int GetDeseasePenalty()
+        {
+            return DeseasePenalty;
+        }
+    }
+}

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace entrega_01_grupo_2
 {
-    public class Mercado //aqui solo se manejan los precios 
+    public class Market //aqui solo se manejan los precios 
     {
         public class PurchasePrice
         {

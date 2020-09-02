@@ -130,7 +130,6 @@ namespace Entrega1
             List<List<int>> mat = RandMatrix(25, 100);
 
             int length = mat.Count;
-            int j = 0;
 
             List<List<List<int>>> originalMap = new List<List<List<int>>>();
 
