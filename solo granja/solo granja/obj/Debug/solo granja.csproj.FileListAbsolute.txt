@@ -1,7 +1,0 @@
-C:\Users\56984\Desktop\proyecto-entrega-1-grupo-2\solo granja\solo granja\bin\Debug\solo granja.exe.config
-C:\Users\56984\Desktop\proyecto-entrega-1-grupo-2\solo granja\solo granja\bin\Debug\solo granja.exe
-C:\Users\56984\Desktop\proyecto-entrega-1-grupo-2\solo granja\solo granja\bin\Debug\solo granja.pdb
-C:\Users\56984\Desktop\proyecto-entrega-1-grupo-2\solo granja\solo granja\obj\Debug\solo granja.csprojAssemblyReference.cache
-C:\Users\56984\Desktop\proyecto-entrega-1-grupo-2\solo granja\solo granja\obj\Debug\solo granja.csproj.CoreCompileInputs.cache
-C:\Users\56984\Desktop\proyecto-entrega-1-grupo-2\solo granja\solo granja\obj\Debug\solo granja.exe
-C:\Users\56984\Desktop\proyecto-entrega-1-grupo-2\solo granja\solo granja\obj\Debug\solo granja.pdb
