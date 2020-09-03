@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 
 namespace entrega_01_grupo_2
 {
-    class Consumable
+    abstract class Consumable
     {
-        protected Consumable(int price, bool use = true)
+        protected int Price;
+        protected bool Use;
+        
+        protected Consumable(int price)
         {
-
+            this.Price = price;
+            Use = true;
         }
     }
 }

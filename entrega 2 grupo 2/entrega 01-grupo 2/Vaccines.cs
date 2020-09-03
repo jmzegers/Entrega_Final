@@ -8,9 +8,26 @@ namespace entrega_01_grupo_2
 {
     class Vaccines : Consumable
     {
-        public Vaccines(int price, bool use, double chanceOfSuccess) : base(price, use)
+        private double ChanceOfSuccess;
+        
+        public Vaccines(int price, double chanceOfSuccess) : base(price)
         {
+            this.ChanceOfSuccess = chanceOfSuccess;
+        }
 
+        public int GetPrice()
+        {
+            return Price;
+        }
+
+        public bool GetUse()
+        {
+            return Use;
+        }
+
+        public double GetChanceOfSuccess()
+        {
+            return ChanceOfSuccess;
         }
     }
 }
