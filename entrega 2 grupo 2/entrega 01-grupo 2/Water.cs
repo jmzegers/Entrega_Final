@@ -12,7 +12,7 @@ namespace entrega_01_grupo_2
         private int Amount;
         private string Target;
 
-        public Water(int price, bool use, int amount, string target) : base(price, use)
+        public Water(int price, int amount, string target) : base(price)
         {
             this.Amount = amount;
             this.Target = target;

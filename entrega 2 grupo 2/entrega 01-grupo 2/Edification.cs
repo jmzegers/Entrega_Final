@@ -8,15 +8,16 @@ namespace entrega_01_grupo_2
 {
     public abstract class Edification
     {
-        private string Name;
-        private int PurchasePrice;
-        private int SalesPrice;
-        private double Health;
-        private double Water;
-        private int Maturity;
-        private bool Disease;
+        protected string Name;
+        protected int PurchasePrice;
+        protected int SalesPrice;
+        protected double Health;
+        protected double Water;
+        protected int Maturity;
+        protected bool Disease;
+        protected string Kind;
         
-        public Edification(string name, int purchasePrice)
+        public Edification(string name, int purchasePrice, string kind)
         {
             this.Name = name;
             this.PurchasePrice = purchasePrice;
@@ -25,17 +26,9 @@ namespace entrega_01_grupo_2
             Water = 100;
             Maturity = 0;
             Disease = false;
+            this.Kind = kind;
         }
 
-        protected int f;
-
-        public string Kind(string tipo)
-        {
-            Console.WriteLine($"es una: {tipo}");
-            return tipo;
-        }
-
-        protected int h;
         public int FinalProduction(int calidad)
         {
             Console.WriteLine($"la calidad del producto es de...: {calidad}");
