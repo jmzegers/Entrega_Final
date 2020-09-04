@@ -8,11 +8,24 @@ namespace entrega_01_grupo_2
 {
     public class Plantation : Edification
     {
-        public Plantation(bool worm, bool weed, int nutrients = 100)
-        {
-
-        }
+        private bool Worms;
+        private bool Weeds;
+        private int Nutrients;
+        private int DiseaseChance;
+        private int WormChance;
+        private int WeedChance;
         
+        public Plantation(string name, int purchasePrice, string kind, int diseaseChance, int wormChance, int weedChance) : 
+            base(name, purchasePrice, kind)
+        {
+            Worms = false;
+            Weeds = false;
+            Nutrients = 100;
+            this.DiseaseChance = diseaseChance;
+            this.WormChance = wormChance;
+            this.WeedChance = weedChance;
+        }
+
         public bool Worm(int gu)
         {
             Random R = new Random();
@@ -42,7 +55,69 @@ namespace entrega_01_grupo_2
             return nutrientsNow - nutrientsPerTurn;
         }
 
+        public string GetName()
+        {
+            return Name;
+        }
+
+        public int GetPurchasePrice()
+        {
+            return PurchasePrice;
+        }
+
+        public string GetKind()
+        {
+            return Kind;
+        }
+
+        public int GetDiseaseChance()
+        {
+            return DiseaseChance;
+        }
+
+        public int GetWormChance()
+        {
+            return WormChance;
+        }
+
+        public int GetWeedChance()
+        {
+            return WeedChance;
+        }
+
+        public bool GetWorms()
+        {
+            return Worms;
+        }
+
+        public bool GetWeeds()
+        {
+            return Weeds;
+        }
+
+        public int GetNutrients()
+        {
+            return Nutrients;
+        }
+
+        public int GetSalesPrice()
+        {
+            return SalesPrice;
+        }
+
+        public double GetHealth()
+        {
+            return Health;
+        }
+
+        public double GetWater()
+        {
+            return Water;
+        }
+
+        public int GetMaturity()
+        {
+            return Maturity;
+        }
     }
-
-
 }

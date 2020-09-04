@@ -8,29 +8,37 @@ namespace entrega_01_grupo_2
 {
     class StorageBuilding
     {
-        public StorageBuilding(string name, int purchasePrice, int salePrice, int capacity)
-        {
+        private string Name;
+        private int PurchasePrice;
+        private int SalePrice;
+        private int MaxCapacity;
 
+        public StorageBuilding(string name, int purchasePrice, int salePrice, int maxCapacity)
+        {
+            this.Name = name;
+            this.PurchasePrice = purchasePrice;
+            this.SalePrice = salePrice;
+            this.MaxCapacity = maxCapacity;
         }
 
-        public string NameBuilding(string edificio)
+        public string NameBuilding()
         {
-            return edificio;
+            return Name;
         }
 
-        public int PurchasePrice(int compra)
+        public int GetPurchasePrice()
         {
-            return compra;
+            return PurchasePrice;
         }
 
-        public int SalePrice(int venta)
+        public int GetSalePrice()
         {
-            return venta;
+            return SalePrice * -1;
         }
 
-        public int MaxCapacity(int capacidad)
+        public int GetMaxCapacity()
         {
-            return capacidad;
+            return MaxCapacity;
         }
     }
 }
