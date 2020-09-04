@@ -8,45 +8,23 @@ namespace entrega_01_grupo_2
 {
     public abstract class Edification
     {
-        public string Name(string nombre)
+        private string Name;
+        private int PurchasePrice;
+        private int SalesPrice;
+        private double Health;
+        private double Water;
+        private int Maturity;
+        private bool Disease;
+        
+        public Edification(string name, int purchasePrice)
         {
-            Console.WriteLine($"nombre es:  {nombre}");
-            return nombre;
-        }
-
-        protected int a;
-        public int Water(int agua)
-        {
-            Console.WriteLine($"agua de...: {agua}");
-            return agua;
-        }
-
-        protected int b;
-        public int Health(int salud)
-        {
-            Console.WriteLine($"salud de...: {salud}");
-            return salud;
-        }
-
-        protected int c;
-        public int Maturity (int madurez)
-        {
-            Console.WriteLine($"madurez de...: {madurez}");
-            return madurez;
-        }
-
-        protected int d;
-        public int PurchasePrice(int preciocompra)
-        {
-            Console.WriteLine($"precio de compra es de...: ${preciocompra}");
-            return preciocompra;
-        }
-
-        protected int e;
-        public int Disease(int enfermedad)
-        {
-            Console.WriteLine($" enfermedad de...: {enfermedad}");
-            return enfermedad;
+            this.Name = name;
+            this.PurchasePrice = purchasePrice;
+            SalesPrice = 100;
+            Health = 100;
+            Water = 100;
+            Maturity = 0;
+            Disease = false;
         }
 
         protected int f;
@@ -55,13 +33,6 @@ namespace entrega_01_grupo_2
         {
             Console.WriteLine($"es una: {tipo}");
             return tipo;
-        }
-
-        protected int g;
-        public int SalePrice(int precioventa)
-        {
-            Console.WriteLine($"el precio de venta es de...: {precioventa}");
-            return precioventa;
         }
 
         protected int h;
