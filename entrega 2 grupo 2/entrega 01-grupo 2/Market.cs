@@ -19,10 +19,6 @@ namespace entrega_01_grupo_2
                 this.b = b;
 
             }
-            public int GetA()
-            {
-                return a + 2;
-            }
         }
     }
 }
