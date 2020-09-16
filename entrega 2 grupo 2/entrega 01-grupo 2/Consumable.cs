@@ -8,7 +8,7 @@ namespace entrega_01_grupo_2
 {
     abstract class Consumable
     {
-        protected int Price;
+        protected double Price;
         protected bool Use;
         
         protected Consumable(int price)

@@ -45,8 +45,12 @@
   <ItemGroup>
     <Compile Include="Animal.cs" />
     <Compile Include="Cattle.cs" />
-    <Compile Include="Food.cs" />
-    <Compile Include="PestControl.cs" />
+    <Compile Include="consumibles\fertilizer.cs" />
+    <Compile Include="consumibles\Food.cs" />
+    <Compile Include="consumibles\irrigation.cs" />
+    <Compile Include="consumibles\Pesticide.cs" />
+    <Compile Include="consumibles\Herbicide.cs" />
+    <Compile Include="consumibles\Fungicide.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="RiverLake.cs" />
     <Compile Include="Consumable.cs" />
@@ -61,8 +65,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="juego %28turnos%29.cs" />
-    <Compile Include="Vaccines.cs" />
-    <Compile Include="Water.cs" />
+    <Compile Include="consumibles\Vaccines.cs" />
+    <Compile Include="consumibles\Water.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
