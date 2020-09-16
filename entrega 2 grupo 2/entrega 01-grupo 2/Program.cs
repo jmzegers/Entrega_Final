@@ -18,8 +18,11 @@ namespace Entrega1
             String response = "X";
             string aviso = "Ojo que puede que no se pueda ver todo, para eso haga clic derecho en la consola y, " +
                 "en 'Propiedades', bajar la letra (por ejemplo en 10)";
+            string nuevo_juego = "\nCrear un nuevo juego:";
+            string pregunta = "\n¿le gusta o prefiere generar otro?";
             Console.WriteLine(aviso);
-
+            Console.WriteLine(nuevo_juego);
+            Console.ReadKey();
             while (response != "Y" && response != "N")
             {
                 Console.WriteLine("¿desea agregar un rio?  [Y/N]");
@@ -61,6 +64,7 @@ namespace Entrega1
             response = "X";
 
             MapCreator mc = new MapCreator(addRiver,addLake);
+            Console.WriteLine(pregunta);
 
             Console.WriteLine(mc);
             Console.ReadKey();

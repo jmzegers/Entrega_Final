@@ -6,17 +6,15 @@ using System.Threading.Tasks;
 
 namespace entrega_01_grupo_2
 {
-    public class Market //aqui solo se manejan los precios 
+    public class Market //aqui solo se manejan los precios de todas las cosas
     {
-        public class PurchasePrice
+        public class AllPrice
         {
-            protected int a;
-            protected int b;
-
-            public PurchasePrice(int a, int b)
+            public void prices()
             {
-                this.a = a;
-                this.b = b;
+                List<int> Market_list; // hacemos la lista
+                Market_list = new List<int>(); // iniciamos la lista
+
 
             }
         }
