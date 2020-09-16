@@ -8,5 +8,7 @@ namespace entrega_3_prototipe
 {
     class Ir_al_mercado_de_propiedades
     {
+        public delegate void GoTothePropertyMarket(object source, EventArgs args);
+        public event GoTothePropertyMarket MercadoPropiedades;
     }
 }

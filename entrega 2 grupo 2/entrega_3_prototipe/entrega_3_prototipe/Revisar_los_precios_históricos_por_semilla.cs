@@ -8,5 +8,7 @@ namespace entrega_3_prototipe
 {
     class Revisar_los_precios_históricos_por_semilla
     {
+        public delegate void ReviewHistoricalPricesPerSeed(object source, EventArgs args);
+        public event ReviewHistoricalPricesPerSeed HistoricalSeed;
     }
 }

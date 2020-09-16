@@ -8,5 +8,7 @@ namespace entrega_3_prototipe
 {
     class Ir_al_mercado_de_consumibles
     {
+        public delegate void GoToTheConsumablesMarket(object source, EventArgs args);
+        public event GoToTheConsumablesMarket ConsumibleMarket;
     }
 }
