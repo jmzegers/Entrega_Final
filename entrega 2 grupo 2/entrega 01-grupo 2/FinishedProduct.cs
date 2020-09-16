@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace entrega_01_grupo_2
 {
-    class FinishedProduct
+    class FinishedProduct 
     {
         private string ProductType;
         private int ProductQuality;

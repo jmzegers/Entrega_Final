@@ -9,13 +9,13 @@ namespace entrega_01_grupo_2
     class Product
     {
         protected string Name;
-        protected int PurchasePrice;
-        protected int BaseSellingPrice;
+        protected double PurchasePrice;
+        protected double BaseSellingPrice;
         protected int WaterConsumptionPerTurn;
         protected int MinWaterLv;
         protected int WaterPenalty;
         protected int ProductionTime;
-        protected int DiseaseProbability;
+        protected double DiseaseProbability;
         protected int DiseasePenalty;
 
         public Product(string name, int purchase_price, int base_selling_price, int water_use_per_turn, int min_water_lv, 
@@ -37,12 +37,12 @@ namespace entrega_01_grupo_2
             return Name;
         }
 
-        public int GetPurchasePrice()
+        public double GetPurchasePrice()
         {
             return PurchasePrice;
         }
 
-        public int GetBaseSellingPrice()
+        public double GetBaseSellingPrice()
         {
             return BaseSellingPrice;
         }
@@ -67,7 +67,7 @@ namespace entrega_01_grupo_2
             return ProductionTime;
         }
 
-        public int GetDiseaseProbability()
+        public double GetDiseaseProbability()
         {
             return DiseaseProbability;
         }

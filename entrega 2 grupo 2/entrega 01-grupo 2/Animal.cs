@@ -9,15 +9,15 @@ namespace entrega_01_grupo_2
 {
     class Animal : Product
     {
-        private int FeedConsumptionPerTurn;
-        private int MinFeedLv;
-        private int FeedPenalty;
+        private double FeedConsumptionPerTurn;
+        private double MinFeedLv;
+        private double FeedPenalty;
         private int Units;
-        private int EscapeProbability;
+        private double EscapeProbability;
         private int MinEscape;
         private int MaxEscape;
         private int EscapedUnits;
-        private int SuddenDeathProbability;
+        private double SuddenDeathProbability;
         private int MinSuddenDeaths;
         private int MaxSuddenDeaths;
         private int SuddenlyDeadUnits;
@@ -44,17 +44,17 @@ namespace entrega_01_grupo_2
 
         }
 
-        public int GetFeedConsumptionPerTurn()
+        public double GetFeedConsumptionPerTurn()
         {
             return FeedConsumptionPerTurn;
         }
 
-        public int GetMinFeedLv()
+        public double GetMinFeedLv()
         {
             return MinFeedLv;
         }
 
-        public int GetFeedPenalty()
+        public double GetFeedPenalty()
         {
             return FeedPenalty;
         }
@@ -64,7 +64,7 @@ namespace entrega_01_grupo_2
             return Units;
         }
 
-        public int GetEscapeProbability()
+        public double GetEscapeProbability()
         {
             return EscapeProbability;
         }
@@ -79,7 +79,7 @@ namespace entrega_01_grupo_2
             return MaxEscape;
         }
 
-        public int GetSuddenDeathProbability()
+        public double GetSuddenDeathProbability()
         {
             return SuddenDeathProbability;
         }

@@ -8,13 +8,13 @@ namespace entrega_01_grupo_2
 {
     class Seed : Product
     {
-        private int PriceVariation;
+        private double PriceVariation;
         private int NutrientConsumptionPerTurn;
         private int MinNutrientLv;
         private int NutrientPenalty;
-        private int WormProbability;
+        private double WormProbability;
         private int WormPenalty;
-        private int WeedProbability;
+        private double WeedProbability;
         private int WeedPenalty;
 
         public Seed(string Name, int PurchasePrice, int BaseSellingPrice, int WaterConsumptionPerTurn, int MinWaterLv, 
@@ -34,7 +34,7 @@ namespace entrega_01_grupo_2
             this.WeedPenalty = weed_penalty;
         }
 
-        public int GetPriceVariation()
+        public double GetPriceVariation()
         {
             return PriceVariation;
         }
@@ -54,7 +54,7 @@ namespace entrega_01_grupo_2
             return NutrientPenalty;
         }
 
-        public int GetWormProbability()
+        public double GetWormProbability()
         {
             return WormProbability;
         }
@@ -64,7 +64,7 @@ namespace entrega_01_grupo_2
             return WormPenalty;
         }
 
-        public int GetWeedProbability()
+        public double GetWeedProbability()
         {
             return WeedProbability;
         }

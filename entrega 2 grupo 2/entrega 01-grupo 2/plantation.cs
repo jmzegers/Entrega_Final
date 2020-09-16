@@ -11,7 +11,7 @@ namespace entrega_01_grupo_2
         private bool Worms;
         private bool Weeds;
         private int Nutrients;
-        private int DiseaseChance;
+        private double DiseaseChance;
         private int WormChance;
         private int WeedChance;
         
@@ -70,7 +70,7 @@ namespace entrega_01_grupo_2
             return Kind;
         }
 
-        public int GetDiseaseChance()
+        public double GetDiseaseChance()
         {
             return DiseaseChance;
         }
