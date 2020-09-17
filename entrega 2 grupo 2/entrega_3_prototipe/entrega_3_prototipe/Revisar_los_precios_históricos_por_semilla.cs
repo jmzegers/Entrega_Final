@@ -10,5 +10,7 @@ namespace entrega_3_prototipe
     {
         public delegate void ReviewHistoricalPricesPerSeed(object source, EventArgs args);
         public event ReviewHistoricalPricesPerSeed HistoricalSeed;
+
+
     }
 }

@@ -15,7 +15,7 @@ namespace entrega_01_grupo_2
         private int WormChance;
         private int WeedChance;
         
-        public Plantation(string name, int purchasePrice, string kind, int diseaseChance, int wormChance, int weedChance) : 
+        public Plantation(string name, int purchasePrice, string kind, double diseaseChance, int wormChance, int weedChance) : 
             base(name, purchasePrice, kind)
         {
             Worms = false;
