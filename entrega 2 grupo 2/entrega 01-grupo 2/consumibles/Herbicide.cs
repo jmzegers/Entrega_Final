@@ -6,16 +6,18 @@ using System.Threading.Tasks;
 
 namespace entrega_01_grupo_2
 {
-    class Vaccines : Consumable
+    class Herbicide : Consumable
     {
+        private string Enemy;
         private double ChanceOfSuccess;
-        
-        public Vaccines(int price, double chanceOfSuccess) : base(price)
+
+        public Herbicide(int price, string enemy, double chanceOfSuccess) : base(price)
         {
+            this.Enemy = enemy;
             this.ChanceOfSuccess = chanceOfSuccess;
         }
 
-        public int GetPrice()
+        public double GetPrice()
         {
             return Price;
         }
@@ -23,6 +25,11 @@ namespace entrega_01_grupo_2
         public bool GetUse()
         {
             return Use;
+        }
+
+        public string GetEnemy()
+        {
+            return Enemy;
         }
 
         public double GetChanceOfSuccess()

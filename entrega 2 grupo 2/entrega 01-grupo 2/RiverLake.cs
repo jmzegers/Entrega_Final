@@ -90,7 +90,8 @@ namespace entrega_01_grupo_2
                             if (b > firstCol && b < firstCol + 6)
                             {
                                 Console.BackgroundColor = ConsoleColor.Blue;
-                                Console.ForegroundColor = ConsoleColor.Blue;
+                                Console.ForegroundColor = ConsoleColor.White;// para que se vean la pregunta de si se quiere generar otro
+                                                                                // mapa
                             }
                             else
                             {
@@ -104,7 +105,8 @@ namespace entrega_01_grupo_2
                             if (a > firstCol && a < firstCol + 6)
                             {
                                 Console.BackgroundColor = ConsoleColor.Blue;
-                                Console.ForegroundColor = ConsoleColor.Blue;
+                                Console.ForegroundColor = ConsoleColor.White;// para que se vean la pregunta de si se quiere generar otro
+                                                                                // mapa
                             }
                             else
                             {
@@ -120,7 +122,8 @@ namespace entrega_01_grupo_2
                             if (b > lakePlaceX && b < lakePlaceX + 15)
                             {
                                 Console.BackgroundColor = ConsoleColor.Blue;
-                                Console.ForegroundColor = ConsoleColor.Blue;
+                                Console.ForegroundColor = ConsoleColor.White;// para que se vean la pregunta de si se quiere generar otro
+                                                                                // mapa
                             }
 
                             else if (b > firstCol && b < firstCol + 6)
@@ -140,7 +143,8 @@ namespace entrega_01_grupo_2
                                     else
                                     {
                                         Console.BackgroundColor = ConsoleColor.Blue;
-                                        Console.ForegroundColor = ConsoleColor.Blue;
+                                        Console.ForegroundColor = ConsoleColor.White;// para que se vean la pregunta de si se quiere generar otro
+                                                                                        // mapa
                                     }
 
                                 }
@@ -180,7 +184,8 @@ namespace entrega_01_grupo_2
                                 else
                                 {
                                     Console.BackgroundColor = ConsoleColor.Blue;
-                                    Console.ForegroundColor = ConsoleColor.Blue;
+                                    Console.ForegroundColor = ConsoleColor.White; // para que se vean la pregunta de si se quiere generar otro
+                                    // mapa
                                 }
 
                             }

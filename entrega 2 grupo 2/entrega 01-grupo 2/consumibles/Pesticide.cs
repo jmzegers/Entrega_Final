@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace entrega_01_grupo_2
 {
-    class PestControl : Consumable
+    class Pesticide : Consumable
     {
         private string Enemy;
         private double ChanceOfSuccess;
         
-        public PestControl(int price, string enemy, double chanceOfSuccess) : base(price)
+        public Pesticide(int price, string enemy, double chanceOfSuccess) : base(price)
         {
             this.Enemy = enemy;
             this.ChanceOfSuccess = chanceOfSuccess;
         }
 
-        public int GetPrice()
+        public double GetPrice()
         {
             return Price;
         }

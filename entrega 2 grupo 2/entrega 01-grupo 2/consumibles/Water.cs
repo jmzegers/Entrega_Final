@@ -1,24 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection.Emit;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace entrega_01_grupo_2
 {
-    class Food : Consumable
+    class Water_of_animals : Consumable
     {
         private int Amount;
         private string Target;
-        
-        public Food(int price, int amount, string target) : base(price)
+
+        public Water_of_animals(int price, int amount, string target) : base(price)
         {
             this.Amount = amount;
             this.Target = target;
         }
 
-        public int GetPrice()
+        public double GetPrice()
         {
             return Price;
         }
