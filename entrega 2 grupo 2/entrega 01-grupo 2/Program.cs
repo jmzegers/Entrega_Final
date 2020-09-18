@@ -13,12 +13,13 @@ namespace Entrega1
     {
         static void Main(string[] args)
         {
+            Brain b = new Brain();
+            
             bool addRiver = false;
             bool addLake = false;
             String response = "X";
             string aviso = "Ojo que puede que no se pueda ver todo, para eso haga clic derecho en la consola y, " +
                 "en 'Propiedades', bajar la letra (por ejemplo en 10)";
-            string nuevo_juego = "\nCrear un nuevo juego:";
             string cargar_archivo = "\n¿Desea cargar un mapa anterior?";
             string pregunta = "\n¿desea generar otro mapa? [Y/N]";
             String answer = "x";
@@ -43,7 +44,17 @@ namespace Entrega1
                     Console.WriteLine("Ésa respuesta no es válida.");
                 }
             }
-            Console.WriteLine(nuevo_juego);
+
+            while (true)
+            {
+                int d = b.MapDecision();
+                if (d == 1)
+                {
+
+                }
+            }
+
+            //Por lo tanto, answer3 es el numero que corresponde al tipo de mapa que desea el jugador
 
             Console.ReadKey();
             while (response != "Y" && response != "N")
