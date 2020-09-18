@@ -8,5 +8,8 @@ namespace entrega_3_prototipe
 {
     class Pasar_de_turno
     {
+        public delegate void PassTurn(object source, EventArgs args);
+        public event PassTurn Turn;
+
     }
 }

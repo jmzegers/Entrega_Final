@@ -10,5 +10,17 @@ namespace entrega_3_prototipe
     {
         public delegate void GoToTheConsumablesMarket(object source, EventArgs args);
         public event GoToTheConsumablesMarket ConsumibleMarket;
+
+        protected virtual void OnBuy()
+        {
+            if (ConsumibleMarket != null)
+                ConsumibleMarket(this, EventArgs.Empty);
+        }
+        
+        public void Buying()
+        {
+            OnBuy();
+            Console.WriteLine("acaba de comprar un consumible");
+        }
     }
 }

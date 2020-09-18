@@ -8,5 +8,7 @@ namespace entrega_3_prototipe
 {
     class Grabar_la_partida
     {
+        public delegate void SaveTheGame(object source, EventArgs args);
+        public event SaveTheGame Save;
     }
 }
