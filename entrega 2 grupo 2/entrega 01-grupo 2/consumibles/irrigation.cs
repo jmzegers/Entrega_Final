@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace entrega_01_grupo_2
 {
-    class irrigation : Consumable
+    class irrigation : Consumable // riego
     {
         private int Amount;
         private string Target;
