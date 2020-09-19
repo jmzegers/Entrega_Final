@@ -46,7 +46,7 @@
     <Compile Include="entrega 03\Administrar_produccion_agregar_agua_o_comida.cs" />
     <Compile Include="entrega 03\Administrar_almacenamiento.cs" />
     <Compile Include="Animal.cs" />
-    <Compile Include="Brain.cs" />
+    <Compile Include="FunctionBrain.cs" />
     <Compile Include="Cattle.cs" />
     <Compile Include="consumibles\fertilizer.cs" />
     <Compile Include="consumibles\Food.cs" />
@@ -62,6 +62,7 @@
     <Compile Include="entrega 03\Ir_al_mercado_de_propiedades.cs" />
     <Compile Include="entrega 03\Pasar_de_turno.cs" />
     <Compile Include="entrega 03\Revisar_los_precios_históricos_por_semilla.cs" />
+    <Compile Include="ObjectBrain.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="RiverLake.cs" />
     <Compile Include="Consumable.cs" />

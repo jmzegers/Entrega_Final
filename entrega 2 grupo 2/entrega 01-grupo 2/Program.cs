@@ -13,7 +13,7 @@ namespace Entrega1
     {
         static void Main(string[] args)
         {
-            Brain b = new Brain();
+            FunctionBrain b = new FunctionBrain();
             Console.WriteLine("Bienvenido a Farm Life Simulator");
 
             while (true) //Aca se presentan mapas hasta que el jugador se decida por uno
@@ -35,6 +35,9 @@ namespace Entrega1
             double CashMoney = 50000;
             Console.WriteLine("su monto inicial es:  "+CashMoney);
             Console.ReadKey();
+            Console.WriteLine(" ");
+            Console.WriteLine("--------------------------");
+            Console.WriteLine(" ");
 
             // aqui empieza lo que te piden de la entrega 3
             String ans = "x";
@@ -53,9 +56,10 @@ namespace Entrega1
                         answ = Console.ReadLine().ToUpper();
                         if (answ == "E")
                         {
-                            Console.WriteLine("Mercado de EDIFICACIONES");
+                            b.Message(2);
+                            answe = Console.ReadLine().ToUpper();
+
                             Console.ReadKey();
-                            Console.WriteLine();
                             break;
                         }
                         else if (answ == "C")

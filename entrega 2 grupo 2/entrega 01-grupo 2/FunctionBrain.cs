@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace entrega_01_grupo_2
 {
-    class Brain
+    class FunctionBrain
     {
         public void MapType()
         {
@@ -103,6 +103,7 @@ namespace entrega_01_grupo_2
             return answer;
         }
 
+
         public void Message(int a)
         {
             if (a == 0)
@@ -112,6 +113,7 @@ namespace entrega_01_grupo_2
                 Console.WriteLine("Ir al mercado [M]");
                 Console.WriteLine("Pasar de turno [P]");
                 Console.WriteLine("Grabar la partida [G]");
+                Console.WriteLine(" ");
             }
 
             else if (a == 1)
@@ -122,6 +124,18 @@ namespace entrega_01_grupo_2
                 Console.WriteLine("Ir al mercado de propiedades [P]");
                 Console.WriteLine("Revisar los precios históricos por semilla [H]");
                 Console.WriteLine("VOLVER [V]");
+                Console.WriteLine(" ");
+            }
+
+            else if (a == 2)
+            {
+                Console.WriteLine("Bienvenido al Mercado de EDIFICACIONES");
+                Console.WriteLine("¿Que desea comprar?");
+                Console.WriteLine("Una plantacion [P]");
+                Console.WriteLine("Ganado [G]");
+                Console.WriteLine("Un edificio de almacenamiento [A]");
+                Console.WriteLine("Destruir un edificio [D]");
+                Console.WriteLine(" ");
             }
 
             else
@@ -129,5 +143,14 @@ namespace entrega_01_grupo_2
                 Console.WriteLine("No hay nada guardado en este numero");
             }
         }
+
+        public void EdifMarket(string a)
+        {
+            if (a == "P")
+            {
+                Console.WriteLine("Semillas: ");
+            }
+        }
+
     }
 }
