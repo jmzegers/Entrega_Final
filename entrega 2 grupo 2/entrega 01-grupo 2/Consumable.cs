@@ -15,6 +15,7 @@ namespace entrega_01_grupo_2
         {
             this.Price = price;
             Use = true;
+            
         }
     }
 }
