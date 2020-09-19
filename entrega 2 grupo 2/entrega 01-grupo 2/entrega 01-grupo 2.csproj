@@ -54,6 +54,14 @@
     <Compile Include="consumibles\Pesticide.cs" />
     <Compile Include="consumibles\Herbicide.cs" />
     <Compile Include="consumibles\Fungicide.cs" />
+    <Compile Include="entrega 03\Administrar_produccion_aplicar_cura.cs" />
+    <Compile Include="entrega 03\administrar_produccion_Obtener_producto_terminado.cs" />
+    <Compile Include="entrega 03\Grabar_la_partida.cs" />
+    <Compile Include="entrega 03\Ir_al_mercado_de_consumibles.cs" />
+    <Compile Include="entrega 03\Ir_al_mercado_de_edificaciones.cs" />
+    <Compile Include="entrega 03\Ir_al_mercado_de_propiedades.cs" />
+    <Compile Include="entrega 03\Pasar_de_turno.cs" />
+    <Compile Include="entrega 03\Revisar_los_precios_históricos_por_semilla.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="RiverLake.cs" />
     <Compile Include="Consumable.cs" />
