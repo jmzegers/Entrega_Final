@@ -21,6 +21,7 @@ namespace entrega_01_grupo_2
         {
             OnBuy();
             Console.WriteLine("acaba de comprar un consumible");
+            
         }
     }
 }
