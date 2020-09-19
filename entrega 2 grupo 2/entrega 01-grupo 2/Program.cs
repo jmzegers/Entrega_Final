@@ -16,7 +16,7 @@ namespace Entrega1
             Brain b = new Brain();
             Console.WriteLine("Bienvenido a Farm Life Simulator");
 
-            while (true)
+            while (true) //Aca se presentan mapas hasta que el jugador se decida por uno
             {
                 List<bool> riverAndLake = b.RiverAndLake(); //Aqui hace la pregunta de cual es el tipo de mapa que desea,
                 //guardando los valores como dos bools (si tiene rio o no y lo mismo con el lago)
@@ -32,6 +32,7 @@ namespace Entrega1
                 }
             }
 
+            double CashMoney = 50000;
             
             
             
