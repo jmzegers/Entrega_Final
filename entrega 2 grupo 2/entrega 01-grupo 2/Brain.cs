@@ -94,9 +94,40 @@ namespace entrega_01_grupo_2
                 {
                     break;
                 }
+                else
+                {
+                    Console.WriteLine("Respuesta invalida");
+                }
             }
 
             return answer;
+        }
+
+        public void Message(int a)
+        {
+            if (a == 0)
+            {
+                Console.WriteLine("Que desea hacer");
+                Console.WriteLine("Ir a Administrar la granja [A]");
+                Console.WriteLine("Ir al mercado [M]");
+                Console.WriteLine("Pasar de turno [P]");
+                Console.WriteLine("Grabar la partida [G]");
+            }
+
+            else if (a == 1)
+            {
+                Console.WriteLine("¿Que desea hacer en el mercado?");
+                Console.WriteLine("Ir al mercado de edificaciones[E]");
+                Console.WriteLine("Ir al mercado de consumibles [C]");
+                Console.WriteLine("Ir al mercado de propiedades [P]");
+                Console.WriteLine("Revisar los precios históricos por semilla [H]");
+                Console.WriteLine("VOLVER [V]");
+            }
+
+            else
+            {
+                Console.WriteLine("No hay nada guardado en este numero");
+            }
         }
     }
 }
