@@ -24,7 +24,7 @@ namespace Entrega1
                 bool al = riverAndLake[1]; //valor del bool del lago
                 MapCreator mh = new MapCreator(ar, al);
 
-                string answer = b.YesOrNo("Le gusta el mapa? Y/N");
+                string answer = b.YesOrNo("Le gusta el mapa? [Y/N]");
 
                 if (answer == "Y")
                 {
@@ -32,57 +32,31 @@ namespace Entrega1
                 }
             }
 
-            double CashMoney = 100000.50;
+            double CashMoney = 50000;
             Console.WriteLine("su monto inicial es:  " + CashMoney);
-            Console.WriteLine("su granja es el rectangulo gris");
             Console.ReadKey();
 
             // aqui empieza lo que te piden de la entrega 3
-            string go = "\nQue desea hacer";
-            string go1 = "\nir a Administrar la granja [A]";
-            string go2 = "Ir al mercado [M]";
-            string go3 = "Pasar de turno [P]";
-            string go4 = "Grabar la partida [G]";
             String ans = "x";
             String answ = "x";
             String answe = "x";
 
             while (true)
             {
-                Console.WriteLine(go);
-
-                Console.WriteLine(go1);
-                Console.WriteLine(go2);
-                Console.WriteLine(go3);
-                Console.WriteLine(go4);
-
+                b.Message(0);
                 ans = Console.ReadLine().ToUpper();
                 if (ans == "M")
                 {
-                    Console.WriteLine("\nque desea hacer en el mercado");
-                    Console.WriteLine("\nIr al mercado de edificaciones[E]");
-                    Console.WriteLine("Ir al mercado de consumibles [C]");
-                    Console.WriteLine("Ir al mercado de propiedades [P]");
-                    Console.WriteLine("Revisar los precios históricos por semilla [H]");
-                    Console.WriteLine("VOLVER [V]");
+                    b.Message(1);
                     while (true)
                     {
                         answ = Console.ReadLine().ToUpper();
                         if (answ == "E")
                         {
-                            Console.WriteLine("Mercado de EDIFICACIONES: ");
+                            Console.WriteLine("Mercado de EDIFICACIONES");
                             Console.ReadKey();
-                            answe = Console.ReadLine().ToUpper();
-                            while (true)
-                            {
-                                Console.WriteLine("\nEstas en el mercado de edificaciones, que desea hacer: ");
-                                Console.WriteLine("Comprar una plantación [P]");
-                                Console.WriteLine("Comprar ganado [G]");
-                                Console.WriteLine("Comprar almacenamiento [A]");
-                                Console.WriteLine("Vender/Destruir Edificio [E]");
-                                Console.WriteLine("VOLVER [V]");
-                                break;
-                            }
+                            Console.WriteLine();
+                            break;
                         }
                         else if (answ == "C")
                         {
@@ -91,7 +65,6 @@ namespace Entrega1
 
                             buyingConsumable.Buying();
                             Console.ReadKey();
-                            break;
                         }
                         else if (answ == "P")
                         {
@@ -116,31 +89,20 @@ namespace Entrega1
                             Console.WriteLine("Ésa respuesta no es válida.");
                         }
                     }
-                    if (answ != "V")
-                    {
-                        break;
-                    }
-                    
+                    break;
                 }
-                else if (ans == "P")
+                else if (ans == "[P]")
                 {
                     Console.WriteLine("Desea pasar de turno [Y/N]");
-                    Console.ReadKey();
                     break;
                 }
-                else if (ans == "G")
-                {
-                    Console.WriteLine("Desea Guardar [Y/N]");
-                    Console.ReadKey();
-                    break;
-                }
+
                 else
                 {
                     Console.WriteLine("Ésa respuesta no es válida.");
                 }
             }
-            // hasta aqui
-            
+
         }
 
     }
