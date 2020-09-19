@@ -36,7 +36,7 @@ namespace Entrega1
             Console.WriteLine("su monto inicial es:  "+CashMoney);
             Console.ReadKey();
 
-
+            // aqui empieza lo que te piden de la entrega 3
             string go = "Que desea hacer";
             string go1 = "ir a Administrar la granja [A]";
             string go2 = "Ir al mercado [M]";
@@ -117,6 +117,7 @@ namespace Entrega1
                     Console.WriteLine("Ésa respuesta no es válida.");
                 }
             }
+            // hasta aqui
             /*
             bool addRiver = false;
             bool addLake = false;
