@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -47,6 +48,55 @@ namespace entrega_01_grupo_2
             }
 
             return answer3;
+        }
+
+        public List<bool> RiverAndLake()
+        {
+            List<bool> boolList = new List<bool>();
+            bool addRiver;
+            bool addLake;
+            int d = MapDecision();
+            if (d == 1)
+            {
+                addRiver = false;
+                addLake = false;
+            }
+            else if (d == 2)
+            {
+                addRiver = true;
+                addLake = false;
+            }
+            else if (d == 3)
+            {
+                addRiver = false;
+                addLake = true;
+            }
+            else
+            {
+                addRiver = true;
+                addLake = true;
+            }
+
+            boolList.Add(addRiver);
+            boolList.Add(addLake);
+
+            return boolList
+        }
+
+        public string YesOrNo(string message) //Funcion que filtra respuestas diferentes a "si" o "no"
+        {
+            string answer = "hola";
+            while (true)
+            {
+                Console.WriteLine(message);
+                answer = Console.ReadLine();
+                if (answer == "Y" || answer == "N")
+                {
+                    break;
+                }
+            }
+
+            return answer;
         }
     }
 }

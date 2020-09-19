@@ -14,7 +14,29 @@ namespace Entrega1
         static void Main(string[] args)
         {
             Brain b = new Brain();
+            Console.WriteLine("Bienvenido a Farm Life Simulator");
+
+            while (true)
+            {
+                List<bool> riverAndLake = b.RiverAndLake(); //Aqui hace la pregunta de cual es el tipo de mapa que desea,
+                //guardando los valores como dos bools (si tiene rio o no y lo mismo con el lago)
+                bool ar = riverAndLake[0]; //valor del bool del rio
+                bool al = riverAndLake[1]; //valor del bool del lago
+                MapCreator mh = new MapCreator(ar, al);
+
+                string answer = b.YesOrNo("Le gusta el mapa? Y/N");
+
+                if (answer == "Y")
+                {
+                    break;
+                }
+            }
+
             
+            
+            
+            
+            /*
             bool addRiver = false;
             bool addLake = false;
             String response = "X";
@@ -44,18 +66,11 @@ namespace Entrega1
                     Console.WriteLine("Ésa respuesta no es válida.");
                 }
             }
-
-            while (true)
-            {
-                int d = b.MapDecision();
-                if (d == 1)
-                {
-
-                }
-            }
+            */
 
             //Por lo tanto, answer3 es el numero que corresponde al tipo de mapa que desea el jugador
 
+            /*
             Console.ReadKey();
             while (response != "Y" && response != "N")
             {
@@ -119,6 +134,8 @@ namespace Entrega1
      
             Console.WriteLine("monto: $" + monto);
             Console.ReadKey();
+            */
         }
+        
     }
 }
