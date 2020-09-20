@@ -1,4 +1,5 @@
 ﻿using entrega_01_grupo_2;
+using entrega_01_grupo_2.entrega_03;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -15,6 +16,8 @@ namespace Entrega1
         {
             FunctionBrain b = new FunctionBrain();
             Console.WriteLine("Bienvenido a Farm Life Simulator");
+            Ir_al_mercado_de_consumibles buyingConsumable = new Ir_al_mercado_de_consumibles();
+            CompraConsumible Consu = new CompraConsumible();
 
             while (true) //Aca se presentan mapas hasta que el jugador se decida por uno
             {
@@ -33,7 +36,8 @@ namespace Entrega1
             }
 
             double CashMoney = 50000;
-            Console.WriteLine("su monto inicial es:  "+CashMoney);
+            string inventario = "";
+            Console.WriteLine("su monto inicial es:  " + CashMoney);
             Console.ReadKey();
             Console.WriteLine(" ");
             Console.WriteLine("--------------------------");
@@ -43,6 +47,7 @@ namespace Entrega1
             String ans = "x";
             String answ = "x";
             String answe = "x";
+            String res = "X";
 
             while (true)
             {
@@ -63,13 +68,60 @@ namespace Entrega1
                         }
                         else if (answ == "C")
                         {
-                            Console.WriteLine("Mercado de CONSUMIBLES");
-                            Ir_al_mercado_de_consumibles buyingConsumable = new Ir_al_mercado_de_consumibles();
-
-                            buyingConsumable.Buying();
+                            b.Message(3);
                             Console.ReadKey();
-                            break;
+                            while (true)
+                            {   
+                                res = Console.ReadLine().ToUpper();
+                                if (res == "F")
+                                {
+                                    buyingConsumable.ConsumibleMarket += Consu.OnBuy;
+                                    buyingConsumable.Buying();
+                                    CashMoney -= 48.20;
+                                    inventario += "\nfungicida";
+                                    Console.ReadKey();
+                                }
+                                else if (res == "H")
+                                {
+                                    buyingConsumable.ConsumibleMarket += Consu.OnBuy1;
+                                    buyingConsumable.Buying();
+                                    CashMoney -= 80.24;
+                                    inventario += "\nHerbicida";
+                                    Console.ReadKey();
+                                }
+
+                                else if (res == "P")
+                                {
+                                    buyingConsumable.ConsumibleMarket += Consu.OnBuy2;
+                                    buyingConsumable.Buying();
+                                    CashMoney -= 42.80;
+                                    inventario += "\npesticida";
+                                    Console.ReadKey();
+                                }
+
+                                else if (res == "G")
+                                {
+                                    buyingConsumable.ConsumibleMarket += Consu.OnBuy3;
+                                    buyingConsumable.Buying();
+                                    CashMoney -= 28.40;
+                                    inventario += "\nvacuna";
+                                    Console.ReadKey();
+                                }
+                                else if (res == "V")
+                                {
+                                    Console.WriteLine(CashMoney);
+                                    Console.WriteLine(inventario);
+                                    Console.ReadKey();
+                                    break;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("respuesta invalida");
+                                }
+                            }
                         }
+
+                        
                         else if (answ == "P")
                         {
                             Console.WriteLine("Mercado de PROPIEDADES");
@@ -95,7 +147,7 @@ namespace Entrega1
                     }
                     break;
                 }
-                else if (ans == "[P]")
+                else if (ans == "P")
                 {
                     Console.WriteLine("Desea pasar de turno [Y/N]");
                     break;
@@ -106,7 +158,7 @@ namespace Entrega1
                     Console.WriteLine("Ésa respuesta no es válida.");
                 }
             }
-            
+
         }
 
     }

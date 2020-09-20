@@ -144,7 +144,20 @@ namespace entrega_01_grupo_2
                 Console.WriteLine("Destruir un edificio [D]");
                 Console.WriteLine(" ");
             }
-
+            else if (a == 3)
+            {
+                Console.WriteLine("Bienvenid al Mercado de CONSUMIBLE");
+                Console.WriteLine("\nque desea comprar: ");
+                Console.WriteLine("Fungicida (cura) [F]");
+                Console.WriteLine("herbicida (cura) [H]");
+                Console.WriteLine("pesticida (cura) [P]");
+                Console.WriteLine("Vacuna (cura) [G]");
+                Console.WriteLine("Fertlizante (alimento) [A]");
+                Console.WriteLine("riego (alimento) [R]");
+                Console.WriteLine("Agua para animales (alimento) [K]");
+                Console.WriteLine("Alimento para animales (alimento) [T]");
+                Console.WriteLine("VOLVER [V]");
+            }
             else
             {
                 Console.WriteLine("No hay nada guardado en este numero");
