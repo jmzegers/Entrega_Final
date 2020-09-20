@@ -36,6 +36,7 @@ namespace Entrega1
             }
 
             double CashMoney = 50000;
+            string inventario = "";
             Console.WriteLine("su monto inicial es:  " + CashMoney);
             Console.ReadKey();
             Console.WriteLine(" ");
@@ -78,6 +79,7 @@ namespace Entrega1
                                     buyingConsumable.ConsumibleMarket += Consu.OnBuy;
                                     buyingConsumable.Buying();
                                     CashMoney -= 48.20;
+                                    inventario += "\nfungicida";
                                     Console.ReadKey();
                                 }
                                 else if (res == "H")
@@ -85,6 +87,7 @@ namespace Entrega1
                                     buyingConsumable.ConsumibleMarket += Consu.OnBuy1;
                                     buyingConsumable.Buying();
                                     CashMoney -= 80.24;
+                                    inventario += "\nHerbicida";
                                     Console.ReadKey();
                                 }
 
@@ -93,6 +96,7 @@ namespace Entrega1
                                     buyingConsumable.ConsumibleMarket += Consu.OnBuy2;
                                     buyingConsumable.Buying();
                                     CashMoney -= 42.80;
+                                    inventario += "\npesticida";
                                     Console.ReadKey();
                                 }
 
@@ -101,11 +105,13 @@ namespace Entrega1
                                     buyingConsumable.ConsumibleMarket += Consu.OnBuy3;
                                     buyingConsumable.Buying();
                                     CashMoney -= 28.40;
+                                    inventario += "\nvacuna";
                                     Console.ReadKey();
                                 }
                                 else if (res == "V")
                                 {
                                     Console.WriteLine(CashMoney);
+                                    Console.WriteLine(inventario);
                                     Console.ReadKey();
                                     break;
                                 }
