@@ -47,6 +47,7 @@
     <Compile Include="entrega 03\Administrar_almacenamiento.cs" />
     <Compile Include="Animal.cs" />
     <Compile Include="entrega 03\CompraConsumible.cs" />
+    <Compile Include="entrega 03\VentaDestruir.cs" />
     <Compile Include="FunctionBrain.cs" />
     <Compile Include="Cattle.cs" />
     <Compile Include="consumibles\fertilizer.cs" />
