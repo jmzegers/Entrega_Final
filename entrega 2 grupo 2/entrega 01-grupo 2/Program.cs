@@ -58,7 +58,6 @@ namespace Entrega1
                         {
                             b.Message(2);
                             answe = Console.ReadLine().ToUpper();
-
                             Console.ReadKey();
                             break;
                         }

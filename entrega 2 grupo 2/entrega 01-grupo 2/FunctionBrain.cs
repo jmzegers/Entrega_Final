@@ -9,6 +9,13 @@ namespace entrega_01_grupo_2
 {
     class FunctionBrain
     {
+        ObjectBrain ob = new ObjectBrain();
+
+        public FunctionBrain()
+        {
+            priceHistory = this.priceHistory;
+        }
+        
         public void MapType()
         {
             Console.WriteLine("Elija uno de las siguientes configuraciones del mapa: ");
@@ -144,11 +151,66 @@ namespace entrega_01_grupo_2
             }
         }
 
+
+        public double SeedValue(double currentValue, double priceVar, double basePrice) //Calculador del cambio de precio de un turno a otro
+        {
+            double maxPrice = basePrice * 1.1; //El precio maximo es el 110% del original
+            double minPrice = basePrice * 0.9; //El precio minimo es el 90% del original
+            currentValue = currentValue + priceVar;
+
+            if (currentValue < minPrice || currentValue > maxPrice)
+            {
+                currentValue = basePrice;
+            }
+
+            return currentValue;
+        }
+
+        public Dictionary<string, Dictionary<int, double>> PriceHistoryMaker(int currentTurn)
+        {
+            Dictionary<string, Dictionary<int, double>> priceHistory = ob.GetPriceHistory();
+            foreach (KeyValuePair<string, Seed> seed in ob.GetSeedDict())
+            {
+                Dictionary<int, double> seedHistory = new Dictionary<int, double>();
+                string seedName = seed.Value.GetName();
+                double basePrice = seed.Value.GetBaseSellingPrice();
+                double priceVar = seed.Value.GetPriceVariation();
+                int turn = 1;
+                double currentVal = basePrice;
+
+                while (turn <= currentTurn)
+                {
+                    currentVal = SeedValue(currentVal, priceVar, basePrice);
+                    seedHistory.Add(turn, currentVal);
+                    turn += 1;
+                }
+
+                priceHistory.Add(seedName, seedHistory);
+            }
+
+            return priceHistory;
+        }
+
+
         public void EdifMarket(string a)
         {
             if (a == "P")
             {
-                Console.WriteLine("Semillas: ");
+                int turn = 30;
+                Dictionary<string, double> seedPrices = new Dictionary<string, double>();
+                Dictionary<string, Dictionary<int, double>> seedHistory = PriceHistoryMaker(turn);
+                foreach (KeyValuePair<string, Seed> seed in ob.GetSeedDict())
+                {
+                    string seedName = seed.Value.GetName();
+                    double seedPrice = seedHistory[seedName][turn + 1];
+                    seedPrices.Add(seedName, seedPrice);
+                }
+
+                Console.WriteLine("Las semillas disponibles y sus precios son: ");
+                foreach (KeyValuePair<string, double> priceList in seedPrices)
+                {
+                    Console.WriteLine("{0}:, {1}", priceList.Key, priceList.Value);
+                }
             }
         }
 
