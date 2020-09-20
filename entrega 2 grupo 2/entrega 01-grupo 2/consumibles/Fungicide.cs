@@ -11,7 +11,7 @@ namespace entrega_01_grupo_2
         private string Enemy;
         private double ChanceOfSuccess;
 
-        public Fungicide(int price, string enemy, double chanceOfSuccess) : base(price)
+        public Fungicide(double price, string enemy, double chanceOfSuccess) : base(price)
         {
             this.Enemy = enemy;
             this.ChanceOfSuccess = chanceOfSuccess;

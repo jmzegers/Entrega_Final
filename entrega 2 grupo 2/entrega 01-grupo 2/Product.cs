@@ -11,14 +11,14 @@ namespace entrega_01_grupo_2
         protected string Name;
         protected double PurchasePrice;
         protected double BaseSellingPrice;
-        protected int WaterConsumptionPerTurn;
+        protected double WaterConsumptionPerTurn;
         protected int MinWaterLv;
         protected int WaterPenalty;
         protected int ProductionTime;
         protected double DiseaseProbability;
         protected int DiseasePenalty;
 
-        public Product(string name, int purchase_price, int base_selling_price, int water_use_per_turn, int min_water_lv, 
+        public Product(string name, double purchase_price, double base_selling_price, int water_use_per_turn, int min_water_lv, 
             int water_penalty, int production_time, int disease_probability, int disease_penalty)
         {
             this.Name = name;
@@ -47,7 +47,7 @@ namespace entrega_01_grupo_2
             return BaseSellingPrice;
         }
 
-        public int GetWaterConsumptionPerTurn()
+        public double GetWaterConsumptionPerTurn()
         {
             return WaterConsumptionPerTurn;
         }
