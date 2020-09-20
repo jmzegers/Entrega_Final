@@ -64,12 +64,44 @@ namespace Entrega1
                             b.Message(2);
                             answe = Console.ReadLine().ToUpper();
                             Console.ReadKey();
-                            break;
+                            while (true)
+                            {
+                                answe = Console.ReadLine().ToUpper();
+                                if (answe == "P")
+                                {
+                                    Console.WriteLine("A comprado una plantacion");
+  
+                                }
+                                else if (answe == "G")
+                                {
+                                    Console.WriteLine("A comprado un ganado");
+
+                                }
+                                else if (answe == "A")
+                                {
+                                    Console.WriteLine("A comprado un edificio de almacenamiento");
+
+                                }
+                                else if (answe == "D")
+                                {
+                                    Console.WriteLine("ha destruido/vendido un edificio");
+
+                                }
+                                else if (answe == "V")
+                                {
+                                    Console.WriteLine("volviendo al mercado");
+                                    Console.ReadKey();
+                                    break;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("respuesta invalida");
+                                }
+                            }
                         }
                         else if (answ == "C")
                         {
                             b.Message(3);
-                            Console.ReadKey();
                             while (true)
                             {   
                                 res = Console.ReadLine().ToUpper();
@@ -79,7 +111,6 @@ namespace Entrega1
                                     buyingConsumable.Buying();
                                     CashMoney -= 48.20;
                                     inventario += "\nfungicida (cura)";
-                                    Console.ReadKey();
                                 }
                                 else if (res == "H")
                                 {
@@ -87,7 +118,7 @@ namespace Entrega1
                                     buyingConsumable.Buying();
                                     CashMoney -= 80.24;
                                     inventario += "\nHerbicida (cura)";
-                                    Console.ReadKey();
+
                                 }
 
                                 else if (res == "P")
@@ -96,7 +127,7 @@ namespace Entrega1
                                     buyingConsumable.Buying();
                                     CashMoney -= 42.80;
                                     inventario += "\npesticida (cura)";
-                                    Console.ReadKey();
+       
                                 }
 
                                 else if (res == "G")
@@ -105,7 +136,7 @@ namespace Entrega1
                                     buyingConsumable.Buying();
                                     CashMoney -= 28.40;
                                     inventario += "\nvacuna (cura)";
-                                    Console.ReadKey();
+                          
                                 }
                                 else if (res == "A")
                                 {
@@ -113,7 +144,7 @@ namespace Entrega1
                                     buyingConsumable.Buying();
                                     CashMoney -= 33.45;
                                     inventario += "\nFertilizante (alimento)";
-                                    Console.ReadKey();
+                      
                                 }
                                 else if (res == "R")
                                 {
@@ -121,7 +152,7 @@ namespace Entrega1
                                     buyingConsumable.Buying();
                                     CashMoney -= 56.31;
                                     inventario += "\nriego (alimento)";
-                                    Console.ReadKey();
+                     
                                 }
                                 else if (res == "K")
                                 {
@@ -129,7 +160,7 @@ namespace Entrega1
                                     buyingConsumable.Buying();
                                     CashMoney -= 44.96;
                                     inventario += "\nAlimento para animales (alimento)";
-                                    Console.ReadKey();
+                          
                                 }
                                 else if (res == "T")
                                 {
@@ -137,20 +168,24 @@ namespace Entrega1
                                     buyingConsumable.Buying();
                                     CashMoney -= 54.45;
                                     inventario += "\nAgua para animales (alimento)";
-                                    Console.ReadKey();
+                          
                                 }
                                 else if (res == "V")
                                 {
                                     Console.WriteLine(CashMoney);
+                                    Console.WriteLine("a comprado en total lo siguientes productos:  ");
                                     Console.WriteLine(inventario);
+                                    Console.WriteLine("volviendo al mercado");
                                     Console.ReadKey();
                                     break;
+
                                 }
                                 else
                                 {
                                     Console.WriteLine("respuesta invalida");
                                 }
                             }
+                            
                         }
 
                         
@@ -177,7 +212,7 @@ namespace Entrega1
                             Console.WriteLine("Ésa respuesta no es válida.");
                         }
                     }
-                    break;
+
                 }
                 else if (ans == "P")
                 {
@@ -195,105 +230,3 @@ namespace Entrega1
 
     }
 }
-/* por si quieren probarlo a aparte
- *  static void Main(string[] args)
-        {
-            double CashMoney = 50000.50;
-            string inventario = "";
-            String res = "X";
-            Ir_al_mercado_de_consumibles buyingConsumable = new Ir_al_mercado_de_consumibles();
-            CompraConsumible Consu = new CompraConsumible();
-
-            while (true)
-            {            
-                Console.WriteLine("Mercado de CONSUMIBLE");
-                Console.WriteLine("\nque desea comprar: ");
-                Console.WriteLine("Fungicida (cura) [F]");
-                Console.WriteLine("herbicida (cura) [H]");
-                Console.WriteLine("pesticida (cura) [P]");
-                Console.WriteLine("Vacuna (cura) [G]");
-                Console.WriteLine("Fertlizante (alimento) [A]");
-                Console.WriteLine("riego (alimento) [R]");
-                Console.WriteLine("Agua para animales (alimento) [K]");
-                Console.WriteLine("Alimento para animales (alimento) [T]");
-                Console.WriteLine("VOLVER [V]");
-                res = Console.ReadLine().ToUpper();
-                if (res == "F")
-                {
-                    buyingConsumable.ConsumibleMarket += Consu.OnBuy;
-                    buyingConsumable.Buying();
-                    CashMoney -= 48.20;
-                    inventario += "\nfungicida (cura)";
-                    Console.ReadKey();
-                }
-                else if (res == "H")
-                {
-                    buyingConsumable.ConsumibleMarket += Consu.OnBuy1;
-                    buyingConsumable.Buying();
-                    CashMoney -= 80.24;
-                    inventario += "\nHerbicida (cura)";
-                    Console.ReadKey();
-                }
-
-                else if (res == "P")
-                {
-                    buyingConsumable.ConsumibleMarket += Consu.OnBuy2;
-                    buyingConsumable.Buying();
-                    CashMoney -= 42.80;
-                    inventario += "\npesticida (cura)";
-                    Console.ReadKey();
-                }
-
-                else if (res == "G")
-                {
-                    buyingConsumable.ConsumibleMarket += Consu.OnBuy3;
-                    buyingConsumable.Buying();
-                    CashMoney -= 28.40;
-                    inventario += "\nvacuna (cura)";
-                    Console.ReadKey();
-                }
-                else if (res == "A")
-                {
-                    buyingConsumable.ConsumibleMarket += Consu.OnBuy4;
-                    buyingConsumable.Buying();
-                    CashMoney -= 33.45;
-                    inventario += "\nFertilizante (alimento)";
-                    Console.ReadKey();
-                }
-                else if (res == "R")
-                {
-                    buyingConsumable.ConsumibleMarket += Consu.OnBuy5;
-                    buyingConsumable.Buying();
-                    CashMoney -= 56.31;
-                    inventario += "\nriego (alimento)";
-                    Console.ReadKey();
-                }
-                else if (res == "K")
-                {
-                    buyingConsumable.ConsumibleMarket += Consu.OnBuy6;
-                    buyingConsumable.Buying();
-                    CashMoney -= 44.96;
-                    inventario += "\nAlimento para animales (alimento)";
-                    Console.ReadKey();
-                }
-                else if (res == "T")
-                {
-                    buyingConsumable.ConsumibleMarket += Consu.OnBuy7;
-                    buyingConsumable.Buying();
-                    CashMoney -= 54.45;
-                    inventario += "\nAgua para animales (alimento)";
-                    Console.ReadKey();
-                }
-                else if (res == "V")
-                {
-                    Console.WriteLine(CashMoney);
-                    Console.WriteLine(inventario);
-                    Console.ReadKey();
-                    break;
-                }
-                else
-                {
-                    Console.WriteLine("respuesta invalida");
-                }
-            }
-        }*/

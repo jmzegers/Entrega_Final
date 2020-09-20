@@ -13,7 +13,7 @@ namespace entrega_01_grupo_2
 
         public FunctionBrain()
         {
-            priceHistory = this.priceHistory;
+            //priceHistory = this.priceHistory;
         }
         
         public void MapType()
@@ -141,7 +141,8 @@ namespace entrega_01_grupo_2
                 Console.WriteLine("Una plantacion [P]");
                 Console.WriteLine("Ganado [G]");
                 Console.WriteLine("Un edificio de almacenamiento [A]");
-                Console.WriteLine("Destruir un edificio [D]");
+                Console.WriteLine("Vender/Destruir un edificio [D]");
+                Console.WriteLine("VOLVER [V]");
                 Console.WriteLine(" ");
             }
             else if (a == 3)
