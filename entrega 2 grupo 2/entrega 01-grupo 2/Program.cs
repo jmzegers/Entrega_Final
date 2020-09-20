@@ -78,7 +78,7 @@ namespace Entrega1
                                     buyingConsumable.ConsumibleMarket += Consu.OnBuy;
                                     buyingConsumable.Buying();
                                     CashMoney -= 48.20;
-                                    inventario += "\nfungicida";
+                                    inventario += "\nfungicida (cura)";
                                     Console.ReadKey();
                                 }
                                 else if (res == "H")
@@ -86,7 +86,7 @@ namespace Entrega1
                                     buyingConsumable.ConsumibleMarket += Consu.OnBuy1;
                                     buyingConsumable.Buying();
                                     CashMoney -= 80.24;
-                                    inventario += "\nHerbicida";
+                                    inventario += "\nHerbicida (cura)";
                                     Console.ReadKey();
                                 }
 
@@ -95,7 +95,7 @@ namespace Entrega1
                                     buyingConsumable.ConsumibleMarket += Consu.OnBuy2;
                                     buyingConsumable.Buying();
                                     CashMoney -= 42.80;
-                                    inventario += "\npesticida";
+                                    inventario += "\npesticida (cura)";
                                     Console.ReadKey();
                                 }
 
@@ -104,7 +104,39 @@ namespace Entrega1
                                     buyingConsumable.ConsumibleMarket += Consu.OnBuy3;
                                     buyingConsumable.Buying();
                                     CashMoney -= 28.40;
-                                    inventario += "\nvacuna";
+                                    inventario += "\nvacuna (cura)";
+                                    Console.ReadKey();
+                                }
+                                else if (res == "A")
+                                {
+                                    buyingConsumable.ConsumibleMarket += Consu.OnBuy4;
+                                    buyingConsumable.Buying();
+                                    CashMoney -= 33.45;
+                                    inventario += "\nFertilizante (alimento)";
+                                    Console.ReadKey();
+                                }
+                                else if (res == "R")
+                                {
+                                    buyingConsumable.ConsumibleMarket += Consu.OnBuy5;
+                                    buyingConsumable.Buying();
+                                    CashMoney -= 56.31;
+                                    inventario += "\nriego (alimento)";
+                                    Console.ReadKey();
+                                }
+                                else if (res == "K")
+                                {
+                                    buyingConsumable.ConsumibleMarket += Consu.OnBuy6;
+                                    buyingConsumable.Buying();
+                                    CashMoney -= 44.96;
+                                    inventario += "\nAlimento para animales (alimento)";
+                                    Console.ReadKey();
+                                }
+                                else if (res == "T")
+                                {
+                                    buyingConsumable.ConsumibleMarket += Consu.OnBuy7;
+                                    buyingConsumable.Buying();
+                                    CashMoney -= 54.45;
+                                    inventario += "\nAgua para animales (alimento)";
                                     Console.ReadKey();
                                 }
                                 else if (res == "V")
@@ -163,3 +195,105 @@ namespace Entrega1
 
     }
 }
+/* por si quieren probarlo a aparte
+ *  static void Main(string[] args)
+        {
+            double CashMoney = 50000.50;
+            string inventario = "";
+            String res = "X";
+            Ir_al_mercado_de_consumibles buyingConsumable = new Ir_al_mercado_de_consumibles();
+            CompraConsumible Consu = new CompraConsumible();
+
+            while (true)
+            {            
+                Console.WriteLine("Mercado de CONSUMIBLE");
+                Console.WriteLine("\nque desea comprar: ");
+                Console.WriteLine("Fungicida (cura) [F]");
+                Console.WriteLine("herbicida (cura) [H]");
+                Console.WriteLine("pesticida (cura) [P]");
+                Console.WriteLine("Vacuna (cura) [G]");
+                Console.WriteLine("Fertlizante (alimento) [A]");
+                Console.WriteLine("riego (alimento) [R]");
+                Console.WriteLine("Agua para animales (alimento) [K]");
+                Console.WriteLine("Alimento para animales (alimento) [T]");
+                Console.WriteLine("VOLVER [V]");
+                res = Console.ReadLine().ToUpper();
+                if (res == "F")
+                {
+                    buyingConsumable.ConsumibleMarket += Consu.OnBuy;
+                    buyingConsumable.Buying();
+                    CashMoney -= 48.20;
+                    inventario += "\nfungicida (cura)";
+                    Console.ReadKey();
+                }
+                else if (res == "H")
+                {
+                    buyingConsumable.ConsumibleMarket += Consu.OnBuy1;
+                    buyingConsumable.Buying();
+                    CashMoney -= 80.24;
+                    inventario += "\nHerbicida (cura)";
+                    Console.ReadKey();
+                }
+
+                else if (res == "P")
+                {
+                    buyingConsumable.ConsumibleMarket += Consu.OnBuy2;
+                    buyingConsumable.Buying();
+                    CashMoney -= 42.80;
+                    inventario += "\npesticida (cura)";
+                    Console.ReadKey();
+                }
+
+                else if (res == "G")
+                {
+                    buyingConsumable.ConsumibleMarket += Consu.OnBuy3;
+                    buyingConsumable.Buying();
+                    CashMoney -= 28.40;
+                    inventario += "\nvacuna (cura)";
+                    Console.ReadKey();
+                }
+                else if (res == "A")
+                {
+                    buyingConsumable.ConsumibleMarket += Consu.OnBuy4;
+                    buyingConsumable.Buying();
+                    CashMoney -= 33.45;
+                    inventario += "\nFertilizante (alimento)";
+                    Console.ReadKey();
+                }
+                else if (res == "R")
+                {
+                    buyingConsumable.ConsumibleMarket += Consu.OnBuy5;
+                    buyingConsumable.Buying();
+                    CashMoney -= 56.31;
+                    inventario += "\nriego (alimento)";
+                    Console.ReadKey();
+                }
+                else if (res == "K")
+                {
+                    buyingConsumable.ConsumibleMarket += Consu.OnBuy6;
+                    buyingConsumable.Buying();
+                    CashMoney -= 44.96;
+                    inventario += "\nAlimento para animales (alimento)";
+                    Console.ReadKey();
+                }
+                else if (res == "T")
+                {
+                    buyingConsumable.ConsumibleMarket += Consu.OnBuy7;
+                    buyingConsumable.Buying();
+                    CashMoney -= 54.45;
+                    inventario += "\nAgua para animales (alimento)";
+                    Console.ReadKey();
+                }
+                else if (res == "V")
+                {
+                    Console.WriteLine(CashMoney);
+                    Console.WriteLine(inventario);
+                    Console.ReadKey();
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("respuesta invalida");
+                }
+            }
+        }*/
