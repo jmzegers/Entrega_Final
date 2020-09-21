@@ -35,9 +35,9 @@ namespace Entrega1
                 }
             }
 
-            double CashMoney = 50000;
+            double cashMoney = 50000;
             string inventario = "";
-            Console.WriteLine("su monto inicial es:  " + CashMoney);
+            Console.WriteLine("su monto inicial es:  " + cashMoney);
             Console.ReadKey();
             Console.WriteLine(" ");
             Console.WriteLine("--------------------------");
@@ -69,17 +69,21 @@ namespace Entrega1
                                 answe = Console.ReadLine().ToUpper();
                                 if (answe == "P")
                                 {
-                                    Console.WriteLine("A comprado una plantacion");
+                                    b.EdifMarket("P", cashMoney);
   
                                 }
                                 else if (answe == "G")
                                 {
-                                    Console.WriteLine("A comprado un ganado");
+                                    b.EdifMarket("G", cashMoney);
 
                                 }
                                 else if (answe == "A")
                                 {
-                                    Console.WriteLine("A comprado un edificio de almacenamiento");
+                                    b.EdifMarket("A", cashMoney);
+
+                                }
+                                else if (answe == "C")
+                                {
 
                                 }
                                 else if (answe == "D")
@@ -109,14 +113,14 @@ namespace Entrega1
                                 {
                                     buyingConsumable.ConsumibleMarket += Consu.OnBuy;
                                     buyingConsumable.Buying();
-                                    CashMoney -= 48.20;
+                                    cashMoney -= 48.20;
                                     inventario += "\nfungicida (cura)";
                                 }
                                 else if (res == "H")
                                 {
                                     buyingConsumable.ConsumibleMarket += Consu.OnBuy1;
                                     buyingConsumable.Buying();
-                                    CashMoney -= 80.24;
+                                    cashMoney -= 80.24;
                                     inventario += "\nHerbicida (cura)";
 
                                 }
@@ -125,7 +129,7 @@ namespace Entrega1
                                 {
                                     buyingConsumable.ConsumibleMarket += Consu.OnBuy2;
                                     buyingConsumable.Buying();
-                                    CashMoney -= 42.80;
+                                    cashMoney -= 42.80;
                                     inventario += "\npesticida (cura)";
        
                                 }
@@ -134,7 +138,7 @@ namespace Entrega1
                                 {
                                     buyingConsumable.ConsumibleMarket += Consu.OnBuy3;
                                     buyingConsumable.Buying();
-                                    CashMoney -= 28.40;
+                                    cashMoney -= 28.40;
                                     inventario += "\nvacuna (cura)";
                           
                                 }
@@ -142,7 +146,7 @@ namespace Entrega1
                                 {
                                     buyingConsumable.ConsumibleMarket += Consu.OnBuy4;
                                     buyingConsumable.Buying();
-                                    CashMoney -= 33.45;
+                                    cashMoney -= 33.45;
                                     inventario += "\nFertilizante (alimento)";
                       
                                 }
@@ -150,7 +154,7 @@ namespace Entrega1
                                 {
                                     buyingConsumable.ConsumibleMarket += Consu.OnBuy5;
                                     buyingConsumable.Buying();
-                                    CashMoney -= 56.31;
+                                    cashMoney -= 56.31;
                                     inventario += "\nriego (alimento)";
                      
                                 }
@@ -158,7 +162,7 @@ namespace Entrega1
                                 {
                                     buyingConsumable.ConsumibleMarket += Consu.OnBuy6;
                                     buyingConsumable.Buying();
-                                    CashMoney -= 44.96;
+                                    cashMoney -= 44.96;
                                     inventario += "\nAlimento para animales (alimento)";
                           
                                 }
@@ -166,13 +170,13 @@ namespace Entrega1
                                 {
                                     buyingConsumable.ConsumibleMarket += Consu.OnBuy7;
                                     buyingConsumable.Buying();
-                                    CashMoney -= 54.45;
+                                    cashMoney -= 54.45;
                                     inventario += "\nAgua para animales (alimento)";
                           
                                 }
                                 else if (res == "V")
                                 {
-                                    Console.WriteLine(CashMoney);
+                                    Console.WriteLine(cashMoney);
                                     Console.WriteLine("a comprado en total lo siguientes productos:  ");
                                     Console.WriteLine(inventario);
                                     Console.WriteLine("volviendo al mercado");

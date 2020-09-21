@@ -10,6 +10,8 @@ namespace entrega_01_grupo_2
     class FunctionBrain
     {
         ObjectBrain ob = new ObjectBrain();
+        Ir_al_mercado_de_consumibles buyingConsumable = new Ir_al_mercado_de_consumibles();
+        CompraConsumible Consu = new CompraConsumible();
 
         public FunctionBrain()
         {
@@ -147,7 +149,7 @@ namespace entrega_01_grupo_2
             }
             else if (a == 3)
             {
-                Console.WriteLine("Bienvenid al Mercado de CONSUMIBLE");
+                Console.WriteLine("Bienvenido al Mercado de CONSUMIBLE");
                 Console.WriteLine("\nque desea comprar: ");
                 Console.WriteLine("Fungicida (cura) [F]");
                 Console.WriteLine("herbicida (cura) [H]");
@@ -338,8 +340,94 @@ namespace entrega_01_grupo_2
                 }
             }
             
-            else if (a == "D")
+            else if (a == "C")
             {
+                Console.WriteLine("Los productos consumibles son: ");
+                string inventario = "";
+
+                while (true)
+                {
+                    string res = Console.ReadLine().ToUpper();
+                    if (res == "F")
+                    {
+                        buyingConsumable.ConsumibleMarket += Consu.OnBuy;
+                        buyingConsumable.Buying();
+                        money -= 48.20;
+                        inventario += "\nfungicida (cura)";
+                    }
+                    else if (res == "H")
+                    {
+                        buyingConsumable.ConsumibleMarket += Consu.OnBuy1;
+                        buyingConsumable.Buying();
+                        money -= 80.24;
+                        inventario += "\nHerbicida (cura)";
+
+                    }
+
+                    else if (res == "P")
+                    {
+                        buyingConsumable.ConsumibleMarket += Consu.OnBuy2;
+                        buyingConsumable.Buying();
+                        money -= 42.80;
+                        inventario += "\npesticida (cura)";
+
+                    }
+
+                    else if (res == "G")
+                    {
+                        buyingConsumable.ConsumibleMarket += Consu.OnBuy3;
+                        buyingConsumable.Buying();
+                        money -= 28.40;
+                        inventario += "\nvacuna (cura)";
+
+                    }
+                    else if (res == "A")
+                    {
+                        buyingConsumable.ConsumibleMarket += Consu.OnBuy4;
+                        buyingConsumable.Buying();
+                        money -= 33.45;
+                        inventario += "\nFertilizante (alimento)";
+
+                    }
+                    else if (res == "R")
+                    {
+                        buyingConsumable.ConsumibleMarket += Consu.OnBuy5;
+                        buyingConsumable.Buying();
+                        money -= 56.31;
+                        inventario += "\nriego (alimento)";
+
+                    }
+                    else if (res == "K")
+                    {
+                        buyingConsumable.ConsumibleMarket += Consu.OnBuy6;
+                        buyingConsumable.Buying();
+                        money -= 44.96;
+                        inventario += "\nAlimento para animales (alimento)";
+
+                    }
+                    else if (res == "T")
+                    {
+                        buyingConsumable.ConsumibleMarket += Consu.OnBuy7;
+                        buyingConsumable.Buying();
+                        money -= 54.45;
+                        inventario += "\nAgua para animales (alimento)";
+
+                    }
+                    else if (res == "V")
+                    {
+                        Console.WriteLine(money);
+                        Console.WriteLine("a comprado en total lo siguientes productos:  ");
+                        Console.WriteLine(inventario);
+                        Console.WriteLine("volviendo al mercado");
+                        Console.ReadKey();
+                        break;
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("respuesta invalida");
+                    }
+                }
 
             }
 
