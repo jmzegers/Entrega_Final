@@ -206,13 +206,14 @@ namespace entrega_01_grupo_2
         }
 
 
-        public void EdifMarket(string a)
+        public double EdifMarket(string a, double money)
         {
-            if (a == "P")
+            if (a == "P") //Plantacion
             {
                 int turn = 30;
                 Dictionary<string, double> seedPrices = new Dictionary<string, double>();
                 Dictionary<string, Dictionary<int, double>> seedHistory = PriceHistoryMaker(turn);
+                
                 foreach (KeyValuePair<string, Seed> seed in ob.GetSeedDict())
                 {
                     string seedName = seed.Value.GetName();
@@ -220,12 +221,139 @@ namespace entrega_01_grupo_2
                     seedPrices.Add(seedName, seedPrice);
                 }
 
+                int prodNum = 1;
                 Console.WriteLine("Las semillas disponibles y sus precios son: ");
                 foreach (KeyValuePair<string, double> priceList in seedPrices)
                 {
-                    Console.WriteLine("{0}:, {1}", priceList.Key, priceList.Value);
+                    Console.WriteLine(prodNum + "." + "{0}:, {1}", priceList.Key + "       " + priceList.Value);
+                    prodNum += 1;
+                }
+
+                Console.WriteLine(" ");
+                Console.WriteLine("¿Cual desea comprar? Escriba el nombre del producto");
+
+                string productName = Console.ReadLine();
+                Seed seedBought = ob.GetSeedDict()["tomate"];
+
+                try
+                {
+                    seedBought = ob.GetSeedDict()[productName];
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine("Ese producto no existe");
+                }
+
+                string n = seedBought.GetName();
+                double seedValue = seedPrices[n];
+                if(seedValue > money)
+                {
+                    Console.WriteLine("No tienes suficiente dinero");
+                }
+                else
+                {
+                    money = money - seedValue;
+                    //Aca hay que añadirle el producto al inventario del jugador
                 }
             }
+
+            else if (a == "G") //Ganado
+            {
+                Dictionary<string, Cattle> cattleDict = ob.GetCattleDict();
+                Console.WriteLine("Los ganados disponibles son: ");
+                int prodNumber = 1;
+
+                foreach(KeyValuePair<string, Cattle> c in cattleDict)
+                {
+                    string name = c.Key;
+                    double price = c.Value.GetPurchasePrice();
+                    Console.WriteLine(prodNumber + "." + name + "      " + price);
+                    prodNumber += 1;
+                }
+
+                Console.WriteLine("¿Cual desea comprar? Escriba el nombre del producto");
+                string prodName = Console.ReadLine();
+                Cattle cattleBought = ob.GetCattleDict()["vacas"];
+
+                try
+                {
+                    cattleBought = ob.GetCattleDict()[prodName];
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine("Ese producto no existe");
+                }
+
+                double prodPrice = cattleBought.GetPurchasePrice();
+                if(prodPrice > money)
+                {
+                    Console.WriteLine("No tienes suficiente dinero");
+                }
+                else
+                {
+                    money = money - prodPrice;
+                    //Aca hay que añadirle el producto al inventario del jugador
+                }
+
+
+            }
+
+            else if (a == "A")//Edificios de Almacenamiento
+            {
+                Dictionary<string, StorageBuilding> storageDict = ob.GetStorageBuildingDict();
+                Console.WriteLine("Los edificios de almacenamiento disponibles son: ");
+                int prodNumber = 1;
+
+                foreach(KeyValuePair<string, StorageBuilding> s in storageDict)
+                {
+                    string name = s.Key;
+                    double price = s.Value.GetPurchasePrice();
+                    Console.WriteLine(prodNumber + "." + name + "      " + price);
+                    prodNumber += 1;
+                }
+
+                Console.WriteLine("¿Cual desea comprar? Escriba el nombre del producto");
+                string prodName = Console.ReadLine();
+
+                StorageBuilding storageBought = ob.GetStorageBuildingDict()["Z"];
+
+                try
+                {
+                    storageBought = ob.GetStorageBuildingDict()[prodName];
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine("Ese producto no existe");
+                }
+
+                double prodPrice = storageBought.GetPurchasePrice();
+                if (prodPrice > money)
+                {
+                    Console.WriteLine("No tienes suficiente dinero");
+                }
+                else
+                {
+                    money = money - prodPrice;
+                    //Aca hay que añadirle el producto al inventario del jugador
+                }
+            }
+            
+            else if (a == "D")
+            {
+
+            }
+
+            else if (a == "V")
+            {
+
+            }
+
+            else
+            {
+                Console.WriteLine("El comando para esta letra no existe");
+            }
+
+            return money;
         }
 
     }
