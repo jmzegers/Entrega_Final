@@ -21,5 +21,17 @@ namespace entrega_01_grupo_2
             if (DestructionSell != null)
                 DestructionSell(this, EventArgs.Empty);
         }
+        public void descision()
+        {
+            OnSellOrDestruction();
+            Console.WriteLine("acaba de destruir...    ");
+
+        }
+        public void descision1()
+        {
+            OnSellOrDestruction1();
+            Console.WriteLine("acaba de vender...    ");
+
+        }
     }
 }

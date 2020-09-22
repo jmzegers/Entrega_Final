@@ -10,6 +10,8 @@ namespace entrega_01_grupo_2
     class FunctionBrain
     {
         ObjectBrain ob = new ObjectBrain();
+        Ir_al_mercado_de_consumibles buyingConsumable = new Ir_al_mercado_de_consumibles();
+        CompraConsumible Consu = new CompraConsumible();
 
         public FunctionBrain()
         {
@@ -115,7 +117,7 @@ namespace entrega_01_grupo_2
         {
             if (a == 0)
             {
-                Console.WriteLine("Que desea hacer");
+                Console.WriteLine("\nQue desea hacer");
                 Console.WriteLine("Ir a Administrar la granja [A]");
                 Console.WriteLine("Ir al mercado [M]");
                 Console.WriteLine("Pasar de turno [P]");
@@ -125,7 +127,7 @@ namespace entrega_01_grupo_2
 
             else if (a == 1)
             {
-                Console.WriteLine("¿Que desea hacer en el mercado?");
+                Console.WriteLine("\n¿Que desea hacer en el mercado?");
                 Console.WriteLine("Ir al mercado de edificaciones[E]");
                 Console.WriteLine("Ir al mercado de consumibles [C]");
                 Console.WriteLine("Ir al mercado de propiedades [P]");
@@ -136,7 +138,7 @@ namespace entrega_01_grupo_2
 
             else if (a == 2)
             {
-                Console.WriteLine("Bienvenido al Mercado de EDIFICACIONES");
+                Console.WriteLine("\nBienvenido al Mercado de EDIFICACIONES");
                 Console.WriteLine("¿Que desea comprar?");
                 Console.WriteLine("Una plantacion [P]");
                 Console.WriteLine("Ganado [G]");
@@ -147,7 +149,7 @@ namespace entrega_01_grupo_2
             }
             else if (a == 3)
             {
-                Console.WriteLine("Bienvenid al Mercado de CONSUMIBLE");
+                Console.WriteLine("\nBienvenido al Mercado de CONSUMIBLE");
                 Console.WriteLine("\nque desea comprar: ");
                 Console.WriteLine("Fungicida (cura) [F]");
                 Console.WriteLine("herbicida (cura) [H]");
@@ -157,6 +159,13 @@ namespace entrega_01_grupo_2
                 Console.WriteLine("riego (alimento) [R]");
                 Console.WriteLine("Agua para animales (alimento) [K]");
                 Console.WriteLine("Alimento para animales (alimento) [T]");
+                Console.WriteLine("VOLVER [V]");
+            }
+            else if (a == 4)
+            {
+                Console.WriteLine("\nha destruido/vendido un edificio, ¿que quiere hacer?");
+                Console.WriteLine("\nDestruir [D]");
+                Console.WriteLine("Vender [B]");
                 Console.WriteLine("VOLVER [V]");
             }
             else
@@ -206,13 +215,14 @@ namespace entrega_01_grupo_2
         }
 
 
-        public void EdifMarket(string a)
+        public double EdifMarket(string a, double money)
         {
-            if (a == "P")
+            if (a == "P") //Plantacion
             {
                 int turn = 30;
                 Dictionary<string, double> seedPrices = new Dictionary<string, double>();
                 Dictionary<string, Dictionary<int, double>> seedHistory = PriceHistoryMaker(turn);
+                
                 foreach (KeyValuePair<string, Seed> seed in ob.GetSeedDict())
                 {
                     string seedName = seed.Value.GetName();
@@ -220,12 +230,225 @@ namespace entrega_01_grupo_2
                     seedPrices.Add(seedName, seedPrice);
                 }
 
+                int prodNum = 1;
                 Console.WriteLine("Las semillas disponibles y sus precios son: ");
                 foreach (KeyValuePair<string, double> priceList in seedPrices)
                 {
-                    Console.WriteLine("{0}:, {1}", priceList.Key, priceList.Value);
+                    Console.WriteLine(prodNum + "." + "{0}:, {1}", priceList.Key + "       " + priceList.Value);
+                    prodNum += 1;
+                }
+
+                Console.WriteLine(" ");
+                Console.WriteLine("¿Cual desea comprar? Escriba el nombre del producto");
+
+                string productName = Console.ReadLine();
+                Seed seedBought = ob.GetSeedDict()["tomate"];
+
+                try
+                {
+                    seedBought = ob.GetSeedDict()[productName];
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine("Ese producto no existe");
+                }
+
+                string n = seedBought.GetName();
+                double seedValue = seedPrices[n];
+                if(seedValue > money)
+                {
+                    Console.WriteLine("No tienes suficiente dinero");
+                }
+                else
+                {
+                    money = money - seedValue;
+                    //Aca hay que añadirle el producto al inventario del jugador
                 }
             }
+
+            else if (a == "G") //Ganado
+            {
+                Dictionary<string, Cattle> cattleDict = ob.GetCattleDict();
+                Console.WriteLine("Los ganados disponibles son: ");
+                int prodNumber = 1;
+
+                foreach(KeyValuePair<string, Cattle> c in cattleDict)
+                {
+                    string name = c.Key;
+                    double price = c.Value.GetPurchasePrice();
+                    Console.WriteLine(prodNumber + "." + name + "      " + price);
+                    prodNumber += 1;
+                }
+
+                Console.WriteLine("¿Cual desea comprar? Escriba el nombre del producto");
+                string prodName = Console.ReadLine();
+                Cattle cattleBought = ob.GetCattleDict()["vacas"];
+
+                try
+                {
+                    cattleBought = ob.GetCattleDict()[prodName];
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine("Ese producto no existe");
+                }
+
+                double prodPrice = cattleBought.GetPurchasePrice();
+                if(prodPrice > money)
+                {
+                    Console.WriteLine("No tienes suficiente dinero");
+                }
+                else
+                {
+                    money = money - prodPrice;
+                    //Aca hay que añadirle el producto al inventario del jugador
+                }
+
+
+            }
+
+            else if (a == "A")//Edificios de Almacenamiento
+            {
+                Dictionary<string, StorageBuilding> storageDict = ob.GetStorageBuildingDict();
+                Console.WriteLine("Los edificios de almacenamiento disponibles son: ");
+                int prodNumber = 1;
+
+                foreach(KeyValuePair<string, StorageBuilding> s in storageDict)
+                {
+                    string name = s.Key;
+                    double price = s.Value.GetPurchasePrice();
+                    Console.WriteLine(prodNumber + "." + name + "      " + price);
+                    prodNumber += 1;
+                }
+
+                Console.WriteLine("¿Cual desea comprar? Escriba el nombre del producto");
+                string prodName = Console.ReadLine();
+
+                StorageBuilding storageBought = ob.GetStorageBuildingDict()["Z"];
+
+                try
+                {
+                    storageBought = ob.GetStorageBuildingDict()[prodName];
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine("Ese producto no existe");
+                }
+
+                double prodPrice = storageBought.GetPurchasePrice();
+                if (prodPrice > money)
+                {
+                    Console.WriteLine("No tienes suficiente dinero");
+                }
+                else
+                {
+                    money = money - prodPrice;
+                    //Aca hay que añadirle el producto al inventario del jugador
+                }
+            }
+            
+            else if (a == "C")
+            {
+                Console.WriteLine("Los productos consumibles son: ");
+                string inventario = "";
+
+                while (true)
+                {
+                    string res = Console.ReadLine().ToUpper();
+                    if (res == "F")
+                    {
+                        buyingConsumable.ConsumibleMarket += Consu.OnBuy;
+                        buyingConsumable.Buying();
+                        money -= 48.20;
+                        inventario += "\nfungicida (cura)";
+                    }
+                    else if (res == "H")
+                    {
+                        buyingConsumable.ConsumibleMarket += Consu.OnBuy1;
+                        buyingConsumable.Buying();
+                        money -= 80.24;
+                        inventario += "\nHerbicida (cura)";
+
+                    }
+
+                    else if (res == "P")
+                    {
+                        buyingConsumable.ConsumibleMarket += Consu.OnBuy2;
+                        buyingConsumable.Buying();
+                        money -= 42.80;
+                        inventario += "\npesticida (cura)";
+
+                    }
+
+                    else if (res == "G")
+                    {
+                        buyingConsumable.ConsumibleMarket += Consu.OnBuy3;
+                        buyingConsumable.Buying();
+                        money -= 28.40;
+                        inventario += "\nvacuna (cura)";
+
+                    }
+                    else if (res == "A")
+                    {
+                        buyingConsumable.ConsumibleMarket += Consu.OnBuy4;
+                        buyingConsumable.Buying();
+                        money -= 33.45;
+                        inventario += "\nFertilizante (alimento)";
+
+                    }
+                    else if (res == "R")
+                    {
+                        buyingConsumable.ConsumibleMarket += Consu.OnBuy5;
+                        buyingConsumable.Buying();
+                        money -= 56.31;
+                        inventario += "\nriego (alimento)";
+
+                    }
+                    else if (res == "K")
+                    {
+                        buyingConsumable.ConsumibleMarket += Consu.OnBuy6;
+                        buyingConsumable.Buying();
+                        money -= 44.96;
+                        inventario += "\nAlimento para animales (alimento)";
+
+                    }
+                    else if (res == "T")
+                    {
+                        buyingConsumable.ConsumibleMarket += Consu.OnBuy7;
+                        buyingConsumable.Buying();
+                        money -= 54.45;
+                        inventario += "\nAgua para animales (alimento)";
+
+                    }
+                    else if (res == "V")
+                    {
+                        Console.WriteLine(money);
+                        Console.WriteLine("a comprado en total lo siguientes productos:  ");
+                        Console.WriteLine(inventario);
+                        Console.WriteLine("volviendo al mercado");
+                        Console.ReadKey();
+                        break;
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("respuesta invalida");
+                    }
+                }
+
+            }
+
+            else if (a == "V")
+            {
+
+            }
+
+            else
+            {
+                Console.WriteLine("El comando para esta letra no existe");
+            }
+
+            return money;
         }
 
     }

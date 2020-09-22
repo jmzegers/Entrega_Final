@@ -12,22 +12,23 @@ namespace entrega_01_grupo_2
 
         Dictionary<string, Seed> seedDict = new Dictionary<string, Seed>();
         Dictionary<string, Dictionary<int, double>> priceHistory = new Dictionary<string, Dictionary<int, double>>();
-
-        public ObjectBrain(Dictionary<string, Seed> SeedDict, Dictionary<string, Dictionary<int, double>> PriceHistory)
-        {
-            SeedDict = this.seedDict;
-            PriceHistory = this.priceHistory;
-        }
-        
         //Hay que crear varias semillas y dar sus valores
-       // Seed tomato = new Seed();
-       // Seed lettuce = new Seed();
-       // Seed carrot = new Seed();
+        // Seed tomato = new Seed();
+        // Seed lettuce = new Seed();
+        // Seed carrot = new Seed();
+
+        Dictionary<string, Cattle> cattleDict = new Dictionary<string, Cattle>();
+        //Tambien hay que crear varios diferentes tipos de ganado con sus valores respectivos para rellenar este diccionario
+
+        Dictionary<string, StorageBuilding> storageBuildingDict = new Dictionary<string, StorageBuilding>();
+        //La misma historia
+
         
         public ObjectBrain()
         {
             //seedDict.Add("Tomate", tomato);
             //seedDict.Add("Lechuga", lettuce);
+            
         }
 
         public Dictionary<string, Seed> GetSeedDict()
@@ -38,6 +39,16 @@ namespace entrega_01_grupo_2
         public Dictionary<string, Dictionary<int, double>> GetPriceHistory()
         {
             return priceHistory;
+        }
+
+        public Dictionary<string, Cattle> GetCattleDict()
+        {
+            return cattleDict;
+        }
+
+        public Dictionary<string, StorageBuilding> GetStorageBuildingDict()
+        {
+            return storageBuildingDict;
         }
     }
 }
