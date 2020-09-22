@@ -117,6 +117,7 @@ namespace Entrega1
                                         {
                                             Console.WriteLine("VOLVIENDO AL MENU ANTERIOR");
                                             Console.WriteLine(cashMoney);
+                                            Console.ReadKey();
                                             break;
                                         }
                                         else

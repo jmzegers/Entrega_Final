@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace entrega_01_grupo_2.entrega_03
 {
-    class precios_30_turnos
+    class CompraAlmacenamiento
     {
-        public delegate void Prices30Shifts(object source, EventArgs args);
-        public event Prices30Shifts TurnosPrecios;
     }
 }
