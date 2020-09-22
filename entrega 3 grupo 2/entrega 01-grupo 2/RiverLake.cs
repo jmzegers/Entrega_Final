@@ -14,7 +14,8 @@ namespace entrega_01_grupo_2
             Console.BackgroundColor = ConsoleColor.Green;
             Console.ForegroundColor = ConsoleColor.Black;
         }
-        
+
+
         public MapCreator(bool YesRiver, bool YesLake)
         {
             // Create Terrain (creacion del terreno)
@@ -22,6 +23,8 @@ namespace entrega_01_grupo_2
             List<List<int>> rowList = t.RowListCreator();
             Console.BackgroundColor = ConsoleColor.Green;
             Console.ForegroundColor = ConsoleColor.Black;
+
+            Dictionary<string, int> coordinates = new Dictionary<string, int>();
 
             Random randNum = new Random();
             int HoV = randNum.Next(0, 2);
@@ -198,7 +201,11 @@ namespace entrega_01_grupo_2
                 a += 1;
             }
 
-
+            coordinates.Add("FarmPlaceX", farmPlaceX);
+            coordinates.Add("FarmPlaceY", farmPlaceY);
+            coordinates.Add("LakePlaceX", lakePlaceX);
+            coordinates.Add("LakePlaceY", lakePlaceY);
+            coordinates.Add("River", firstCol);
         }
     }
 }

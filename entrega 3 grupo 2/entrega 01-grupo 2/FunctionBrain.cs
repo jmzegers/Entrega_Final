@@ -259,9 +259,37 @@ namespace entrega_01_grupo_2
                 {
                     Console.WriteLine("No tienes suficiente dinero");
                 }
-                else
+                else //Si llega aca, entonces la compra fue exitosa
                 {
                     money = money - seedValue;
+                    Console.WriteLine("Elija el lugar donde quiera poner la plantacion [1 - 100]");
+                    Console.WriteLine("Eje X: ");
+                    while (true)
+                    {
+                        try
+                        {
+                            int EjeX = Convert.ToInt32(Console.ReadLine());
+                            break;
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine("Debe ser un numero");
+                        }
+                    }
+                    Console.WriteLine("Eje Y: ");
+                    while (true)
+                    {
+                        try
+                        {
+                            int EjeY = Convert.ToInt32(Console.ReadLine());
+                            break;
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine("Debe ser un numero");
+                        }
+                    }
+                    if()
                     //Aca hay que añadirle el producto al inventario del jugador
                 }
             }
