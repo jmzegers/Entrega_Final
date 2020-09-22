@@ -25,8 +25,6 @@ namespace entrega_01_grupo_2
 
             Random randNum = new Random();
             int HoV = randNum.Next(0, 2);
-            int LoV = 3;
-            int block = randNum.Next(3, 3);
             //0 es vertical, 1 es horizontal
 
             int farmPlaceX = randNum.Next(0, 6);
@@ -42,8 +40,7 @@ namespace entrega_01_grupo_2
             int firstCol = 0;
             if (HoV == 0)
             {
-                bool a2 = true;
-                while (a2 == true)
+                while (true)
                 {
                     firstCol = randNum.Next(0, 99);
                     if (firstCol >= farmPlaceX && firstCol <= farmPlaceX + 30)
@@ -53,16 +50,15 @@ namespace entrega_01_grupo_2
 
                     else
                     {
-                        a2 = false;
+                        break;
                     }
                 }
             }
             else
             {
                 firstCol = randNum.Next(0, 100);
-                bool a2 = true;
 
-                while (a2 == true)
+                while (true)
                 {
                     if (firstCol >= farmPlaceY && firstCol <= farmPlaceY + 20)
                     {
@@ -70,7 +66,7 @@ namespace entrega_01_grupo_2
                     }
                     else
                     {
-                        a2 = false;
+                        break;
                     }
                 }
             }
@@ -95,8 +91,7 @@ namespace entrega_01_grupo_2
                             }
                             else
                             {
-                                Console.BackgroundColor = ConsoleColor.Green;
-                                Console.ForegroundColor = ConsoleColor.Black;
+                                DefaultColor();
                             }
                         }
 
@@ -114,97 +109,84 @@ namespace entrega_01_grupo_2
                             }
                         }
                     }
+                    
+                    
                     // Create Lake (crea lago)
                     if (YesLake == true)
                     {
-                        if (a > lakePlaceY && a < lakePlaceY + 15)
+                        while (true)
                         {
-                            if (b > lakePlaceX && b < lakePlaceX + 15)
+                            if (lakePlaceX >= farmPlaceX && lakePlaceX <= farmPlaceX + 30)
                             {
-                                Console.BackgroundColor = ConsoleColor.Blue;
-                                Console.ForegroundColor = ConsoleColor.White;// para que se vean la pregunta de si se quiere generar otro
-                                                                                // mapa
+                                lakePlaceX = randNum.Next(6, 10);
+                                lakePlaceX = lakePlaceX * 10;
                             }
-
-                            else if (b > firstCol && b < firstCol + 6)
+                            else if (lakePlaceY >= farmPlaceY && lakePlaceY <= lakePlaceY + 20)
                             {
-                                if (LoV == 3)
+                                lakePlaceY = randNum.Next(5, 10);
+                                lakePlaceY = lakePlaceY * 10;
+                            }
+                            else
+                            {
+                                if (YesRiver == true)
                                 {
-                                    if (YesRiver == false)
+                                    if (HoV == 0)
                                     {
-                                        Console.BackgroundColor = ConsoleColor.Green;
-                                        Console.ForegroundColor = ConsoleColor.Black;
-                                    }
-                                    else if (HoV != 0)
-                                    {
-                                        Console.BackgroundColor = ConsoleColor.Green;
-                                        Console.ForegroundColor = ConsoleColor.Black;
+                                        if (lakePlaceX >= firstCol && lakePlaceX <= firstCol + 6)
+                                        {
+                                            lakePlaceX = randNum.Next(6, 10);
+                                            lakePlaceX = lakePlaceX * 10;
+                                        }
+                                        else
+                                        {
+                                            break;
+                                        }
                                     }
                                     else
                                     {
-                                        Console.BackgroundColor = ConsoleColor.Blue;
-                                        Console.ForegroundColor = ConsoleColor.White;// para que se vean la pregunta de si se quiere generar otro
-                                                                                        // mapa
+                                        if (lakePlaceY >= firstCol && lakePlaceY <= firstCol + 6)
+                                        {
+                                            lakePlaceY = randNum.Next(5, 10);
+                                            lakePlaceY = lakePlaceY * 10;
+                                        }
+                                        else
+                                        {
+                                            break;
+                                        }
                                     }
-
                                 }
-
                                 else
                                 {
-                                    Console.BackgroundColor = ConsoleColor.Green;
-                                    Console.ForegroundColor = ConsoleColor.Black;
+                                    break;
                                 }
+                            }
+                        }
+                        
 
+
+                        if (a >= lakePlaceY && a <= lakePlaceY + 15)
+                        {
+                            if (b >= lakePlaceX && b <= lakePlaceX + 15)
+                            {
+                                Console.BackgroundColor = ConsoleColor.Blue;
+                                Console.ForegroundColor = ConsoleColor.White;// para que se vean la pregunta de si se quiere generar otro
+                                                                             // mapa
                             }
                             else
                             {
                                 DefaultColor();
                             }
-
                         }
                     }
                     //Create Farm (crea granja)
-                    if (a > farmPlaceY && a < farmPlaceY + 30)
+                    if (a >= farmPlaceY && a <= farmPlaceY + 30)
                     {
-                        if (b > farmPlaceX && b < farmPlaceX + 20)
+                        if (b >= farmPlaceX && b <= farmPlaceX + 20)
                         {
                             Console.BackgroundColor = ConsoleColor.DarkGray;
                             Console.ForegroundColor = ConsoleColor.DarkGray;
                         }
-
-                        else if (b > firstCol && b < firstCol + 6)
-                        {
-                            if(HoV == 0)
-                            { 
-                                if (YesRiver == false)
-                                {                      
-                                    Console.BackgroundColor = ConsoleColor.Green;
-                                    Console.ForegroundColor = ConsoleColor.Black;
-                                }
-                                else
-                                {
-                                    Console.BackgroundColor = ConsoleColor.Blue;
-                                    Console.ForegroundColor = ConsoleColor.White; // para que se vean la pregunta de si se quiere generar otro
-                                    // mapa
-                                }
-
-                            }
-                          
-                            else
-                            {
-                                Console.BackgroundColor = ConsoleColor.Green;
-                                Console.ForegroundColor = ConsoleColor.Black;
-                            }
-                        }
-
-                        else
-                        {
-                            DefaultColor();
-                        }
                     }
-
-                    
-
                     Console.Write(row[b]);
                     Console.Write(" ");
 
