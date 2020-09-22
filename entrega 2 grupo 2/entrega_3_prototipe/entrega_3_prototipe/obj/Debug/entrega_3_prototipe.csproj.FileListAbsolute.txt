@@ -1,7 +1,0 @@
-C:\Users\56984\Desktop\proyecto-entrega-1-grupo-2\entrega 2 grupo 2\entrega_3_prototipe\entrega_3_prototipe\bin\Debug\entrega_3_prototipe.exe.config
-C:\Users\56984\Desktop\proyecto-entrega-1-grupo-2\entrega 2 grupo 2\entrega_3_prototipe\entrega_3_prototipe\bin\Debug\entrega_3_prototipe.exe
-C:\Users\56984\Desktop\proyecto-entrega-1-grupo-2\entrega 2 grupo 2\entrega_3_prototipe\entrega_3_prototipe\bin\Debug\entrega_3_prototipe.pdb
-C:\Users\56984\Desktop\proyecto-entrega-1-grupo-2\entrega 2 grupo 2\entrega_3_prototipe\entrega_3_prototipe\obj\Debug\entrega_3_prototipe.csprojAssemblyReference.cache
-C:\Users\56984\Desktop\proyecto-entrega-1-grupo-2\entrega 2 grupo 2\entrega_3_prototipe\entrega_3_prototipe\obj\Debug\entrega_3_prototipe.csproj.CoreCompileInputs.cache
-C:\Users\56984\Desktop\proyecto-entrega-1-grupo-2\entrega 2 grupo 2\entrega_3_prototipe\entrega_3_prototipe\obj\Debug\entrega_3_prototipe.exe
-C:\Users\56984\Desktop\proyecto-entrega-1-grupo-2\entrega 2 grupo 2\entrega_3_prototipe\entrega_3_prototipe\obj\Debug\entrega_3_prototipe.pdb
