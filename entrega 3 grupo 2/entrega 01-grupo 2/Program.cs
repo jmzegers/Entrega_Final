@@ -85,10 +85,6 @@ namespace Entrega1
                                     b.EdifMarket("A", cashMoney);
 
                                 }
-                                else if (answe == "C")
-                                {
-
-                                }
                                 else if (answe == "D")
                                 {
                                     b.Message(4);
@@ -98,8 +94,9 @@ namespace Entrega1
                                         if (resp == "D")
                                         {
                                             Console.WriteLine("ha destruido el edificio");
-                                            DestSell.DestructionSell += VD.OnSellOrDestruction;
-                                            DestSell.descision();
+                                           // DestSell.descision();
+                                            DestSell.DestructionSell += VD.OnSellOrDestruction1;
+
                                             cashMoney -= (cashMoney * ((0.5) + (0.078 * 2)));
                                             Console.WriteLine("  dinero actual:  " + cashMoney);
                                             break;
@@ -107,8 +104,9 @@ namespace Entrega1
                                         else if (resp == "B")
                                         {
                                             Console.WriteLine("ha vendido el edificio");
-                                            DestSell.DestructionSell += VD.OnSellOrDestruction1;
-                                            DestSell.descision1();
+                                            // DestSell.descision1();
+                                            DestSell.DestructionSell += VD.OnSellOrDestruction;
+
                                             cashMoney += (cashMoney * (0.64) - (0.433));
                                             Console.WriteLine("  dinero actual:  " + cashMoney);
                                             break;

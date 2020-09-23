@@ -289,7 +289,10 @@ namespace entrega_01_grupo_2
                             Console.WriteLine("Debe ser un numero");
                         }
                     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> af3667672ac3ae6d045c31d1b9c0af8d93a790a5
                     //Aca hay que añadirle el producto al inventario del jugador
                 }
             }
@@ -352,7 +355,7 @@ namespace entrega_01_grupo_2
                 Console.WriteLine("¿Cual desea comprar? Escriba el nombre del producto");
                 string prodName = Console.ReadLine();
 
-                StorageBuilding storageBought = ob.GetStorageBuildingDict()["Z"];
+                StorageBuilding storageBought = ob.GetStorageBuildingDict()["Z"]; 
 
                 try
                 {

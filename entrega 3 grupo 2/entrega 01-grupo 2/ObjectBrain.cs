@@ -30,9 +30,10 @@ namespace entrega_01_grupo_2
         Animal Sheep = new Animal("Sheep", 30, 25, 5, 5, 2, 5, 15, 2, 1, 1, 2, 10, 5, 1, 10, 3, 1, 10);
 
         Dictionary<string, StorageBuilding> storageBuildingDict = new Dictionary<string, StorageBuilding>();
-        StorageBuilding SmallStorageBuilding = new StorageBuilding("Small Storage Building", 100, 50, 500);
-        StorageBuilding MediumStorageBuilding = new StorageBuilding("Medium Storage Building", 200, 150, 1000);
-        StorageBuilding LargeStorageBuilding = new StorageBuilding("Large Storage Building", 400, 350, 2000);
+        StorageBuilding SmallStorageBuilding = new StorageBuilding("Small Storage Building", 100, 50, 500, "A");
+        StorageBuilding MediumStorageBuilding = new StorageBuilding("Medium Storage Building", 200, 150, 1000, "B");
+        StorageBuilding LargeStorageBuilding = new StorageBuilding("Large Storage Building", 400, 350, 2000, "C");
+        private Dictionary<string, Cattle> cattleDict;
 
         public ObjectBrain()
         {

@@ -14,7 +14,11 @@ namespace entrega_01_grupo_2
         private double DiseaseChance;
         private int WormChance;
         private int WeedChance;
-        
+        private bool disease;
+        private new double Health;
+        private new double Water;
+        private new int Maturity;
+
         public Plantation(string name, int purchasePrice, string kind, double diseaseChance, int wormChance, int weedChance) : 
             base(name, purchasePrice, kind)
         {
@@ -118,6 +122,11 @@ namespace entrega_01_grupo_2
         public int GetMaturity()
         {
             return Maturity;
+        }
+
+        public bool GetDisease()
+        {
+            return disease;
         }
     }
 }
