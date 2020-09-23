@@ -83,7 +83,7 @@ namespace Entrega1
                                 else if (answe == "A")
                                 {
                                     b.EdifMarket("A", cashMoney);
-
+                                    
                                 }
                                 else if (answe == "D")
                                 {
