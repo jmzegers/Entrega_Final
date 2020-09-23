@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 namespace entrega_01_grupo_2
 {
-    class StorageBuilding
+    class StorageBuilding : Edification
     {
-        private string Name;
-        private int PurchasePrice;
-        private int SalePrice;
+
+        private double SalePrice;
         private int MaxCapacity;
 
-        public StorageBuilding(string name, int purchasePrice, int salePrice, int maxCapacity)
+        public StorageBuilding(string name, int purchasePrice, int salePrice, int maxCapacity, string kind) :
+            base(name, purchasePrice, kind)
+
         {
             this.Name = name;
             this.PurchasePrice = purchasePrice;
@@ -31,7 +32,7 @@ namespace entrega_01_grupo_2
             return PurchasePrice;
         }
 
-        public int GetSalePrice()
+        public double GetSalePrice()
         {
             return SalePrice * -1;
         }
@@ -39,6 +40,10 @@ namespace entrega_01_grupo_2
         public int GetMaxCapacity()
         {
             return MaxCapacity;
+        }
+        public string GetKind()
+        {
+            return Kind;
         }
     }
 }

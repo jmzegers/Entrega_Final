@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bloqueAguaTierra.cs" />
+    <Compile Include="entrega 03\CompraTerreno.cs" />
     <Compile Include="entrega x\Administrar_produccion_agregar_agua_o_comida.cs" />
     <Compile Include="entrega x\Administrar_almacenamiento.cs" />
     <Compile Include="Animal.cs" />

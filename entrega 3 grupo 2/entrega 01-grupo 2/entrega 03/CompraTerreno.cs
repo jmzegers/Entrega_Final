@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace entrega_01_grupo_2
+namespace entrega_01_grupo_2.entrega_03
 {
-    class lista_de_semillas : ObjectBrain
+    class CompraTerreno
     {
-        ObjectBrain see = new ObjectBrain();
-        
     }
 }
