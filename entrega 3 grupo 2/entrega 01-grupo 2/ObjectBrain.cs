@@ -65,9 +65,9 @@ namespace entrega_01_grupo_2
             return priceHistory;
         }
 
-        public Dictionary<string, Cattle> GetCattleDict()
+        public Dictionary<string, Animal> GetAnimalDict()
         {
-            return cattleDict;
+            return animalDict;
         }
 
         public Dictionary<string, StorageBuilding> GetStorageBuildingDict()

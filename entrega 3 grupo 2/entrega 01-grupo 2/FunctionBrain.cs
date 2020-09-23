@@ -289,18 +289,18 @@ namespace entrega_01_grupo_2
                             Console.WriteLine("Debe ser un numero");
                         }
                     }
-                    if()
+
                     //Aca hay que añadirle el producto al inventario del jugador
                 }
             }
 
             else if (a == "G") //Ganado
             {
-                Dictionary<string, Cattle> cattleDict = ob.GetCattleDict();
+                Dictionary<string, Animal> animalDict = ob.GetAnimalDict();
                 Console.WriteLine("Los ganados disponibles son: ");
                 int prodNumber = 1;
 
-                foreach(KeyValuePair<string, Cattle> c in cattleDict)
+                foreach(KeyValuePair<string, Animal> c in animalDict)
                 {
                     string name = c.Key;
                     double price = c.Value.GetPurchasePrice();
@@ -310,11 +310,11 @@ namespace entrega_01_grupo_2
 
                 Console.WriteLine("¿Cual desea comprar? Escriba el nombre del producto");
                 string prodName = Console.ReadLine();
-                Cattle cattleBought = ob.GetCattleDict()["vacas"];
+                Animal cattleBought = ob.GetAnimalDict()["vacas"];
 
                 try
                 {
-                    cattleBought = ob.GetCattleDict()[prodName];
+                    cattleBought = ob.GetAnimalDict()[prodName];
                 }
                 catch(Exception e)
                 {

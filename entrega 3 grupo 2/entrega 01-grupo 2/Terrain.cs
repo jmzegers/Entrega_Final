@@ -120,7 +120,7 @@ namespace Entrega1
         }
 
 
-        public Terrain()
+        public List<List<List<int>>> TerrainCreator()
         {
 
 
@@ -128,8 +128,6 @@ namespace Entrega1
             Console.ReadKey();
 
             List<List<int>> mat = RandMatrix(25, 100);
-
-            int length = mat.Count;
 
             List<List<List<int>>> originalMap = new List<List<List<int>>>();
 
@@ -141,7 +139,7 @@ namespace Entrega1
                     originalMap.Add(singleSquare);
                 }
             }
-
+            return originalMap;
         }
     }
 }
