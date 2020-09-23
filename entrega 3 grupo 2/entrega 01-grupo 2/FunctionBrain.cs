@@ -351,7 +351,7 @@ namespace entrega_01_grupo_2
                 Console.WriteLine("¿Cual desea comprar? Escriba el nombre del producto");
                 string prodName = Console.ReadLine();
 
-                StorageBuilding storageBought = ob.GetStorageBuildingDict()["Z"];
+                StorageBuilding storageBought = ob.GetStorageBuildingDict()["Z"]; 
 
                 try
                 {
