@@ -214,6 +214,17 @@ namespace entrega_01_grupo_2
             return priceHistory;
         }
 
+        public bool CheckIfUsedCoord(Dictionary<string, List<int>> usedCoord, List<int> newCoordX, List<int> newCoordY)
+        {
+            bool isUsed = false;
+            return isUsed;
+        }
+
+        public void NewMapElement(int xCoord, int yCoord)
+        {
+
+        }
+
 
         public double EdifMarket(string a, double money)
         {
@@ -289,11 +300,8 @@ namespace entrega_01_grupo_2
                             Console.WriteLine("Debe ser un numero");
                         }
                     }
-<<<<<<< HEAD
 
-=======
->>>>>>> af3667672ac3ae6d045c31d1b9c0af8d93a790a5
-                    //Aca hay que añadirle el producto al inventario del jugador
+
                 }
             }
 

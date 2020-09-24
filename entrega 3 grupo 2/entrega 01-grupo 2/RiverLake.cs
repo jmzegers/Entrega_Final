@@ -15,17 +15,23 @@ namespace entrega_01_grupo_2
             Console.ForegroundColor = ConsoleColor.Black;
         }
 
+        public void UsedCoordinates()
+        {
+
+        }
+
 
         public MapCreator(bool YesRiver, bool YesLake)
         {
             // Create Terrain (creacion del terreno)
             Terrain t = new Terrain();
+            ObjectBrain ob = new ObjectBrain();
             List<List<int>> rowList = t.RowListCreator();
             List<List<List<int>>> tc = t.TerrainCreator();
 
             DefaultColor();
 
-            Dictionary<string, int> coordinates = new Dictionary<string, int>();
+            Dictionary<string, List<int>> coordinates = new Dictionary<string, List<int>>();
 
             Random randNum = new Random();
             int HoV = randNum.Next(0, 2);
@@ -121,14 +127,14 @@ namespace entrega_01_grupo_2
                 }
             }
 
-            
-            
-            
-            
-            
-            
-            
-            
+
+
+
+
+
+
+
+
             int a = 0;
             int PositionY = 1;
             while (a <= 9)
@@ -150,7 +156,7 @@ namespace entrega_01_grupo_2
                                 {
                                     Console.BackgroundColor = ConsoleColor.Blue;
                                     Console.ForegroundColor = ConsoleColor.Blue;
-                                    
+
                                     Console.Write(matrixRow[c]);
                                     Console.Write(" ");
                                     PositionX += 1;
@@ -179,7 +185,7 @@ namespace entrega_01_grupo_2
                                 }
                             }
                         }
-                        
+
                         if (YesLake == true)
                         {
                             if (PositionX >= lakePlaceX && PositionX <= lakePlaceX + 14)
@@ -324,11 +330,45 @@ namespace entrega_01_grupo_2
             }
             */
 
-            coordinates.Add("FarmPlaceX", farmPlaceX);
-            coordinates.Add("FarmPlaceY", farmPlaceY);
-            coordinates.Add("LakePlaceX", lakePlaceX);
-            coordinates.Add("LakePlaceY", lakePlaceY);
-            coordinates.Add("River", firstCol);
+            List<int> farmCoordX = new List<int>();
+            farmCoordX.Add(farmPlaceX);
+            farmCoordX.Add(farmPlaceX + 19);
+            List<int> farmCoordY = new List<int>();
+            farmCoordY.Add(farmPlaceY);
+            farmCoordY.Add(farmPlaceY + 29);
+            List<int> lakeCoordX = new List<int>();
+            lakeCoordX.Add(lakePlaceX);
+            lakeCoordX.Add(lakePlaceX + 14);
+            List<int> lakeCoordY = new List<int>();
+            lakeCoordY.Add(lakePlaceY);
+            lakeCoordY.Add(lakePlaceY + 14);
+            List<int> riverCoordX = new List<int>();
+            List<int> riverCoordY = new List<int>();
+
+
+            coordinates.Add("FarmPlaceX", farmCoordX);
+            ob.GetUsedCoordinates().Add("FarmPlaceX", farmCoordX);
+            coordinates.Add("FarmPlaceY", farmCoordY);
+            ob.GetUsedCoordinates().Add("FarmPlaceY", farmCoordY);
+            coordinates.Add("LakePlaceX", lakeCoordX);
+            ob.GetUsedCoordinates().Add("LakePlaceX", lakeCoordX);
+            coordinates.Add("LakePlaceY", lakeCoordY);
+            ob.GetUsedCoordinates().Add("LakePlaceY", lakeCoordY);
+
+            if (HoV == 0) //Vertical
+            {
+                riverCoordY.Add(firstCol);
+                riverCoordY.Add(firstCol + 4);
+                coordinates.Add("RiverPlaceY", riverCoordY);
+                ob.GetUsedCoordinates().Add("RiverPlaceY", riverCoordY);
+            }
+            else //Horizontal
+            {
+                riverCoordX.Add(firstCol);
+                riverCoordX.Add(firstCol + 4);
+                coordinates.Add("RiverPlaceX", riverCoordX);
+                ob.GetUsedCoordinates().Add("RiverPlaceX", riverCoordX);
+            }
         }
     }
 }
