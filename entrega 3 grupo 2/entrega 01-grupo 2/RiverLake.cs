@@ -21,8 +21,9 @@ namespace entrega_01_grupo_2
             // Create Terrain (creacion del terreno)
             Terrain t = new Terrain();
             List<List<int>> rowList = t.RowListCreator();
-            Console.BackgroundColor = ConsoleColor.Green;
-            Console.ForegroundColor = ConsoleColor.Black;
+            List<List<List<int>>> tc = t.TerrainCreator();
+
+            DefaultColor();
 
             Dictionary<string, int> coordinates = new Dictionary<string, int>();
 
@@ -30,67 +31,242 @@ namespace entrega_01_grupo_2
             int HoV = randNum.Next(0, 2);
             //0 es vertical, 1 es horizontal
 
-            int farmPlaceX = randNum.Next(0, 6);
+            int farmPlaceX = randNum.Next(0, 9);
             farmPlaceX = farmPlaceX * 10;
-            int farmPlaceY = randNum.Next(0, 5);
+            int farmPlaceY = randNum.Next(0, 8);
             farmPlaceY = farmPlaceY * 10;
 
-            int lakePlaceX = randNum.Next(6, 10);
-            lakePlaceX = lakePlaceX * 10;
-            int lakePlaceY = randNum.Next(5, 10);
-            lakePlaceY = lakePlaceY * 10;
+            int lakePlaceX = randNum.Next(0, 85);
+            int lakePlaceY = randNum.Next(0, 85);
 
-            int firstCol = 0;
-            if (HoV == 0)
+            int firstCol = randNum.Next(0, 95);
+
+            if (YesRiver == true) //En el caso de que haya un rio
             {
-                while (true)
+                if (HoV == 0) //rio vertical
                 {
-                    firstCol = randNum.Next(0, 99);
-                    if (firstCol >= farmPlaceX && firstCol <= farmPlaceX + 30)
+                    while (true) //Revisando que el potencial rio no caiga dentro de la granja
                     {
-                        firstCol = randNum.Next(0, 99);
-                    }
+                        if (firstCol >= farmPlaceX && firstCol <= farmPlaceX + 19)
+                        {
+                            firstCol = randNum.Next(0, 96);
+                        }
 
-                    else
+                        else
+                        {
+                            break;
+                        }
+                    }
+                }
+                else //rio horizontal
+                {
+                    while (true) //Lo mismo
                     {
-                        break;
+                        if (firstCol >= farmPlaceY && firstCol <= farmPlaceY + 29)
+                        {
+                            firstCol = randNum.Next(0, 100);
+                        }
+                        else
+                        {
+                            break;
+                        }
                     }
                 }
             }
-            else
-            {
-                firstCol = randNum.Next(0, 100);
 
+            if (YesLake == true)
+            {
                 while (true)
                 {
-                    if (firstCol >= farmPlaceY && firstCol <= farmPlaceY + 20)
+                    if (lakePlaceX >= farmPlaceX && lakePlaceX <= farmPlaceX + 19) //Revisando que el lago y la granja no queden en el mismo lugar horizontal
                     {
-                        firstCol = randNum.Next(0, 100);
+                        lakePlaceX = randNum.Next(1, 86);
+                    }
+                    else if (lakePlaceY >= farmPlaceY && lakePlaceY <= lakePlaceY + 29) //Revisando que el lago y la granja no queden en el mismo lugar vertical
+                    {
+                        lakePlaceY = randNum.Next(1, 86);
                     }
                     else
                     {
-                        break;
+                        if (YesRiver == true)
+                        {
+                            if (HoV == 0) //Rio vertical
+                            {
+                                if (firstCol >= lakePlaceX && firstCol <= lakePlaceX + 14)
+                                {
+                                    lakePlaceX = randNum.Next(1, 86);
+                                }
+                                else
+                                {
+                                    break;
+                                }
+                            }
+                            else //Rio horizontal
+                            {
+                                if (firstCol >= lakePlaceY && firstCol <= lakePlaceY + 14)
+                                {
+                                    lakePlaceY = randNum.Next(1, 86);
+                                }
+                                else
+                                {
+                                    break;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            break;
+                        }
                     }
                 }
             }
+
+            
+            
+            
+            
+            
+            
+            
+            
             int a = 0;
-
-            while (a < rowList.Count)
+            int PositionY = 1;
+            while (a <= 9)
             {
-                List<int> row = rowList[a];
                 int b = 0;
-                while(b < row.Count)
+                int PositionX = 1;
+
+                while (b <= 9)
                 {
-                    // create River (crea lago)
+                    List<int> matrixRow = tc[b][a];
+                    int c = 0;
+                    while (c <= 9)
+                    {
+                        if (YesRiver == true) // Creando el rio
+                        {
+                            if (HoV == 0) //Rio vertical
+                            {
+                                if (PositionX >= firstCol && PositionX <= firstCol + 4)
+                                {
+                                    Console.BackgroundColor = ConsoleColor.Blue;
+                                    Console.ForegroundColor = ConsoleColor.Blue;
+                                    
+                                    Console.Write(matrixRow[c]);
+                                    Console.Write(" ");
+                                    PositionX += 1;
+                                    c += 1;
+                                }
+                                else
+                                {
+                                    DefaultColor();
+                                }
+                            }
+                            else //Rio horizontal
+                            {
+                                if (PositionY >= firstCol && PositionY <= firstCol + 4)
+                                {
+                                    Console.BackgroundColor = ConsoleColor.Blue;
+                                    Console.ForegroundColor = ConsoleColor.Blue;
+
+                                    Console.Write(matrixRow[c]);
+                                    Console.Write(" ");
+                                    PositionX += 1;
+                                    c += 1;
+                                }
+                                else
+                                {
+                                    DefaultColor();
+                                }
+                            }
+                        }
+                        
+                        if (YesLake == true)
+                        {
+                            if (PositionX >= lakePlaceX && PositionX <= lakePlaceX + 14)
+                            {
+                                if (PositionY >= lakePlaceY && PositionX <= lakePlaceY + 14)
+                                {
+                                    Console.BackgroundColor = ConsoleColor.Blue;
+                                    Console.ForegroundColor = ConsoleColor.Blue;
+
+                                    Console.Write(matrixRow[c]);
+                                    Console.Write(" ");
+                                    PositionX += 1;
+                                    c += 1;
+                                }
+                            }
+                            else
+                            {
+                                DefaultColor();
+                            }
+                        }
+
+                        if (PositionX >= farmPlaceX && PositionX <= farmPlaceX + 19)
+                        {
+                            if (PositionY >= farmPlaceY && PositionY <= farmPlaceY + 29)
+                            {
+                                Console.BackgroundColor = ConsoleColor.DarkGray;
+                                Console.ForegroundColor = ConsoleColor.DarkGray;
+
+                                Console.Write(matrixRow[c]);
+                                Console.Write(" ");
+                                PositionX += 1;
+                                c += 1;
+                            }
+                            else
+                            {
+                                DefaultColor();
+                            }
+                        }
+
+                        Console.Write(matrixRow[c]);
+                        Console.Write(" ");
+                        PositionX += 1;
+                        c += 1;
+                    }
+
+                    PositionY += 1;
+                    b += 1;
+
+                }
+
+                Console.Write(Environment.NewLine);
+                a += 1;
+            }
+
+
+
+
+
+
+
+
+
+
+            /*
+            while (a <= 9) //Siempre que este dentro del tamaño de tc
+            {
+                int b = 0;
+                int num = 0;
+                List<int> row = tc[b][num];
+
+
+                while (b <= 9)
+                {
+                    
+                    int columnNum = 0;
+                    int singleSquare = row[columnNum];
+                    
+                    // create River (crea rio)
                     if (YesRiver == true)
                     {
                         if (HoV == 0) //Vertical
                         {
-                            if (b > firstCol && b < firstCol + 6)
+                            if (num >= firstCol && num <= firstCol + 4)
                             {
                                 Console.BackgroundColor = ConsoleColor.Blue;
-                                Console.ForegroundColor = ConsoleColor.White;// para que se vean la pregunta de si se quiere generar otro
-                                                                                // mapa
+                                Console.ForegroundColor = ConsoleColor.Blue;// para que se vean la pregunta de si se quiere generar otro
+                                                                            // mapa
                             }
                             else
                             {
@@ -100,11 +276,11 @@ namespace entrega_01_grupo_2
 
                         else //Horizontal
                         {
-                            if (a > firstCol && a < firstCol + 6)
+                            if (a >= firstCol && a <= firstCol + 4)
                             {
                                 Console.BackgroundColor = ConsoleColor.Blue;
-                                Console.ForegroundColor = ConsoleColor.White;// para que se vean la pregunta de si se quiere generar otro
-                                                                                // mapa
+                                Console.ForegroundColor = ConsoleColor.Blue;// para que se vean la pregunta de si se quiere generar otro
+                                                                            // mapa
                             }
                             else
                             {
@@ -112,68 +288,16 @@ namespace entrega_01_grupo_2
                             }
                         }
                     }
-                    
-                    
-                    // Create Lake (crea lago)
-                    if (YesLake == true)
+
+                    if (YesLake == true) // Create Lake (crea lago)
                     {
-                        while (true)
+                        if (a >= lakePlaceY && a <= lakePlaceY + 14)
                         {
-                            if (lakePlaceX >= farmPlaceX && lakePlaceX <= farmPlaceX + 30)
-                            {
-                                lakePlaceX = randNum.Next(6, 10);
-                                lakePlaceX = lakePlaceX * 10;
-                            }
-                            else if (lakePlaceY >= farmPlaceY && lakePlaceY <= lakePlaceY + 20)
-                            {
-                                lakePlaceY = randNum.Next(5, 10);
-                                lakePlaceY = lakePlaceY * 10;
-                            }
-                            else
-                            {
-                                if (YesRiver == true)
-                                {
-                                    if (HoV == 0)
-                                    {
-                                        if (lakePlaceX >= firstCol && lakePlaceX <= firstCol + 6)
-                                        {
-                                            lakePlaceX = randNum.Next(6, 10);
-                                            lakePlaceX = lakePlaceX * 10;
-                                        }
-                                        else
-                                        {
-                                            break;
-                                        }
-                                    }
-                                    else
-                                    {
-                                        if (lakePlaceY >= firstCol && lakePlaceY <= firstCol + 6)
-                                        {
-                                            lakePlaceY = randNum.Next(5, 10);
-                                            lakePlaceY = lakePlaceY * 10;
-                                        }
-                                        else
-                                        {
-                                            break;
-                                        }
-                                    }
-                                }
-                                else
-                                {
-                                    break;
-                                }
-                            }
-                        }
-                        
-
-
-                        if (a >= lakePlaceY && a <= lakePlaceY + 15)
-                        {
-                            if (b >= lakePlaceX && b <= lakePlaceX + 15)
+                            if (num >= lakePlaceX && num <= lakePlaceX + 14)
                             {
                                 Console.BackgroundColor = ConsoleColor.Blue;
-                                Console.ForegroundColor = ConsoleColor.White;// para que se vean la pregunta de si se quiere generar otro
-                                                                             // mapa
+                                Console.ForegroundColor = ConsoleColor.Blue;// para que se vean la pregunta de si se quiere generar otro
+                                                                            // mapa
                             }
                             else
                             {
@@ -181,25 +305,24 @@ namespace entrega_01_grupo_2
                             }
                         }
                     }
+
                     //Create Farm (crea granja)
-                    if (a >= farmPlaceY && a <= farmPlaceY + 30)
+                    if (a >= farmPlaceY && a <= farmPlaceY + 29)
                     {
-                        if (b >= farmPlaceX && b <= farmPlaceX + 20)
+                        if (num >= farmPlaceX && num <= farmPlaceX + 19)
                         {
                             Console.BackgroundColor = ConsoleColor.DarkGray;
                             Console.ForegroundColor = ConsoleColor.DarkGray;
                         }
                     }
-                    Console.Write(row[b]);
-                    Console.Write(" ");
-
-                    b += 1;
-
-
+                    num += 1;
                 }
+                Console.Write(row[num]);
+                Console.Write(" ");
                 Console.Write(Environment.NewLine);
                 a += 1;
             }
+            */
 
             coordinates.Add("FarmPlaceX", farmPlaceX);
             coordinates.Add("FarmPlaceY", farmPlaceY);
