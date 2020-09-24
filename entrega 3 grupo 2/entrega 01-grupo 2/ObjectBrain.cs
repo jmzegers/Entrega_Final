@@ -33,9 +33,11 @@ namespace entrega_01_grupo_2
         StorageBuilding SmallStorageBuilding = new StorageBuilding("Small Storage Building", 100, 50, 500, "A");
         StorageBuilding MediumStorageBuilding = new StorageBuilding("Medium Storage Building", 200, 150, 1000, "B");
         StorageBuilding LargeStorageBuilding = new StorageBuilding("Large Storage Building", 400, 350, 2000, "C");
-        private Dictionary<string, Cattle> cattleDict;
 
-        public ObjectBrain()
+        Dictionary<string, List<int>> uc = new Dictionary<string, List<int>>();
+
+
+        public ObjectBrain(Dictionary<string, List<int>> usedCoordinates = null)
         {
             seedDict.Add("Tomate", Tomato);
             seedDict.Add("Lechuga", Lettuce);
@@ -54,6 +56,8 @@ namespace entrega_01_grupo_2
             storageBuildingDict.Add("Edificio de Almacenamiento Pequeño", SmallStorageBuilding);
             storageBuildingDict.Add("Edificio de Almacenamiento Mediano", MediumStorageBuilding);
             storageBuildingDict.Add("Edificio de Almacenamiento Grande", LargeStorageBuilding);
+
+            this.uc = usedCoordinates;
         }
 
         public Dictionary<string, Seed> GetSeedDict()
@@ -74,6 +78,11 @@ namespace entrega_01_grupo_2
         public Dictionary<string, StorageBuilding> GetStorageBuildingDict()
         {
             return storageBuildingDict;
+        }
+
+        public Dictionary<string, List<int>> GetUsedCoordinates()
+        {
+            return uc;
         }
     }
 }
