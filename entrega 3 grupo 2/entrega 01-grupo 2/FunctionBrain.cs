@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace entrega_01_grupo_2
 {
@@ -212,7 +213,28 @@ namespace entrega_01_grupo_2
 
         public bool CheckIfUsedCoord(Dictionary<string, List<int>> usedCoord, List<int> newCoordX, List<int> newCoordY)
         {
+            bool usedX = false;
+            bool usedY = false;
             bool isUsed = false;
+
+            for(int i = 0; i < usedCoord.Count; i++)
+            {
+                if (usedCoord[usedCoord.Keys.ElementAt(i)].Intersect(newCoordX).Any())
+                {
+                    usedX = true;
+                }
+                i++;
+                if (usedCoord[usedCoord.Keys.ElementAt(i)].Intersect(newCoordY).Any())
+                {
+                    usedY = true;
+                }
+            }
+
+            if(usedX && usedY)
+            {
+                isUsed = true;
+            }
+            
             return isUsed;
         }
 
