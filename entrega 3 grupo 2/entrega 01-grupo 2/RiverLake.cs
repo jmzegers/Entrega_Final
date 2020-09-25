@@ -227,7 +227,7 @@ namespace entrega_01_grupo_2
 
                         Console.Write(matrixRow[c]);
                         Console.Write(" ");
-                        PositionX += 1;
+                        PositionX += 0;
                         c += 1;
                     }
 

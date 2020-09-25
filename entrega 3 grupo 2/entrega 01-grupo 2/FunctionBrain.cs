@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http.Headers;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace entrega_01_grupo_2
 {
@@ -21,7 +18,7 @@ namespace entrega_01_grupo_2
         {
             //priceHistory = this.priceHistory;
         }
-        
+
         public void MapType()
         {
             Console.WriteLine("Elija uno de las siguientes configuraciones del mapa: ");
@@ -220,8 +217,11 @@ namespace entrega_01_grupo_2
 
         public bool CheckIfUsedCoord(Dictionary<string, Dictionary<string, List<int>>> usedCoord, List<int> newCoordX, List<int> newCoordY)
         {
+            bool usedX = false;
+            bool usedY = false;
             bool isUsed = false;
 
+<<<<<<< HEAD
             foreach(KeyValuePair<string, Dictionary<string, List<int>>> coord in usedCoord)
             {
                 List<int> xCoord = coord.Value["X"];
@@ -254,6 +254,26 @@ namespace entrega_01_grupo_2
                 }
             }
 
+=======
+            for(int i = 0; i < usedCoord.Count; i++)
+            {
+                if (usedCoord[usedCoord.Keys.ElementAt(i)].Intersect(newCoordX).Any())
+                {
+                    usedX = true;
+                }
+                i++;
+                if (usedCoord[usedCoord.Keys.ElementAt(i)].Intersect(newCoordY).Any())
+                {
+                    usedY = true;
+                }
+            }
+
+            if(usedX && usedY)
+            {
+                isUsed = true;
+            }
+            
+>>>>>>> 545046bd225c71deaa073d9ae2d7397679640ba4
             return isUsed;
         }
 
@@ -288,7 +308,7 @@ namespace entrega_01_grupo_2
                 int turn = 30;
                 Dictionary<string, double> seedPrices = new Dictionary<string, double>();
                 Dictionary<string, Dictionary<int, double>> seedHistory = PriceHistoryMaker(turn);
-                
+
                 foreach (KeyValuePair<string, Seed> seed in ob.GetSeedDict())
                 {
                     string seedName = seed.Value.GetName();
@@ -314,14 +334,14 @@ namespace entrega_01_grupo_2
                 {
                     seedBought = ob.GetSeedDict()[productName];
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     Console.WriteLine("Ese producto no existe");
                 }
 
                 string n = seedBought.GetName();
                 double seedValue = seedPrices[n];
-                if(seedValue > money)
+                if (seedValue > money)
                 {
                     Console.WriteLine("No tienes suficiente dinero");
                 }
@@ -362,6 +382,7 @@ namespace entrega_01_grupo_2
                         }
                     }
 
+<<<<<<< HEAD
                     while (true)
                     {
                         if (CheckIfUsedCoord(usedCoordinates, XCoord, YCoord) == false)
@@ -375,6 +396,8 @@ namespace entrega_01_grupo_2
                             Console.WriteLine("Intente nuevamente");
                         }
                     }
+=======
+>>>>>>> 545046bd225c71deaa073d9ae2d7397679640ba4
                 }
             }
 
@@ -384,7 +407,7 @@ namespace entrega_01_grupo_2
                 Console.WriteLine("Los ganados disponibles son: ");
                 int prodNumber = 1;
 
-                foreach(KeyValuePair<string, Animal> c in animalDict)
+                foreach (KeyValuePair<string, Animal> c in animalDict)
                 {
                     string name = c.Key;
                     double price = c.Value.GetPurchasePrice();
@@ -400,13 +423,13 @@ namespace entrega_01_grupo_2
                 {
                     cattleBought = ob.GetAnimalDict()[prodName];
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     Console.WriteLine("Ese producto no existe");
                 }
 
                 double prodPrice = cattleBought.GetPurchasePrice();
-                if(prodPrice > money)
+                if (prodPrice > money)
                 {
                     Console.WriteLine("No tienes suficiente dinero");
                 }
@@ -471,7 +494,7 @@ namespace entrega_01_grupo_2
                 Console.WriteLine("Los edificios de almacenamiento disponibles son: ");
                 int prodNumber = 1;
 
-                foreach(KeyValuePair<string, StorageBuilding> s in storageDict)
+                foreach (KeyValuePair<string, StorageBuilding> s in storageDict)
                 {
                     string name = s.Key;
                     double price = s.Value.GetPurchasePrice();
@@ -482,13 +505,13 @@ namespace entrega_01_grupo_2
                 Console.WriteLine("¿Cual desea comprar? Escriba el nombre del producto");
                 string prodName = Console.ReadLine();
 
-                StorageBuilding storageBought = ob.GetStorageBuildingDict()["Z"]; 
+                StorageBuilding storageBought = ob.GetStorageBuildingDict()["Z"];
 
                 try
                 {
                     storageBought = ob.GetStorageBuildingDict()[prodName];
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     Console.WriteLine("Ese producto no existe");
                 }
@@ -550,7 +573,7 @@ namespace entrega_01_grupo_2
                     }
                 }
             }
-            
+
             else if (a == "C")
             {
                 Console.WriteLine("Los productos consumibles son: ");

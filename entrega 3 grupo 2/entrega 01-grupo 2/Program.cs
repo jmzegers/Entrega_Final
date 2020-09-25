@@ -84,8 +84,9 @@ namespace Entrega1
                                 }
                                 else if (answe == "A")
                                 {
-                                    b.EdifMarket("A", cashMoney, usedCoordinates);
 
+                                    b.EdifMarket("A", cashMoney, usedCoordinates);
+                                    
                                 }
                                 else if (answe == "D")
                                 {
