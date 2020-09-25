@@ -1,0 +1,7 @@
+C:\Users\56984\Desktop\proyecto-entrega-1-grupo-2\entrega 3 grupo 2\entrega 3 grupo 2 solo diccionario NO mapa\bin\Debug\entrega 3 grupo 2 solo diccionario NO mapa.exe.config
+C:\Users\56984\Desktop\proyecto-entrega-1-grupo-2\entrega 3 grupo 2\entrega 3 grupo 2 solo diccionario NO mapa\bin\Debug\entrega 3 grupo 2 solo diccionario NO mapa.exe
+C:\Users\56984\Desktop\proyecto-entrega-1-grupo-2\entrega 3 grupo 2\entrega 3 grupo 2 solo diccionario NO mapa\bin\Debug\entrega 3 grupo 2 solo diccionario NO mapa.pdb
+C:\Users\56984\Desktop\proyecto-entrega-1-grupo-2\entrega 3 grupo 2\entrega 3 grupo 2 solo diccionario NO mapa\obj\Debug\entrega 3 grupo 2 solo diccionario NO mapa.csprojAssemblyReference.cache
+C:\Users\56984\Desktop\proyecto-entrega-1-grupo-2\entrega 3 grupo 2\entrega 3 grupo 2 solo diccionario NO mapa\obj\Debug\entrega 3 grupo 2 solo diccionario NO mapa.csproj.CoreCompileInputs.cache
+C:\Users\56984\Desktop\proyecto-entrega-1-grupo-2\entrega 3 grupo 2\entrega 3 grupo 2 solo diccionario NO mapa\obj\Debug\entrega 3 grupo 2 solo diccionario NO mapa.exe
+C:\Users\56984\Desktop\proyecto-entrega-1-grupo-2\entrega 3 grupo 2\entrega 3 grupo 2 solo diccionario NO mapa\obj\Debug\entrega 3 grupo 2 solo diccionario NO mapa.pdb
