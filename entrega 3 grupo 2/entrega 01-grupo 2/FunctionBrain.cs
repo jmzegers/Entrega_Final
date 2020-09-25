@@ -217,11 +217,8 @@ namespace entrega_01_grupo_2
 
         public bool CheckIfUsedCoord(Dictionary<string, Dictionary<string, List<int>>> usedCoord, List<int> newCoordX, List<int> newCoordY)
         {
-            bool usedX = false;
-            bool usedY = false;
             bool isUsed = false;
 
-<<<<<<< HEAD
             foreach(KeyValuePair<string, Dictionary<string, List<int>>> coord in usedCoord)
             {
                 List<int> xCoord = coord.Value["X"];
@@ -254,26 +251,6 @@ namespace entrega_01_grupo_2
                 }
             }
 
-=======
-            for(int i = 0; i < usedCoord.Count; i++)
-            {
-                if (usedCoord[usedCoord.Keys.ElementAt(i)].Intersect(newCoordX).Any())
-                {
-                    usedX = true;
-                }
-                i++;
-                if (usedCoord[usedCoord.Keys.ElementAt(i)].Intersect(newCoordY).Any())
-                {
-                    usedY = true;
-                }
-            }
-
-            if(usedX && usedY)
-            {
-                isUsed = true;
-            }
-            
->>>>>>> 545046bd225c71deaa073d9ae2d7397679640ba4
             return isUsed;
         }
 
@@ -382,7 +359,6 @@ namespace entrega_01_grupo_2
                         }
                     }
 
-<<<<<<< HEAD
                     while (true)
                     {
                         if (CheckIfUsedCoord(usedCoordinates, XCoord, YCoord) == false)
@@ -396,8 +372,6 @@ namespace entrega_01_grupo_2
                             Console.WriteLine("Intente nuevamente");
                         }
                     }
-=======
->>>>>>> 545046bd225c71deaa073d9ae2d7397679640ba4
                 }
             }
 
