@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Xml.Linq;
 
 namespace entrega_01_grupo_2
 {
@@ -10,6 +9,10 @@ namespace entrega_01_grupo_2
         ObjectBrain ob = new ObjectBrain();
         Ir_al_mercado_de_consumibles buyingConsumable = new Ir_al_mercado_de_consumibles();
         CompraConsumible Consu = new CompraConsumible();
+        Dictionary<string, Dictionary<string, List<int>>> newCoordinates = new Dictionary<string, Dictionary<string, List<int>>>();
+        Dictionary<string, Dictionary<string, List<int>>> plantCoord = new Dictionary<string, Dictionary<string, List<int>>>();
+        Dictionary<string, Dictionary<string, List<int>>> animalCoord = new Dictionary<string, Dictionary<string, List<int>>>();
+        Dictionary<string, Dictionary<string, List<int>>> storageCoord = new Dictionary<string, Dictionary<string, List<int>>>();
 
         public FunctionBrain()
         {
@@ -212,57 +215,109 @@ namespace entrega_01_grupo_2
             return priceHistory;
         }
 
-        public bool CheckIfUsedCoord(Dictionary<string, List<int>> usedCoord, List<int> newCoordX, List<int> newCoordY)
+        public bool CheckIfUsedCoord(Dictionary<string, Dictionary<string, List<int>>> usedCoord, List<int> newCoordX, List<int> newCoordY)
         {
             bool usedX = false;
             bool usedY = false;
             bool isUsed = false;
 
-            for(int i = 0; i < usedCoord.Count; i++)
+
+            foreach (KeyValuePair<string, Dictionary<string, List<int>>> coord in usedCoord)
             {
-                if (usedCoord[usedCoord.Keys.ElementAt(i)].Intersect(newCoordX).Any())
+                List<int> xCoord = coord.Value["X"];
+                List<int> yCoord = coord.Value["Y"];
+                if (newCoordX[0] >= xCoord[0] && newCoordX[0] <= xCoord[1])
+                {
+                    if (newCoordY[0] >= yCoord[0] && newCoordY[0] <= yCoord[1])
+                    {
+                        isUsed = true;
+                        break;
+                    }
+                    else if (newCoordY[1] >= yCoord[0] && newCoordY[1] <= yCoord[1])
+                    {
+                        isUsed = true;
+                        break;
+                    }
+                }
+                else if (newCoordX[1] >= xCoord[0] && newCoordX[1] <= xCoord[1])
+                {
+                    if (newCoordY[0] >= yCoord[0] && newCoordY[0] <= yCoord[1])
+                    {
+                        isUsed = true;
+                        break;
+                    }
+                    else if (newCoordY[1] >= yCoord[0] && newCoordY[1] <= yCoord[1])
+                    {
+                        isUsed = true;
+                        break;
+                    }
+                }
+            }
+
+
+            /*for(int i = 0; i < usedCoord.Count; i++)
+            {
+                if (usedCoord[key: usedCoord.Keys.ElementAt(i)].Intersect(newCoordX).Any())
                 {
                     usedX = true;
+                }
+                else
+                {
                 }
                 i++;
                 if (usedCoord[usedCoord.Keys.ElementAt(i)].Intersect(newCoordY).Any())
                 {
                     usedY = true;
                 }
-            }
+            }*/
 
             if(usedX && usedY)
             {
                 isUsed = true;
             }
             
+
             return isUsed;
         }
 
-        public void NewMapElement(int xCoord, int yCoord)
+        public void NewMapElement(string kind, string name, List<int> xCoord, List<int> yCoord)
         {
-
+            Dictionary<string, Dictionary<string, List<int>>> newCoordinates = new Dictionary<string, Dictionary<string, List<int>>>();
+            MapCreator mc = new MapCreator(true, true);
+            Dictionary<string, List<int>> newCoord = new Dictionary<string, List<int>>();
+            newCoord.Add("X", xCoord);
+            newCoord.Add("Y", yCoord);
+            if (kind == "P")
+            {
+                plantCoord.Add(name, newCoord);
+            }
+            else if (kind == "G")
+            {
+                animalCoord.Add(name, newCoord);
+            }
+            else
+            {
+                storageCoord.Add(name, newCoord);
+            }
         }
 
 
-        public double EdifMarket(string a, double money)
+        public double EdifMarket(string a, double money, Dictionary<string, Dictionary<string, List<int>>> usedCoordinates)
         {
+
+
             if (a == "P") //Plantacion
             {
                 int turn = 30;
                 Dictionary<string, double> seedPrices = new Dictionary<string, double>();
                 Dictionary<string, Dictionary<int, double>> seedHistory = PriceHistoryMaker(turn);
 
-                for (int Xa = 0; Xa <= turn -1; Xa++)
-                {
-                   
-                }
-                /* foreach (KeyValuePair<string, Seed> seed in ob.GetSeedDict())
+                foreach (KeyValuePair<string, Seed> seed in ob.GetSeedDict())
                 {
                     string seedName = seed.Value.GetName();
                     double seedPrice = seedHistory[seedName][turn + 1];
                     seedPrices.Add(seedName, seedPrice);
-                }*/ 
+                }
 
                 int prodNum = 1;
                 Console.WriteLine("Las semillas disponibles y sus precios son: ");
@@ -296,6 +351,8 @@ namespace entrega_01_grupo_2
                 else //Si llega aca, entonces la compra fue exitosa
                 {
                     money = money - seedValue;
+                    List<int> XCoord = new List<int>();
+                    List<int> YCoord = new List<int>();
                     Console.WriteLine("Elija el lugar donde quiera poner la plantacion [1 - 100]");
                     Console.WriteLine("Eje X: ");
                     while (true)
@@ -303,6 +360,8 @@ namespace entrega_01_grupo_2
                         try
                         {
                             int EjeX = Convert.ToInt32(Console.ReadLine());
+                            XCoord.Add(EjeX);
+                            XCoord.Add(EjeX);
                             break;
                         }
                         catch (Exception e)
@@ -316,11 +375,28 @@ namespace entrega_01_grupo_2
                         try
                         {
                             int EjeY = Convert.ToInt32(Console.ReadLine());
+                            YCoord.Add(EjeY);
+                            YCoord.Add(EjeY);
                             break;
                         }
                         catch (Exception e)
                         {
                             Console.WriteLine("Debe ser un numero");
+                        }
+                    }
+
+
+                    while (true)
+                    {
+                        if (CheckIfUsedCoord(usedCoordinates, XCoord, YCoord) == false)
+                        {
+                            NewMapElement("P", seedBought.GetName(), XCoord, YCoord);
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Ese lugar no esta disponible");
+                            Console.WriteLine("Intente nuevamente");
                         }
                     }
 
@@ -362,7 +438,53 @@ namespace entrega_01_grupo_2
                 else
                 {
                     money = money - prodPrice;
-                    //Aca hay que añadirle el producto al inventario del jugador
+                    List<int> XCoord = new List<int>();
+                    List<int> YCoord = new List<int>();
+                    Console.WriteLine("Elija el lugar donde quiera poner el ganado [1 - 100]");
+                    Console.WriteLine("Eje X: ");
+                    while (true)
+                    {
+                        try
+                        {
+                            int EjeX = Convert.ToInt32(Console.ReadLine());
+                            XCoord.Add(EjeX);
+                            XCoord.Add(EjeX);
+                            break;
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine("Debe ser un numero");
+                        }
+                    }
+                    Console.WriteLine("Eje Y: ");
+                    while (true)
+                    {
+                        try
+                        {
+                            int EjeY = Convert.ToInt32(Console.ReadLine());
+                            YCoord.Add(EjeY);
+                            YCoord.Add(EjeY);
+                            break;
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine("Debe ser un numero");
+                        }
+                    }
+
+                    while (true)
+                    {
+                        if (CheckIfUsedCoord(usedCoordinates, XCoord, YCoord) == false)
+                        {
+                            NewMapElement("G", cattleBought.GetName(), XCoord, YCoord);
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Ese lugar no esta disponible");
+                            Console.WriteLine("Intente nuevamente");
+                        }
+                    }
                 }
 
 
@@ -404,7 +526,53 @@ namespace entrega_01_grupo_2
                 else
                 {
                     money = money - prodPrice;
-                    //Aca hay que añadirle el producto al inventario del jugador
+                    List<int> XCoord = new List<int>();
+                    List<int> YCoord = new List<int>();
+                    Console.WriteLine("Elija el lugar donde quiera poner el edificio de almacenamiento [1 - 100]");
+                    Console.WriteLine("Eje X: ");
+                    while (true)
+                    {
+                        try
+                        {
+                            int EjeX = Convert.ToInt32(Console.ReadLine());
+                            XCoord.Add(EjeX);
+                            XCoord.Add(EjeX);
+                            break;
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine("Debe ser un numero");
+                        }
+                    }
+                    Console.WriteLine("Eje Y: ");
+                    while (true)
+                    {
+                        try
+                        {
+                            int EjeY = Convert.ToInt32(Console.ReadLine());
+                            YCoord.Add(EjeY);
+                            YCoord.Add(EjeY);
+                            break;
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine("Debe ser un numero");
+                        }
+                    }
+
+                    while (true)
+                    {
+                        if (CheckIfUsedCoord(usedCoordinates, XCoord, YCoord) == false)
+                        {
+                            NewMapElement("P", storageBought.NameBuilding(), XCoord, YCoord);
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Ese lugar no esta disponible");
+                            Console.WriteLine("Intente nuevamente");
+                        }
+                    }
                 }
             }
 

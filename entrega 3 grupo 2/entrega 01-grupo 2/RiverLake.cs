@@ -21,6 +21,7 @@ namespace entrega_01_grupo_2
         }
 
 
+        Dictionary<string, Dictionary<string, List<int>>> coordinates = new Dictionary<string, Dictionary<string, List<int>>>();
         public MapCreator(bool YesRiver, bool YesLake)
         {
             // Create Terrain (creacion del terreno)
@@ -29,9 +30,8 @@ namespace entrega_01_grupo_2
             List<List<int>> rowList = t.RowListCreator();
             List<List<List<int>>> tc = t.TerrainCreator();
 
-            DefaultColor();
 
-            Dictionary<string, List<int>> coordinates = new Dictionary<string, List<int>>();
+            DefaultColor();
 
             Random randNum = new Random();
             int HoV = randNum.Next(0, 2);
@@ -126,6 +126,13 @@ namespace entrega_01_grupo_2
                     }
                 }
             }
+
+
+
+
+
+
+
 
 
             int a = 0;
@@ -233,126 +240,62 @@ namespace entrega_01_grupo_2
                 a += 1;
             }
 
-            /*
-            while (a <= 9) //Siempre que este dentro del tamaño de tc
-            {
-                int b = 0;
-                int num = 0;
-                List<int> row = tc[b][num];
 
 
-                while (b <= 9)
-                {
-                    
-                    int columnNum = 0;
-                    int singleSquare = row[columnNum];
-                    
-                    // create River (crea rio)
-                    if (YesRiver == true)
-                    {
-                        if (HoV == 0) //Vertical
-                        {
-                            if (num >= firstCol && num <= firstCol + 4)
-                            {
-                                Console.BackgroundColor = ConsoleColor.Blue;
-                                Console.ForegroundColor = ConsoleColor.Blue;// para que se vean la pregunta de si se quiere generar otro
-                                                                            // mapa
-                            }
-                            else
-                            {
-                                DefaultColor();
-                            }
-                        }
-
-                        else //Horizontal
-                        {
-                            if (a >= firstCol && a <= firstCol + 4)
-                            {
-                                Console.BackgroundColor = ConsoleColor.Blue;
-                                Console.ForegroundColor = ConsoleColor.Blue;// para que se vean la pregunta de si se quiere generar otro
-                                                                            // mapa
-                            }
-                            else
-                            {
-                                DefaultColor();
-                            }
-                        }
-                    }
-
-                    if (YesLake == true) // Create Lake (crea lago)
-                    {
-                        if (a >= lakePlaceY && a <= lakePlaceY + 14)
-                        {
-                            if (num >= lakePlaceX && num <= lakePlaceX + 14)
-                            {
-                                Console.BackgroundColor = ConsoleColor.Blue;
-                                Console.ForegroundColor = ConsoleColor.Blue;// para que se vean la pregunta de si se quiere generar otro
-                                                                            // mapa
-                            }
-                            else
-                            {
-                                DefaultColor();
-                            }
-                        }
-                    }
-
-                    //Create Farm (crea granja)
-                    if (a >= farmPlaceY && a <= farmPlaceY + 29)
-                    {
-                        if (num >= farmPlaceX && num <= farmPlaceX + 19)
-                        {
-                            Console.BackgroundColor = ConsoleColor.DarkGray;
-                            Console.ForegroundColor = ConsoleColor.DarkGray;
-                        }
-                    }
-                    num += 1;
-                }
-                Console.Write(row[num]);
-                Console.Write(" ");
-                Console.Write(Environment.NewLine);
-                a += 1;
-            }
-            */
-
+            Dictionary<string, List<int>> farmCoord = new Dictionary<string, List<int>>();
             List<int> farmCoordX = new List<int>();
             farmCoordX.Add(farmPlaceX);
             farmCoordX.Add(farmPlaceX + 19);
             List<int> farmCoordY = new List<int>();
             farmCoordY.Add(farmPlaceY);
             farmCoordY.Add(farmPlaceY + 29);
+            farmCoord.Add("X", farmCoordX);
+            farmCoord.Add("Y", farmCoordY);
+
+            Dictionary<string, List<int>> lakeCoord = new Dictionary<string, List<int>>();
             List<int> lakeCoordX = new List<int>();
             lakeCoordX.Add(lakePlaceX);
             lakeCoordX.Add(lakePlaceX + 14);
             List<int> lakeCoordY = new List<int>();
             lakeCoordY.Add(lakePlaceY);
             lakeCoordY.Add(lakePlaceY + 14);
+            lakeCoord.Add("X", lakeCoordX);
+            lakeCoord.Add("Y", lakeCoordY);
+
+
             List<int> riverCoordX = new List<int>();
             List<int> riverCoordY = new List<int>();
 
 
-            coordinates.Add("FarmPlaceX", farmCoordX);
-           // ob.GetUsedCoordinates().Add("FarmPlaceX", farmCoordX); // se guarda la "coordenada x de la granja"
-            coordinates.Add("FarmPlaceY", farmCoordY);
-           // ob.GetUsedCoordinates().Add("FarmPlaceY", farmCoordY); // se guarda la "coordenada y de la granja"
-            coordinates.Add("LakePlaceX", lakeCoordX);
-           // ob.GetUsedCoordinates().Add("LakePlaceX", lakeCoordX); // se guarda la "coordenada x del lago"
-            coordinates.Add("LakePlaceY", lakeCoordY);
-           // ob.GetUsedCoordinates().Add("LakePlaceY", lakeCoordY); // se guarda la "coordenada y del lago"
+            coordinates.Add("Farm", farmCoord);
+            coordinates.Add("Lake", lakeCoord);
 
+            Dictionary<string, List<int>> riverCoord = new Dictionary<string, List<int>>();
             if (HoV == 0) //Vertical
             {
+                riverCoordX.Add(1);
+                riverCoordX.Add(100);
                 riverCoordY.Add(firstCol);
                 riverCoordY.Add(firstCol + 4);
-                coordinates.Add("RiverPlaceY", riverCoordY);
-               // ob.GetUsedCoordinates().Add("RiverPlaceY", riverCoordY); // se guarda la coordenada y del rio (vertical)
+                riverCoord.Add("X", riverCoordX);
+                riverCoord.Add("Y", riverCoordY);
+                coordinates.Add("River", riverCoord);
             }
             else //Horizontal
             {
                 riverCoordX.Add(firstCol);
                 riverCoordX.Add(firstCol + 4);
-                coordinates.Add("RiverPlaceX", riverCoordX);
-                //ob.GetUsedCoordinates().Add("RiverPlaceX", riverCoordX);  // se guarda la coordenada x del rio (horizontal)
+                riverCoordY.Add(1);
+                riverCoordY.Add(100);
+                riverCoord.Add("X", riverCoordX);
+                riverCoord.Add("Y", riverCoordY);
+                coordinates.Add("River", riverCoord);
             }
+        }
+
+        public Dictionary<string, Dictionary<string, List<int>>> GetStaticCoord()
+        {
+            return coordinates;
         }
     }
 }
