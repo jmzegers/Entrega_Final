@@ -85,4 +85,112 @@ namespace entrega_01_grupo_2
             return uc;
         }
     }
+
+
+
+    /*
+    while (a <= 9) //Siempre que este dentro del tamaño de tc
+    {
+        int b = 0;
+        int num = 0;
+        List<int> row = tc[b][num];
+
+
+        while (b <= 9)
+        {
+
+            int columnNum = 0;
+            int singleSquare = row[columnNum];
+
+            // create River (crea rio)
+            if (YesRiver == true)
+            {
+                if (HoV == 0) //Vertical
+                {
+                    if (num >= firstCol && num <= firstCol + 4)
+                    {
+                        Console.BackgroundColor = ConsoleColor.Blue;
+                        Console.ForegroundColor = ConsoleColor.Blue;// para que se vean la pregunta de si se quiere generar otro
+                                                                    // mapa
+                    }
+                    else
+                    {
+                        DefaultColor();
+                    }
+                }
+
+                else //Horizontal
+                {
+                    if (a >= firstCol && a <= firstCol + 4)
+                    {
+                        Console.BackgroundColor = ConsoleColor.Blue;
+                        Console.ForegroundColor = ConsoleColor.Blue;// para que se vean la pregunta de si se quiere generar otro
+                                                                    // mapa
+                    }
+                    else
+                    {
+                        DefaultColor();
+                    }
+                }
+            }
+
+            if (YesLake == true) // Create Lake (crea lago)
+            {
+                if (a >= lakePlaceY && a <= lakePlaceY + 14)
+                {
+                    if (num >= lakePlaceX && num <= lakePlaceX + 14)
+                    {
+                        Console.BackgroundColor = ConsoleColor.Blue;
+                        Console.ForegroundColor = ConsoleColor.Blue;// para que se vean la pregunta de si se quiere generar otro
+                                                                    // mapa
+                    }
+                    else
+                    {
+                        DefaultColor();
+                    }
+                }
+            }
+
+            //Create Farm (crea granja)
+            if (a >= farmPlaceY && a <= farmPlaceY + 29)
+            {
+                if (num >= farmPlaceX && num <= farmPlaceX + 19)
+                {
+                    Console.BackgroundColor = ConsoleColor.DarkGray;
+                    Console.ForegroundColor = ConsoleColor.DarkGray;
+                }
+            }
+            num += 1;
+        }
+        Console.Write(row[num]);
+        Console.Write(" ");
+        Console.Write(Environment.NewLine);
+        a += 1;
+    }
+    */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

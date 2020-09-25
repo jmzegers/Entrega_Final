@@ -20,6 +20,7 @@ namespace Entrega1
             Ir_al_mercado_de_edificaciones DestSell = new Ir_al_mercado_de_edificaciones();
             CompraConsumible Consu = new CompraConsumible();
             VentaDestruir VD = new VentaDestruir();
+            MapCreator mh = new MapCreator(true, true);
 
             while (true) //Aca se presentan mapas hasta que el jugador se decida por uno
             {
@@ -27,7 +28,7 @@ namespace Entrega1
                 //guardando los valores como dos bools (si tiene rio o no y lo mismo con el lago)
                 bool ar = riverAndLake[0]; //valor del bool del rio
                 bool al = riverAndLake[1]; //valor del bool del lago
-                MapCreator mh = new MapCreator(ar, al);
+                mh = new MapCreator(ar, al);
 
                 string answer = b.YesOrNo("Le gusta el mapa? [Y/N]");
 
@@ -36,6 +37,7 @@ namespace Entrega1
                     break;
                 }
             }
+            Dictionary<string, Dictionary<string, List<int>>> usedCoordinates = mh.GetStaticCoord();
 
             double cashMoney = 50000;
             string inventario = "";
@@ -72,17 +74,17 @@ namespace Entrega1
                                 answe = Console.ReadLine().ToUpper();
                                 if (answe == "P")
                                 {
-                                    b.EdifMarket("P", cashMoney);
+                                    b.EdifMarket("P", cashMoney, usedCoordinates);
   
                                 }
                                 else if (answe == "G")
                                 {
-                                    b.EdifMarket("G", cashMoney);
+                                    b.EdifMarket("G", cashMoney, usedCoordinates);
 
                                 }
                                 else if (answe == "A")
                                 {
-                                    b.EdifMarket("A", cashMoney);
+                                    b.EdifMarket("A", cashMoney, usedCoordinates);
 
                                 }
                                 else if (answe == "D")
