@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Xml.Linq;
 
 namespace entrega_01_grupo_2
 {
@@ -212,7 +214,28 @@ namespace entrega_01_grupo_2
 
         public bool CheckIfUsedCoord(Dictionary<string, List<int>> usedCoord, List<int> newCoordX, List<int> newCoordY)
         {
+            bool usedX = false;
+            bool usedY = false;
             bool isUsed = false;
+
+            for(int i = 0; i < usedCoord.Count; i++)
+            {
+                if (usedCoord[usedCoord.Keys.ElementAt(i)].Intersect(newCoordX).Any())
+                {
+                    usedX = true;
+                }
+                i++;
+                if (usedCoord[usedCoord.Keys.ElementAt(i)].Intersect(newCoordY).Any())
+                {
+                    usedY = true;
+                }
+            }
+
+            if(usedX && usedY)
+            {
+                isUsed = true;
+            }
+            
             return isUsed;
         }
 
@@ -230,12 +253,16 @@ namespace entrega_01_grupo_2
                 Dictionary<string, double> seedPrices = new Dictionary<string, double>();
                 Dictionary<string, Dictionary<int, double>> seedHistory = PriceHistoryMaker(turn);
 
-                foreach (KeyValuePair<string, Seed> seed in ob.GetSeedDict())
+                for (int Xa = 0; Xa <= turn -1; Xa++)
+                {
+                   
+                }
+                /* foreach (KeyValuePair<string, Seed> seed in ob.GetSeedDict())
                 {
                     string seedName = seed.Value.GetName();
                     double seedPrice = seedHistory[seedName][turn + 1];
                     seedPrices.Add(seedName, seedPrice);
-                }
+                }*/ 
 
                 int prodNum = 1;
                 Console.WriteLine("Las semillas disponibles y sus precios son: ");

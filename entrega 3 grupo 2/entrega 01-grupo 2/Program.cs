@@ -238,6 +238,7 @@ namespace Entrega1
                         else if (answ == "H")
                         {
                             Console.WriteLine("Precios HISTORICOS de las semillas");
+                            
                             Console.ReadKey();
                             break;
                         }

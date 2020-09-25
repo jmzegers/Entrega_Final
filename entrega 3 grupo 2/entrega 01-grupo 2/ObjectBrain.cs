@@ -13,6 +13,7 @@ namespace entrega_01_grupo_2
         Dictionary<string, Seed> seedDict = new Dictionary<string, Seed>();
         Dictionary<string, Dictionary<int, double>> priceHistory = new Dictionary<string, Dictionary<int, double>>();
         //Hay que crear 7 semillas y dar sus valores
+
         Seed Tomato = new Seed("Tomato", 5, 5, 1, 1, 1, 2, 10, 1, 1, 1, 1, 1, 10, 2, 15, 2);
         Seed Lettuce = new Seed("Lettuce", 10, 7, 1, 1, 1, 2, 10, 1, 1, 1, 1, 1, 10, 2, 15, 2);
         Seed Carrot = new Seed("Carrot", 15, 10, 1, 1, 1, 2, 10, 1, 1, 1, 1, 1, 10, 2, 15, 2);
@@ -20,7 +21,6 @@ namespace entrega_01_grupo_2
         Seed Corn = new Seed("Corn", 25, 20, 1, 1, 1, 2, 10, 1, 1, 1, 1, 1, 10, 2, 15, 2);
         Seed Onion = new Seed("Onion", 35, 25, 1, 1, 1, 2, 10, 1, 1, 1, 1, 1, 10, 2, 15, 2);
         Seed Celery = new Seed("Celery", 45, 35, 1, 1, 1, 2, 10, 1, 1, 1, 1, 1, 10, 2, 15, 2);
-
 
         Dictionary<string, Animal> animalDict = new Dictionary<string, Animal>();
         //Tambien hay que crear 5 diferentes tipos de ganado con sus valores respectivos para rellenar este diccionario
@@ -85,5 +85,13 @@ namespace entrega_01_grupo_2
         {
             return uc;
         }
+
+        List<string> SeedList = new List<string>()
+        {
+            "Tomate" + "precio de compra: 5" + "precio base: 5" + "consumo de nutrientes: 1"+"consumo de agua: 1"+
+             "nivel minimo de nutrientes: 2"+" nivel minimo de agua: 10" + " 1, 1, 1, 1, 1, 10, 2, 15, 2", 
+            "Lettuce" + "precio de compra: 5" + "precio base: 5" + "consumo de nutrientes: 1"+"consumo de agua: 1"+
+             "nivel minimo de nutrientes: 2"+" nivel minimo de agua: 10" + " 1, 1, 1, 1, 1, 10, 2, 15, 2"
+        };
     }
 }

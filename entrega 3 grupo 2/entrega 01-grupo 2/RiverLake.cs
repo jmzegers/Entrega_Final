@@ -331,27 +331,27 @@ namespace entrega_01_grupo_2
 
 
             coordinates.Add("FarmPlaceX", farmCoordX);
-            ob.GetUsedCoordinates().Add("FarmPlaceX", farmCoordX);
+           // ob.GetUsedCoordinates().Add("FarmPlaceX", farmCoordX); // se guarda la "coordenada x de la granja"
             coordinates.Add("FarmPlaceY", farmCoordY);
-            ob.GetUsedCoordinates().Add("FarmPlaceY", farmCoordY);
+           // ob.GetUsedCoordinates().Add("FarmPlaceY", farmCoordY); // se guarda la "coordenada y de la granja"
             coordinates.Add("LakePlaceX", lakeCoordX);
-            ob.GetUsedCoordinates().Add("LakePlaceX", lakeCoordX);
+           // ob.GetUsedCoordinates().Add("LakePlaceX", lakeCoordX); // se guarda la "coordenada x del lago"
             coordinates.Add("LakePlaceY", lakeCoordY);
-            ob.GetUsedCoordinates().Add("LakePlaceY", lakeCoordY);
+           // ob.GetUsedCoordinates().Add("LakePlaceY", lakeCoordY); // se guarda la "coordenada y del lago"
 
             if (HoV == 0) //Vertical
             {
                 riverCoordY.Add(firstCol);
                 riverCoordY.Add(firstCol + 4);
                 coordinates.Add("RiverPlaceY", riverCoordY);
-                ob.GetUsedCoordinates().Add("RiverPlaceY", riverCoordY);
+               // ob.GetUsedCoordinates().Add("RiverPlaceY", riverCoordY); // se guarda la coordenada y del rio (vertical)
             }
             else //Horizontal
             {
                 riverCoordX.Add(firstCol);
                 riverCoordX.Add(firstCol + 4);
                 coordinates.Add("RiverPlaceX", riverCoordX);
-                ob.GetUsedCoordinates().Add("RiverPlaceX", riverCoordX);
+                //ob.GetUsedCoordinates().Add("RiverPlaceX", riverCoordX);  // se guarda la coordenada x del rio (horizontal)
             }
         }
     }
