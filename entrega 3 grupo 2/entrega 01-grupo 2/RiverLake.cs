@@ -128,13 +128,6 @@ namespace entrega_01_grupo_2
             }
 
 
-
-
-
-
-
-
-
             int a = 0;
             int PositionY = 1;
             while (a <= 9)
@@ -239,15 +232,6 @@ namespace entrega_01_grupo_2
                 Console.Write(Environment.NewLine);
                 a += 1;
             }
-
-
-
-
-
-
-
-
-
 
             /*
             while (a <= 9) //Siempre que este dentro del tamaño de tc

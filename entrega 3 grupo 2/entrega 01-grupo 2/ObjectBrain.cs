@@ -21,6 +21,7 @@ namespace entrega_01_grupo_2
         Seed Onion = new Seed("Onion", 35, 25, 1, 1, 1, 2, 10, 1, 1, 1, 1, 1, 10, 2, 15, 2);
         Seed Celery = new Seed("Celery", 45, 35, 1, 1, 1, 2, 10, 1, 1, 1, 1, 1, 10, 2, 15, 2);
 
+
         Dictionary<string, Animal> animalDict = new Dictionary<string, Animal>();
         //Tambien hay que crear 5 diferentes tipos de ganado con sus valores respectivos para rellenar este diccionario
         Animal Cow = new Animal("Cow", 15, 15, 5, 5, 2, 5, 15, 2, 1, 1, 2, 10, 5, 1, 10, 3, 1, 10);

@@ -28,7 +28,7 @@ namespace entrega_01_grupo_2
             productDict.Add("Animals", animalPrices);
             productDict.Add("Buildings", storageBuidingPrices);
             productDict.Add("Consumables", consumablePrices);
-
+            
         }
     }
 }
