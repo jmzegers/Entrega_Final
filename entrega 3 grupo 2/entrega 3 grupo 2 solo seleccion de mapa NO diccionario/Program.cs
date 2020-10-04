@@ -21,6 +21,7 @@ namespace Entrega1
             CompraConsumible Consu = new CompraConsumible();
             VentaDestruir VD = new VentaDestruir();
             List<string> Alimento = new List<string>();
+            List<string> Cura = new List<string>();
             String ans = "X";
             String answ = "X";
             String answe = "X";
@@ -172,7 +173,7 @@ namespace Entrega1
                                             buyingConsumable.Buying();
                                             cashMoney -= 33.45;
                                             inventario += "\nFertilizante";
-                                            Alimento.Add("\nFertilizante");
+                                            Alimento.Add("Fertilizante");
 
                                         }
                                         else if (res == "R")
@@ -181,7 +182,7 @@ namespace Entrega1
                                             buyingConsumable.Buying();
                                             cashMoney -= 56.31;
                                             inventario += "\nriego";
-                                            Alimento.Add("\nRiego");
+                                            Alimento.Add("Riego");
 
                                         }
                                         else if (res == "A")
@@ -190,7 +191,7 @@ namespace Entrega1
                                             buyingConsumable.Buying();
                                             cashMoney -= 44.96;
                                             inventario += "\nAlimento para animales";
-                                            Alimento.Add("\nAlimento para animales");
+                                            Alimento.Add("Alimento para animales");
 
                                         }
                                         else if (res == "W")
@@ -199,7 +200,7 @@ namespace Entrega1
                                             buyingConsumable.Buying();
                                             cashMoney -= 54.45;
                                             inventario += "\nAgua para animales";
-                                            Alimento.Add("\nAgua para animales");
+                                            Alimento.Add("Agua para animales");
 
                                         }
                                         else if (res == "V")
@@ -217,7 +218,7 @@ namespace Entrega1
                                         {
                                             Console.WriteLine("respuesta invalida");
                                         }
-                                    }
+                                    } break;
                                 }
                                 else if (ali == "C")
                                 {
@@ -236,6 +237,7 @@ namespace Entrega1
                                             buyingConsumable.Buying();
                                             cashMoney -= 48.20;
                                             inventario += "\nfungicida";
+                                            Cura.Add("Fungicida");
                                         }
                                         else if (res == "H")
                                         {
@@ -243,6 +245,7 @@ namespace Entrega1
                                             buyingConsumable.Buying();
                                             cashMoney -= 80.24;
                                             inventario += "\nHerbicida";
+                                            Cura.Add("Herbicida");
 
                                         }
 
@@ -252,7 +255,7 @@ namespace Entrega1
                                             buyingConsumable.Buying();
                                             cashMoney -= 42.80;
                                             inventario += "\npesticida";
-
+                                            Cura.Add("Pesticida");
                                         }
 
                                         else if (res == "G")
@@ -261,7 +264,7 @@ namespace Entrega1
                                             buyingConsumable.Buying();
                                             cashMoney -= 28.40;
                                             inventario += "\nvacuna";
-
+                                            Cura.Add("Vacuna");
                                         }
                                         else if (res == "V")
                                         {
@@ -348,15 +351,41 @@ namespace Entrega1
                                                 mnb = Console.ReadLine().ToUpper();
                                                 if (mnb == "C")
                                                 {
-                                                    Console.WriteLine("agregar comida");
+                                                    for (int i = 0; i < Alimento.Count; i++)
+                                                    {
+                                                        if (Alimento[i] == "Alimento para animales")
+                                                        {
+                                                            Console.WriteLine("Se ha usado un Alimento para animales");
+                                                            Alimento.Remove("Alimento para animales");
+                                                            break;
+                                                        }
+                                                        /*
+                                                        else if (Alimento[i] != "Alimento para animales")
+                                                        {
+                                                            Console.WriteLine("no tiene Alimento para animales");
+                                                            
+                                                        }*/
+                                                    }
                                                 }
                                                 else if (mnb == "A")
                                                 {
-                                                    Console.WriteLine("agregar agua");
+                                                    for (int i = 0; i < Alimento.Count; i++)
+                                                    {
+                                                        if (Alimento[i] == "Agua para animales")
+                                                        {
+                                                            Console.WriteLine("Se ha usado un Agua para animales");
+                                                            Alimento.Remove("Agua para animales");
+                                                            break;
+                                                        }
+                                                    }
                                                 }
                                                 else if (mnb == "V")
                                                 {
                                                     Console.WriteLine("VOLVIENDO");
+                                                    foreach (String items in Alimento)
+                                                    {
+                                                        Console.WriteLine(items);
+                                                    }
                                                     break;
                                                 }
                                                 else
@@ -377,15 +406,35 @@ namespace Entrega1
                                                 ghj = Console.ReadLine().ToUpper();
                                                 if (ghj == "F")
                                                 {
-                                                    Console.WriteLine("agregar Fertilizante");
+                                                    for (int i = 0; i < Alimento.Count; i++)
+                                                    {
+                                                        if (Alimento[i] == "Fertilizante")
+                                                        {
+                                                            Console.WriteLine("Se ha usado un Fertilizante");
+                                                            Alimento.Remove("Fertilizante");
+                                                            break;
+                                                        }
+                                                    }
                                                 }
                                                 else if (ghj == "R")
                                                 {
-                                                    Console.WriteLine("Agregar Riego");
+                                                    for (int i = 0; i < Alimento.Count; i++)
+                                                    {
+                                                        if (Alimento[i] == "Riego")
+                                                        {
+                                                            Console.WriteLine("Se ha usado un Riego");
+                                                            Alimento.Remove("Riego");
+                                                            break;
+                                                        }
+                                                    }
                                                 }
                                                 else if (ghj == "V")
                                                 {
                                                     Console.WriteLine("volviendo");
+                                                    foreach (String items in Alimento)
+                                                    {
+                                                        Console.WriteLine(items);
+                                                    }
                                                     break;
                                                 }
                                                 else
@@ -422,19 +471,47 @@ namespace Entrega1
                                                 klp = Console.ReadLine().ToUpper();
                                                 if (klp == "H")
                                                 {
-                                                    Console.WriteLine("aplicando Herbicida");
+                                                    for (int i = 0; i < Cura.Count; i++)
+                                                    {
+                                                        if (Cura[i] == "Herbicida")
+                                                        {
+                                                            Console.WriteLine("Se ha usado un Herbicida");
+                                                            Cura.Remove("Herbicida");
+                                                            break;
+                                                        }
+                                                    }
                                                 }
                                                 else if (klp == "F")
                                                 {
-                                                    Console.WriteLine("aplicando Fungicida");
+                                                    for (int i = 0; i < Cura.Count; i++)
+                                                    {
+                                                        if (Cura[i] == "Fungicida")
+                                                        {
+                                                            Console.WriteLine("Se ha usado un Fungicida");
+                                                            Cura.Remove("Fungicida");
+                                                            break;
+                                                        }
+                                                    }
                                                 }
                                                 else if (klp == "P")
                                                 {
-                                                    Console.WriteLine("aplicando Pesticida");
+                                                    for (int i = 0; i < Cura.Count; i++)
+                                                    {
+                                                        if (Cura[i] == "Pesticida")
+                                                        {
+                                                            Console.WriteLine("Se ha usado un Pesticida");
+                                                            Cura.Remove("Pesticida");
+                                                            break;
+                                                        }
+                                                    }
                                                 }
                                                 else if (klp == "V")
                                                 {
                                                     Console.WriteLine("Volviendo");
+                                                    foreach (String items in Cura)
+                                                    {
+                                                        Console.WriteLine(items);
+                                                    }
                                                     break;
                                                 }
                                                 else
@@ -445,11 +522,23 @@ namespace Entrega1
                                         }
                                         else if (poi == "G")
                                         {
-                                            Console.WriteLine("aplicando vacuna");
+                                            for (int i = 0; i < Cura.Count; i++)
+                                            {
+                                                if (Cura[i] == "Vacuna")
+                                                {
+                                                    Console.WriteLine("Se ha usado un Vacuna");
+                                                    Cura.Remove("Vacuna");
+                                                    break;
+                                                }
+                                            }
                                         }
                                         else if (fgt == "V")
                                         {
                                             Console.WriteLine("VOLVIENDO");
+                                            foreach (String items in Cura)
+                                            {
+                                                Console.WriteLine(items);
+                                            }
                                             break;
                                         }
                                         else
