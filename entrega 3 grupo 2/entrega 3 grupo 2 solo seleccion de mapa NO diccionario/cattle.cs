@@ -14,18 +14,21 @@ namespace entrega_01_grupo_2
         private double ScapeChance;
         private double SuddenDeathChance;
         private bool Death;
-        private new double Health;
-        private new double Water;
-        private new int Maturity;
+        private double Health;
+        private double Water;
+        private int Maturity;
         private int amountofland;
 
         // falta un poco revisar aqui
-        public Cattle(string name, double purchasePrice, string kind, int unidad, double scapeChance, double suddenDeathChance) :
+        public Cattle(string name, double purchasePrice, string kind, int unidad, double scapeChance, double suddenDeathChance, double Health, double Water, int Maturity) :
             base(name, (int)purchasePrice, kind)
         {
             this.Unidad = unidad;
             this.ScapeChance = scapeChance;
             this.SuddenDeathChance = suddenDeathChance;
+            Health = 100;
+            Water = 1;
+            Maturity = 1;
         }
 
         public int CurrentNutrients(int nutrientsPerTurn, int nutrientsNow)

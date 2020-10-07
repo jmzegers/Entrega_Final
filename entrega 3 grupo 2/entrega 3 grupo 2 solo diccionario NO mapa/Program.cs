@@ -18,6 +18,7 @@ namespace Entrega1
             Console.WriteLine("Bienvenido a Farm Life Simulator");
             Ir_al_mercado_de_consumibles buyingConsumable = new Ir_al_mercado_de_consumibles();
             Ir_al_mercado_de_edificaciones DestSell = new Ir_al_mercado_de_edificaciones();
+            //Seed nuevaSeed = new Seed("nombre",);
             CompraConsumible Consu = new CompraConsumible();
             VentaDestruir VD = new VentaDestruir();
             MapCreator mh = new MapCreator(true, true);
