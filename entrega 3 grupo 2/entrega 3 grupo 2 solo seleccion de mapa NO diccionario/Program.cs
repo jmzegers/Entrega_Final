@@ -41,18 +41,23 @@ namespace Entrega1
             double verificandoEscape;
             double verificandoEnfermedad;
             double verificandoEnfermedadG;
+            double compraG;
+            double compraP;
             bool enfermedad;
             bool enfermedadG;
             bool gusano;
             bool maleza;
             bool muerte;
             bool escape;
+            int bodegasJugador;
+            bool productoAlmacenado;
             var random = new Random();
             int probaMaleza = random.Next(0, 100);
             int probaGusano = random.Next(0, 100);
             double probaMuerte = random.Next(0,100);
             double probaEscape = random.Next(0, 100);
             double probaEnfer = random.Next(0, 100);
+            double ganancia;
             variacion = nuevaSeed.GetPriceVariation();
             maduracionPlanta = nuevaPlantation.GetMaturity();
             maduracionGanado = nuevoGanado.GetMaturity();
@@ -64,11 +69,16 @@ namespace Entrega1
             unidad = nuevoGanado.GetUnidad();
             verificandoEnfermedadG = nuevoGanado.GetDesease();
             calidad = nuevoAlmacen.GetQuality();
+            compraG = nuevoGanado.GetPurchasePrice();
+            compraP = nuevaPlantation.GetPurchasePrice();
+            productoAlmacenado = true;
             enfermedad = false;
             gusano = false;
             maleza = false;
             muerte = false;
             escape = false;
+            bodegasJugador = 0;
+            ganancia = 0;
             String ans = "X";
             String answ = "X";
             String answe = "X";
@@ -83,8 +93,8 @@ namespace Entrega1
             String ghj = "X";
             String fgt = "V";
             String ali = "X";
-            
-
+            String bod = "X";
+            String vent = "X";
             Console.WriteLine("\nCrear nuevo juego [N]");
             Console.WriteLine("Cargar nuevo juego [C]");
 
@@ -144,7 +154,31 @@ namespace Entrega1
                                 }
                                 else if (answe == "A")
                                 {
+                                    Console.WriteLine("Desea comprar un edificio de almacenamiento (bodegas) [Y/N]");
+                                    
+                                    while (true)
+                                    {   
+                                        bod = Console.ReadLine().ToUpper();
+                                        if (bod == "Y")
+                                        {
+                                            Console.WriteLine("a comprado una bodega");
+                                            bodegasJugador += 1;
+                                            cashMoney -= compraP;
+                                            cashMoney -= compraG;
+                                            break;
+                                        }
+                                        else if (bod == "N")
+                                        {
+                                            Console.WriteLine("no ha comprado nada");
+                                            break;
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine("respuesta invalida");
+                                        }
+                                    }
                                     b.EdifMarket("A", cashMoney);
+                                    
 
                                 }
                                 else if (answe == "D")
@@ -710,8 +744,34 @@ namespace Entrega1
                         }
                         else if (admins == "A")
                         {
+                            if (bodegasJugador >= 1 | productoAlmacenado == true)
+                            {
+                                Console.WriteLine("¿desea vender un producto? [Y/N]");
+                               
+                                while (true)
+                                {
+                                    vent = Console.ReadLine().ToUpper();
+                                    if (vent == "Y")
+                                    {
+                                        ganancia += (calidad * compraG);
+                                        cashMoney += ganancia;
+                                        break;
+                                    }
+                                    else if (vent == "N")
+                                    {
+                                        Console.WriteLine("no ha vendido nada");
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("respuesta invalida");
+                                    }
+                                    ganancia = 0;
+                                }
+
+                            }
                             Console.WriteLine("almacenamiento en este punto");
-                           
+                            
                         }
                         else if (admins == "V")
                         {
