@@ -18,15 +18,17 @@ namespace entrega_01_grupo_2
         private double Water;
         private int Maturity;
         private int amountofland;
+        private double Disease;
 
         // falta un poco revisar aqui
-        public Cattle(string name, double purchasePrice, string kind, int unidad, double scapeChance, double suddenDeathChance, double Health, double Water, int maturity) :
+        public Cattle(string name, double purchasePrice, string kind, int unidad, double scapeChance, double suddenDeathChance, double Health, double Water, int maturity, double disease) :
             base(name, (int)purchasePrice, kind)
         {
             this.Unidad = unidad;
             this.ScapeChance = scapeChance;
             this.SuddenDeathChance = suddenDeathChance;
             this.Maturity = maturity;
+            this.Disease = disease; 
             Health = 100;
             Water = 1;
             Maturity = 1;
@@ -87,7 +89,11 @@ namespace entrega_01_grupo_2
         public int Getamountofland()
         {
             return amountofland;
-        } 
+        }
+        public double GetDesease()
+        {
+            return Disease;
+        }
     }
 
 }

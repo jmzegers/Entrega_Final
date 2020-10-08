@@ -19,8 +19,8 @@ namespace entrega_01_grupo_2
         private double Water;
         private int Maturity;
 
-        public Plantation(string name, int purchasePrice, string kind, double diseaseChance, int wormChance, int weedChance, bool disease, double Health, double Water, int maturity) : 
-            base(name, purchasePrice, kind)
+        public Plantation(string name, double purchasePrice, string kind, double diseaseChance, int wormChance, int weedChance, bool disease, double Health, double Water, int maturity) : 
+            base(name, (int)purchasePrice, kind)
         {
             Worms = false;
             Weeds = false;
@@ -67,7 +67,7 @@ namespace entrega_01_grupo_2
             return Name;
         }
 
-        public int GetPurchasePrice()
+        public double GetPurchasePrice()
         {
             return PurchasePrice;
         }

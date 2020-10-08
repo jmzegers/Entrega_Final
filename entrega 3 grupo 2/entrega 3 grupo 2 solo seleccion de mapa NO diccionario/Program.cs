@@ -26,28 +26,59 @@ namespace Entrega1
             List<string> AguAnimales = new List<string>();
             List<string> Cura = new List<string>();
             Dictionary<string, (int, int)> ejemplo = new Dictionary<string, (int, int)>();
-            Seed nuevaSeed = new Seed("nombre",5,1,1,1,1,4,10,25,4,1,1,1,10,1,5,1);
+            Seed nuevaSeed = new Seed("nombre", 5, 1, 1, 1, 1, 4, 10, 25, 4, 1, 1, 1, 10, 1, 5, 1);
             Plantation nuevaPlantation = new Plantation("nombre", 5, "A", 1.5, 3, 2, false, 100, 100,1);
-            Cattle nuevoGanado = new Cattle("nombre", 2.5, "B", 30, 0.5, 0.2, 1, 1, 2);
+            Cattle nuevoGanado = new Cattle("nombre", 2.5, "B", 30, 0.5, 0.2, 1, 1, 2,1);
+            StorageBuilding nuevoAlmacen = new StorageBuilding("nombre", 30, 10, 250, "C", 50);
             double variacion;
             int maduracionPlanta;
             int maduracionGanado;
             int verificandoMaleza;
             int verificandoGusano;
+            int unidad;
+            int calidad;
+            double verificandoMuerte;
+            double verificandoEscape;
             double verificandoEnfermedad;
+            double verificandoEnfermedadG;
+            double compraG;
+            double compraP;
             bool enfermedad;
+            bool enfermedadG;
             bool gusano;
             bool maleza;
-            var random = new Random(100);
+            bool muerte;
+            bool escape;
+            int bodegasJugador;
+            bool productoAlmacenado;
+            var random = new Random();
             int probaMaleza = random.Next(0, 100);
             int probaGusano = random.Next(0, 100);
+            double probaMuerte = random.Next(0,100);
+            double probaEscape = random.Next(0, 100);
             double probaEnfer = random.Next(0, 100);
+            double ganancia;
             variacion = nuevaSeed.GetPriceVariation();
             maduracionPlanta = nuevaPlantation.GetMaturity();
             maduracionGanado = nuevoGanado.GetMaturity();
             verificandoMaleza = nuevaPlantation.GetWeedChance();
             verificandoGusano = nuevaPlantation.GetWormChance();
             verificandoEnfermedad = nuevaPlantation.GetDiseaseChance();
+            verificandoEscape = nuevoGanado.GetScapeChance();
+            verificandoMuerte = nuevoGanado.GetSuddenDeathChance();
+            unidad = nuevoGanado.GetUnidad();
+            verificandoEnfermedadG = nuevoGanado.GetDesease();
+            calidad = nuevoAlmacen.GetQuality();
+            compraG = nuevoGanado.GetPurchasePrice();
+            compraP = nuevaPlantation.GetPurchasePrice();
+            productoAlmacenado = true;
+            enfermedad = false;
+            gusano = false;
+            maleza = false;
+            muerte = false;
+            escape = false;
+            bodegasJugador = 0;
+            ganancia = 0;
             String ans = "X";
             String answ = "X";
             String answe = "X";
@@ -62,8 +93,8 @@ namespace Entrega1
             String ghj = "X";
             String fgt = "V";
             String ali = "X";
-            
-
+            String bod = "X";
+            String vent = "X";
             Console.WriteLine("\nCrear nuevo juego [N]");
             Console.WriteLine("Cargar nuevo juego [C]");
 
@@ -123,7 +154,31 @@ namespace Entrega1
                                 }
                                 else if (answe == "A")
                                 {
+                                    Console.WriteLine("Desea comprar un edificio de almacenamiento (bodegas) [Y/N]");
+                                    
+                                    while (true)
+                                    {   
+                                        bod = Console.ReadLine().ToUpper();
+                                        if (bod == "Y")
+                                        {
+                                            Console.WriteLine("a comprado una bodega");
+                                            bodegasJugador += 1;
+                                            cashMoney -= compraP;
+                                            cashMoney -= compraG;
+                                            break;
+                                        }
+                                        else if (bod == "N")
+                                        {
+                                            Console.WriteLine("no ha comprado nada");
+                                            break;
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine("respuesta invalida");
+                                        }
+                                    }
                                     b.EdifMarket("A", cashMoney);
+                                    
 
                                 }
                                 else if (answe == "D")
@@ -468,6 +523,7 @@ namespace Entrega1
                                                             Console.WriteLine("\nDesea comprar un alimento para animales");
                                                             buyingConsumable.ConsumibleMarket += Consu.OnBuy6;
                                                             buyingConsumable.Buying();
+                                                            // similar a lo que hay de en pasar turno
 
                                                             if (cashMoney < 44.96)
                                                             {
@@ -688,7 +744,34 @@ namespace Entrega1
                         }
                         else if (admins == "A")
                         {
-                            break;
+                            if (bodegasJugador >= 1 | productoAlmacenado == true)
+                            {
+                                Console.WriteLine("¿desea vender un producto? [Y/N]");
+                               
+                                while (true)
+                                {
+                                    vent = Console.ReadLine().ToUpper();
+                                    if (vent == "Y")
+                                    {
+                                        ganancia += (calidad * compraG);
+                                        cashMoney += ganancia;
+                                        break;
+                                    }
+                                    else if (vent == "N")
+                                    {
+                                        Console.WriteLine("no ha vendido nada");
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("respuesta invalida");
+                                    }
+                                    ganancia = 0;
+                                }
+
+                            }
+                            Console.WriteLine("almacenamiento en este punto");
+                            
                         }
                         else if (admins == "V")
                         {
@@ -717,7 +800,7 @@ namespace Entrega1
                         Console.WriteLine("\nCalculando nuevos niveles de nutrientes y agua");
 
                         Console.WriteLine("\nVerificando el desarrollo de maleza, gusano o enfermedad en las plantaciones");
-                        if (verificandoMaleza == probaMaleza)
+                        if (verificandoMaleza == (probaMaleza * 0.01))
                         {
                             maleza = true;
                         }
@@ -725,7 +808,7 @@ namespace Entrega1
                         {
                             maleza = false;
                         }
-                        if (verificandoGusano == probaGusano)
+                        if (verificandoGusano == (probaGusano * 0.01))
                         {
                             gusano = true;
                         }
@@ -733,7 +816,7 @@ namespace Entrega1
                         {
                             gusano = false;
                         }
-                        if (verificandoEnfermedad == probaEnfer)
+                        if (verificandoEnfermedad == (probaEnfer * 0.01))
                         {
                             enfermedad = true;
                         }
@@ -742,11 +825,37 @@ namespace Entrega1
                             enfermedad = false;
                         }
                         Console.WriteLine("\nverificando muerte o escape del ganado");
-
+                        if (verificandoMuerte == (probaMuerte * 0.01))
+                        {
+                            muerte = true;
+                            unidad -= 1;
+                        }
+                        else
+                        {
+                            muerte = false;
+                        }
+                        if (verificandoEscape == (probaEscape * 0.01))
+                        {
+                            escape = true;
+                            unidad -= 1;
+                        }
+                        else
+                        {
+                            escape = false;
+                        }
+                        if (verificandoEnfermedadG == (probaEnfer * 0.01))
+                        {
+                            enfermedadG = true;
+                        }
+                        else
+                        {
+                            enfermedadG = false;
+                        }
                         Console.WriteLine("\nrestando calidad a los productos");
+                        calidad -= 1;
                         Console.ReadKey();
                     }
-                    break;
+                    //break;
                 }
 
                 else

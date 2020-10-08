@@ -24,9 +24,9 @@ namespace entrega_01_grupo_2
 
 
         Dictionary<string, StorageBuilding> storageBuildingDict = new Dictionary<string, StorageBuilding>();
-        StorageBuilding SmallStorageBuilding = new StorageBuilding("Small Storage Building", 100, 50, 500, "A");
-        StorageBuilding MediumStorageBuilding = new StorageBuilding("Medium Storage Building", 200, 150, 1000, "B");
-        StorageBuilding LargeStorageBuilding = new StorageBuilding("Large Storage Building", 400, 350, 2000, "C");
+        StorageBuilding SmallStorageBuilding = new StorageBuilding("Small Storage Building", 100, 50, 500, "A",1);
+        StorageBuilding MediumStorageBuilding = new StorageBuilding("Medium Storage Building", 200, 150, 1000, "B",1);
+        StorageBuilding LargeStorageBuilding = new StorageBuilding("Large Storage Building", 400, 350, 2000, "C",1);
 
         Dictionary<string, List<int>> uc = new Dictionary<string, List<int>>();
 
