@@ -21,11 +21,18 @@ namespace Entrega1
             CompraConsumible Consu = new CompraConsumible();
             VentaDestruir VD = new VentaDestruir();
             List<string> Alimento = new List<string>();
+            List<string> AliAnimales = new List<string>();
+            AliAnimales.Add("zzz");
+            List<string> AguAnimales = new List<string>();
             List<string> Cura = new List<string>();
             Dictionary<string, (int, int)> ejemplo = new Dictionary<string, (int, int)>();
             Seed nuevaSeed = new Seed("nombre",5,1,1,1,1,4,10,25,4,1,1,1,10,1,5,1);
-            double variacion; 
+            Plantation nuevaPlantation = new Plantation("nombre", 5, "A", 1.5, 3, 2, false, 100, 100,1);
+            double variacion;
+            int maduracionPlanta;
+            int verificandoMaleza;
             variacion = nuevaSeed.GetPriceVariation();
+            maduracionPlanta = nuevaPlantation.GetMaturity();
             String ans = "X";
             String answ = "X";
             String answe = "X";
@@ -61,7 +68,7 @@ namespace Entrega1
                 }
             }
 
-            double cashMoney = 1;
+            double cashMoney = 10000000;
             string inventario = "";
             Console.WriteLine("su monto inicial es:  " + cashMoney);
             Console.ReadKey();
@@ -206,7 +213,8 @@ namespace Entrega1
                                             }
                                             
 
-                                        }
+                                        } 
+                                        // se copio desde aca hasta 
                                         else if (res == "A")
                                         {
                                             buyingConsumable.ConsumibleMarket += Consu.OnBuy6;
@@ -221,8 +229,9 @@ namespace Entrega1
                                                 cashMoney -= 44.96;
                                                 inventario += "\nAlimento para animales";
                                                 Alimento.Add("Alimento para animales");
+                                                AliAnimales.Add("Alimento para animales");
                                             }
-                                            
+                                         // hasta aca   
 
                                         }
                                         else if (res == "W")
@@ -240,6 +249,7 @@ namespace Entrega1
                                                 cashMoney -= 54.45;
                                                 inventario += "\nAgua para animales";
                                                 Alimento.Add("Agua para animales");
+                                                AguAnimales.Add("Agua para animales");
                                             }
                                             
 
@@ -425,27 +435,46 @@ namespace Entrega1
                                                 mnb = Console.ReadLine().ToUpper();
                                                 if (mnb == "C")
                                                 {
-                                                    for (int i = 0; i < Alimento.Count; i++)
+                                                    AliAnimales.Sort();
+                                                    for (int i = 0; i < AliAnimales.Count; i++)
                                                     {
-                                                        if (Alimento[i] == "Alimento para animales")
+                                                        
+                                                        if (AliAnimales[i] == "Alimento para animales")
                                                         {
                                                             Console.WriteLine("Se ha usado un Alimento para animales");
                                                             Alimento.Remove("Alimento para animales");
+                                                            AliAnimales.Remove("Alimento para animales");
                                                             break;
                                                         }
-                                                        /*
-                                                        else if (Alimento[i] != "Alimento para animales")
+                                                        
+                                                        else 
                                                         {
                                                             Console.WriteLine("no tiene Alimento para animales");
-                                                            
-                                                        }*/
+                                                            Console.WriteLine("\nDesea comprar un alimento para animales");
+                                                            buyingConsumable.ConsumibleMarket += Consu.OnBuy6;
+                                                            buyingConsumable.Buying();
+
+                                                            if (cashMoney < 44.96)
+                                                            {
+                                                                Console.WriteLine("... ESPERA, \nno tienes dinero suficiente vuelva mas tarde");
+                                                            }
+                                                            else if (cashMoney >= 44.96)
+                                                            {
+                                                                cashMoney -= 44.96;
+                                                                inventario += "\nAlimento para animales";
+                                                                Alimento.Add("Alimento para animales");
+                                                                AliAnimales.Add("Alimento para animales");
+                                                                break;
+                                                            }
+                                                            break;
+                                                        } 
                                                     }
                                                 }
                                                 else if (mnb == "A")
                                                 {
-                                                    for (int i = 0; i < Alimento.Count; i++)
+                                                    for (int i = 0; i < AguAnimales.Count; i++)
                                                     {
-                                                        if (Alimento[i] == "Agua para animales")
+                                                        if (AguAnimales[i] == "Agua para animales")
                                                         {
                                                             Console.WriteLine("Se ha usado un Agua para animales");
                                                             Alimento.Remove("Agua para animales");
@@ -487,6 +516,10 @@ namespace Entrega1
                                                             Console.WriteLine("Se ha usado un Fertilizante");
                                                             Alimento.Remove("Fertilizante");
                                                             break;
+                                                        }
+                                                        else if (Alimento[i] != "Fertilizante")
+                                                        {
+                                                            Console.WriteLine("muestrar");
                                                         }
                                                     }
                                                 }
@@ -662,7 +695,8 @@ namespace Entrega1
                         Console.WriteLine("\nse generan nuevos precios para las semillas");
                         variacion += 1;
                         Console.WriteLine("\nmadurando plantaciones/ganado");
-                        
+                        maduracionPlanta += 1;
+
                         Console.WriteLine("\ncalculando nueva salud");
 
                         Console.WriteLine("\nCalculando nuevos niveles de nutrientes y agua");
