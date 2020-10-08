@@ -11,8 +11,8 @@ namespace entrega_01_grupo_2
 
         private double SalePrice;
         private int MaxCapacity;
-
-        public StorageBuilding(string name, int purchasePrice, int salePrice, int maxCapacity, string kind) :
+        private int Quality;
+        public StorageBuilding(string name, int purchasePrice, int salePrice, int maxCapacity, string kind, int quality) :
             base(name, purchasePrice, kind)
 
         {
@@ -20,6 +20,7 @@ namespace entrega_01_grupo_2
             this.PurchasePrice = purchasePrice;
             this.SalePrice = salePrice;
             this.MaxCapacity = maxCapacity;
+            this.Quality = quality;
         }
 
         public string NameBuilding()
@@ -44,6 +45,10 @@ namespace entrega_01_grupo_2
         public string GetKind()
         {
             return Kind;
+        }
+        public int GetQuality()
+        {
+            return Quality;
         }
     }
 }

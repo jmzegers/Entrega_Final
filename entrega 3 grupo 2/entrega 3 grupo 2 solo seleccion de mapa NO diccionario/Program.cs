@@ -26,21 +26,32 @@ namespace Entrega1
             List<string> AguAnimales = new List<string>();
             List<string> Cura = new List<string>();
             Dictionary<string, (int, int)> ejemplo = new Dictionary<string, (int, int)>();
-            Seed nuevaSeed = new Seed("nombre",5,1,1,1,1,4,10,25,4,1,1,1,10,1,5,1);
+            Seed nuevaSeed = new Seed("nombre", 5, 1, 1, 1, 1, 4, 10, 25, 4, 1, 1, 1, 10, 1, 5, 1);
             Plantation nuevaPlantation = new Plantation("nombre", 5, "A", 1.5, 3, 2, false, 100, 100,1);
-            Cattle nuevoGanado = new Cattle("nombre", 2.5, "B", 30, 0.5, 0.2, 1, 1, 2);
+            Cattle nuevoGanado = new Cattle("nombre", 2.5, "B", 30, 0.5, 0.2, 1, 1, 2,1);
+            StorageBuilding nuevoAlmacen = new StorageBuilding("nombre", 30, 10, 250, "C", 50);
             double variacion;
             int maduracionPlanta;
             int maduracionGanado;
             int verificandoMaleza;
             int verificandoGusano;
+            int unidad;
+            int calidad;
+            double verificandoMuerte;
+            double verificandoEscape;
             double verificandoEnfermedad;
+            double verificandoEnfermedadG;
             bool enfermedad;
+            bool enfermedadG;
             bool gusano;
             bool maleza;
-            var random = new Random(100);
+            bool muerte;
+            bool escape;
+            var random = new Random();
             int probaMaleza = random.Next(0, 100);
             int probaGusano = random.Next(0, 100);
+            double probaMuerte = random.Next(0,100);
+            double probaEscape = random.Next(0, 100);
             double probaEnfer = random.Next(0, 100);
             variacion = nuevaSeed.GetPriceVariation();
             maduracionPlanta = nuevaPlantation.GetMaturity();
@@ -48,6 +59,16 @@ namespace Entrega1
             verificandoMaleza = nuevaPlantation.GetWeedChance();
             verificandoGusano = nuevaPlantation.GetWormChance();
             verificandoEnfermedad = nuevaPlantation.GetDiseaseChance();
+            verificandoEscape = nuevoGanado.GetScapeChance();
+            verificandoMuerte = nuevoGanado.GetSuddenDeathChance();
+            unidad = nuevoGanado.GetUnidad();
+            verificandoEnfermedadG = nuevoGanado.GetDesease();
+            calidad = nuevoAlmacen.GetQuality();
+            enfermedad = false;
+            gusano = false;
+            maleza = false;
+            muerte = false;
+            escape = false;
             String ans = "X";
             String answ = "X";
             String answe = "X";
@@ -468,6 +489,7 @@ namespace Entrega1
                                                             Console.WriteLine("\nDesea comprar un alimento para animales");
                                                             buyingConsumable.ConsumibleMarket += Consu.OnBuy6;
                                                             buyingConsumable.Buying();
+                                                            // similar a lo que hay de en pasar turno
 
                                                             if (cashMoney < 44.96)
                                                             {
@@ -688,7 +710,8 @@ namespace Entrega1
                         }
                         else if (admins == "A")
                         {
-                            break;
+                            Console.WriteLine("almacenamiento en este punto");
+                           
                         }
                         else if (admins == "V")
                         {
@@ -717,7 +740,7 @@ namespace Entrega1
                         Console.WriteLine("\nCalculando nuevos niveles de nutrientes y agua");
 
                         Console.WriteLine("\nVerificando el desarrollo de maleza, gusano o enfermedad en las plantaciones");
-                        if (verificandoMaleza == probaMaleza)
+                        if (verificandoMaleza == (probaMaleza * 0.01))
                         {
                             maleza = true;
                         }
@@ -725,7 +748,7 @@ namespace Entrega1
                         {
                             maleza = false;
                         }
-                        if (verificandoGusano == probaGusano)
+                        if (verificandoGusano == (probaGusano * 0.01))
                         {
                             gusano = true;
                         }
@@ -733,7 +756,7 @@ namespace Entrega1
                         {
                             gusano = false;
                         }
-                        if (verificandoEnfermedad == probaEnfer)
+                        if (verificandoEnfermedad == (probaEnfer * 0.01))
                         {
                             enfermedad = true;
                         }
@@ -742,11 +765,37 @@ namespace Entrega1
                             enfermedad = false;
                         }
                         Console.WriteLine("\nverificando muerte o escape del ganado");
-
+                        if (verificandoMuerte == (probaMuerte * 0.01))
+                        {
+                            muerte = true;
+                            unidad -= 1;
+                        }
+                        else
+                        {
+                            muerte = false;
+                        }
+                        if (verificandoEscape == (probaEscape * 0.01))
+                        {
+                            escape = true;
+                            unidad -= 1;
+                        }
+                        else
+                        {
+                            escape = false;
+                        }
+                        if (verificandoEnfermedadG == (probaEnfer * 0.01))
+                        {
+                            enfermedadG = true;
+                        }
+                        else
+                        {
+                            enfermedadG = false;
+                        }
                         Console.WriteLine("\nrestando calidad a los productos");
+                        calidad -= 1;
                         Console.ReadKey();
                     }
-                    break;
+                    //break;
                 }
 
                 else
