@@ -13,7 +13,7 @@ namespace entrega_01_grupo_2
         protected int SalesPrice;
         protected double Health;
         protected double Water;
-        protected int Maturity;
+        //protected int Maturity;
         protected bool Disease;
         protected string Kind;
         
@@ -24,7 +24,7 @@ namespace entrega_01_grupo_2
             SalesPrice = 100;
             Health = 100;
             Water = 100;
-            Maturity = 0;
+            //Maturity = 0;
             Disease = false;
             this.Kind = kind;
         }
