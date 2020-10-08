@@ -20,12 +20,13 @@ namespace entrega_01_grupo_2
         private int amountofland;
 
         // falta un poco revisar aqui
-        public Cattle(string name, double purchasePrice, string kind, int unidad, double scapeChance, double suddenDeathChance, double Health, double Water, int Maturity) :
+        public Cattle(string name, double purchasePrice, string kind, int unidad, double scapeChance, double suddenDeathChance, double Health, double Water, int maturity) :
             base(name, (int)purchasePrice, kind)
         {
             this.Unidad = unidad;
             this.ScapeChance = scapeChance;
             this.SuddenDeathChance = suddenDeathChance;
+            this.Maturity = maturity;
             Health = 100;
             Water = 1;
             Maturity = 1;

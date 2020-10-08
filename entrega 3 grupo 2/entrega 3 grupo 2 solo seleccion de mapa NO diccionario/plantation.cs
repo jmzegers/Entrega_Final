@@ -19,7 +19,7 @@ namespace entrega_01_grupo_2
         private double Water;
         private int Maturity;
 
-        public Plantation(string name, int purchasePrice, string kind, double diseaseChance, int wormChance, int weedChance, bool disease, double Health, double Water, int Maturity) : 
+        public Plantation(string name, int purchasePrice, string kind, double diseaseChance, int wormChance, int weedChance, bool disease, double Health, double Water, int maturity) : 
             base(name, purchasePrice, kind)
         {
             Worms = false;
@@ -28,9 +28,9 @@ namespace entrega_01_grupo_2
             this.DiseaseChance = diseaseChance;
             this.WormChance = wormChance;
             this.WeedChance = weedChance;
+            this.Maturity = maturity;
             Health = 100;
             Water = 1;
-            Maturity = 1;
         }
 
         public bool Worm(int gu)

@@ -28,11 +28,26 @@ namespace Entrega1
             Dictionary<string, (int, int)> ejemplo = new Dictionary<string, (int, int)>();
             Seed nuevaSeed = new Seed("nombre",5,1,1,1,1,4,10,25,4,1,1,1,10,1,5,1);
             Plantation nuevaPlantation = new Plantation("nombre", 5, "A", 1.5, 3, 2, false, 100, 100,1);
+            Cattle nuevoGanado = new Cattle("nombre", 2.5, "B", 30, 0.5, 0.2, 1, 1, 2);
             double variacion;
             int maduracionPlanta;
+            int maduracionGanado;
             int verificandoMaleza;
+            int verificandoGusano;
+            double verificandoEnfermedad;
+            bool enfermedad;
+            bool gusano;
+            bool maleza;
+            var random = new Random(100);
+            int probaMaleza = random.Next(0, 100);
+            int probaGusano = random.Next(0, 100);
+            double probaEnfer = random.Next(0, 100);
             variacion = nuevaSeed.GetPriceVariation();
             maduracionPlanta = nuevaPlantation.GetMaturity();
+            maduracionGanado = nuevoGanado.GetMaturity();
+            verificandoMaleza = nuevaPlantation.GetWeedChance();
+            verificandoGusano = nuevaPlantation.GetWormChance();
+            verificandoEnfermedad = nuevaPlantation.GetDiseaseChance();
             String ans = "X";
             String answ = "X";
             String answe = "X";
@@ -692,18 +707,43 @@ namespace Entrega1
                     Console.WriteLine("Desea pasar de turno [Y/N]");
                     if (ans == "P")
                     {
-                        Console.WriteLine("\nse generan nuevos precios para las semillas");
+                        Console.WriteLine("\nse generando nuevos precios para las semillas");
                         variacion += 1;
                         Console.WriteLine("\nmadurando plantaciones/ganado");
                         maduracionPlanta += 1;
-
+                        maduracionGanado += 1;
                         Console.WriteLine("\ncalculando nueva salud");
 
                         Console.WriteLine("\nCalculando nuevos niveles de nutrientes y agua");
 
                         Console.WriteLine("\nVerificando el desarrollo de maleza, gusano o enfermedad en las plantaciones");
-
+                        if (verificandoMaleza == probaMaleza)
+                        {
+                            maleza = true;
+                        }
+                        else
+                        {
+                            maleza = false;
+                        }
+                        if (verificandoGusano == probaGusano)
+                        {
+                            gusano = true;
+                        }
+                        else
+                        {
+                            gusano = false;
+                        }
+                        if (verificandoEnfermedad == probaEnfer)
+                        {
+                            enfermedad = true;
+                        }
+                        else
+                        {
+                            enfermedad = false;
+                        }
                         Console.WriteLine("\nverificando muerte o escape del ganado");
+
+                        Console.WriteLine("\nrestando calidad a los productos");
                         Console.ReadKey();
                     }
                     break;
