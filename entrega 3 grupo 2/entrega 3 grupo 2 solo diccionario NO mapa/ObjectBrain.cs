@@ -13,14 +13,34 @@ namespace entrega_01_grupo_2
         Dictionary<string, Seed> seedDict = new Dictionary<string, Seed>();
         Dictionary<string, Dictionary<int, double>> priceHistory = new Dictionary<string, Dictionary<int, double>>();
         //Hay que crear 7 semillas y dar sus valores
+        /*Los valores de las semillas (en orden) son:
+         * 1. Nombre
+         * 2. Precio actual de compra
+         * 3. Precio base de compra
+         * 4. Consumo de agua por turno
+         * 5. Nivel minimo de agua
+         * 6. Penalizacion por falta de agua
+         * 7. Tiempo de produccion (por turnos)
+         * 8. Probabilidad de enfermedad
+         * 9. Penalizacion por enfermedad
+         * 10. Variacion de precio
+         * 11. Uso de nutrientes por turno
+         * 12. Nivel minimo de nutrientes
+         * 13. Penalizacion por falta de nutrientes
+         * 14. Probabilidad de gusanos
+         * 15. Penalizacion por gusanos
+         * 16. Probabilidad de malezas
+         * 17. Penalizacion por malezas
+         */
 
-        Seed Tomato = new Seed("Tomato", 5, 5, 1, 1, 1, 2, 10, 1, 1, 1, 1, 1, 10, 2, 15, 2);
-        Seed Lettuce = new Seed("Lettuce", 10, 7, 1, 1, 1, 2, 10, 1, 1, 1, 1, 1, 10, 2, 15, 2);
-        Seed Carrot = new Seed("Carrot", 15, 10, 1, 1, 1, 2, 10, 1, 1, 1, 1, 1, 10, 2, 15, 2);
-        Seed Potato = new Seed("Potato", 20, 15, 1, 1, 1, 2, 10, 1, 1, 1, 1, 1, 10, 2, 15, 2);
-        Seed Corn = new Seed("Corn", 25, 20, 1, 1, 1, 2, 10, 1, 1, 1, 1, 1, 10, 2, 15, 2);
-        Seed Onion = new Seed("Onion", 35, 25, 1, 1, 1, 2, 10, 1, 1, 1, 1, 1, 10, 2, 15, 2);
-        Seed Celery = new Seed("Celery", 45, 35, 1, 1, 1, 2, 10, 1, 1, 1, 1, 1, 10, 2, 15, 2);
+
+        Seed Tomato = new Seed("Tomato", 4500, 4500, 1, 1, 1, 2, 10, 1, 1, 1, 1, 1, 10, 2, 15, 2);
+        Seed Lettuce = new Seed("Lettuce", 4200, 4200, 1, 1, 1, 2, 10, 1, 1, 1, 1, 1, 10, 2, 15, 2);
+        Seed Carrot = new Seed("Carrot", 1500, 1500, 1, 1, 1, 2, 10, 1, 1, 1, 1, 1, 10, 2, 15, 2);
+        Seed Potato = new Seed("Potato", 2000, 2000, 1, 1, 1, 2, 10, 1, 1, 1, 1, 1, 10, 2, 15, 2);
+        Seed Corn = new Seed("Corn", 2500, 2500, 1, 1, 1, 2, 10, 1, 1, 1, 1, 1, 10, 2, 15, 2);
+        Seed Onion = new Seed("Onion", 3500, 3500, 1, 1, 1, 2, 10, 1, 1, 1, 1, 1, 10, 2, 15, 2);
+        Seed Celery = new Seed("Celery", 4500, 4500, 1, 1, 1, 2, 10, 1, 1, 1, 1, 1, 10, 2, 15, 2);
 
         Dictionary<string, Animal> animalDict = new Dictionary<string, Animal>();
         //Tambien hay que crear 5 diferentes tipos de ganado con sus valores respectivos para rellenar este diccionario

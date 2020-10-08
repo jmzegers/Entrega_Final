@@ -26,6 +26,7 @@ namespace Entrega1
             {
                 List<bool> riverAndLake = b.RiverAndLake(); //Aqui hace la pregunta de cual es el tipo de mapa que desea,
                 //guardando los valores como dos bools (si tiene rio o no y lo mismo con el lago)
+
                 bool ar = riverAndLake[0]; //valor del bool del rio
                 bool al = riverAndLake[1]; //valor del bool del lago
                 mh = new MapCreator(ar, al);
