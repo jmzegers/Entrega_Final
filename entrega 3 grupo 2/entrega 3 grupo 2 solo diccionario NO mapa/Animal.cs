@@ -24,9 +24,9 @@ namespace entrega_01_grupo_2
 
         Random AnimalRand = new Random();
 
-        public Animal(string Name, int PurchasePrice, int BaseSellingPrice, int WaterConsumptionPerTurn,
-            int MinWaterLv, int WaterPenalty, int ProductionTime, int DeseaseProbability, int DeseasePenalty,
-            int feed_use_per_turn, int min_feed_lv, int feed_penalty, int units, int escape_probability, 
+        public Animal(string Name, int PurchasePrice, int BaseSellingPrice, double WaterConsumptionPerTurn,
+            double MinWaterLv, double WaterPenalty, int ProductionTime, int DeseaseProbability, double DeseasePenalty,
+            double feed_use_per_turn, double min_feed_lv, double feed_penalty, int units, int escape_probability, 
             int min_escape, int max_escape, int sudden_death_probability, int min_sudden_deaths, int max_sudden_deaths)
             : base(Name, PurchasePrice, BaseSellingPrice, WaterConsumptionPerTurn, MinWaterLv, WaterPenalty, 
                   ProductionTime, DeseaseProbability, DeseasePenalty)
