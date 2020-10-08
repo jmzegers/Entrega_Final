@@ -64,11 +64,11 @@ namespace entrega_01_grupo_2
          * 18. Numero minimo del rango de muerte subita
          * 19. Numero maximo del rango de muerte subita
          */
-        Animal Cow = new Animal("Cow", 15, 15, 5, 5, 2, 5, 15, 2, 1, 1, 2, 10, 5, 1, 10, 3, 1, 10);
-        Animal Pig = new Animal("Pig", 20, 17, 5, 5, 2, 5, 15, 2, 1, 1, 2, 10, 5, 1, 10, 3, 1, 10);
-        Animal Chicken = new Animal("Chicken", 25, 20, 5, 5, 2, 5, 15, 2, 1, 1, 2, 10, 5, 1, 10, 3, 1, 10);
-        Animal Goat = new Animal("Goat", 27, 23, 5, 5, 2, 5, 15, 2, 1, 1, 2, 10, 5, 1, 10, 3, 1, 10);
-        Animal Sheep = new Animal("Sheep", 30, 25, 5, 5, 2, 5, 15, 2, 1, 1, 2, 10, 5, 1, 10, 3, 1, 10);
+        Animal Cow = new Animal("Cow", 7000, 7000, 16.2, 80, 2, 8, 15, 2, 15, 80, 2, 10, 5, 1, 10, 3, 1, 10);
+        Animal Pig = new Animal("Pig", 6500, 7000, 12.0, 80, 2, 6, 12, 2, 13, 80, 2, 12, 5, 1, 10, 3, 1, 10);
+        Animal Chicken = new Animal("Chicken", 4000, 4000, 5.0, 80, 6, 4, 15, 80, 4, 10, 2, 10, 5, 1, 10, 3, 1, 10);
+        Animal Goat = new Animal("Goat", 4200, 4000, 8.5, 80, 2, 6, 8, 6, 11, 80, 2, 11, 5, 1, 10, 3, 1, 10);
+        Animal Sheep = new Animal("Sheep", 4400, 4400, 8.8, 80, 2, 6, 9, 2, 12, 80, 2, 12, 5, 1, 10, 3, 1, 10);
 
         Dictionary<string, StorageBuilding> storageBuildingDict = new Dictionary<string, StorageBuilding>();
         StorageBuilding SmallStorageBuilding = new StorageBuilding("Small Storage Building", 100, 50, 500, "A");
