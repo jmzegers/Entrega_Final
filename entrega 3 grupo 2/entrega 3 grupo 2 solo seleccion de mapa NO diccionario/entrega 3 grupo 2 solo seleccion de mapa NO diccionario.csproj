@@ -55,6 +55,7 @@
     <Compile Include="consumibles\Vaccines.cs" />
     <Compile Include="consumibles\Water.cs" />
     <Compile Include="Edification.cs" />
+    <Compile Include="EdifMarket.cs" />
     <Compile Include="entrega 03\CompraAlmacenamiento.cs" />
     <Compile Include="entrega 03\CompraConsumible.cs" />
     <Compile Include="entrega 03\CompraGanado.cs" />
@@ -82,6 +83,7 @@
     <Compile Include="object turns.cs" />
     <Compile Include="ObjectBrain.cs" />
     <Compile Include="plantation.cs" />
+    <Compile Include="PlantationPurchase.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

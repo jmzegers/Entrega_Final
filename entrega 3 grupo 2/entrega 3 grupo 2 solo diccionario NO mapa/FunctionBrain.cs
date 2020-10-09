@@ -180,7 +180,7 @@ namespace entrega_01_grupo_2
         {
             double maxPrice = basePrice * 1.1; //El precio maximo es el 110% del original
             double minPrice = basePrice * 0.9; //El precio minimo es el 90% del original
-            currentValue = currentValue + priceVar;
+            currentValue = currentValue * priceVar;
 
             if (currentValue < minPrice || currentValue > maxPrice)
             {
@@ -193,6 +193,7 @@ namespace entrega_01_grupo_2
         public Dictionary<string, Dictionary<int, double>> PriceHistoryMaker(int currentTurn)
         {
             Dictionary<string, Dictionary<int, double>> priceHistory = ob.GetPriceHistory();
+
             foreach (KeyValuePair<string, Seed> seed in ob.GetSeedDict())
             {
                 Dictionary<int, double> seedHistory = new Dictionary<int, double>();
@@ -253,31 +254,6 @@ namespace entrega_01_grupo_2
                     }
                 }
             }
-
-
-
-            /*for(int i = 0; i < usedCoord.Count; i++)
-            {
-                if (usedCoord[key: usedCoord.Keys.ElementAt(i)].Intersect(newCoordX).Any())
-                {
-                    usedX = true;
-                }
-                else
-                {
-                }
-                i++;
-                if (usedCoord[usedCoord.Keys.ElementAt(i)].Intersect(newCoordY).Any())
-                {
-                    usedY = true;
-                }
-            }
-
-            if(usedX && usedY)
-            {
-                isUsed = true;
-            }*/
-            
-
 
             return isUsed;
         }

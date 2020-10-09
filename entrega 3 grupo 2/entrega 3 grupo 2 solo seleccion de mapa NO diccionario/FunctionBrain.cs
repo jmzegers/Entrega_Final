@@ -170,9 +170,10 @@ namespace entrega
 
         public double SeedValue(double currentValue, double priceVar, double basePrice) //Calculador del cambio de precio de un turno a otro
         {
-            double maxPrice = basePrice * 1.1; //El precio maximo es el 110% del original
-            double minPrice = basePrice * 0.9; //El precio minimo es el 90% del original
-            currentValue = currentValue + priceVar;
+            double maxPrice = basePrice * 1.4; //El precio maximo es el 140% del original
+            double minPrice = basePrice * 0.7; //El precio minimo es el 70% del original
+
+            currentValue = Math.Round(currentValue * priceVar);
 
             if (currentValue < minPrice || currentValue > maxPrice)
             {
@@ -221,6 +222,11 @@ namespace entrega
                     string seedName = seed.Value.GetName();
                     double seedPrice = seedHistory[seedName][turn + 1];
                     seedPrices.Add(seedName, seedPrice);
+                }
+
+                foreach(KeyValuePair<string, double> i in seedPrices)
+                {
+                    Console.WriteLine(" Key: " + i.Key + " Value: " + i.Value);
                 }
 
                 int prodNum = 1;

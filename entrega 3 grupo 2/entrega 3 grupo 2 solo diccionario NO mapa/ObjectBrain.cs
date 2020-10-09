@@ -33,13 +33,22 @@ namespace entrega_01_grupo_2
          * 17. Penalizacion por malezas
          */
 
-        Seed Tomato = new Seed("Tomato", 4500, 4500, 2.5, 100, 1, 5, 10, 1, 1.05, 15, 1, 10, 10, 2, 5, 2);
-        Seed Lettuce = new Seed("Lettuce", 4200, 4200, 2.8, 95, 1, 4, 10, 1, 1.02, 12, 1, 10, 10, 2, 7, 2);
-        Seed Carrot = new Seed("Carrot", 1500, 1500, 1.8, 80, 1, 2, 6, 1, 1.02, 10, 1, 1, 3, 2, 5, 2);
-        Seed Potato = new Seed("Potato", 2000, 2000, 0.8, 50, 1, 2, 8, 1, 1.01, 7, 1, 1, 12, 2, 12, 2);
-        Seed Corn = new Seed("Corn", 2500, 2500, 1.2, 75, 1, 2, 10, 1, 1.04, 10, 1, 1, 7, 2, 15, 2);
-        Seed Onion = new Seed("Onion", 3500, 3500, 1.2, 80, 1, 2, 10, 1, 1.04, 9, 1, 1, 5, 2, 15, 2);
-        Seed Celery = new Seed("Celery", 4500, 4500, 1.8, 90, 1, 2, 10, 1, 1.05, 11, 1, 5, 10, 2, 15, 2);
+        Seed Tomato = new Seed("Tomato", 4500, 4500, 2.5, 100, 1, 5, 10, 1, 1.05, 15, 1, 10, 10, 2, 5, 2, 100);
+        Seed Lettuce = new Seed("Lettuce", 4200, 4200, 2.8, 95, 1, 4, 10, 1, 1.02, 12, 1, 10, 10, 2, 7, 2, 100);
+        Seed Carrot = new Seed("Carrot", 1500, 1500, 1.8, 80, 1, 2, 6, 1, 1.02, 10, 1, 1, 3, 2, 5, 2, 100);
+        Seed Potato = new Seed("Potato", 2000, 2000, 0.8, 50, 1, 2, 8, 1, 1.01, 7, 1, 1, 12, 2, 12, 2, 100);
+        Seed Corn = new Seed("Corn", 2500, 2500, 1.2, 75, 1, 2, 10, 1, 1.04, 10, 1, 1, 7, 2, 15, 2, 100);
+        Seed Onion = new Seed("Onion", 3500, 3500, 1.2, 80, 1, 2, 10, 1, 1.04, 9, 1, 1, 5, 2, 15, 2, 100);
+        Seed Celery = new Seed("Celery", 4500, 4500, 1.8, 90, 1, 2, 10, 1, 1.05, 11, 1, 5, 10, 2, 15, 2, 100);
+
+        /*
+         *Seed Lettuce = new Seed("Lettuce", 10, 7, 1, 1, 1, 2, 10, 1, 1, 1, 1, 1, 10, 2, 15, 2, 100);
+        Seed Carrot = new Seed("Carrot", 15, 10, 1, 1, 1, 2, 10, 1, 1, 1, 1, 1, 10, 2, 15, 2, 100);
+        Seed Potato = new Seed("Potato", 20, 15, 1, 1, 1, 2, 10, 1, 1, 1, 1, 1, 10, 2, 15, 2, 100);
+        Seed Corn = new Seed("Corn", 25, 20, 1, 1, 1, 2, 10, 1, 1, 1, 1, 1, 10, 2, 15, 2, 100);
+        Seed Onion = new Seed("Onion", 35, 25, 1, 1, 1, 2, 10, 1, 1, 1, 1, 1, 10, 2, 15, 2, 100);
+        Seed Celery = new Seed("Celery", 45, 35, 1, 1, 1, 2, 10, 1, 1, 1, 1, 1, 10, 2, 15, 2, 100);
+        */
 
         Dictionary<string, Animal> animalDict = new Dictionary<string, Animal>();
         //Tambien hay que crear 5 diferentes tipos de ganado con sus valores respectivos para rellenar este diccionario
@@ -64,11 +73,11 @@ namespace entrega_01_grupo_2
          * 18. Numero minimo del rango de muerte subita
          * 19. Numero maximo del rango de muerte subita
          */
-        Animal Cow = new Animal("Cow", 7000, 7000, 16.2, 80, 2, 8, 15, 2, 15, 80, 2, 10, 5, 1, 10, 3, 1, 10);
-        Animal Pig = new Animal("Pig", 6500, 7000, 12.0, 80, 2, 6, 12, 2, 13, 80, 2, 12, 5, 1, 10, 3, 1, 10);
-        Animal Chicken = new Animal("Chicken", 4000, 4000, 5.0, 80, 6, 4, 15, 80, 4, 10, 2, 10, 5, 1, 10, 3, 1, 10);
-        Animal Goat = new Animal("Goat", 4200, 4000, 8.5, 80, 2, 6, 8, 6, 11, 80, 2, 11, 5, 1, 10, 3, 1, 10);
-        Animal Sheep = new Animal("Sheep", 4400, 4400, 8.8, 80, 2, 6, 9, 2, 12, 80, 2, 12, 5, 1, 10, 3, 1, 10);
+        Animal Cow = new Animal("Cow", 7000, 7000, 16.2, 80, 2, 8, 15, 2, 15, 80, 2, 10, 5, 1, 10, 3, 1, 10, 100);
+        Animal Pig = new Animal("Pig", 6500, 7000, 12.0, 80, 2, 6, 12, 2, 13, 80, 2, 12, 5, 1, 10, 3, 1, 10, 100);
+        Animal Chicken = new Animal("Chicken", 4000, 4000, 5.0, 80, 6, 4, 15, 80, 4, 10, 2, 10, 5, 1, 10, 3, 1, 10, 100);
+        Animal Goat = new Animal("Goat", 4200, 4000, 8.5, 80, 2, 6, 8, 6, 11, 80, 2, 11, 5, 1, 10, 3, 1, 10, 100);
+        Animal Sheep = new Animal("Sheep", 4400, 4400, 8.8, 80, 2, 6, 9, 2, 12, 80, 2, 12, 5, 1, 10, 3, 1, 10, 100);
 
         Dictionary<string, StorageBuilding> storageBuildingDict = new Dictionary<string, StorageBuilding>();
         StorageBuilding SmallStorageBuilding = new StorageBuilding("Small Storage Building", 100, 50, 500, "A",5);

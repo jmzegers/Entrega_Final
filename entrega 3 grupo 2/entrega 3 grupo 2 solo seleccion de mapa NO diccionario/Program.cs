@@ -19,6 +19,7 @@ namespace Entrega1
             object_adminitrator k = new object_adminitrator();
             object_turns t = new object_turns();
             Console.WriteLine("Bienvenido a Farm Life Simulator");
+            Console.WriteLine();
             Ir_al_mercado_de_consumibles buyingConsumable = new Ir_al_mercado_de_consumibles();
             Ir_al_mercado_de_edificaciones DestSell = new Ir_al_mercado_de_edificaciones();
             CompraConsumible Consu = new CompraConsumible();
@@ -30,9 +31,9 @@ namespace Entrega1
             List<string> Cura = new List<string>();
             List<string> almacen = new List<string>() { "tomato", "letucce", "carrot", "potato", "corn", "onion", "celery" };
             Dictionary<string, (int, int)> ejemplo = new Dictionary<string, (int, int)>();
-            Seed nuevaSeed = new Seed("nombre", 5, 1, 1, 1, 1, 4, 10, 25, 4, 1, 1, 1, 10, 1, 5, 1);
-            Plantation nuevaPlantation = new Plantation("nombre", 5, "A", 1.5, 3, 2, false, 100, 100, 1);
-            Cattle nuevoGanado = new Cattle("nombre", 2.5, "B", 30, 0.5, 0.2, 1, 1, 2, 1);
+            Seed nuevaSeed = new Seed("nombre", 5, 1, 1, 1, 1, 4, 10, 25, 4, 1, 1, 1, 10, 1, 5, 1, 10);
+            Plantation nuevaPlantation = new Plantation("nombre", 5, "A", 1.5, 3, 2, false, 100, 100,1);
+            Cattle nuevoGanado = new Cattle("nombre", 2.5, "B", 30, 0.5, 0.2, 1, 1, 2,1);
             StorageBuilding nuevoAlmacen = new StorageBuilding("nombre", 30, 10, 250, "C", 50);
             double variacion;
             int maduracionPlanta;
@@ -144,7 +145,7 @@ namespace Entrega1
                         {
                             b.Message(2);
                             answe = Console.ReadLine().ToUpper();
-                            Console.ReadKey();
+                            //Console.ReadKey();
                             while (true)
                             {
                                 answe = Console.ReadLine().ToUpper();
@@ -480,73 +481,7 @@ namespace Entrega1
                 
                 else if (ans == "P")
                     {
-                        t.Tmensaje(0);
-                        /*
-                            Console.WriteLine("\nse generando nuevos precios para las semillas");
-                            variacion += 1;
-                            Console.WriteLine("\nmadurando plantaciones/ganado");
-                            maduracionPlanta += 1;
-                            maduracionGanado += 1;
-                            Console.WriteLine("\ncalculando nueva salud");
-
-                            Console.WriteLine("\nCalculando nuevos niveles de nutrientes y agua");
-
-                            Console.WriteLine("\nVerificando el desarrollo de maleza, gusano o enfermedad en las plantaciones");
-                            if (verificandoMaleza == (probaMaleza * 0.01))
-                            {
-                                maleza = true;
-                            }
-                            else
-                            {
-                                maleza = false;
-                            }
-                            if (verificandoGusano == (probaGusano * 0.01))
-                            {
-                                gusano = true;
-                            }
-                            else
-                            {
-                                gusano = false;
-                            }
-                            if (verificandoEnfermedad == (probaEnfer * 0.01))
-                            {
-                                enfermedad = true;
-                            }
-                            else
-                            {
-                                enfermedad = false;
-                            }
-                            Console.WriteLine("\nverificando muerte o escape del ganado");
-                            if (verificandoMuerte == (probaMuerte * 0.01))
-                            {
-                                muerte = true;
-                                unidad -= 1;
-                            }
-                            else
-                            {
-                                muerte = false;
-                            }
-                            if (verificandoEscape == (probaEscape * 0.01))
-                            {
-                                escape = true;
-                                unidad -= 1;
-                            }
-                            else
-                            {
-                                escape = false;
-                            }
-                            if (verificandoEnfermedadG == (probaEnfer * 0.01))
-                            {
-                                enfermedadG = true;
-                            }
-                            else
-                            {
-                                enfermedadG = false;
-                            }
-                            Console.WriteLine("\nrestando calidad a los productos");
-                            calidad -= 1;
-                            Console.ReadKey(); 
-                        */
+                    t.Tmensaje(0);
                         
                         //break;
                     }
