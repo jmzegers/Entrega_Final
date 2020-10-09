@@ -20,7 +20,7 @@ namespace entrega
 
         //string a, double money, Dictionary<string, Dictionary<string, List<int>>> usedCoordinates
 
-        public EdifMarket()
+        public EdifMarket(string a, double money)
         {
             if (a == "P") //Plantacion
             {
