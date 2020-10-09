@@ -172,6 +172,7 @@ namespace entrega
                                                 {
                                                     for (int i = 0; i < AguAnimales.Count; i++)
                                                     {
+                                                        
                                                         if (AguAnimales[i] == "Agua para animales")
                                                         {
                                                             Console.WriteLine("Se ha usado un Agua para animales");

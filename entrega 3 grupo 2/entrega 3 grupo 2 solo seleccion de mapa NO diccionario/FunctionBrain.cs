@@ -161,6 +161,10 @@ namespace entrega
                 Console.WriteLine("Vender [B]");
                 Console.WriteLine("VOLVER [V]");
             }
+            else if (a == 5)
+            {
+                Console.WriteLine()
+            }
             else
             {
                 Console.WriteLine("No hay nada guardado en este numero");
