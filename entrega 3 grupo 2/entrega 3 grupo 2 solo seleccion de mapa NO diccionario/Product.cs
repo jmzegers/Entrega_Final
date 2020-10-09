@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace entrega_01_grupo_2
+namespace entrega
 {
     class Product
     {
         protected string Name;
-        protected double PurchasePrice;
         protected double BaseSellingPrice;
         protected double WaterConsumptionPerTurn;
         protected int MinWaterLv;
@@ -19,11 +18,10 @@ namespace entrega_01_grupo_2
         protected int DiseasePenalty;
         protected double Health;
 
-        public Product(string name, double purchase_price, double base_selling_price, double water_use_per_turn, int min_water_lv, 
-            int water_penalty, int production_time, int disease_probability, int disease_penalty, double health)
+        public Product(string name, double base_selling_price, double water_use_per_turn, double min_water_lv, 
+            double water_penalty, int production_time, int disease_probability, double disease_penalty)
         {
             this.Name = name;
-            this.PurchasePrice = purchase_price;
             this.BaseSellingPrice = base_selling_price;
             this.WaterConsumptionPerTurn = water_use_per_turn;
             this.MinWaterLv = min_water_lv;

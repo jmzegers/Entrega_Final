@@ -91,6 +91,7 @@
     <Compile Include="Seed.cs" />
     <Compile Include="StorageBuilding.cs" />
     <Compile Include="Terrain.cs" />
+    <Compile Include="Tomato.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

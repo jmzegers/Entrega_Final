@@ -33,7 +33,6 @@ namespace entrega_01_grupo_2
        * 17. Penalizacion por malezas
        */
 
-        Seed Tomato = new Seed("Tomato", 4500, 4500, 2.5, 100, 1, 5, 10, 1, 1.02, 15, 1, 10, 10, 2, 5, 2, 100);
         Seed Lettuce = new Seed("Lettuce", 4200, 4200, 2.8, 95, 1, 4, 10, 1, 1.02, 12, 1, 10, 10, 2, 7, 2, 100);
         Seed Carrot = new Seed("Carrot", 1500, 1500, 1.8, 80, 1, 2, 6, 1, 1.02, 10, 1, 1, 3, 2, 5, 2, 100);
         Seed Potato = new Seed("Potato", 2000, 2000, 0.8, 50, 1, 2, 8, 1, 1.01, 7, 1, 1, 12, 2, 12, 2, 100);
