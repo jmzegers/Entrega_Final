@@ -17,7 +17,13 @@ namespace entrega
         protected int ProductionTime;
         protected double DiseaseProbability;
         protected double DiseasePenalty;
+<<<<<<< HEAD
+        public double PurchasePrice;
+        public double DeseaseProbability { get; }
+        public double DeseasePenalty { get; }
+=======
         protected int PurchasePrice;
+>>>>>>> b441be53059a7dcbc89279feb68219cc3fe017ce
 
         public Product(string name, double base_selling_price, double water_use_per_turn, double min_water_lv, 
             double water_penalty, int production_time, double disease_probability, double disease_penalty, int purchase_price)
@@ -31,6 +37,18 @@ namespace entrega
             this.DiseaseProbability = disease_probability;
             this.DiseasePenalty = disease_penalty;
             this.PurchasePrice = purchase_price;
+        }
+
+        public Product(string name, double baseSellingPrice, double waterConsumptionPerTurn, double minWaterLv, double waterPenalty, int productionTime, double deseaseProbability, double deseasePenalty)
+        {
+            Name = name;
+            BaseSellingPrice = baseSellingPrice;
+            WaterConsumptionPerTurn = waterConsumptionPerTurn;
+            MinWaterLv = minWaterLv;
+            WaterPenalty = waterPenalty;
+            ProductionTime = productionTime;
+            DeseaseProbability = deseaseProbability;
+            DeseasePenalty = deseasePenalty;
         }
 
         public string GetName()

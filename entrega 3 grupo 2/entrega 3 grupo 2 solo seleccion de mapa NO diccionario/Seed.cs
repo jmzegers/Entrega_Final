@@ -25,13 +25,13 @@ namespace entrega
                 MinWaterLv, WaterPenalty, ProductionTime, DeseaseProbability, DeseasePenalty, PurchasePrice)
         {
             this.PriceVariation = price_variation;
-            this.NutrientConsumptionPerTurn = nutrient_use_per_turn;
-            this.MinNutrientLv = min_nutrient_lv;
-            this.NutrientPenalty = nutrient_penalty;
+            this.NutrientConsumptionPerTurn = (int)nutrient_use_per_turn;
+            this.MinNutrientLv = (int)min_nutrient_lv;
+            this.NutrientPenalty = (int)nutrient_penalty;
             this.WormProbability = worm_probability;
-            this.WormPenalty = worm_penalty;
+            this.WormPenalty = (int)worm_penalty;
             this.WeedProbability = weed_probability;
-            this.WeedPenalty = weed_penalty;
+            this.WeedPenalty = (int)weed_penalty;
         }
 
         public double GetPriceVariation()

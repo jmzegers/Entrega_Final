@@ -26,7 +26,7 @@ namespace entrega
         public Animal(string Name, double BaseSellingPrice, double WaterConsumptionPerTurn,
             double MinWaterLv, double WaterPenalty, int ProductionTime, int DeseaseProbability, double DeseasePenalty, int PurchasePrice,
             double feed_use_per_turn, double min_feed_lv, double feed_penalty, int escape_probability, 
-            int min_escape, int max_escape, int sudden_death_probability, int min_sudden_deaths, int max_sudden_deaths)
+            int min_escape, int max_escape, int sudden_death_probability, int min_sudden_deaths, int max_sudden_deaths, int units)
             : base(Name, BaseSellingPrice, WaterConsumptionPerTurn, MinWaterLv, WaterPenalty, 
                   ProductionTime, DeseaseProbability, DeseasePenalty, PurchasePrice)
         {
