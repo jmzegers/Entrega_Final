@@ -16,13 +16,12 @@ namespace entrega_01_grupo_2
         protected double WaterPenalty;
         protected int ProductionTime;
         protected double DiseaseProbability;
-<<<<<<< HEAD
         protected double DiseasePenalty;
         protected double health;
 
-=======
-        protected int DiseasePenalty;
->>>>>>> 96389bb6d43dce097f4b30585d79ae953729ccd8
+
+        //protected int DiseasePenalty;
+
         public Product(string name, double purchase_price, double base_selling_price, double water_use_per_turn, double min_water_lv, 
             double water_penalty, int production_time, int disease_probability, double disease_penalty, double health)
         {

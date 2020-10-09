@@ -1,11 +1,11 @@
-﻿using entrega_01_grupo_2;
+﻿using entrega;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace entrega_3_grupo_2_solo_seleccion_de_mapa_NO_diccionario
+namespace entrega
 {
     class object_adminitrator
     {
@@ -13,7 +13,7 @@ namespace entrega_3_grupo_2_solo_seleccion_de_mapa_NO_diccionario
         List<string> AliAnimales = new List<string>() { "zz" };
         List<string> AguAnimales = new List<string>();
         List<string> Cura = new List<string>();
-        Seed nuevaSeed = new Seed("nombre", 5, 1, 1, 1, 1, 4, 10, 25, 4, 1, 1, 1, 10, 1, 5, 1);
+        Seed nuevaSeed = new Seed("nombre", 5, 1, 1, 1, 1, 4, 10, 25, 4, 1, 1, 1, 10, 1, 5, 1,0);
         Plantation nuevaPlantation = new Plantation("nombre", 5, "A", 1.5, 3, 2, false, 100, 100, 1);
         Cattle nuevoGanado = new Cattle("nombre", 2.5, "B", 30, 0.5, 0.2, 1, 1, 2, 1);
         StorageBuilding nuevoAlmacen = new StorageBuilding("nombre", 30, 10, 250, "C", 50);
@@ -39,7 +39,7 @@ namespace entrega_3_grupo_2_solo_seleccion_de_mapa_NO_diccionario
         {
             if (a == 0)
             {
-                Seed nuevaSeed = new Seed("nombre", 5, 1, 1, 1, 1, 4, 10, 25, 4, 1, 1, 1, 10, 1, 5, 1);
+                Seed nuevaSeed = new Seed("nombre", 5, 1, 1, 1, 1, 4, 10, 25, 4, 1, 1, 1, 10, 1, 5, 1,0);
                 Plantation nuevaPlantation = new Plantation("nombre", 5, "A", 1.5, 3, 2, false, 100, 100, 1);
                 Cattle nuevoGanado = new Cattle("nombre", 2.5, "B", 30, 0.5, 0.2, 1, 1, 2, 1);
                 List<string> almacen = new List<string>() { "tomato", "letucce", "carrot", "potato", "corn", "onion", "celery" };

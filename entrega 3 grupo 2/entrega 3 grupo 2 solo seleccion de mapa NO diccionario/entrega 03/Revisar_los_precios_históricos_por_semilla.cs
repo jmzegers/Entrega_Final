@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace entrega_01_grupo_2.entrega_03
+namespace entrega
 {
     class Revisar_los_precios_históricos_por_semilla
     {

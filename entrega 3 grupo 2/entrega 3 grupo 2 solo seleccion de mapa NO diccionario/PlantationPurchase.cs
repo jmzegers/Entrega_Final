@@ -1,4 +1,4 @@
-﻿using entrega_01_grupo_2;
+﻿using entrega;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +9,11 @@ namespace entrega_3_grupo_2_solo_seleccion_de_mapa_NO_diccionario
 {
     class PlantationPurchase
     {
-        public PlantationPurchase(string a, double money, Dictionary<string, Dictionary<string, List<int>>> usedCoordinates)
+        public PlantationPurchase(string a, double money, double money1, Dictionary<string, Dictionary<string, List<int>>> usedCoordinates)
         {
+            /*
             FunctionBrain fb = new FunctionBrain();
             ObjectBrain ob = new ObjectBrain();
-            
             int turn = 30;
             Dictionary<string, double> seedPrices = new Dictionary<string, double>();
             Dictionary<string, Dictionary<int, double>> seedHistory = fb.PriceHistoryMaker(turn);
@@ -107,6 +107,11 @@ namespace entrega_3_grupo_2_solo_seleccion_de_mapa_NO_diccionario
                 }
 
             }
+        }
+
+        public PlantationPurchase(string a, double money, double money1, Dictionary<string, Dictionary<string, List<int>>> usedCoordinates, Dictionary<string, Dictionary<string, List<int>>> usedCoordinates1) : this(a, money, money1, usedCoordinates)
+        {
+        }*/
         }
     }
 }

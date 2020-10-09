@@ -1,4 +1,5 @@
-﻿using System;
+﻿using entrega;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,9 +11,15 @@ namespace entrega_3_grupo_2_solo_seleccion_de_mapa_NO_diccionario
     {
         public EdifMarket(string a, double money, Dictionary<string, Dictionary<string, List<int>>> usedCoordinates)
         {
+            /*
+            Ir_al_mercado_de_consumibles buyingConsumable = new Ir_al_mercado_de_consumibles();
+            Ir_al_mercado_de_edificaciones DestSell = new Ir_al_mercado_de_edificaciones();
+            CompraConsumible Consu = new CompraConsumible();
+            VentaDestruir VD = new VentaDestruir();
+            ObjectBrain ob = new ObjectBrain();
             if (a == "P") //Plantacion
             {
-                PlantationPurchase p = new PlantationPurchase(string a, double money, Dictionary<string, Dictionary<string, List<int>>> usedCoordinates);
+                PlantationPurchase p = new PlantationPurchase(string, double money, Dictionary<string, Dictionary<string, List<int>>> usedCoordinates);
             }
 
             else if (a == "G") //Ganado
@@ -290,8 +297,10 @@ namespace entrega_3_grupo_2_solo_seleccion_de_mapa_NO_diccionario
             }
 
             return money;
-        }
+        }*/
 
+        }
     }
 }
-}
+
+
