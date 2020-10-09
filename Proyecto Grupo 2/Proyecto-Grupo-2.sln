@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proyecto-Grupo-2", "entrega 3 grupo 2 solo seleccion de mapa NO diccionario\Proyecto-Grupo-2.csproj", "{4FE4CDD5-C06E-469E-BF12-54246806ADA7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proyecto-Grupo-2", "Proyecto-Grupo-2\Proyecto-Grupo-2.csproj", "{4FE4CDD5-C06E-469E-BF12-54246806ADA7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
