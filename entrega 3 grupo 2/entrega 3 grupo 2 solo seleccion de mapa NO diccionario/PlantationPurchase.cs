@@ -9,22 +9,24 @@ namespace entrega
 {
     class PlantationPurchase
     {
+        FunctionBrain fb = new FunctionBrain();
+        ObjectBrain ob = new ObjectBrain();
+
         //string a, double money, double money1, Dictionary<string, Dictionary<string, List<int>>> usedCoordinates
         public PlantationPurchase()
         {
-            /*
-            FunctionBrain fb = new FunctionBrain();
-            ObjectBrain ob = new ObjectBrain();
             int turn = 30;
             Dictionary<string, double> seedPrices = new Dictionary<string, double>();
             Dictionary<string, Dictionary<int, double>> seedHistory = fb.PriceHistoryMaker(turn);
 
+            /*
             foreach (KeyValuePair<string, Seed> seed in ob.GetSeedDict())
             {
                 string seedName = seed.Value.GetName();
                 double seedPrice = seedHistory[seedName][turn + 1];
                 seedPrices.Add(seedName, seedPrice);
             }
+            */
 
             int prodNum = 1;
             Console.WriteLine("Las semillas disponibles y sus precios son: ");
@@ -38,8 +40,8 @@ namespace entrega
             Console.WriteLine("¿Cual desea comprar? Escriba el nombre del producto");
 
             string productName = Console.ReadLine();
+            /*
             Seed seedBought = ob.GetSeedDict()["tomate"];
-
             try
             {
                 seedBought = ob.GetSeedDict()[productName];
@@ -109,10 +111,7 @@ namespace entrega
 
             }
         }
-
-        public PlantationPurchase(string a, double money, double money1, Dictionary<string, Dictionary<string, List<int>>> usedCoordinates, Dictionary<string, Dictionary<string, List<int>>> usedCoordinates1) : this(a, money, money1, usedCoordinates)
-        {
-        }*/
+        */
         }
     }
 }

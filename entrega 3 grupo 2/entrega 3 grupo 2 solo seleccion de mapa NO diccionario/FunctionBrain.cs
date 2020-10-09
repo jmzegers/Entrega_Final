@@ -18,23 +18,13 @@ namespace entrega
             //priceHistory = this.priceHistory;
         }
 
-        public void MapType()
-        {
-            Console.WriteLine("Elija uno de las siguientes configuraciones del mapa: ");
-            Console.WriteLine("1) Solo tierra");
-            Console.WriteLine("2) Que contenga un rio");
-            Console.WriteLine("3) Que contenga un lago");
-            Console.WriteLine("4) Que tenga tanto un rio como un lago");
-            Console.WriteLine("Para responder, simplemente escriba el numero de la opcion");
-        }
-
         int answer3 = 0;
         List<int> ansList = new List<int>() { 1, 2, 3, 4 };
         public int MapDecision()
         {
             while (true)
             {
-                MapType();
+                Messages m = new Messages(5);
                 string mapType = Console.ReadLine();
                 try
                 {
@@ -115,6 +105,9 @@ namespace entrega
 
         public void Message(int a)
         {
+<<<<<<< HEAD
+            Messages m = new Messages(a);
+=======
             if (a == 0)
             {
                 Console.WriteLine("\nQue desea hacer");
@@ -170,50 +163,34 @@ namespace entrega
             {
                 Console.WriteLine("No hay nada guardado en este numero");
             }
+>>>>>>> e3d5de456e25d7dab2c19329f75dff3c97b8b2ce
         }
 
+        PriceHistoryMaker phm = new PriceHistoryMaker();
 
         public double SeedValue(double currentValue, double priceVar, double basePrice) //Calculador del cambio de precio de un turno a otro
         {
-            double maxPrice = basePrice * 1.4; //El precio maximo es el 140% del original
-            double minPrice = basePrice * 0.7; //El precio minimo es el 70% del original
+            double s = phm.SeedValue(currentValue, priceVar, basePrice);
 
-            currentValue = Math.Round(currentValue * priceVar);
-
-            if (currentValue < minPrice || currentValue > maxPrice)
-            {
-                currentValue = basePrice;
-            }
-
-            return currentValue;
+            return s;
         }
 
         public Dictionary<string, Dictionary<int, double>> PriceHistoryMaker(int currentTurn)
         {
-            Dictionary<string, Dictionary<int, double>> priceHistory = ob.GetPriceHistory();
-            foreach (KeyValuePair<string, Seed> seed in ob.GetSeedDict())
-            {
-                Dictionary<int, double> seedHistory = new Dictionary<int, double>();
-                string seedName = seed.Value.GetName();
-                double basePrice = seed.Value.GetBaseSellingPrice();
-                double priceVar = seed.Value.GetPriceVariation();
-                int turn = 1;
-                double currentVal = basePrice;
+            Dictionary<string, Dictionary<int, double>> d = phm.PriceHistory(currentTurn);
 
-                while (turn <= currentTurn)
-                {
-                    currentVal = SeedValue(currentVal, priceVar, basePrice);
-                    seedHistory.Add(turn, currentVal);
-                    turn += 1;
-                }
+            return d;
+        }
 
-                priceHistory.Add(seedName, seedHistory);
-            }
-
-            return priceHistory;
+        public double EdifMarket(string a, double money)
+        {
+            EdifMarket e = new EdifMarket();
+            
+            return money;
         }
 
 
+        /*
         public double EdifMarket(string a, double money)
         {
             if (a == "P") //Plantacion
@@ -454,6 +431,6 @@ namespace entrega
 
             return money;
         }
-
+        */
     }
 }

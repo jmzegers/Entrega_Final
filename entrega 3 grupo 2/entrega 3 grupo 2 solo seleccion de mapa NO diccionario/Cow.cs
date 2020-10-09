@@ -41,6 +41,7 @@ namespace entrega
             this.DiseasePenalty = 15;
             this.PurchasePrice = 55000;
             this.FeedConsumptionPerTurn = 150;
+            this.
 
             this.Units = units;
             this.Health = health;

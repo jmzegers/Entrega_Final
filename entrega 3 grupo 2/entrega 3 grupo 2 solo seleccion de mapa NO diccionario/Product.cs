@@ -53,11 +53,14 @@ namespace entrega
             return Name;
         }
 
+<<<<<<< HEAD
+=======
         public int GetPurchasePrice()
         {
             return PurchasePrice;
         }
 
+>>>>>>> b441be53059a7dcbc89279feb68219cc3fe017ce
         public double GetBaseSellingPrice()
         {
             return BaseSellingPrice;
