@@ -1,0 +1,2 @@
+C:\Users\Seb\Desktop\UANDES Extra\2020\Primer Semestre\POO\proyecto-entrega-1-grupo-2\Proyecto Grupo 2\Proyecto-Grupo-2\obj\Debug\Proyecto-Grupo-2.csprojAssemblyReference.cache
+C:\Users\Seb\Desktop\UANDES Extra\2020\Primer Semestre\POO\proyecto-entrega-1-grupo-2\Proyecto Grupo 2\Proyecto-Grupo-2\obj\Debug\Proyecto-Grupo-2.csproj.CoreCompileInputs.cache

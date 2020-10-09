@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{4FE4CDD5-C06E-469E-BF12-54246806ADA7}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>entrega_3_grupo_2_solo_seleccion_de_mapa_NO_diccionario</RootNamespace>
-    <AssemblyName>entrega 3 grupo 2 solo seleccion de mapa NO diccionario</AssemblyName>
+    <RootNamespace>entrega</RootNamespace>
+    <AssemblyName>Proyecto Grupo 2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -47,6 +47,8 @@
     <Compile Include="bloqueAguaTierra.cs" />
     <Compile Include="cattle.cs" />
     <Compile Include="CattlePurchase.cs" />
+    <Compile Include="Chicken.cs" />
+    <Compile Include="Pig.cs" />
     <Compile Include="Consumable.cs" />
     <Compile Include="consumibles\fertilizer.cs" />
     <Compile Include="consumibles\Food.cs" />
