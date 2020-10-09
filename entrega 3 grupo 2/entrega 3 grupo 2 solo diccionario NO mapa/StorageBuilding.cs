@@ -11,6 +11,48 @@ namespace entrega_01_grupo_2
 
         private double SalePrice;
         private int MaxCapacity;
+        private int Quality;
+        public StorageBuilding(string name, int purchasePrice, int salePrice, int maxCapacity, string kind, int quality) :
+            base(name, purchasePrice, kind)
+
+        {
+            this.Name = name;
+            this.PurchasePrice = purchasePrice;
+            this.SalePrice = salePrice;
+            this.MaxCapacity = maxCapacity;
+            this.Quality = quality;
+        }
+
+        public string NameBuilding()
+        {
+            return Name;
+        }
+
+        public int GetPurchasePrice()
+        {
+            return PurchasePrice;
+        }
+
+        public double GetSalePrice()
+        {
+            return SalePrice * -1;
+        }
+
+        public int GetMaxCapacity()
+        {
+            return MaxCapacity;
+        }
+        public string GetKind()
+        {
+            return Kind;
+        }
+        public int GetQuality()
+        {
+            return Quality;
+        }
+        /*
+        private double SalePrice;
+        private int MaxCapacity;
 
         public StorageBuilding(string name, int purchasePrice, int salePrice, int maxCapacity, string kind) :
             base(name, purchasePrice, kind)
@@ -44,6 +86,6 @@ namespace entrega_01_grupo_2
         public string GetKind()
         {
             return Kind;
-        }
+        }*/
     }
 }

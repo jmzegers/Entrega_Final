@@ -1,5 +1,6 @@
 ﻿using entrega_01_grupo_2;
 using entrega_01_grupo_2.entrega_03;
+using entrega_3_grupo_2_solo_seleccion_de_mapa_NO_diccionario;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -15,6 +16,7 @@ namespace Entrega1
         static void Main(string[] args)
         {
             FunctionBrain b = new FunctionBrain();
+            object_adminitrator k = new object_adminitrator();
             Console.WriteLine("Bienvenido a Farm Life Simulator");
             Console.WriteLine();
 
@@ -27,10 +29,17 @@ namespace Entrega1
             AliAnimales.Add("zzz");
             List<string> AguAnimales = new List<string>();
             List<string> Cura = new List<string>();
+            List<string> almacen = new List<string>() { "tomato", "letucce", "carrot", "potato", "corn", "onion", "celery" };
             Dictionary<string, (int, int)> ejemplo = new Dictionary<string, (int, int)>();
+<<<<<<< HEAD
             Seed nuevaSeed = new Seed("nombre", 5, 1, 1, 1, 1, 4, 10, 25, 4, 1, 1, 1, 10, 1, 5, 1, 10);
             Plantation nuevaPlantation = new Plantation("nombre", 5, "A", 1.5, 3, 2, false, 100, 100,1);
             Cattle nuevoGanado = new Cattle("nombre", 2.5, "B", 30, 0.5, 0.2, 1, 1, 2,1);
+=======
+            Seed nuevaSeed = new Seed("nombre", 5, 1, 1, 1, 1, 4, 10, 25, 4, 1, 1, 1, 10, 1, 5, 1);
+            Plantation nuevaPlantation = new Plantation("nombre", 5, "A", 1.5, 3, 2, false, 100, 100, 1);
+            Cattle nuevoGanado = new Cattle("nombre", 2.5, "B", 30, 0.5, 0.2, 1, 1, 2, 1);
+>>>>>>> 96389bb6d43dce097f4b30585d79ae953729ccd8
             StorageBuilding nuevoAlmacen = new StorageBuilding("nombre", 30, 10, 250, "C", 50);
             double variacion;
             int maduracionPlanta;
@@ -56,7 +65,7 @@ namespace Entrega1
             var random = new Random();
             int probaMaleza = random.Next(0, 100);
             int probaGusano = random.Next(0, 100);
-            double probaMuerte = random.Next(0,100);
+            double probaMuerte = random.Next(0, 100);
             double probaEscape = random.Next(0, 100);
             double probaEnfer = random.Next(0, 100);
             double ganancia;
@@ -81,6 +90,7 @@ namespace Entrega1
             escape = false;
             bodegasJugador = 0;
             ganancia = 0;
+            // agregar lista con las plantaciones y ganados para que el jugador pueda elegir, esto simulara lel almacen
             String ans = "X";
             String answ = "X";
             String answe = "X";
@@ -129,6 +139,7 @@ namespace Entrega1
             while (true)
             {
                 b.Message(0);
+                Console.WriteLine("\nsu monto actual es de:  " + cashMoney);
                 ans = Console.ReadLine().ToUpper();
                 if (ans == "M")
                 {
@@ -157,9 +168,9 @@ namespace Entrega1
                                 else if (answe == "A")
                                 {
                                     Console.WriteLine("Desea comprar un edificio de almacenamiento (bodegas) [Y/N]");
-                                    
+
                                     while (true)
-                                    {   
+                                    {
                                         bod = Console.ReadLine().ToUpper();
                                         if (bod == "Y")
                                         {
@@ -179,8 +190,8 @@ namespace Entrega1
                                             Console.WriteLine("respuesta invalida");
                                         }
                                     }
-                                    b.EdifMarket("A", cashMoney);
-                                    
+                                    // b.EdifMarket("A", cashMoney);
+
 
                                 }
                                 else if (answe == "D")
@@ -254,7 +265,7 @@ namespace Entrega1
                                         {
                                             buyingConsumable.ConsumibleMarket += Consu.OnBuy4;
                                             buyingConsumable.Buying();
-                                            
+
                                             if (cashMoney < 33.45)
                                             {
                                                 Console.WriteLine("... ESPERA, \nno tienes dinero suficiente vuelva mas tarde");
@@ -265,14 +276,14 @@ namespace Entrega1
                                                 inventario += "\nFertilizante";
                                                 Alimento.Add("Fertilizante");
                                             }
-                                            
+
 
                                         }
                                         else if (res == "R")
                                         {
                                             buyingConsumable.ConsumibleMarket += Consu.OnBuy5;
                                             buyingConsumable.Buying();
-                                            
+
                                             if (cashMoney < 56.31)
                                             {
                                                 Console.WriteLine("... ESPERA, \nno tienes dinero suficiente vuelva mas tarde");
@@ -283,15 +294,15 @@ namespace Entrega1
                                                 inventario += "\nriego";
                                                 Alimento.Add("Riego");
                                             }
-                                            
 
-                                        } 
+
+                                        }
                                         // se copio desde aca hasta 
                                         else if (res == "A")
                                         {
                                             buyingConsumable.ConsumibleMarket += Consu.OnBuy6;
                                             buyingConsumable.Buying();
-                                            
+
                                             if (cashMoney < 44.96)
                                             {
                                                 Console.WriteLine("... ESPERA, \nno tienes dinero suficiente vuelva mas tarde");
@@ -303,14 +314,14 @@ namespace Entrega1
                                                 Alimento.Add("Alimento para animales");
                                                 AliAnimales.Add("Alimento para animales");
                                             }
-                                         // hasta aca   
+                                            // hasta aca   
 
                                         }
                                         else if (res == "W")
                                         {
                                             buyingConsumable.ConsumibleMarket += Consu.OnBuy7;
                                             buyingConsumable.Buying();
-                                            
+
                                             if (cashMoney < 54.45)
                                             {
                                                 Console.WriteLine("... ESPERA, \nno tienes dinero suficiente vuelva mas tarde");
@@ -323,7 +334,7 @@ namespace Entrega1
                                                 Alimento.Add("Agua para animales");
                                                 AguAnimales.Add("Agua para animales");
                                             }
-                                            
+
 
                                         }
                                         else if (res == "V")
@@ -358,7 +369,7 @@ namespace Entrega1
                                         {
                                             buyingConsumable.ConsumibleMarket += Consu.OnBuy;
                                             buyingConsumable.Buying();
-                                            
+
                                             if (cashMoney < 48.20)
                                             {
                                                 Console.WriteLine("... ESPERA, \nno tienes dinero suficiente vuelva mas tarde");
@@ -380,7 +391,7 @@ namespace Entrega1
                                                 Console.WriteLine("... ESPERA, \nno tienes dinero suficiente vuelva mas tarde");
                                             }
                                             else if (cashMoney >= 80.24)
-                                            {                                            
+                                            {
                                                 cashMoney -= 80.24;
                                                 inventario += "\nHerbicida";
                                                 Cura.Add("Herbicida");
@@ -397,7 +408,7 @@ namespace Entrega1
                                                 Console.WriteLine("... ESPERA, \nno tienes dinero suficiente vuelva mas tarde");
                                             }
                                             else if (cashMoney >= 42.80)
-                                            {                                            
+                                            {
                                                 cashMoney -= 42.80;
                                                 inventario += "\npesticida";
                                                 Cura.Add("Pesticida");
@@ -409,7 +420,7 @@ namespace Entrega1
                                         {
                                             buyingConsumable.ConsumibleMarket += Consu.OnBuy3;
                                             buyingConsumable.Buying();
-                                            
+
                                             if (cashMoney < 28.40)
                                             {
                                                 Console.WriteLine("... ESPERA, \nno tienes dinero suficiente vuelva mas tarde");
@@ -471,403 +482,88 @@ namespace Entrega1
                 }
                 else if (ans == "A")
                 {
-                    Console.WriteLine("Administrar grnaja");
-                    Console.WriteLine("\nAdministrar produccion [P]");
-                    Console.WriteLine("Administrar almacenamiento [A]");
-                    Console.WriteLine("\nVOLVER [V]");
-                    while (true)
-                    {
-                        admins = Console.ReadLine().ToUpper();
-                        if (admins == "P")
-                        {
-                            Console.WriteLine("administrar produccion");
-                            Console.WriteLine("\nAgregar agua o comida [A]");
-                            Console.WriteLine("aplicar cura [C]");
-                            Console.WriteLine("obtener producto terminado [T]");
-                            Console.WriteLine("\nVOLVER [V]"); 
-                            while (true)
-                            {
-                                asd = Console.ReadLine().ToUpper();
-                                if (asd == "A")
-                                {
-                                    Console.WriteLine("¿A QUIEN desea agregar agua o comida?");
-                                    Console.WriteLine("\nGanado [G]");
-                                    Console.WriteLine("Plantacion [P]");
-                                    while (true)
-                                    {
-                                        qwe = Console.ReadLine().ToUpper();
-                                        if (qwe == "G")
-                                        {
-                                            Console.WriteLine("¿QUE desea usar?");
-                                            Console.WriteLine("\nComida [C]");
-                                            Console.WriteLine("Agua [A]");
-                                            Console.WriteLine("\nVOLVER [V]");
-                                            while (true)
-                                            {
-                                                mnb = Console.ReadLine().ToUpper();
-                                                if (mnb == "C")
-                                                {
-                                                    AliAnimales.Sort();
-                                                    for (int i = 0; i < AliAnimales.Count; i++)
-                                                    {
-                                                        
-                                                        if (AliAnimales[i] == "Alimento para animales")
-                                                        {
-                                                            Console.WriteLine("Se ha usado un Alimento para animales");
-                                                            Alimento.Remove("Alimento para animales");
-                                                            AliAnimales.Remove("Alimento para animales");
-                                                            break;
-                                                        }
-                                                        
-                                                        else 
-                                                        {
-                                                            Console.WriteLine("no tiene Alimento para animales");
-                                                            Console.WriteLine("\nDesea comprar un alimento para animales");
-                                                            buyingConsumable.ConsumibleMarket += Consu.OnBuy6;
-                                                            buyingConsumable.Buying();
-                                                            // similar a lo que hay de en pasar turno
-
-                                                            if (cashMoney < 44.96)
-                                                            {
-                                                                Console.WriteLine("... ESPERA, \nno tienes dinero suficiente vuelva mas tarde");
-                                                            }
-                                                            else if (cashMoney >= 44.96)
-                                                            {
-                                                                cashMoney -= 44.96;
-                                                                inventario += "\nAlimento para animales";
-                                                                Alimento.Add("Alimento para animales");
-                                                                AliAnimales.Add("Alimento para animales");
-                                                                break;
-                                                            }
-                                                            break;
-                                                        } 
-                                                    }
-                                                }
-                                                else if (mnb == "A")
-                                                {
-                                                    for (int i = 0; i < AguAnimales.Count; i++)
-                                                    {
-                                                        if (AguAnimales[i] == "Agua para animales")
-                                                        {
-                                                            Console.WriteLine("Se ha usado un Agua para animales");
-                                                            Alimento.Remove("Agua para animales");
-                                                            break;
-                                                        }
-                                                    }
-                                                }
-                                                else if (mnb == "V")
-                                                {
-                                                    Console.WriteLine("VOLVIENDO");
-                                                    foreach (String items in Alimento)
-                                                    {
-                                                        Console.WriteLine(items);
-                                                    }
-                                                    break;
-                                                }
-                                                else
-                                                {
-                                                    Console.WriteLine("Ésa respuesta no es válida.");
-                                                }
-                                               
-                                            } 
-                                        }
-                                        else if (qwe == "P")
-                                        {
-                                            Console.WriteLine("¿QUE desea usar?");
-                                            Console.WriteLine("\nFertilizante [F]");
-                                            Console.WriteLine("Riego [R]");
-                                            Console.WriteLine("\nVOLVER [V]");
-                                            while (true)
-                                            {
-                                                ghj = Console.ReadLine().ToUpper();
-                                                if (ghj == "F")
-                                                {
-                                                    for (int i = 0; i < Alimento.Count; i++)
-                                                    {
-                                                        if (Alimento[i] == "Fertilizante")
-                                                        {
-                                                            Console.WriteLine("Se ha usado un Fertilizante");
-                                                            Alimento.Remove("Fertilizante");
-                                                            break;
-                                                        }
-                                                        else if (Alimento[i] != "Fertilizante")
-                                                        {
-                                                            Console.WriteLine("muestrar");
-                                                        }
-                                                    }
-                                                }
-                                                else if (ghj == "R")
-                                                {
-                                                    for (int i = 0; i < Alimento.Count; i++)
-                                                    {
-                                                        if (Alimento[i] == "Riego")
-                                                        {
-                                                            Console.WriteLine("Se ha usado un Riego");
-                                                            Alimento.Remove("Riego");
-                                                            break;
-                                                        }
-                                                    }
-                                                }
-                                                else if (ghj == "V")
-                                                {
-                                                    Console.WriteLine("volviendo");
-                                                    foreach (String items in Alimento)
-                                                    {
-                                                        Console.WriteLine(items);
-                                                    }
-                                                    break;
-                                                }
-                                                else
-                                                {
-                                                    Console.WriteLine("respuesta invalida");
-                                                }
-                                            }
-                                        }
-                                        else
-                                        {
-                                            Console.WriteLine("Ésa respuesta no es válida.");
-                                            break;
-                                        }
-                                    }
-                                    
-                                }
-                                else if (asd == "C")
-                                {
-                                    Console.WriteLine("¿A quien desea aplicar cura?");
-                                    Console.WriteLine("\nGanado [G]");
-                                    Console.WriteLine("Plantacion [P]");
-                                    while (true)
-                                    {
-                                        poi = Console.ReadLine().ToUpper();
-                                        if (poi == "P")
-                                        {
-                                            Console.WriteLine("¿QUE desea usar?");
-                                            Console.WriteLine("\nHerbicida [H]");
-                                            Console.WriteLine("Fungicida [F]");
-                                            Console.WriteLine("Pesticida [P]");
-                                            Console.WriteLine("\nVOLVER [V]");
-                                            while (true)
-                                            {
-                                                klp = Console.ReadLine().ToUpper();
-                                                if (klp == "H")
-                                                {
-                                                    for (int i = 0; i < Cura.Count; i++)
-                                                    {
-                                                        if (Cura[i] == "Herbicida")
-                                                        {
-                                                            Console.WriteLine("Se ha usado un Herbicida");
-                                                            Cura.Remove("Herbicida");
-                                                            break;
-                                                        }
-                                                    }
-                                                }
-                                                else if (klp == "F")
-                                                {
-                                                    for (int i = 0; i < Cura.Count; i++)
-                                                    {
-                                                        if (Cura[i] == "Fungicida")
-                                                        {
-                                                            Console.WriteLine("Se ha usado un Fungicida");
-                                                            Cura.Remove("Fungicida");
-                                                            break;
-                                                        }
-                                                    }
-                                                }
-                                                else if (klp == "P")
-                                                {
-                                                    for (int i = 0; i < Cura.Count; i++)
-                                                    {
-                                                        if (Cura[i] == "Pesticida")
-                                                        {
-                                                            Console.WriteLine("Se ha usado un Pesticida");
-                                                            Cura.Remove("Pesticida");
-                                                            break;
-                                                        }
-                                                    }
-                                                }
-                                                else if (klp == "V")
-                                                {
-                                                    Console.WriteLine("Volviendo");
-                                                    foreach (String items in Cura)
-                                                    {
-                                                        Console.WriteLine(items);
-                                                    }
-                                                    break;
-                                                }
-                                                else
-                                                {
-                                                    Console.WriteLine("respuesta invalida");
-                                                }
-                                            }
-                                        }
-                                        else if (poi == "G")
-                                        {
-                                            for (int i = 0; i < Cura.Count; i++)
-                                            {
-                                                if (Cura[i] == "Vacuna")
-                                                {
-                                                    Console.WriteLine("Se ha usado un Vacuna");
-                                                    Cura.Remove("Vacuna");
-                                                    break;
-                                                }
-                                            }
-                                        }
-                                        else if (fgt == "V")
-                                        {
-                                            Console.WriteLine("VOLVIENDO");
-                                            foreach (String items in Cura)
-                                            {
-                                                Console.WriteLine(items);
-                                            }
-                                            break;
-                                        }
-                                        else
-                                        {
-                                            Console.WriteLine("Ésa respuesta no es válida.");
-                                        }
-                                    }
-                                }
-                                else if (asd == "T")
-                                {
-                                    Console.WriteLine("algo 3");
-                                    
-                                }
-                                else if (asd == "V")
-                                {
-                                    Console.WriteLine("volviendo");
-                                    break;
-                                }
-                                else
-                                {
-                                    Console.WriteLine("Ésa respuesta no es válida.");
-                                }
-
-                            }break;
-                        }
-                        else if (admins == "A")
-                        {
-                            if (bodegasJugador >= 1 | productoAlmacenado == true)
-                            {
-                                Console.WriteLine("¿desea vender un producto? [Y/N]");
-                               
-                                while (true)
-                                {
-                                    vent = Console.ReadLine().ToUpper();
-                                    if (vent == "Y")
-                                    {
-                                        ganancia += (calidad * compraG);
-                                        cashMoney += ganancia;
-                                        break;
-                                    }
-                                    else if (vent == "N")
-                                    {
-                                        Console.WriteLine("no ha vendido nada");
-                                        break;
-                                    }
-                                    else
-                                    {
-                                        Console.WriteLine("respuesta invalida");
-                                    }
-                                    ganancia = 0;
-                                }
-
-                            }
-                            Console.WriteLine("almacenamiento en este punto");
-                            
-                        }
-                        else if (admins == "V")
-                        {
-                            Console.WriteLine("volviendo");
-                            break;
-                        }
-                        else
-                        {
-                            Console.WriteLine("Ésa respuesta no es válida.");
-                        }
-                    }
-
+                    k.Amensaje(0);
                 }
+                
                 else if (ans == "P")
-                {
-                    Console.WriteLine("Desea pasar de turno [Y/N]");
-                    if (ans == "P")
                     {
-                        Console.WriteLine("\nse generando nuevos precios para las semillas");
-                        variacion += 1;
-                        Console.WriteLine("\nmadurando plantaciones/ganado");
-                        maduracionPlanta += 1;
-                        maduracionGanado += 1;
-                        Console.WriteLine("\ncalculando nueva salud");
+                        if (ans == "P")
+                        {
+                            Console.WriteLine("\nse generando nuevos precios para las semillas");
+                            variacion += 1;
+                            Console.WriteLine("\nmadurando plantaciones/ganado");
+                            maduracionPlanta += 1;
+                            maduracionGanado += 1;
+                            Console.WriteLine("\ncalculando nueva salud");
 
-                        Console.WriteLine("\nCalculando nuevos niveles de nutrientes y agua");
+                            Console.WriteLine("\nCalculando nuevos niveles de nutrientes y agua");
 
-                        Console.WriteLine("\nVerificando el desarrollo de maleza, gusano o enfermedad en las plantaciones");
-                        if (verificandoMaleza == (probaMaleza * 0.01))
-                        {
-                            maleza = true;
+                            Console.WriteLine("\nVerificando el desarrollo de maleza, gusano o enfermedad en las plantaciones");
+                            if (verificandoMaleza == (probaMaleza * 0.01))
+                            {
+                                maleza = true;
+                            }
+                            else
+                            {
+                                maleza = false;
+                            }
+                            if (verificandoGusano == (probaGusano * 0.01))
+                            {
+                                gusano = true;
+                            }
+                            else
+                            {
+                                gusano = false;
+                            }
+                            if (verificandoEnfermedad == (probaEnfer * 0.01))
+                            {
+                                enfermedad = true;
+                            }
+                            else
+                            {
+                                enfermedad = false;
+                            }
+                            Console.WriteLine("\nverificando muerte o escape del ganado");
+                            if (verificandoMuerte == (probaMuerte * 0.01))
+                            {
+                                muerte = true;
+                                unidad -= 1;
+                            }
+                            else
+                            {
+                                muerte = false;
+                            }
+                            if (verificandoEscape == (probaEscape * 0.01))
+                            {
+                                escape = true;
+                                unidad -= 1;
+                            }
+                            else
+                            {
+                                escape = false;
+                            }
+                            if (verificandoEnfermedadG == (probaEnfer * 0.01))
+                            {
+                                enfermedadG = true;
+                            }
+                            else
+                            {
+                                enfermedadG = false;
+                            }
+                            Console.WriteLine("\nrestando calidad a los productos");
+                            calidad -= 1;
+                            Console.ReadKey();
                         }
-                        else
-                        {
-                            maleza = false;
-                        }
-                        if (verificandoGusano == (probaGusano * 0.01))
-                        {
-                            gusano = true;
-                        }
-                        else
-                        {
-                            gusano = false;
-                        }
-                        if (verificandoEnfermedad == (probaEnfer * 0.01))
-                        {
-                            enfermedad = true;
-                        }
-                        else
-                        {
-                            enfermedad = false;
-                        }
-                        Console.WriteLine("\nverificando muerte o escape del ganado");
-                        if (verificandoMuerte == (probaMuerte * 0.01))
-                        {
-                            muerte = true;
-                            unidad -= 1;
-                        }
-                        else
-                        {
-                            muerte = false;
-                        }
-                        if (verificandoEscape == (probaEscape * 0.01))
-                        {
-                            escape = true;
-                            unidad -= 1;
-                        }
-                        else
-                        {
-                            escape = false;
-                        }
-                        if (verificandoEnfermedadG == (probaEnfer * 0.01))
-                        {
-                            enfermedadG = true;
-                        }
-                        else
-                        {
-                            enfermedadG = false;
-                        }
-                        Console.WriteLine("\nrestando calidad a los productos");
-                        calidad -= 1;
-                        Console.ReadKey();
+                        //break;
                     }
-                    //break;
+
+                    else
+                    {
+                        Console.WriteLine("Ésa respuesta no es válida.");
+                    }
                 }
 
-                else
-                {
-                    Console.WriteLine("Ésa respuesta no es válida.");
-                }
             }
 
         }
-
     }
-
-}
