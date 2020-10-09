@@ -33,6 +33,7 @@ namespace entrega
        * 17. Penalizacion por malezas
        */
 
+<<<<<<< HEAD
         Seed Lettuce = new Seed("Lettuce", 4200, 4200, 2.8, 95, 1, 4, 10, 1, 1.02, 12, 1, 10, 10, 2, 7);
         Seed Carrot = new Seed("Carrot", 1500, 1500, 1.8, 80, 1, 2, 6, 1, 1.02, 10, 1, 1, 3, 2, 5);
         Seed Potato = new Seed("Potato", 2000, 2000, 0.8, 50, 1, 2, 8, 1, 1.01, 7, 1, 1, 12, 2, 12);
@@ -40,6 +41,16 @@ namespace entrega
         Seed Onion = new Seed("Onion", 3500, 3500, 1.2, 80, 1, 2, 10, 1, 1.04, 9, 1, 1, 5, 2, 15);
         Seed Celery = new Seed("Celery", 4500, 4500, 1.8, 90, 1, 2, 10, 1, 1.05, 11, 1, 5, 10, 2, 15);
 
+=======
+        /*
+        Seed Lettuce = new Seed("Lettuce", 4200, 4200, 2.8, 95, 1, 4, 10, 1, 1.02, 12, 1, 10, 10, 2, 7, 2, 100);
+        Seed Carrot = new Seed("Carrot", 1500, 1500, 1.8, 80, 1, 2, 6, 1, 1.02, 10, 1, 1, 3, 2, 5, 2, 100);
+        Seed Potato = new Seed("Potato", 2000, 2000, 0.8, 50, 1, 2, 8, 1, 1.01, 7, 1, 1, 12, 2, 12, 2, 100);
+        Seed Corn = new Seed("Corn", 2500, 2500, 1.2, 75, 1, 2, 10, 1, 1.04, 10, 1, 1, 7, 2, 15, 2, 100);
+        Seed Onion = new Seed("Onion", 3500, 3500, 1.2, 80, 1, 2, 10, 1, 1.04, 9, 1, 1, 5, 2, 15, 2, 100);
+        Seed Celery = new Seed("Celery", 4500, 4500, 1.8, 90, 1, 2, 10, 1, 1.05, 11, 1, 5, 10, 2, 15, 2, 100);
+        */
+>>>>>>> b441be53059a7dcbc89279feb68219cc3fe017ce
 
         Dictionary<string, StorageBuilding> storageBuildingDict = new Dictionary<string, StorageBuilding>();
         StorageBuilding SmallStorageBuilding = new StorageBuilding("Small Storage Building", 100, 50, 500, "A",1);
@@ -51,13 +62,19 @@ namespace entrega
 
         public ObjectBrain(Dictionary<string, List<int>> usedCoordinates = null)
         {
+<<<<<<< HEAD
             //seedDict.Add("Tomate", Tomato);
+=======
+            /*
+            seedDict.Add("Tomate", Tomato);
+>>>>>>> b441be53059a7dcbc89279feb68219cc3fe017ce
             seedDict.Add("Lechuga", Lettuce);
             seedDict.Add("Zanahoria", Carrot);
             seedDict.Add("Papa", Potato);
             seedDict.Add("Maíz", Corn);
             seedDict.Add("Cebolla", Onion);
             seedDict.Add("Apio", Celery);
+            */
 
             storageBuildingDict.Add("Edificio de Almacenamiento Pequeño", SmallStorageBuilding);
             storageBuildingDict.Add("Edificio de Almacenamiento Mediano", MediumStorageBuilding);
