@@ -137,6 +137,7 @@ namespace Entrega1
                 ans = Console.ReadLine().ToUpper();
                 if (ans == "M")
                 {
+                    /*
                     b.Message(1);
                     while (true)
                     {
@@ -472,27 +473,26 @@ namespace Entrega1
                             Console.WriteLine("Ésa respuesta no es válida.");
                         }
                     }
-
+                */
                 }
+
                 else if (ans == "A")
                 {
                     k.Amensaje(0);
                 }
                 
                 else if (ans == "P")
-                    {
+                {
                     t.Tmensaje(0);
-                        
-                        //break;
-                    }
-
-                    else
-                    {
-                        Console.WriteLine("Ésa respuesta no es válida.");
-                    }
                 }
 
+                else
+                {
+                    Console.WriteLine("Ésa respuesta no es válida.");
+                }
             }
 
         }
+
     }
+}
