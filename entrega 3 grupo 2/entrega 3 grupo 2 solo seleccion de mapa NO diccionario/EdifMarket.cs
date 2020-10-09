@@ -10,15 +10,18 @@ namespace entrega
 {
     class EdifMarket
     {
-        public EdifMarket(string a, double money, Dictionary<string, Dictionary<string, List<int>>> usedCoordinates)
-        {
-            FunctionBrain fb = new FunctionBrain();
-            Ir_al_mercado_de_consumibles buyingConsumable = new Ir_al_mercado_de_consumibles();
-            Ir_al_mercado_de_edificaciones DestSell = new Ir_al_mercado_de_edificaciones();
-            CompraConsumible Consu = new CompraConsumible();
-            VentaDestruir VD = new VentaDestruir();
-            ObjectBrain ob = new ObjectBrain();
 
+        FunctionBrain fb = new FunctionBrain();
+        Ir_al_mercado_de_consumibles buyingConsumable = new Ir_al_mercado_de_consumibles();
+        Ir_al_mercado_de_edificaciones DestSell = new Ir_al_mercado_de_edificaciones();
+        CompraConsumible Consu = new CompraConsumible();
+        VentaDestruir VD = new VentaDestruir();
+        ObjectBrain ob = new ObjectBrain();
+
+        //string a, double money, Dictionary<string, Dictionary<string, List<int>>> usedCoordinates
+
+        public EdifMarket()
+        {
             if (a == "P") //Plantacion
             {
                 PlantationPurchase p = new PlantationPurchase();
@@ -135,8 +138,6 @@ namespace entrega
             {
                 Console.WriteLine("El comando para esta letra no existe");
             }
-
-            return money;
         }
     }
 }

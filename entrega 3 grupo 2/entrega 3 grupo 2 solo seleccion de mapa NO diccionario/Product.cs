@@ -36,11 +36,6 @@ namespace entrega
             return Name;
         }
 
-        public double GetPurchasePrice()
-        {
-            return PurchasePrice;
-        }
-
         public double GetBaseSellingPrice()
         {
             return BaseSellingPrice;
@@ -51,12 +46,12 @@ namespace entrega
             return WaterConsumptionPerTurn;
         }
 
-        public int GetMinWaterLv()
+        public double GetMinWaterLv()
         {
             return  MinWaterLv;
         }
 
-        public int GetWaterPenalty()
+        public double GetWaterPenalty()
         {
             return WaterPenalty;
         }
@@ -71,7 +66,7 @@ namespace entrega
             return DiseaseProbability;
         }
 
-        public int GetDiseasePenalty()
+        public double GetDiseasePenalty()
         {
             return DiseasePenalty;
         }

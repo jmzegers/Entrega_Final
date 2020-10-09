@@ -18,23 +18,13 @@ namespace entrega
             //priceHistory = this.priceHistory;
         }
 
-        public void MapType()
-        {
-            Console.WriteLine("Elija uno de las siguientes configuraciones del mapa: ");
-            Console.WriteLine("1) Solo tierra");
-            Console.WriteLine("2) Que contenga un rio");
-            Console.WriteLine("3) Que contenga un lago");
-            Console.WriteLine("4) Que tenga tanto un rio como un lago");
-            Console.WriteLine("Para responder, simplemente escriba el numero de la opcion");
-        }
-
         int answer3 = 0;
         List<int> ansList = new List<int>() { 1, 2, 3, 4 };
         public int MapDecision()
         {
             while (true)
             {
-                MapType();
+                Messages m = new Messages(5);
                 string mapType = Console.ReadLine();
                 try
                 {
@@ -115,100 +105,34 @@ namespace entrega
 
         public void Message(int a)
         {
-            if (a == 0)
-            {
-                Console.WriteLine("\nQue desea hacer");
-                Console.WriteLine("Ir a Administrar la granja [A]");
-                Console.WriteLine("Ir al mercado [M]");
-                Console.WriteLine("Pasar de turno [P]");
-                Console.WriteLine("Grabar la partida [G]");
-                Console.WriteLine(" ");
-            }
-
-            else if (a == 1)
-            {
-                Console.WriteLine("\n¿Que desea hacer en el mercado?");
-                Console.WriteLine("Ir al mercado de edificaciones[E]");
-                Console.WriteLine("Ir al mercado de consumibles [C]");
-                Console.WriteLine("Ir al mercado de propiedades [P]");
-                Console.WriteLine("Revisar los precios históricos por semilla [H]");
-                Console.WriteLine("VOLVER [V]");
-                Console.WriteLine(" ");
-            }
-
-            else if (a == 2)
-            {
-                Console.WriteLine("\nBienvenido al Mercado de EDIFICACIONES");
-                Console.WriteLine("¿Que desea comprar?");
-                Console.WriteLine("Una plantacion [P]");
-                Console.WriteLine("Ganado [G]");
-                Console.WriteLine("Un edificio de almacenamiento [A]");
-                Console.WriteLine("Vender/Destruir un edificio [D]");
-                Console.WriteLine("VOLVER [V]");
-                Console.WriteLine(" ");
-            }
-            else if (a == 3)
-            {
-                Console.WriteLine("\nBienvenido al Mercado de CONSUMIBLE");
-                Console.WriteLine("\nque desea comprar: ");
-                Console.WriteLine("Alimento [A]");
-                Console.WriteLine("Curas [C]");
-            }
-            else if (a == 4)
-            {
-                Console.WriteLine("\nha destruido/vendido un edificio, ¿que quiere hacer?");
-                Console.WriteLine("\nDestruir [D]");
-                Console.WriteLine("Vender [B]");
-                Console.WriteLine("VOLVER [V]");
-            }
-            else
-            {
-                Console.WriteLine("No hay nada guardado en este numero");
-            }
+            Messages m = new Messages(a);
         }
 
+        PriceHistoryMaker phm = new PriceHistoryMaker();
 
         public double SeedValue(double currentValue, double priceVar, double basePrice) //Calculador del cambio de precio de un turno a otro
         {
-            double maxPrice = basePrice * 1.4; //El precio maximo es el 140% del original
-            double minPrice = basePrice * 0.7; //El precio minimo es el 70% del original
+            double s = phm.SeedValue(currentValue, priceVar, basePrice);
 
-            currentValue = Math.Round(currentValue * priceVar);
-
-            if (currentValue < minPrice || currentValue > maxPrice)
-            {
-                currentValue = basePrice;
-            }
-
-            return currentValue;
+            return s;
         }
 
         public Dictionary<string, Dictionary<int, double>> PriceHistoryMaker(int currentTurn)
         {
-            Dictionary<string, Dictionary<int, double>> priceHistory = ob.GetPriceHistory();
-            foreach (KeyValuePair<string, Seed> seed in ob.GetSeedDict())
-            {
-                Dictionary<int, double> seedHistory = new Dictionary<int, double>();
-                string seedName = seed.Value.GetName();
-                double basePrice = seed.Value.GetBaseSellingPrice();
-                double priceVar = seed.Value.GetPriceVariation();
-                int turn = 1;
-                double currentVal = basePrice;
+            Dictionary<string, Dictionary<int, double>> d = phm.PriceHistory(currentTurn);
 
-                while (turn <= currentTurn)
-                {
-                    currentVal = SeedValue(currentVal, priceVar, basePrice);
-                    seedHistory.Add(turn, currentVal);
-                    turn += 1;
-                }
+            return d;
+        }
 
-                priceHistory.Add(seedName, seedHistory);
-            }
-
-            return priceHistory;
+        public double EdifMarket(string a, double money)
+        {
+            EdifMarket e = new EdifMarket();
+            
+            return money;
         }
 
 
+        /*
         public double EdifMarket(string a, double money)
         {
             if (a == "P") //Plantacion
@@ -449,6 +373,6 @@ namespace entrega
 
             return money;
         }
-
+        */
     }
 }

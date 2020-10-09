@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Entrega1
+namespace entrega
 {
     class Program
     {

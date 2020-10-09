@@ -11,6 +11,9 @@ namespace entrega
     {
 
         Dictionary<string, Seed> seedDict = new Dictionary<string, Seed>();
+
+        List<Seed> seedList = new List<Seed>();
+
         Dictionary<string, Dictionary<int, double>> priceHistory = new Dictionary<string, Dictionary<int, double>>();
         //Hay que crear 7 semillas y dar sus valores
         /*Los valores de las semillas (en orden) son:
@@ -51,7 +54,6 @@ namespace entrega
 
         public ObjectBrain(Dictionary<string, List<int>> usedCoordinates = null)
         {
-            seedDict.Add("Tomate", Tomato);
             seedDict.Add("Lechuga", Lettuce);
             seedDict.Add("Zanahoria", Carrot);
             seedDict.Add("Papa", Potato);
