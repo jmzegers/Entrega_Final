@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace entrega_3_grupo_2_solo_seleccion_de_mapa_NO_diccionario
+namespace entrega
 {
     class StoragePurchase
     {

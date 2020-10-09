@@ -24,7 +24,7 @@ namespace entrega
         {
             while (true)
             {
-                Messages m = new Messages(5);
+                //Messages m = new Messages(5);
                 string mapType = Console.ReadLine();
                 try
                 {
@@ -105,9 +105,8 @@ namespace entrega
 
         public void Message(int a)
         {
-<<<<<<< HEAD
+
             Messages m = new Messages(a);
-=======
             if (a == 0)
             {
                 Console.WriteLine("\nQue desea hacer");
@@ -163,12 +162,10 @@ namespace entrega
             {
                 Console.WriteLine("No hay nada guardado en este numero");
             }
->>>>>>> e3d5de456e25d7dab2c19329f75dff3c97b8b2ce
         }
 
-        PriceHistoryMaker phm = new PriceHistoryMaker();
-
-        public double SeedValue(double currentValue, double priceVar, double basePrice) //Calculador del cambio de precio de un turno a otro
+        //PriceHistoryMaker phm = new PriceHistoryMaker();
+       /* public double SeedValue(double currentValue, double priceVar, double basePrice) //Calculador del cambio de precio de un turno a otro
         {
             double s = phm.SeedValue(currentValue, priceVar, basePrice);
 
@@ -181,14 +178,14 @@ namespace entrega
 
             return d;
         }
-
+       
         public double EdifMarket(string a, double money)
         {
             EdifMarket e = new EdifMarket();
             
             return money;
         }
-
+*/
 
         /*
         public double EdifMarket(string a, double money)

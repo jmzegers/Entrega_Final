@@ -28,8 +28,6 @@ namespace entrega
             double MinWaterLv, double WaterPenalty, int ProductionTime, int DeseaseProbability, double DeseasePenalty,
             double feed_use_per_turn, double min_feed_lv, double feed_penalty, int units, int escape_probability, 
             int min_escape, int max_escape, int sudden_death_probability, int min_sudden_deaths, int max_sudden_deaths, double health)
-            : base(Name, PurchasePrice, BaseSellingPrice, WaterConsumptionPerTurn, MinWaterLv, WaterPenalty, 
-                  ProductionTime, DeseaseProbability, DeseasePenalty, health)
         {
             this.FeedConsumptionPerTurn = feed_use_per_turn;
             this.MinFeedLv = min_feed_lv;

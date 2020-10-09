@@ -37,12 +37,12 @@ namespace entrega
        */
 
 
-        Seed Lettuce = new Seed("Lettuce", 4200, 4200, 2.8, 95, 1, 4, 10, 1, 1.02, 12, 1, 10, 10, 2, 7);
-        Seed Carrot = new Seed("Carrot", 1500, 1500, 1.8, 80, 1, 2, 6, 1, 1.02, 10, 1, 1, 3, 2, 5);
-        Seed Potato = new Seed("Potato", 2000, 2000, 0.8, 50, 1, 2, 8, 1, 1.01, 7, 1, 1, 12, 2, 12);
-        Seed Corn = new Seed("Corn", 2500, 2500, 1.2, 75, 1, 2, 10, 1, 1.04, 10, 1, 1, 7, 2, 15);
-        Seed Onion = new Seed("Onion", 3500, 3500, 1.2, 80, 1, 2, 10, 1, 1.04, 9, 1, 1, 5, 2, 15);
-        Seed Celery = new Seed("Celery", 4500, 4500, 1.8, 90, 1, 2, 10, 1, 1.05, 11, 1, 5, 10, 2, 15);
+        Seed Lettuce = new Seed("Lettuce", 4200, 4200, 2.8, 95, 1, 4, 10, 1, 1.02, 12, 1, 10, 10, 2, 7,0);
+        Seed Carrot = new Seed("Carrot", 1500, 1500, 1.8, 80, 1, 2, 6, 1, 1.02, 10, 1, 1, 3, 2, 5,0);
+        Seed Potato = new Seed("Potato", 2000, 2000, 0.8, 50, 1, 2, 8, 1, 1.01, 7, 1, 1, 12, 2, 12,0);
+        Seed Corn = new Seed("Corn", 2500, 2500, 1.2, 75, 1, 2, 10, 1, 1.04, 10, 1, 1, 7, 2, 15,0);
+        Seed Onion = new Seed("Onion", 3500, 3500, 1.2, 80, 1, 2, 10, 1, 1.04, 9, 1, 1, 5, 2, 15,0);
+        Seed Celery = new Seed("Celery", 4500, 4500, 1.8, 90, 1, 2, 10, 1, 1.05, 11, 1, 5, 10, 2, 15,0);
 
         /*
         Seed Lettuce = new Seed("Lettuce", 4200, 4200, 2.8, 95, 1, 4, 10, 1, 1.02, 12, 1, 10, 10, 2, 7, 2, 100);
