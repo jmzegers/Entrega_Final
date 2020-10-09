@@ -11,12 +11,11 @@ namespace entrega
         protected string Name;
         protected double BaseSellingPrice;
         protected double WaterConsumptionPerTurn;
-        protected int MinWaterLv;
-        protected int WaterPenalty;
+        protected double MinWaterLv;
+        protected double WaterPenalty;
         protected int ProductionTime;
         protected double DiseaseProbability;
-        protected int DiseasePenalty;
-        protected double Health;
+        protected double DiseasePenalty;
 
         public Product(string name, double base_selling_price, double water_use_per_turn, double min_water_lv, 
             double water_penalty, int production_time, int disease_probability, double disease_penalty)
@@ -29,7 +28,6 @@ namespace entrega
             this.ProductionTime = production_time;
             this.DiseaseProbability = disease_probability;
             this.DiseasePenalty = disease_penalty;
-            this.Health = health;
         }
 
         public string GetName()

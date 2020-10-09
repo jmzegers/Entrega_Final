@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animal.cs" />
     <Compile Include="bloqueAguaTierra.cs" />
     <Compile Include="cattle.cs" />
     <Compile Include="Consumable.cs" />
@@ -54,6 +55,7 @@
     <Compile Include="consumibles\Pesticide.cs" />
     <Compile Include="consumibles\Vaccines.cs" />
     <Compile Include="consumibles\Water.cs" />
+    <Compile Include="Cow.cs" />
     <Compile Include="Edification.cs" />
     <Compile Include="EdifMarket.cs" />
     <Compile Include="entrega 03\CompraAlmacenamiento.cs" />
