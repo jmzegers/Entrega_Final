@@ -16,7 +16,7 @@ namespace entrega_3_grupo_2_solo_seleccion_de_mapa_NO_diccionario
             ObjectBrain ob = new ObjectBrain();
             int turn = 30;
             Dictionary<string, double> seedPrices = new Dictionary<string, double>();
-            Dictionary<string, Dictionary<int, double>> seedHistory = ob.PriceHistoryMaker(turn);
+            Dictionary<string, Dictionary<int, double>> seedHistory = fb.PriceHistoryMaker(turn);
 
             foreach (KeyValuePair<string, Seed> seed in ob.GetSeedDict())
             {

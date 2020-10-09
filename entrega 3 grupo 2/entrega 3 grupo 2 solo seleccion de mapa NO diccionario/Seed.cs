@@ -17,21 +17,21 @@ namespace entrega
         private double WeedProbability;
         private int WeedPenalty;
 
-        public Seed(string Name, double PurchasePrice, double BaseSellingPrice, double WaterConsumptionPerTurn, int MinWaterLv, 
-            int WaterPenalty, int ProductionTime, int DeseaseProbability, int DeseasePenalty, double price_variation,
-            int nutrient_use_per_turn, int min_nutrient_lv, int nutrient_penalty, int worm_probability, int worm_penalty, 
-            int weed_probability, int weed_penalty, double health) : 
-            base(Name, PurchasePrice, BaseSellingPrice, WaterConsumptionPerTurn,
-                MinWaterLv, WaterPenalty, ProductionTime, DeseaseProbability, DeseasePenalty, health)
+        public Seed(string Name, double BaseSellingPrice, double WaterConsumptionPerTurn, double MinWaterLv, 
+            double WaterPenalty, int ProductionTime, double DeseaseProbability, double DeseasePenalty, double price_variation,
+            double nutrient_use_per_turn, double min_nutrient_lv, double nutrient_penalty, int worm_probability, double worm_penalty, 
+            int weed_probability, double weed_penalty) : 
+            base(Name, BaseSellingPrice, WaterConsumptionPerTurn,
+                MinWaterLv, WaterPenalty, ProductionTime, DeseaseProbability, DeseasePenalty)
         {
             this.PriceVariation = price_variation;
-            this.NutrientConsumptionPerTurn = nutrient_use_per_turn;
-            this.MinNutrientLv = min_nutrient_lv;
-            this.NutrientPenalty = nutrient_penalty;
+            this.NutrientConsumptionPerTurn = (int)nutrient_use_per_turn;
+            this.MinNutrientLv = (int)min_nutrient_lv;
+            this.NutrientPenalty = (int)nutrient_penalty;
             this.WormProbability = worm_probability;
-            this.WormPenalty = worm_penalty;
+            this.WormPenalty = (int)worm_penalty;
             this.WeedProbability = weed_probability;
-            this.WeedPenalty = weed_penalty;
+            this.WeedPenalty = (int)weed_penalty;
         }
 
         public double GetPriceVariation()

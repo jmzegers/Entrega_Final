@@ -9,21 +9,21 @@ namespace entrega
     class Product
     {
         protected string Name;
-        protected double PurchasePrice;
         protected double BaseSellingPrice;
         protected double WaterConsumptionPerTurn;
-        protected int MinWaterLv;
-        protected int WaterPenalty;
+        protected double MinWaterLv;
+        protected double WaterPenalty;
         protected int ProductionTime;
         protected double DiseaseProbability;
-        protected int DiseasePenalty;
-        protected double Health;
+        protected double DiseasePenalty;
+        public double PurchasePrice;
+        public double DeseaseProbability { get; }
+        public double DeseasePenalty { get; }
 
-        public Product(string name, double purchase_price, double base_selling_price, double water_use_per_turn, int min_water_lv, 
-            int water_penalty, int production_time, int disease_probability, int disease_penalty, double health)
+        public Product(string name, double base_selling_price, double water_use_per_turn, double min_water_lv, 
+            double water_penalty, int production_time, int disease_probability, double disease_penalty)
         {
             this.Name = name;
-            this.PurchasePrice = purchase_price;
             this.BaseSellingPrice = base_selling_price;
             this.WaterConsumptionPerTurn = water_use_per_turn;
             this.MinWaterLv = min_water_lv;
@@ -31,7 +31,18 @@ namespace entrega
             this.ProductionTime = production_time;
             this.DiseaseProbability = disease_probability;
             this.DiseasePenalty = disease_penalty;
-            this.Health = health;
+        }
+
+        public Product(string name, double baseSellingPrice, double waterConsumptionPerTurn, double minWaterLv, double waterPenalty, int productionTime, double deseaseProbability, double deseasePenalty)
+        {
+            Name = name;
+            BaseSellingPrice = baseSellingPrice;
+            WaterConsumptionPerTurn = waterConsumptionPerTurn;
+            MinWaterLv = minWaterLv;
+            WaterPenalty = waterPenalty;
+            ProductionTime = productionTime;
+            DeseaseProbability = deseaseProbability;
+            DeseasePenalty = deseasePenalty;
         }
 
         public string GetName()
@@ -54,12 +65,12 @@ namespace entrega
             return WaterConsumptionPerTurn;
         }
 
-        public int GetMinWaterLv()
+        public double GetMinWaterLv()
         {
             return  MinWaterLv;
         }
 
-        public int GetWaterPenalty()
+        public double GetWaterPenalty()
         {
             return WaterPenalty;
         }
@@ -74,7 +85,7 @@ namespace entrega
             return DiseaseProbability;
         }
 
-        public int GetDiseasePenalty()
+        public double GetDiseasePenalty()
         {
             return DiseasePenalty;
         }
