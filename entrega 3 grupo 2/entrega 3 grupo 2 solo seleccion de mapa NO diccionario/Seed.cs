@@ -9,20 +9,20 @@ namespace entrega
     class Seed : Product
     {
         private double PriceVariation;
-        private int NutrientConsumptionPerTurn;
-        private int MinNutrientLv;
-        private int NutrientPenalty;
+        private double NutrientConsumptionPerTurn;
+        private double MinNutrientLv;
+        private double NutrientPenalty;
         private double WormProbability;
-        private int WormPenalty;
+        private double WormPenalty;
         private double WeedProbability;
-        private int WeedPenalty;
+        private double WeedPenalty;
 
         public Seed(string Name, double BaseSellingPrice, double WaterConsumptionPerTurn, double MinWaterLv, 
-            double WaterPenalty, int ProductionTime, double DeseaseProbability, double DeseasePenalty, double price_variation,
+            double WaterPenalty, int ProductionTime, double DeseaseProbability, double DeseasePenalty, int PurchasePrice, double price_variation,
             double nutrient_use_per_turn, double min_nutrient_lv, double nutrient_penalty, int worm_probability, double worm_penalty, 
             int weed_probability, double weed_penalty) : 
             base(Name, BaseSellingPrice, WaterConsumptionPerTurn,
-                MinWaterLv, WaterPenalty, ProductionTime, DeseaseProbability, DeseasePenalty)
+                MinWaterLv, WaterPenalty, ProductionTime, DeseaseProbability, DeseasePenalty, PurchasePrice)
         {
             this.PriceVariation = price_variation;
             this.NutrientConsumptionPerTurn = nutrient_use_per_turn;
@@ -39,17 +39,17 @@ namespace entrega
             return PriceVariation;
         }
 
-        public int GetNutrientConsumptionPerTurn()
+        public double GetNutrientConsumptionPerTurn()
         {
             return NutrientConsumptionPerTurn;
         }
 
-        public int GetMinNutrientLv()
+        public double GetMinNutrientLv()
         {
             return MinNutrientLv;
         }
 
-        public int GetNutrientPenalty()
+        public double GetNutrientPenalty()
         {
             return NutrientPenalty;
         }
@@ -59,7 +59,7 @@ namespace entrega
             return WormProbability;
         }
 
-        public int GetWormPenalty()
+        public double GetWormPenalty()
         {
             return WormPenalty;
         }
@@ -69,7 +69,7 @@ namespace entrega
             return WeedProbability;
         }
 
-        public int GetWeedPenalty()
+        public double GetWeedPenalty()
         {
             return WeedPenalty;
         }
