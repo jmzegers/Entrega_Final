@@ -177,7 +177,7 @@ namespace Entrega1
                                             Console.WriteLine("respuesta invalida");
                                         }
                                     }
-                                    b.EdifMarket("A", cashMoney);
+                                   // b.EdifMarket("A", cashMoney);
                                     
 
                                 }
@@ -770,7 +770,7 @@ namespace Entrega1
                                 }
 
                             }
-                            Console.WriteLine("almacenamiento en este punto");
+                            break;
                             
                         }
                         else if (admins == "V")
