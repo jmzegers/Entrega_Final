@@ -17,12 +17,12 @@ namespace entrega_01_grupo_2
         private double WeedProbability;
         private int WeedPenalty;
 
-        public Seed(string Name, double PurchasePrice, double BaseSellingPrice, int WaterConsumptionPerTurn, int MinWaterLv, 
-            int WaterPenalty, int ProductionTime, int DeseaseProbability, int DeseasePenalty, int price_variation,
+        public Seed(string Name, double PurchasePrice, double BaseSellingPrice, double WaterConsumptionPerTurn, int MinWaterLv, 
+            int WaterPenalty, int ProductionTime, int DeseaseProbability, int DeseasePenalty, double price_variation,
             int nutrient_use_per_turn, int min_nutrient_lv, int nutrient_penalty, int worm_probability, int worm_penalty, 
-            int weed_probability, int weed_penalty) : 
+            int weed_probability, int weed_penalty, double health) : 
             base(Name, PurchasePrice, BaseSellingPrice, WaterConsumptionPerTurn,
-                MinWaterLv, WaterPenalty, ProductionTime, DeseaseProbability, DeseasePenalty)
+                MinWaterLv, WaterPenalty, ProductionTime, DeseaseProbability, DeseasePenalty, health)
         {
             this.PriceVariation = price_variation;
             this.NutrientConsumptionPerTurn = nutrient_use_per_turn;
