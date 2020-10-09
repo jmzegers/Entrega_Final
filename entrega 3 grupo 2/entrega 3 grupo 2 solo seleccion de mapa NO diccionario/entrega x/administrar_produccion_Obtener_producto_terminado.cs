@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace entrega_01_grupo_2
+namespace entrega
 {
     class administrar_produccion_Obtener_producto_terminado
     {

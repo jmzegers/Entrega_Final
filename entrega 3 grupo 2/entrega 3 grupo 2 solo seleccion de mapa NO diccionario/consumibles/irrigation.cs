@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace entrega_01_grupo_2
+namespace entrega
 {
     class irrigation : Consumable // riego
     {

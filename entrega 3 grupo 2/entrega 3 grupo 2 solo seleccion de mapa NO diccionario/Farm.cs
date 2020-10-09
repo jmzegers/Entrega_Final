@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Entrega1
+namespace Entrega
 {
 
     class Farm

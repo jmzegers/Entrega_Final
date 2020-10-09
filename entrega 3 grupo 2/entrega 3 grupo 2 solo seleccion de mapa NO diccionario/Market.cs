@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace entrega_01_grupo_2
+namespace entrega
 {
     public class Market 
     //aqui solo se manejan los precios de todas las cosas

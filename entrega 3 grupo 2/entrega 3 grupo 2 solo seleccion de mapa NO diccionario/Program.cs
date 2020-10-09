@@ -1,5 +1,5 @@
-﻿using entrega_01_grupo_2;
-using entrega_01_grupo_2.entrega_03;
+﻿using entrega;
+using entrega;
 using entrega_3_grupo_2_solo_seleccion_de_mapa_NO_diccionario;
 using System;
 using System.Collections.Generic;
@@ -17,6 +17,7 @@ namespace Entrega1
         {
             FunctionBrain b = new FunctionBrain();
             object_adminitrator k = new object_adminitrator();
+            object_turns t = new object_turns();
             Console.WriteLine("Bienvenido a Farm Life Simulator");
             Ir_al_mercado_de_consumibles buyingConsumable = new Ir_al_mercado_de_consumibles();
             Ir_al_mercado_de_edificaciones DestSell = new Ir_al_mercado_de_edificaciones();
@@ -479,8 +480,8 @@ namespace Entrega1
                 
                 else if (ans == "P")
                     {
-                        if (ans == "P")
-                        {
+                        t.Tmensaje(0);
+                        /*
                             Console.WriteLine("\nse generando nuevos precios para las semillas");
                             variacion += 1;
                             Console.WriteLine("\nmadurando plantaciones/ganado");
@@ -544,8 +545,9 @@ namespace Entrega1
                             }
                             Console.WriteLine("\nrestando calidad a los productos");
                             calidad -= 1;
-                            Console.ReadKey();
-                        }
+                            Console.ReadKey(); 
+                        */
+                        
                         //break;
                     }
 
