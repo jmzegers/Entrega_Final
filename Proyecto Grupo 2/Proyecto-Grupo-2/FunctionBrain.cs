@@ -24,11 +24,11 @@ namespace entrega
         {
             while (true)
             {
-<<<<<<< HEAD
+
                 //Messages m = new Messages(5);
-=======
+
                 Messages m = new Messages(6);
->>>>>>> 61d79d772047f8069109297749a2db9b94b83d49
+
                 string mapType = Console.ReadLine();
                 try
                 {
@@ -109,7 +109,7 @@ namespace entrega
 
         public void Message(int a)
         {
-<<<<<<< HEAD
+
 
             Messages m = new Messages(a);
             if (a == 0)
@@ -167,9 +167,9 @@ namespace entrega
             {
                 Console.WriteLine("No hay nada guardado en este numero");
             }
-=======
-            Messages m = new Messages(a);
->>>>>>> 61d79d772047f8069109297749a2db9b94b83d49
+
+            //Messages m = new Messages(a);
+
         }
 
         //PriceHistoryMaker phm = new PriceHistoryMaker();

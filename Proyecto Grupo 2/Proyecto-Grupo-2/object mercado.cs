@@ -41,7 +41,8 @@ namespace entrega
             if (a == 0)
             {
                 FunctionBrain b = new FunctionBrain();
-                Seed nuevaSeed = new Seed("nombre", 5, 1, 1, 1, 1, 4, 10, 25, 4, 1, 1, 1, 10, 1, 5);
+                //EdifMarket b1 = new EdifMarket();
+                Seed nuevaSeed = new Seed("nombre", 5, 1, 1, 1, 1, 4, 10, 25, 4, 1, 1, 1, 10, 1, 5,0);
                 Plantation nuevaPlantation = new Plantation("nombre", 5, "A", 1.5, 3, 2, false, 100, 100, 1);
                 Cattle nuevoGanado = new Cattle("nombre", 2.5, "B", 30, 0.5, 0.2, 1, 1, 2, 1);
                 List<string> almacen = new List<string>() { "tomato", "letucce", "carrot", "potato", "corn", "onion", "celery" };
@@ -50,7 +51,7 @@ namespace entrega
                 Ir_al_mercado_de_edificaciones DestSell = new Ir_al_mercado_de_edificaciones();
                 CompraConsumible Consu = new CompraConsumible();
                 VentaDestruir VD = new VentaDestruir();
-                FunctionBrain b = new FunctionBrain();
+
                 double variacion;
                 int maduracionPlanta;
                 int maduracionGanado;
@@ -116,12 +117,12 @@ namespace entrega
                                 answe = Console.ReadLine().ToUpper();
                                 if (answe == "P")
                                 {
-                                    b.EdifMarket("P", cashMoney);
+                                    //b1.EdifMarket("P", cashMoney);
 
                                 }
                                 else if (answe == "G")
                                 {
-                                    b.EdifMarket("G", cashMoney);
+                                    //b1.EdifMarket("G", cashMoney);
 
                                 }
                                 else if (answe == "A")

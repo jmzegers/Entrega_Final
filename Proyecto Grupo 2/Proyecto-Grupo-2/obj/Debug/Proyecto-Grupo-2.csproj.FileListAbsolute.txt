@@ -1,0 +1,4 @@
+C:\Users\56984\Desktop\entrega 4 v3\proyecto-entrega-1-grupo-2\Proyecto Grupo 2\Proyecto-Grupo-2\obj\Debug\Proyecto-Grupo-2.csprojAssemblyReference.cache
+C:\Users\56984\Desktop\entrega 4 v3\proyecto-entrega-1-grupo-2\Proyecto Grupo 2\Proyecto-Grupo-2\obj\Debug\Proyecto-Grupo-2.csproj.CoreCompileInputs.cache
+C:\Users\56984\Desktop\entrega 4 v3\proyecto-entrega-1-grupo-2\Proyecto Grupo 2\Proyecto-Grupo-2\obj\Debug\entrega 3 grupo 2 solo seleccion de mapa NO diccionario.exe
+C:\Users\56984\Desktop\entrega 4 v3\proyecto-entrega-1-grupo-2\Proyecto Grupo 2\Proyecto-Grupo-2\obj\Debug\entrega 3 grupo 2 solo seleccion de mapa NO diccionario.pdb
