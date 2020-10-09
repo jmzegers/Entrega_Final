@@ -17,13 +17,10 @@ namespace entrega
         protected int ProductionTime;
         protected double DiseaseProbability;
         protected double DiseasePenalty;
-<<<<<<< HEAD
         public double PurchasePrice;
         public double DeseaseProbability { get; }
         public double DeseasePenalty { get; }
-=======
         protected int PurchasePrice;
->>>>>>> b441be53059a7dcbc89279feb68219cc3fe017ce
 
         public Product(string name, double base_selling_price, double water_use_per_turn, double min_water_lv, 
             double water_penalty, int production_time, double disease_probability, double disease_penalty, int purchase_price)
