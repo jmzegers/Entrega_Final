@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "entrega 3 grupo 2 solo seleccion de mapa NO diccionario", "entrega 3 grupo 2 solo seleccion de mapa NO diccionario\entrega 3 grupo 2 solo seleccion de mapa NO diccionario.csproj", "{4FE4CDD5-C06E-469E-BF12-54246806ADA7}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "entrega 3 grupo 2 solo diccionario NO mapa", "entrega 3 grupo 2 solo diccionario NO mapa\entrega 3 grupo 2 solo diccionario NO mapa.csproj", "{06C6B75F-918F-49B4-A0AA-38C9CC548268}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proyecto-Grupo-2", "entrega 3 grupo 2 solo seleccion de mapa NO diccionario\Proyecto-Grupo-2.csproj", "{4FE4CDD5-C06E-469E-BF12-54246806ADA7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		{4FE4CDD5-C06E-469E-BF12-54246806ADA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FE4CDD5-C06E-469E-BF12-54246806ADA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FE4CDD5-C06E-469E-BF12-54246806ADA7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{06C6B75F-918F-49B4-A0AA-38C9CC548268}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{06C6B75F-918F-49B4-A0AA-38C9CC548268}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{06C6B75F-918F-49B4-A0AA-38C9CC548268}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{06C6B75F-918F-49B4-A0AA-38C9CC548268}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
