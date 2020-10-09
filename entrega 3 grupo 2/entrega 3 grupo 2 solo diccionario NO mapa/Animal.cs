@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace entrega
 {
-    class Animal : Product
+    class Animal
     {
         private double FeedConsumptionPerTurn;
         private double MinFeedLv;

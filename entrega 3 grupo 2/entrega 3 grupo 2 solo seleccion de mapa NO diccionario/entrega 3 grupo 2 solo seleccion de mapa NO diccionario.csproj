@@ -46,6 +46,7 @@
     <Compile Include="Animal.cs" />
     <Compile Include="bloqueAguaTierra.cs" />
     <Compile Include="cattle.cs" />
+    <Compile Include="CattlePurchase.cs" />
     <Compile Include="Consumable.cs" />
     <Compile Include="consumibles\fertilizer.cs" />
     <Compile Include="consumibles\Food.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="RiverLake.cs" />
     <Compile Include="Seed.cs" />
     <Compile Include="StorageBuilding.cs" />
+    <Compile Include="StoragePurchase.cs" />
     <Compile Include="Terrain.cs" />
     <Compile Include="Tomato.cs" />
   </ItemGroup>

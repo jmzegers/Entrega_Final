@@ -8,12 +8,12 @@ namespace entrega
 {
     class Tomato : Seed
     {
-        private double Health { get; set; };
-        private double CurrentPurchasePrice { get; set; };
+        private double Health { get; set; }
+        private double CurrentPurchasePrice { get; set; }
 
         public Tomato(string name = "Tomate", double basePurchasePrice = 4500, double waterConsumptionPerTurn = 50, 
             double minWater = 750, double waterPenalty = 10, int productionTime = 5, int diseaseProb = 8, double diseasePenalty = 8, 
-            double priceVar = 1.02, double nutrient_use_per_turn = 8, double min_nutrient_level = 60, double nutrient_penalty = 12, int worm_prob = 11
+            double priceVar = 1.02, double nutrient_use_per_turn = 8, double min_nutrient_level = 60, double nutrient_penalty = 12, int worm_prob = 11,
             double worm_penalty = 9.5, int weed_probability = 5, double weed_penalty = 10.3, double health, double currentPurchasePrice)
 
             : base(name, basePurchasePrice, waterConsumptionPerTurn, minWater, waterPenalty, productionTime, diseaseProb, diseasePenalty, priceVar, 
