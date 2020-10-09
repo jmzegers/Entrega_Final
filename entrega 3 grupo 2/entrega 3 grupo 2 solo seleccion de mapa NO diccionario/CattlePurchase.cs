@@ -1,5 +1,4 @@
-﻿using entrega;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,60 +6,47 @@ using System.Threading.Tasks;
 
 namespace entrega
 {
-    class PlantationPurchase
+    class CattlePurchase
     {
-        //string a, double money, double money1, Dictionary<string, Dictionary<string, List<int>>> usedCoordinates
-        public PlantationPurchase()
+        public CattlePurchase()
         {
             /*
-            FunctionBrain fb = new FunctionBrain();
-            ObjectBrain ob = new ObjectBrain();
-            int turn = 30;
-            Dictionary<string, double> seedPrices = new Dictionary<string, double>();
-            Dictionary<string, Dictionary<int, double>> seedHistory = fb.PriceHistoryMaker(turn);
+            Dictionary<string, Animal> animalDict = ob.GetAnimalDict();
+            Console.WriteLine("Los ganados disponibles son: ");
+            int prodNumber = 1;
 
-            foreach (KeyValuePair<string, Seed> seed in ob.GetSeedDict())
+            foreach (KeyValuePair<string, Animal> c in animalDict)
             {
-                string seedName = seed.Value.GetName();
-                double seedPrice = seedHistory[seedName][turn + 1];
-                seedPrices.Add(seedName, seedPrice);
+                string name = c.Key;
+                double price = c.Value.GetPurchasePrice();
+                Console.WriteLine(prodNumber + "." + name + "      " + price);
+                prodNumber += 1;
             }
 
-            int prodNum = 1;
-            Console.WriteLine("Las semillas disponibles y sus precios son: ");
-            foreach (KeyValuePair<string, double> priceList in seedPrices)
-            {
-                Console.WriteLine(prodNum + "." + "{0}:, {1}", priceList.Key + "       " + priceList.Value);
-                prodNum += 1;
-            }
-
-            Console.WriteLine(" ");
             Console.WriteLine("¿Cual desea comprar? Escriba el nombre del producto");
-
-            string productName = Console.ReadLine();
-            Seed seedBought = ob.GetSeedDict()["tomate"];
+            string prodName = Console.ReadLine();
+            Animal cattleBought = ob.GetAnimalDict()["vacas"];
 
             try
             {
-                seedBought = ob.GetSeedDict()[productName];
+                cattleBought = ob.GetAnimalDict()[prodName];
             }
             catch (Exception e)
             {
                 Console.WriteLine("Ese producto no existe");
             }
 
-            string n = seedBought.GetName();
-            double seedValue = seedPrices[n];
-            if (seedValue > money)
+            double prodPrice = cattleBought.GetPurchasePrice();
+            if (prodPrice > money)
             {
                 Console.WriteLine("No tienes suficiente dinero");
             }
-            else //Si llega aca, entonces la compra fue exitosa
+            else
             {
-                money = money - seedValue;
+                money = money - prodPrice;
                 List<int> XCoord = new List<int>();
                 List<int> YCoord = new List<int>();
-                Console.WriteLine("Elija el lugar donde quiera poner la plantacion [1 - 100]");
+                Console.WriteLine("Elija el lugar donde quiera poner el ganado [1 - 100]");
                 Console.WriteLine("Eje X: ");
                 while (true)
                 {
@@ -92,12 +78,11 @@ namespace entrega
                     }
                 }
 
-
                 while (true)
                 {
                     if (CheckIfUsedCoord(usedCoordinates, XCoord, YCoord) == false)
                     {
-                        NewMapElement("P", seedBought.GetName(), XCoord, YCoord);
+                        NewMapElement("G", cattleBought.GetName(), XCoord, YCoord);
                         break;
                     }
                     else
@@ -106,13 +91,9 @@ namespace entrega
                         Console.WriteLine("Intente nuevamente");
                     }
                 }
-
             }
-        }
 
-        public PlantationPurchase(string a, double money, double money1, Dictionary<string, Dictionary<string, List<int>>> usedCoordinates, Dictionary<string, Dictionary<string, List<int>>> usedCoordinates1) : this(a, money, money1, usedCoordinates)
-        {
-        }*/
+            */
         }
     }
 }

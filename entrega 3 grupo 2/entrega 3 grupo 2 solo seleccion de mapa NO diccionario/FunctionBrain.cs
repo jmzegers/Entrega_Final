@@ -163,7 +163,8 @@ namespace entrega
             }
             else if (a == 5)
             {
-                Console.WriteLine();
+                Console.WriteLine("desea comprar un objeto: [C]");
+                Console.WriteLine("desea usar de su stock: [S]");
             }
             else
             {

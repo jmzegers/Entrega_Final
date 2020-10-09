@@ -9,18 +9,17 @@ namespace entrega
 {
     class Animal : Product
     {
-        private double FeedConsumptionPerTurn;
-        private double MinFeedLv;
-        private double FeedPenalty;
-        private int Units;
-        private double EscapeProbability;
-        private int MinEscape;
-        private int MaxEscape;
-        private int EscapedUnits;
-        private double SuddenDeathProbability;
-        private int MinSuddenDeaths;
-        private int MaxSuddenDeaths;
-        private int SuddenlyDeadUnits;
+        protected double FeedConsumptionPerTurn;
+        protected double MinFeedLv;
+        protected double FeedPenalty;
+        protected double EscapeProbability;
+        protected int MinEscape;
+        protected int MaxEscape;
+        protected int EscapedUnits;
+        protected double SuddenDeathProbability;
+        protected int MinSuddenDeaths;
+        protected int MaxSuddenDeaths;
+        protected int SuddenlyDeadUnits;
 
         Random AnimalRand = new Random();
 
@@ -34,7 +33,6 @@ namespace entrega
             this.FeedConsumptionPerTurn = feed_use_per_turn;
             this.MinFeedLv = min_feed_lv;
             this.FeedPenalty = feed_penalty;
-            this.Units = units;
             this.EscapeProbability = escape_probability;
             this.MinEscape = min_escape;
             this.MaxEscape = max_escape;
@@ -57,11 +55,6 @@ namespace entrega
         public double GetFeedPenalty()
         {
             return FeedPenalty;
-        }
-
-        public int GetUnits()
-        {
-            return Units;
         }
 
         public double GetEscapeProbability()

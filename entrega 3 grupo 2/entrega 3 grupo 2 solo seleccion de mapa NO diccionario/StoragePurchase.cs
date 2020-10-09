@@ -1,66 +1,53 @@
-﻿using entrega;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace entrega
+namespace entrega_3_grupo_2_solo_seleccion_de_mapa_NO_diccionario
 {
-    class PlantationPurchase
+    class StoragePurchase
     {
-        //string a, double money, double money1, Dictionary<string, Dictionary<string, List<int>>> usedCoordinates
-        public PlantationPurchase()
+        public StoragePurchase()
         {
             /*
-            FunctionBrain fb = new FunctionBrain();
-            ObjectBrain ob = new ObjectBrain();
-            int turn = 30;
-            Dictionary<string, double> seedPrices = new Dictionary<string, double>();
-            Dictionary<string, Dictionary<int, double>> seedHistory = fb.PriceHistoryMaker(turn);
+            Dictionary<string, StorageBuilding> storageDict = ob.GetStorageBuildingDict();
+            Console.WriteLine("Los edificios de almacenamiento disponibles son: ");
+            int prodNumber = 1;
 
-            foreach (KeyValuePair<string, Seed> seed in ob.GetSeedDict())
+            foreach (KeyValuePair<string, StorageBuilding> s in storageDict)
             {
-                string seedName = seed.Value.GetName();
-                double seedPrice = seedHistory[seedName][turn + 1];
-                seedPrices.Add(seedName, seedPrice);
+                string name = s.Key;
+                double price = s.Value.GetPurchasePrice();
+                Console.WriteLine(prodNumber + "." + name + "      " + price);
+                prodNumber += 1;
             }
 
-            int prodNum = 1;
-            Console.WriteLine("Las semillas disponibles y sus precios son: ");
-            foreach (KeyValuePair<string, double> priceList in seedPrices)
-            {
-                Console.WriteLine(prodNum + "." + "{0}:, {1}", priceList.Key + "       " + priceList.Value);
-                prodNum += 1;
-            }
-
-            Console.WriteLine(" ");
             Console.WriteLine("¿Cual desea comprar? Escriba el nombre del producto");
+            string prodName = Console.ReadLine();
 
-            string productName = Console.ReadLine();
-            Seed seedBought = ob.GetSeedDict()["tomate"];
+            StorageBuilding storageBought = ob.GetStorageBuildingDict()["Z"];
 
             try
             {
-                seedBought = ob.GetSeedDict()[productName];
+                storageBought = ob.GetStorageBuildingDict()[prodName];
             }
             catch (Exception e)
             {
                 Console.WriteLine("Ese producto no existe");
             }
 
-            string n = seedBought.GetName();
-            double seedValue = seedPrices[n];
-            if (seedValue > money)
+            double prodPrice = storageBought.GetPurchasePrice();
+            if (prodPrice > money)
             {
                 Console.WriteLine("No tienes suficiente dinero");
             }
-            else //Si llega aca, entonces la compra fue exitosa
+            else
             {
-                money = money - seedValue;
+                money = money - prodPrice;
                 List<int> XCoord = new List<int>();
                 List<int> YCoord = new List<int>();
-                Console.WriteLine("Elija el lugar donde quiera poner la plantacion [1 - 100]");
+                Console.WriteLine("Elija el lugar donde quiera poner el edificio de almacenamiento [1 - 100]");
                 Console.WriteLine("Eje X: ");
                 while (true)
                 {
@@ -92,12 +79,11 @@ namespace entrega
                     }
                 }
 
-
                 while (true)
                 {
                     if (CheckIfUsedCoord(usedCoordinates, XCoord, YCoord) == false)
                     {
-                        NewMapElement("P", seedBought.GetName(), XCoord, YCoord);
+                        NewMapElement("P", storageBought.NameBuilding(), XCoord, YCoord);
                         break;
                     }
                     else
@@ -106,13 +92,8 @@ namespace entrega
                         Console.WriteLine("Intente nuevamente");
                     }
                 }
-
             }
-        }
-
-        public PlantationPurchase(string a, double money, double money1, Dictionary<string, Dictionary<string, List<int>>> usedCoordinates, Dictionary<string, Dictionary<string, List<int>>> usedCoordinates1) : this(a, money, money1, usedCoordinates)
-        {
-        }*/
+            */
         }
     }
 }

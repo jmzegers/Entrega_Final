@@ -10,7 +10,9 @@ namespace entrega
     {
         List<string> Alimento = new List<string>();
         List<string> AliAnimales = new List<string>() { "zz" };
-        List<string> AguAnimales = new List<string>();
+        List<string> AguAnimales = new List<string>() { "zz" };
+        List<string> fertil = new List<string>() { "zz" };
+        List<string> riego = new List<string>() { "zz" };
         List<string> Cura = new List<string>();
         Seed nuevaSeed = new Seed("nombre", 5, 1, 1, 1, 1, 4, 10, 25, 4, 1, 1, 1, 10, 1, 5);
         Plantation nuevaPlantation = new Plantation("nombre", 5, "A", 1.5, 3, 2, false, 100, 100, 1);
@@ -231,6 +233,7 @@ namespace entrega
                                                 cashMoney -= 33.45;
                                                 inventario += "\nFertilizante";
                                                 Alimento.Add("Fertilizante");
+                                                fertil.Add("Fertilizante");
                                             }
 
 
@@ -249,6 +252,7 @@ namespace entrega
                                                 cashMoney -= 56.31;
                                                 inventario += "\nriego";
                                                 Alimento.Add("Riego");
+                                                riego.Add("Riego");
                                             }
 
 

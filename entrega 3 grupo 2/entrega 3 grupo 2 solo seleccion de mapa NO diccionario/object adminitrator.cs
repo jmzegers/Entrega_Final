@@ -11,7 +11,9 @@ namespace entrega
     {
         List<string> Alimento = new List<string>();
         List<string> AliAnimales = new List<string>() { "zz" };
-        List<string> AguAnimales = new List<string>();
+        List<string> AguAnimales = new List<string>() { "zz" };
+        List<string> fertil = new List<string>() { "zz" };
+        List<string> riego = new List<string>() { "zz" };
         List<string> Cura = new List<string>();
         Seed nuevaSeed = new Seed("nombre", 5, 1, 1, 1, 1, 4, 10, 25, 4, 1, 1, 1, 10, 1, 5);
         Plantation nuevaPlantation = new Plantation("nombre", 5, "A", 1.5, 3, 2, false, 100, 100, 1);
@@ -39,11 +41,15 @@ namespace entrega
         {
             if (a == 0)
             {
+                FunctionBrain fb = new FunctionBrain();
                 Seed nuevaSeed = new Seed("nombre", 5, 1, 1, 1, 1, 4, 10, 25, 4, 1, 1, 1, 10, 1, 5);
                 Plantation nuevaPlantation = new Plantation("nombre", 5, "A", 1.5, 3, 2, false, 100, 100, 1);
                 Cattle nuevoGanado = new Cattle("nombre", 2.5, "B", 30, 0.5, 0.2, 1, 1, 2, 1);
                 List<string> almacen = new List<string>() { "tomato", "letucce", "carrot", "potato", "corn", "onion", "celery" };
                 Dictionary<string, (int, int)> ejemplo = new Dictionary<string, (int, int)>();
+                Ir_al_mercado_de_consumibles buyingConsumable = new Ir_al_mercado_de_consumibles();
+                Ir_al_mercado_de_edificaciones DestSell = new Ir_al_mercado_de_edificaciones();
+                CompraConsumible Consu = new CompraConsumible();
                 double variacion;
                 int maduracionPlanta;
                 int maduracionGanado;
@@ -132,25 +138,33 @@ namespace entrega
                                                 mnb = Console.ReadLine().ToUpper();
                                                 if (mnb == "C")
                                                 {
+                                                    fb.Message(5);
                                                     AliAnimales.Sort();
-                                                    for (int i = 0; i < AliAnimales.Count; i++)
+                                                    while (true)
                                                     {
-
-                                                        if (AliAnimales[i] == "Alimento para animales")
+                                                      ans = Console.ReadLine().ToUpper();
+                                                      if (ans == "S")
+                                                      {
+                                                        for (int i = 0; i < AliAnimales.Count; i++)
                                                         {
-                                                            Console.WriteLine("Se ha usado un Alimento para animales");
-                                                            Alimento.Remove("Alimento para animales");
-                                                            AliAnimales.Remove("Alimento para animales");
-                                                            break;
+                                                            if (AliAnimales[i] == "Alimento para animales")
+                                                            {
+                                                                Console.WriteLine("Se ha usado un Alimento para animales");
+                                                                Alimento.Remove("Alimento para animales");
+                                                                AliAnimales.Remove("Alimento para animales");
+                                                                break;
+                                                            }
+                                                            else
+                                                            {
+                                                                Console.WriteLine("no tiene alimento para animales");
+                                                            }
                                                         }
-
-                                                        else
+                                                        break;
+                                                      }
+                                                      else if (ans == "C")
                                                         {
-                                                            Console.WriteLine("no tiene Alimento para animales");
-                                                            Console.WriteLine("\nDesea comprar un alimento para animales");
-                                                            // buyingConsumable.ConsumibleMarket += Consu.OnBuy6;
-                                                            // buyingConsumable.Buying();
-                                                            // similar a lo que hay de en pasar turno
+                                                            buyingConsumable.ConsumibleMarket += Consu.OnBuy6;
+                                                            buyingConsumable.Buying();
 
                                                             if (cashMoney < 44.96)
                                                             {
@@ -162,24 +176,61 @@ namespace entrega
                                                                 inventario += "\nAlimento para animales";
                                                                 Alimento.Add("Alimento para animales");
                                                                 AliAnimales.Add("Alimento para animales");
-                                                                break;
                                                             }
                                                             break;
                                                         }
+                                                        break;
                                                     }
+                                                    break;
+                                    
                                                 }
                                                 else if (mnb == "A")
                                                 {
-                                                    for (int i = 0; i < AguAnimales.Count; i++)
+                                                    fb.Message(5);
+                                                    AguAnimales.Sort();
+                                                    while (true)
                                                     {
-                                                        
-                                                        if (AguAnimales[i] == "Agua para animales")
+                                                        ans = Console.ReadLine().ToUpper();
+                                                        if (ans == "S")
                                                         {
-                                                            Console.WriteLine("Se ha usado un Agua para animales");
-                                                            Alimento.Remove("Agua para animales");
+                                                            for (int i = 0; i < AguAnimales.Count; i++)
+                                                            {
+
+                                                                if (AguAnimales[i] == "Agua para animales")
+                                                                {
+                                                                    Console.WriteLine("Se ha usado un Agua para animales");
+                                                                    Alimento.Remove("Agua para animales");
+                                                                    break;
+                                                                }
+                                                                else
+                                                                {
+                                                                    Console.WriteLine("no tiene agua para animales");
+                                                                }
+                                                            }
                                                             break;
                                                         }
+                                                        else if (ans == "C")
+                                                        {
+                                                            buyingConsumable.ConsumibleMarket += Consu.OnBuy7;
+                                                            buyingConsumable.Buying();
+
+                                                            if (cashMoney < 54.45)
+                                                            {
+                                                                Console.WriteLine("... ESPERA, \nno tienes dinero suficiente vuelva mas tarde");
+
+                                                            }
+                                                            else if (cashMoney >= 54.45)
+                                                            {
+                                                                cashMoney -= 54.45;
+                                                                inventario += "\nAgua para animales";
+                                                                Alimento.Add("Agua para animales");
+                                                                AguAnimales.Add("Agua para animales");
+                                                            }
+                                                            break;
+                                                        }
+                                                        break;
                                                     }
+                                                    break;
                                                 }
                                                 else if (mnb == "V")
                                                 {
@@ -208,31 +259,95 @@ namespace entrega
                                                 ghj = Console.ReadLine().ToUpper();
                                                 if (ghj == "F")
                                                 {
-                                                    for (int i = 0; i < Alimento.Count; i++)
+                                                    fb.Message(5);
+                                                    fertil.Sort();
+                                                    while (true)
                                                     {
-                                                        if (Alimento[i] == "Fertilizante")
+                                                        ans = Console.ReadLine().ToUpper();
+                                                        if (ans == "S")
                                                         {
-                                                            Console.WriteLine("Se ha usado un Fertilizante");
-                                                            Alimento.Remove("Fertilizante");
+                                                            for (int i = 0; i < fertil.Count; i++)
+                                                            {
+                                                                if (fertil[i] == "Fertilizante")
+                                                                {
+                                                                    Console.WriteLine("Se ha usado un Fertilizante");
+                                                                    fertil.Remove("Fertilizante");
+                                                                    break;
+                                                                }
+                                                                else if (fertil[i] != "Fertilizante")
+                                                                {
+                                                                    Console.WriteLine("no tiene fertilizante");
+                                                                }
+                                                            }
+                                                        }
+                                                        else if (ans == "C")
+                                                        {
+                                                            buyingConsumable.ConsumibleMarket += Consu.OnBuy4;
+                                                            buyingConsumable.Buying();
+
+                                                            if (cashMoney < 33.45)
+                                                            {
+                                                                Console.WriteLine("... ESPERA, \nno tienes dinero suficiente vuelva mas tarde");
+                                                            }
+                                                            else if (cashMoney >= 33.45)
+                                                            {
+                                                                cashMoney -= 33.45;
+                                                                inventario += "\nFertilizante";
+                                                                Alimento.Add("Fertilizante");
+                                                                fertil.Add("Fertilizante");
+                                                            }
                                                             break;
                                                         }
-                                                        else if (Alimento[i] != "Fertilizante")
-                                                        {
-                                                            Console.WriteLine("muestrar");
-                                                        }
+                                                        break;
                                                     }
+                                                    break;
+                                                    
                                                 }
                                                 else if (ghj == "R")
                                                 {
-                                                    for (int i = 0; i < Alimento.Count; i++)
+                                                    fb.Message(5);
+                                                    riego.Sort();
+                                                    while (true)
                                                     {
-                                                        if (Alimento[i] == "Riego")
+                                                        ans = Console.ReadLine().ToUpper();
+                                                        if (ans == "S")
                                                         {
-                                                            Console.WriteLine("Se ha usado un Riego");
-                                                            Alimento.Remove("Riego");
+                                                            for (int i = 0; i < riego.Count; i++)
+                                                            {
+                                                                if (riego[i] == "Riego")
+                                                                {
+                                                                    Console.WriteLine("Se ha usado un Riego");
+                                                                    riego.Remove("Riego");
+                                                                    break;
+                                                                }
+                                                                else if (riego[i] != "Riego")
+                                                                {
+                                                                    Console.WriteLine("no tiene Riego");
+                                                                }
+                                                            }
+                                                        }
+                                                        else if (ans == "C")
+                                                        {
+                                                            buyingConsumable.ConsumibleMarket += Consu.OnBuy5;
+                                                            buyingConsumable.Buying();
+
+                                                            if (cashMoney < 56.31)
+                                                            {
+                                                                Console.WriteLine("... ESPERA, \nno tienes dinero suficiente vuelva mas tarde");
+                                                            }
+                                                            else if (cashMoney >= 56.31)
+                                                            {
+                                                                cashMoney -= 56.31;
+                                                                inventario += "\nriego";
+                                                                Alimento.Add("Riego");
+                                                                riego.Add("Riego");
+                                                            }
                                                             break;
                                                         }
+                                                        break;
+
                                                     }
+                                                    break;
                                                 }
                                                 else if (ghj == "V")
                                                 {
