@@ -40,6 +40,8 @@ namespace entrega
 
             else if (a == "C")
             {
+                ConsumablePurchase cp = new ConsumablePurchase();
+                
                 Console.WriteLine("Los productos consumibles son: ");
                 string inventario = "";
 

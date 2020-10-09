@@ -58,6 +58,11 @@ namespace entrega
             }
             else if (a == 5)
             {
+                Console.WriteLine("desea comprar un objeto: [C]");
+                Console.WriteLine("desea usar de su stock: [S]");
+            }
+            else if (a == 6)
+            {
                 Console.WriteLine("Elija uno de las siguientes configuraciones del mapa: ");
                 Console.WriteLine("1) Solo tierra");
                 Console.WriteLine("2) Que contenga un rio");
