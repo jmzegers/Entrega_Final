@@ -138,11 +138,6 @@ namespace entrega
             {
                 Console.WriteLine("El comando para esta letra no existe");
             }
-<<<<<<< HEAD
-=======
-
-            //return money;
->>>>>>> e3d5de456e25d7dab2c19329f75dff3c97b8b2ce
         }
     }
 }
