@@ -37,7 +37,7 @@ namespace entrega
             this.ProductionTime = 8;
             this.DiseaseProbability = 20;
             this.DiseasePenalty = 15;
-           // this.PurchasePrice = 55000;
+            this.PurchasePrice = 55000;
             this.FeedConsumptionPerTurn = 150;
             this.MinFeedLv = 200;
             this.FeedPenalty = 25;

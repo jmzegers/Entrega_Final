@@ -15,6 +15,10 @@ namespace entrega
         List<string> fertil = new List<string>() { "zz" };
         List<string> riego = new List<string>() { "zz" };
         List<string> Cura = new List<string>();
+        List<string> herbic = new List<string>() { "zz" };
+        List<string> fungi = new List<string>() { "zz" };
+        List<string> pesti = new List<string>() { "zz" };
+        List<string> vacun = new List<string>() { "zz" };
         Seed nuevaSeed = new Seed("nombre", 5, 1, 1, 1, 1, 4, 10, 25, 4, 1, 1, 1, 10, 1, 5,0);
         Plantation nuevaPlantation = new Plantation("nombre", 5, "A", 1.5, 3, 2, false, 100, 100, 1);
         Cattle nuevoGanado = new Cattle("nombre", 2.5, "B", 30, 0.5, 0.2, 1, 1, 2, 1);
@@ -199,7 +203,7 @@ namespace entrega
                                                                 if (AguAnimales[i] == "Agua para animales")
                                                                 {
                                                                     Console.WriteLine("Se ha usado un Agua para animales");
-                                                                    Alimento.Remove("Agua para animales");
+                                                                    AguAnimales.Remove("Agua para animales");
                                                                     break;
                                                                 }
                                                                 else
@@ -393,39 +397,139 @@ namespace entrega
                                                 if (klp == "H")
                                                 {
                                                     fb.Message(5);
-                                                    for (int i = 0; i < Cura.Count; i++)
+                                                    herbic.Sort();
+                                                    while (true)
                                                     {
-                                                        if (Cura[i] == "Herbicida")
+                                                        ans = Console.ReadLine().ToUpper();
+                                                        if (ans == "S")
                                                         {
-                                                            Console.WriteLine("Se ha usado un Herbicida");
-                                                            Cura.Remove("Herbicida");
-                                                            break;
+                                                            for (int i = 0; i < herbic.Count; i++)
+                                                            {
+                                                                if (herbic[i] == "Herbicida")
+                                                                {
+                                                                    Console.WriteLine("Se ha usado un Herbicida");
+                                                                    herbic.Remove("Herbicida");
+                                                                    break;
+                                                                }
+                                                                else if (herbic[i] != "Herbicida")
+                                                                {
+                                                                    Console.WriteLine("no tiene herbicida");
+                                                                }
+                                                            }
                                                         }
+                                                        else if(ans == "C")
+                                                        {
+                                                            buyingConsumable.ConsumibleMarket += Consu.OnBuy1;
+                                                            buyingConsumable.Buying();
+                                                            if (cashMoney < 80.24)
+                                                            {
+                                                                Console.WriteLine("... ESPERA, \nno tienes dinero suficiente vuelva mas tarde");
+                                                            }
+                                                            else if (cashMoney >= 80.24)
+                                                            {
+                                                                cashMoney -= 80.24;
+                                                                inventario += "\nHerbicida";
+                                                                Cura.Add("Herbicida");
+                                                                herbic.Add("Herbicida");
+                                                            }
+                                                            break;
+
+                                                        }
+                                                        break;
+
                                                     }
+                                                    break;
+                                                    
                                                 }
                                                 else if (klp == "F")
                                                 {
-                                                    for (int i = 0; i < Cura.Count; i++)
+                                                    fb.Message(5);
+                                                    fungi.Sort();
+                                                    while (true)
                                                     {
-                                                        if (Cura[i] == "Fungicida")
+                                                        ans = Console.ReadLine().ToUpper();
+                                                        if (ans == "S")
                                                         {
-                                                            Console.WriteLine("Se ha usado un Fungicida");
-                                                            Cura.Remove("Fungicida");
+                                                            for (int i = 0; i < fungi.Count; i++)
+                                                            {
+                                                                if (fungi[i] == "Fungicida")
+                                                                {
+                                                                    Console.WriteLine("Se ha usado un Fungicida");
+                                                                    fungi.Remove("Fungicida");
+                                                                    break;
+                                                                }
+                                                                else if (fungi[i] != "Fungicida")
+                                                                {
+                                                                    Console.WriteLine("no tiene fungicida");
+                                                                }
+                                                            }
+                                                        }
+                                                        else if (ans == "C")
+                                                        {
+                                                            buyingConsumable.ConsumibleMarket += Consu.OnBuy;
+                                                            buyingConsumable.Buying();
+
+                                                            if (cashMoney < 48.20)
+                                                            {
+                                                                Console.WriteLine("... ESPERA, \nno tienes dinero suficiente vuelva mas tarde");
+                                                            }
+                                                            else if (cashMoney >= 48.20)
+                                                            {
+                                                                cashMoney -= 48.20;
+                                                                inventario += "\nfungicida";
+                                                                Cura.Add("Fungicida");
+                                                                fungi.Add("Fungicida");
+                                                            }
                                                             break;
                                                         }
+                                                        break;
                                                     }
+                                                    break;
+                                        
                                                 }
                                                 else if (klp == "P")
                                                 {
-                                                    for (int i = 0; i < Cura.Count; i++)
+                                                    fb.Message(5);
+                                                    pesti.Sort();
+                                                    while (true)
                                                     {
-                                                        if (Cura[i] == "Pesticida")
+                                                        ans = Console.ReadLine().ToUpper();
+                                                        if (ans == "S")
                                                         {
-                                                            Console.WriteLine("Se ha usado un Pesticida");
-                                                            Cura.Remove("Pesticida");
+                                                            for (int i = 0; i < pesti.Count; i++)
+                                                            {
+                                                                if (pesti[i] == "Pesticida")
+                                                                {
+                                                                    Console.WriteLine("Se ha usado un Pesticida");
+                                                                    pesti.Remove("Pesticida");
+                                                                    break;
+                                                                }
+                                                                else if (pesti[i] != "Pesticida")
+                                                                {
+                                                                    Console.WriteLine("no tiene pesticida");
+                                                                }
+                                                            }
+                                                        }
+                                                        else if (ans == "C")
+                                                        {
+                                                            buyingConsumable.ConsumibleMarket += Consu.OnBuy2;
+                                                            buyingConsumable.Buying();
+                                                            if (cashMoney < 42.80)
+                                                            {
+                                                                Console.WriteLine("... ESPERA, \nno tienes dinero suficiente vuelva mas tarde");
+                                                            }
+                                                            else if (cashMoney >= 42.80)
+                                                            {
+                                                                cashMoney -= 42.80;
+                                                                inventario += "\npesticida";
+                                                                pesti.Add("Pesticida");
+                                                                Cura.Add("Pesticida");
+                                                            }
                                                             break;
                                                         }
+                                                        break;
                                                     }
+                                                    break;
                                                 }
                                                 else if (klp == "V")
                                                 {
@@ -444,15 +548,48 @@ namespace entrega
                                         }
                                         else if (poi == "G")
                                         {
-                                            for (int i = 0; i < Cura.Count; i++)
+                                            fb.Message(5);
+                                            vacun.Sort();
+                                            while (true)
                                             {
-                                                if (Cura[i] == "Vacuna")
+                                                ans = Console.ReadLine().ToUpper();
+                                                if (ans == "S")
                                                 {
-                                                    Console.WriteLine("Se ha usado un Vacuna");
-                                                    Cura.Remove("Vacuna");
+                                                    for (int i = 0; i < vacun.Count; i++)
+                                                    {
+                                                        if (vacun[i] == "Vacuna")
+                                                        {
+                                                            Console.WriteLine("Se ha usado un Vacuna");
+                                                            vacun.Remove("Vacuna");
+                                                            break;
+                                                        }
+                                                        else if (vacun[i] != "Vacuna")
+                                                        {
+                                                            Console.WriteLine("no tiene vacunas");
+                                                        }
+                                                    }
+                                                }
+                                                else if (ans == "C")
+                                                {
+                                                    buyingConsumable.ConsumibleMarket += Consu.OnBuy3;
+                                                    buyingConsumable.Buying();
+
+                                                    if (cashMoney < 28.40)
+                                                    {
+                                                        Console.WriteLine("... ESPERA, \nno tienes dinero suficiente vuelva mas tarde");
+                                                    }
+                                                    else if (cashMoney >= 28.40)
+                                                    {
+                                                        cashMoney -= 28.40;
+                                                        inventario += "\nvacuna";
+                                                        vacun.Add("Vacuna");
+                                                        Cura.Add("Vacuna");
+                                                    }
                                                     break;
                                                 }
+                                                break;
                                             }
+                                            break;
                                         }
                                         else if (fgt == "V")
                                         {
