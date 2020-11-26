@@ -1,0 +1,230 @@
+C:\Users\Admin\Desktop\Zegeres\Grupo-2\Grupo-2\obj\Debug\Grupo-2.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\Zegeres\Grupo-2\Grupo-2\obj\Debug\Grupo_2.Menu_inicio.resources
+C:\Users\Admin\Desktop\Zegeres\Grupo-2\Grupo-2\obj\Debug\Grupo_2.Properties.Resources.resources
+C:\Users\Admin\Desktop\Zegeres\Grupo-2\Grupo-2\obj\Debug\Grupo-2.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\Zegeres\Grupo-2\Grupo-2\obj\Debug\Grupo-2.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Zegeres\Grupo-2\Grupo-2\bin\Debug\Grupo-2.exe.config
+C:\Users\Admin\Desktop\Zegeres\Grupo-2\Grupo-2\bin\Debug\Grupo-2.exe
+C:\Users\Admin\Desktop\Zegeres\Grupo-2\Grupo-2\bin\Debug\Grupo-2.pdb
+C:\Users\Admin\Desktop\Zegeres\Grupo-2\Grupo-2\obj\Debug\Grupo-2.exe
+C:\Users\Admin\Desktop\Zegeres\Grupo-2\Grupo-2\obj\Debug\Grupo-2.pdb
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Grupo-2\Grupo-2\bin\Debug\Grupo-2.exe.config
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Grupo-2\Grupo-2\bin\Debug\Grupo-2.exe
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Grupo-2\Grupo-2\bin\Debug\Grupo-2.pdb
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Grupo-2\Grupo-2\obj\Debug\Grupo-2.csprojAssemblyReference.cache
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Grupo-2\Grupo-2\obj\Debug\Grupo_2.Menu_inicio.resources
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Grupo-2\Grupo-2\obj\Debug\Grupo_2.Properties.Resources.resources
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Grupo-2\Grupo-2\obj\Debug\Grupo-2.csproj.GenerateResource.cache
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Grupo-2\Grupo-2\obj\Debug\Grupo-2.csproj.CoreCompileInputs.cache
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Grupo-2\Grupo-2\obj\Debug\Grupo-2.exe
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Grupo-2\Grupo-2\obj\Debug\Grupo-2.pdb
+C:\Users\Admin\Downloads\Grupo-2-2-20201114T155652Z-001\Grupo-2-2\Grupo-2\bin\Debug\Grupo-2.exe.config
+C:\Users\Admin\Downloads\Grupo-2-2-20201114T155652Z-001\Grupo-2-2\Grupo-2\bin\Debug\Grupo-2.exe
+C:\Users\Admin\Downloads\Grupo-2-2-20201114T155652Z-001\Grupo-2-2\Grupo-2\bin\Debug\Grupo-2.pdb
+C:\Users\Admin\Downloads\Grupo-2-2-20201114T155652Z-001\Grupo-2-2\Grupo-2\obj\Debug\Grupo-2.csprojAssemblyReference.cache
+C:\Users\Admin\Downloads\Grupo-2-2-20201114T155652Z-001\Grupo-2-2\Grupo-2\obj\Debug\Grupo_2.Menu_inicio.resources
+C:\Users\Admin\Downloads\Grupo-2-2-20201114T155652Z-001\Grupo-2-2\Grupo-2\obj\Debug\Grupo_2.Properties.Resources.resources
+C:\Users\Admin\Downloads\Grupo-2-2-20201114T155652Z-001\Grupo-2-2\Grupo-2\obj\Debug\Grupo-2.csproj.GenerateResource.cache
+C:\Users\Admin\Downloads\Grupo-2-2-20201114T155652Z-001\Grupo-2-2\Grupo-2\obj\Debug\Grupo-2.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\Grupo-2-2-20201114T155652Z-001\Grupo-2-2\Grupo-2\obj\Debug\Grupo-2.exe
+C:\Users\Admin\Downloads\Grupo-2-2-20201114T155652Z-001\Grupo-2-2\Grupo-2\obj\Debug\Grupo-2.pdb
+C:\Users\Admin\Downloads\Grupo-2-2-20201115T202154Z-001\Grupo-2-2\Grupo-2\bin\Debug\Grupo-2.exe.config
+C:\Users\Admin\Downloads\Grupo-2-2-20201115T202154Z-001\Grupo-2-2\Grupo-2\bin\Debug\Grupo-2.exe
+C:\Users\Admin\Downloads\Grupo-2-2-20201115T202154Z-001\Grupo-2-2\Grupo-2\bin\Debug\Grupo-2.pdb
+C:\Users\Admin\Downloads\Grupo-2-2-20201115T202154Z-001\Grupo-2-2\Grupo-2\obj\Debug\Grupo-2.csprojAssemblyReference.cache
+C:\Users\Admin\Downloads\Grupo-2-2-20201115T202154Z-001\Grupo-2-2\Grupo-2\obj\Debug\Grupo_2.Menu_inicio.resources
+C:\Users\Admin\Downloads\Grupo-2-2-20201115T202154Z-001\Grupo-2-2\Grupo-2\obj\Debug\Grupo_2.Properties.Resources.resources
+C:\Users\Admin\Downloads\Grupo-2-2-20201115T202154Z-001\Grupo-2-2\Grupo-2\obj\Debug\Grupo-2.csproj.GenerateResource.cache
+C:\Users\Admin\Downloads\Grupo-2-2-20201115T202154Z-001\Grupo-2-2\Grupo-2\obj\Debug\Grupo-2.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\Grupo-2-2-20201115T202154Z-001\Grupo-2-2\Grupo-2\obj\Debug\Grupo-2.exe
+C:\Users\Admin\Downloads\Grupo-2-2-20201115T202154Z-001\Grupo-2-2\Grupo-2\obj\Debug\Grupo-2.pdb
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Posible actualización\Grupo-2-2.0-20201119T221145Z-001\Grupo-2-2.0\Grupo-2\bin\Debug\Grupo-2.exe.config
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Posible actualización\Grupo-2-2.0-20201119T221145Z-001\Grupo-2-2.0\Grupo-2\bin\Debug\Grupo-2.exe
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Posible actualización\Grupo-2-2.0-20201119T221145Z-001\Grupo-2-2.0\Grupo-2\bin\Debug\Grupo-2.pdb
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Posible actualización\Grupo-2-2.0-20201119T221145Z-001\Grupo-2-2.0\Grupo-2\obj\Debug\Grupo-2.csprojAssemblyReference.cache
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Posible actualización\Grupo-2-2.0-20201119T221145Z-001\Grupo-2-2.0\Grupo-2\obj\Debug\Grupo_2.Menu_inicio.resources
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Posible actualización\Grupo-2-2.0-20201119T221145Z-001\Grupo-2-2.0\Grupo-2\obj\Debug\Grupo_2.Properties.Resources.resources
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Posible actualización\Grupo-2-2.0-20201119T221145Z-001\Grupo-2-2.0\Grupo-2\obj\Debug\Grupo-2.csproj.GenerateResource.cache
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Posible actualización\Grupo-2-2.0-20201119T221145Z-001\Grupo-2-2.0\Grupo-2\obj\Debug\Grupo-2.csproj.CoreCompileInputs.cache
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Posible actualización\Grupo-2-2.0-20201119T221145Z-001\Grupo-2-2.0\Grupo-2\obj\Debug\Grupo-2.exe
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Posible actualización\Grupo-2-2.0-20201119T221145Z-001\Grupo-2-2.0\Grupo-2\obj\Debug\Grupo-2.pdb
+C:\Users\Admin\Desktop\1234\Grupo-2-2.0\Grupo-2\bin\Debug\Grupo-2.exe.config
+C:\Users\Admin\Desktop\1234\Grupo-2-2.0\Grupo-2\bin\Debug\Grupo-2.exe
+C:\Users\Admin\Desktop\1234\Grupo-2-2.0\Grupo-2\bin\Debug\Grupo-2.pdb
+C:\Users\Admin\Desktop\1234\Grupo-2-2.0\Grupo-2\obj\Debug\Grupo-2.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\1234\Grupo-2-2.0\Grupo-2\obj\Debug\Grupo_2.Menu_inicio.resources
+C:\Users\Admin\Desktop\1234\Grupo-2-2.0\Grupo-2\obj\Debug\Grupo_2.Properties.Resources.resources
+C:\Users\Admin\Desktop\1234\Grupo-2-2.0\Grupo-2\obj\Debug\Grupo-2.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\1234\Grupo-2-2.0\Grupo-2\obj\Debug\Grupo-2.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\1234\Grupo-2-2.0\Grupo-2\obj\Debug\Grupo-2.exe
+C:\Users\Admin\Desktop\1234\Grupo-2-2.0\Grupo-2\obj\Debug\Grupo-2.pdb
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Grupo-2-2.0-20201121T132310Z-001\Grupo-2-2.0\Grupo-2\bin\Debug\Grupo-2.exe.config
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Grupo-2-2.0-20201121T132310Z-001\Grupo-2-2.0\Grupo-2\bin\Debug\Grupo-2.exe
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Grupo-2-2.0-20201121T132310Z-001\Grupo-2-2.0\Grupo-2\bin\Debug\Grupo-2.pdb
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Grupo-2-2.0-20201121T132310Z-001\Grupo-2-2.0\Grupo-2\obj\Debug\Grupo-2.csprojAssemblyReference.cache
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Grupo-2-2.0-20201121T132310Z-001\Grupo-2-2.0\Grupo-2\obj\Debug\Grupo_2.Menu_inicio.resources
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Grupo-2-2.0-20201121T132310Z-001\Grupo-2-2.0\Grupo-2\obj\Debug\Grupo_2.Properties.Resources.resources
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Grupo-2-2.0-20201121T132310Z-001\Grupo-2-2.0\Grupo-2\obj\Debug\Grupo-2.csproj.GenerateResource.cache
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Grupo-2-2.0-20201121T132310Z-001\Grupo-2-2.0\Grupo-2\obj\Debug\Grupo-2.csproj.CoreCompileInputs.cache
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Grupo-2-2.0-20201121T132310Z-001\Grupo-2-2.0\Grupo-2\obj\Debug\Grupo-2.exe
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Grupo-2-2.0-20201121T132310Z-001\Grupo-2-2.0\Grupo-2\obj\Debug\Grupo-2.pdb
+C:\Users\Admin\Downloads\Grupo-2-2.0-20201121T132310Z-001-20201121T165446Z-001\Grupo-2-2.0-20201121T132310Z-001\Grupo-2-2.0\Grupo-2\bin\Debug\Grupo-2.exe.config
+C:\Users\Admin\Downloads\Grupo-2-2.0-20201121T132310Z-001-20201121T165446Z-001\Grupo-2-2.0-20201121T132310Z-001\Grupo-2-2.0\Grupo-2\bin\Debug\Grupo-2.exe
+C:\Users\Admin\Downloads\Grupo-2-2.0-20201121T132310Z-001-20201121T165446Z-001\Grupo-2-2.0-20201121T132310Z-001\Grupo-2-2.0\Grupo-2\bin\Debug\Grupo-2.pdb
+C:\Users\Admin\Downloads\Grupo-2-2.0-20201121T132310Z-001-20201121T165446Z-001\Grupo-2-2.0-20201121T132310Z-001\Grupo-2-2.0\Grupo-2\obj\Debug\Grupo-2.csprojAssemblyReference.cache
+C:\Users\Admin\Downloads\Grupo-2-2.0-20201121T132310Z-001-20201121T165446Z-001\Grupo-2-2.0-20201121T132310Z-001\Grupo-2-2.0\Grupo-2\obj\Debug\Grupo_2.Menu_inicio.resources
+C:\Users\Admin\Downloads\Grupo-2-2.0-20201121T132310Z-001-20201121T165446Z-001\Grupo-2-2.0-20201121T132310Z-001\Grupo-2-2.0\Grupo-2\obj\Debug\Grupo_2.Properties.Resources.resources
+C:\Users\Admin\Downloads\Grupo-2-2.0-20201121T132310Z-001-20201121T165446Z-001\Grupo-2-2.0-20201121T132310Z-001\Grupo-2-2.0\Grupo-2\obj\Debug\Grupo-2.csproj.GenerateResource.cache
+C:\Users\Admin\Downloads\Grupo-2-2.0-20201121T132310Z-001-20201121T165446Z-001\Grupo-2-2.0-20201121T132310Z-001\Grupo-2-2.0\Grupo-2\obj\Debug\Grupo-2.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\Grupo-2-2.0-20201121T132310Z-001-20201121T165446Z-001\Grupo-2-2.0-20201121T132310Z-001\Grupo-2-2.0\Grupo-2\obj\Debug\Grupo-2.exe
+C:\Users\Admin\Downloads\Grupo-2-2.0-20201121T132310Z-001-20201121T165446Z-001\Grupo-2-2.0-20201121T132310Z-001\Grupo-2-2.0\Grupo-2\obj\Debug\Grupo-2.pdb
+C:\Users\Admin\Downloads\Grupo-2-4.0-20201121T170825Z-001\Grupo-2-4.0\Grupo-2\bin\Debug\Grupo-2.exe.config
+C:\Users\Admin\Downloads\Grupo-2-4.0-20201121T170825Z-001\Grupo-2-4.0\Grupo-2\bin\Debug\Grupo-2.exe
+C:\Users\Admin\Downloads\Grupo-2-4.0-20201121T170825Z-001\Grupo-2-4.0\Grupo-2\bin\Debug\Grupo-2.pdb
+C:\Users\Admin\Downloads\Grupo-2-4.0-20201121T170825Z-001\Grupo-2-4.0\Grupo-2\obj\Debug\Grupo-2.csprojAssemblyReference.cache
+C:\Users\Admin\Downloads\Grupo-2-4.0-20201121T170825Z-001\Grupo-2-4.0\Grupo-2\obj\Debug\Grupo_2.Menu_inicio.resources
+C:\Users\Admin\Downloads\Grupo-2-4.0-20201121T170825Z-001\Grupo-2-4.0\Grupo-2\obj\Debug\Grupo_2.Properties.Resources.resources
+C:\Users\Admin\Downloads\Grupo-2-4.0-20201121T170825Z-001\Grupo-2-4.0\Grupo-2\obj\Debug\Grupo-2.csproj.GenerateResource.cache
+C:\Users\Admin\Downloads\Grupo-2-4.0-20201121T170825Z-001\Grupo-2-4.0\Grupo-2\obj\Debug\Grupo-2.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\Grupo-2-4.0-20201121T170825Z-001\Grupo-2-4.0\Grupo-2\obj\Debug\Grupo-2.exe
+C:\Users\Admin\Downloads\Grupo-2-4.0-20201121T170825Z-001\Grupo-2-4.0\Grupo-2\obj\Debug\Grupo-2.pdb
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Grupo-2-4.0-20201121T184842Z-001\Grupo-2-4.0\Grupo-2\bin\Debug\Grupo-2.exe.config
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Grupo-2-4.0-20201121T184842Z-001\Grupo-2-4.0\Grupo-2\bin\Debug\Grupo-2.exe
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Grupo-2-4.0-20201121T184842Z-001\Grupo-2-4.0\Grupo-2\bin\Debug\Grupo-2.pdb
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Grupo-2-4.0-20201121T184842Z-001\Grupo-2-4.0\Grupo-2\obj\Debug\Grupo-2.csprojAssemblyReference.cache
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Grupo-2-4.0-20201121T184842Z-001\Grupo-2-4.0\Grupo-2\obj\Debug\Grupo_2.Menu_inicio.resources
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Grupo-2-4.0-20201121T184842Z-001\Grupo-2-4.0\Grupo-2\obj\Debug\Grupo_2.Properties.Resources.resources
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Grupo-2-4.0-20201121T184842Z-001\Grupo-2-4.0\Grupo-2\obj\Debug\Grupo-2.csproj.GenerateResource.cache
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Grupo-2-4.0-20201121T184842Z-001\Grupo-2-4.0\Grupo-2\obj\Debug\Grupo-2.csproj.CoreCompileInputs.cache
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Grupo-2-4.0-20201121T184842Z-001\Grupo-2-4.0\Grupo-2\obj\Debug\Grupo-2.exe
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Grupo-2-4.0-20201121T184842Z-001\Grupo-2-4.0\Grupo-2\obj\Debug\Grupo-2.pdb
+C:\Users\Admin\Downloads\Grupo-2-4.0-20201122T013238Z-001\Grupo-2-4.0\Grupo-2\obj\Debug\Grupo-2.csprojAssemblyReference.cache
+C:\Users\Admin\Downloads\Grupo-2-4.0-20201122T013238Z-001\Grupo-2-4.0\Grupo-2\obj\Debug\Grupo_2.Menu_inicio.resources
+C:\Users\Admin\Downloads\Grupo-2-4.0-20201122T013238Z-001\Grupo-2-4.0\Grupo-2\obj\Debug\Grupo_2.Properties.Resources.resources
+C:\Users\Admin\Downloads\Grupo-2-4.0-20201122T013238Z-001\Grupo-2-4.0\Grupo-2\obj\Debug\Grupo-2.csproj.GenerateResource.cache
+C:\Users\Admin\Downloads\Grupo-2-4.0-20201122T013238Z-001\Grupo-2-4.0\Grupo-2\obj\Debug\Grupo-2.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\Grupo-2-4.0-20201122T013238Z-001\Grupo-2-4.0\Grupo-2\obj\Debug\Grupo-2.exe
+C:\Users\Admin\Downloads\Grupo-2-4.0-20201122T013238Z-001\Grupo-2-4.0\Grupo-2\obj\Debug\Grupo-2.pdb
+C:\Users\Admin\Downloads\Grupo-2-4.0-20201122T013238Z-001\Grupo-2-4.0\Grupo-2\bin\Debug\Grupo-2.exe.config
+C:\Users\Admin\Downloads\Grupo-2-4.0-20201122T013238Z-001\Grupo-2-4.0\Grupo-2\bin\Debug\Grupo-2.exe
+C:\Users\Admin\Downloads\Grupo-2-4.0-20201122T013238Z-001\Grupo-2-4.0\Grupo-2\bin\Debug\Grupo-2.pdb
+C:\Users\mlyon\Downloads\Grupo-2-4.0-20201122T143005Z-001\Grupo-2-4.0\Grupo-2\obj\Debug\Grupo-2.csprojAssemblyReference.cache
+C:\Users\mlyon\Downloads\Grupo-2-4.0-20201122T143005Z-001\Grupo-2-4.0\Grupo-2\obj\Debug\Grupo_2.Menu_inicio.resources
+C:\Users\mlyon\Downloads\Grupo-2-4.0-20201122T143005Z-001\Grupo-2-4.0\Grupo-2\obj\Debug\Grupo_2.Properties.Resources.resources
+C:\Users\mlyon\Downloads\Grupo-2-4.0-20201122T143005Z-001\Grupo-2-4.0\Grupo-2\obj\Debug\Grupo-2.csproj.GenerateResource.cache
+C:\Users\mlyon\Downloads\Grupo-2-4.0-20201122T143005Z-001\Grupo-2-4.0\Grupo-2\obj\Debug\Grupo-2.csproj.CoreCompileInputs.cache
+C:\Users\mlyon\Downloads\Grupo-2-4.0-20201122T143005Z-001\Grupo-2-4.0\Grupo-2\obj\Debug\Grupo-2.exe
+C:\Users\mlyon\Downloads\Grupo-2-4.0-20201122T143005Z-001\Grupo-2-4.0\Grupo-2\obj\Debug\Grupo-2.pdb
+C:\Users\mlyon\Downloads\Grupo-2-4.0-20201122T143005Z-001\Grupo-2-4.0\Grupo-2\bin\Debug\Grupo-2.exe.config
+C:\Users\mlyon\Downloads\Grupo-2-4.0-20201122T143005Z-001\Grupo-2-4.0\Grupo-2\bin\Debug\Grupo-2.exe
+C:\Users\mlyon\Downloads\Grupo-2-4.0-20201122T143005Z-001\Grupo-2-4.0\Grupo-2\bin\Debug\Grupo-2.pdb
+C:\Users\mlyon\Downloads\Grupo-2-4.0-20201122T143005Z-001\Grupo-2-VERSION 5.0\Grupo-2\bin\Debug\Grupo-2.exe.config
+C:\Users\mlyon\Downloads\Grupo-2-4.0-20201122T143005Z-001\Grupo-2-VERSION 5.0\Grupo-2\bin\Debug\Grupo-2.exe
+C:\Users\mlyon\Downloads\Grupo-2-4.0-20201122T143005Z-001\Grupo-2-VERSION 5.0\Grupo-2\bin\Debug\Grupo-2.pdb
+C:\Users\mlyon\Downloads\Grupo-2-4.0-20201122T143005Z-001\Grupo-2-VERSION 5.0\Grupo-2\obj\Debug\Grupo-2.csprojAssemblyReference.cache
+C:\Users\mlyon\Downloads\Grupo-2-4.0-20201122T143005Z-001\Grupo-2-VERSION 5.0\Grupo-2\obj\Debug\Grupo_2.Menu_inicio.resources
+C:\Users\mlyon\Downloads\Grupo-2-4.0-20201122T143005Z-001\Grupo-2-VERSION 5.0\Grupo-2\obj\Debug\Grupo_2.Properties.Resources.resources
+C:\Users\mlyon\Downloads\Grupo-2-4.0-20201122T143005Z-001\Grupo-2-VERSION 5.0\Grupo-2\obj\Debug\Grupo-2.csproj.GenerateResource.cache
+C:\Users\mlyon\Downloads\Grupo-2-4.0-20201122T143005Z-001\Grupo-2-VERSION 5.0\Grupo-2\obj\Debug\Grupo-2.csproj.CoreCompileInputs.cache
+C:\Users\mlyon\Downloads\Grupo-2-4.0-20201122T143005Z-001\Grupo-2-VERSION 5.0\Grupo-2\obj\Debug\Grupo-2.exe
+C:\Users\mlyon\Downloads\Grupo-2-4.0-20201122T143005Z-001\Grupo-2-VERSION 5.0\Grupo-2\obj\Debug\Grupo-2.pdb
+C:\Users\Admin\Downloads\Grupo-2-VERSION 5.0-20201124T184728Z-001\Grupo-2-VERSION 5.0\Grupo-2\bin\Debug\Grupo-2.exe.config
+C:\Users\Admin\Downloads\Grupo-2-VERSION 5.0-20201124T184728Z-001\Grupo-2-VERSION 5.0\Grupo-2\bin\Debug\Grupo-2.exe
+C:\Users\Admin\Downloads\Grupo-2-VERSION 5.0-20201124T184728Z-001\Grupo-2-VERSION 5.0\Grupo-2\bin\Debug\Grupo-2.pdb
+C:\Users\Admin\Downloads\Grupo-2-VERSION 5.0-20201124T184728Z-001\Grupo-2-VERSION 5.0\Grupo-2\obj\Debug\Grupo-2.csprojAssemblyReference.cache
+C:\Users\Admin\Downloads\Grupo-2-VERSION 5.0-20201124T184728Z-001\Grupo-2-VERSION 5.0\Grupo-2\obj\Debug\Grupo_2.Menu_inicio.resources
+C:\Users\Admin\Downloads\Grupo-2-VERSION 5.0-20201124T184728Z-001\Grupo-2-VERSION 5.0\Grupo-2\obj\Debug\Grupo_2.Properties.Resources.resources
+C:\Users\Admin\Downloads\Grupo-2-VERSION 5.0-20201124T184728Z-001\Grupo-2-VERSION 5.0\Grupo-2\obj\Debug\Grupo-2.csproj.GenerateResource.cache
+C:\Users\Admin\Downloads\Grupo-2-VERSION 5.0-20201124T184728Z-001\Grupo-2-VERSION 5.0\Grupo-2\obj\Debug\Grupo-2.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\Grupo-2-VERSION 5.0-20201124T184728Z-001\Grupo-2-VERSION 5.0\Grupo-2\obj\Debug\Grupo-2.exe
+C:\Users\Admin\Downloads\Grupo-2-VERSION 5.0-20201124T184728Z-001\Grupo-2-VERSION 5.0\Grupo-2\obj\Debug\Grupo-2.pdb
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Nueva actualización 4.0\Grupo-2-VERSION 5.0\Grupo-2\bin\Debug\Grupo-2.exe.config
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Nueva actualización 4.0\Grupo-2-VERSION 5.0\Grupo-2\bin\Debug\Grupo-2.exe
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Nueva actualización 4.0\Grupo-2-VERSION 5.0\Grupo-2\bin\Debug\Grupo-2.pdb
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Nueva actualización 4.0\Grupo-2-VERSION 5.0\Grupo-2\obj\Debug\Grupo-2.csprojAssemblyReference.cache
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Nueva actualización 4.0\Grupo-2-VERSION 5.0\Grupo-2\obj\Debug\Grupo_2.Menu_inicio.resources
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Nueva actualización 4.0\Grupo-2-VERSION 5.0\Grupo-2\obj\Debug\Grupo_2.Properties.Resources.resources
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Nueva actualización 4.0\Grupo-2-VERSION 5.0\Grupo-2\obj\Debug\Grupo-2.csproj.GenerateResource.cache
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Nueva actualización 4.0\Grupo-2-VERSION 5.0\Grupo-2\obj\Debug\Grupo-2.csproj.CoreCompileInputs.cache
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Nueva actualización 4.0\Grupo-2-VERSION 5.0\Grupo-2\obj\Debug\Grupo-2.exe
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Nueva actualización 4.0\Grupo-2-VERSION 5.0\Grupo-2\obj\Debug\Grupo-2.pdb
+C:\Users\Admin\Downloads\Grupo-2-VERSION 5.0-20201125T182747Z-001\Grupo-2-VERSION 5.0\Grupo-2\obj\Debug\Grupo-2.csprojAssemblyReference.cache
+C:\Users\Admin\Downloads\Grupo-2-VERSION 5.0-20201125T182747Z-001\Grupo-2-VERSION 5.0\Grupo-2\obj\Debug\Grupo_2.Menu_inicio.resources
+C:\Users\Admin\Downloads\Grupo-2-VERSION 5.0-20201125T182747Z-001\Grupo-2-VERSION 5.0\Grupo-2\obj\Debug\Grupo_2.Properties.Resources.resources
+C:\Users\Admin\Downloads\Grupo-2-VERSION 5.0-20201125T182747Z-001\Grupo-2-VERSION 5.0\Grupo-2\obj\Debug\Grupo-2.csproj.GenerateResource.cache
+C:\Users\Admin\Downloads\Grupo-2-VERSION 5.0-20201125T182747Z-001\Grupo-2-VERSION 5.0\Grupo-2\obj\Debug\Grupo-2.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\Grupo-2-VERSION 5.0-20201125T182747Z-001\Grupo-2-VERSION 5.0\Grupo-2\obj\Debug\Grupo-2.exe
+C:\Users\Admin\Downloads\Grupo-2-VERSION 5.0-20201125T182747Z-001\Grupo-2-VERSION 5.0\Grupo-2\obj\Debug\Grupo-2.pdb
+C:\Users\Admin\Downloads\Grupo-2-VERSION 5.0-20201125T182747Z-001\Grupo-2-VERSION 5.0\Grupo-2\bin\Debug\Grupo-2.exe.config
+C:\Users\Admin\Downloads\Grupo-2-VERSION 5.0-20201125T182747Z-001\Grupo-2-VERSION 5.0\Grupo-2\bin\Debug\Grupo-2.exe
+C:\Users\Admin\Downloads\Grupo-2-VERSION 5.0-20201125T182747Z-001\Grupo-2-VERSION 5.0\Grupo-2\bin\Debug\Grupo-2.pdb
+C:\Users\Admin\Downloads\Grupo-2-VERSION 5.0-20201125T215635Z-001\Grupo-2-VERSION 5.0\Grupo-2\bin\Debug\Grupo-2.exe.config
+C:\Users\Admin\Downloads\Grupo-2-VERSION 5.0-20201125T215635Z-001\Grupo-2-VERSION 5.0\Grupo-2\bin\Debug\Grupo-2.exe
+C:\Users\Admin\Downloads\Grupo-2-VERSION 5.0-20201125T215635Z-001\Grupo-2-VERSION 5.0\Grupo-2\bin\Debug\Grupo-2.pdb
+C:\Users\Admin\Downloads\Grupo-2-VERSION 5.0-20201125T215635Z-001\Grupo-2-VERSION 5.0\Grupo-2\obj\Debug\Grupo-2.csprojAssemblyReference.cache
+C:\Users\Admin\Downloads\Grupo-2-VERSION 5.0-20201125T215635Z-001\Grupo-2-VERSION 5.0\Grupo-2\obj\Debug\Grupo_2.Menu_inicio.resources
+C:\Users\Admin\Downloads\Grupo-2-VERSION 5.0-20201125T215635Z-001\Grupo-2-VERSION 5.0\Grupo-2\obj\Debug\Grupo_2.Properties.Resources.resources
+C:\Users\Admin\Downloads\Grupo-2-VERSION 5.0-20201125T215635Z-001\Grupo-2-VERSION 5.0\Grupo-2\obj\Debug\Grupo-2.csproj.GenerateResource.cache
+C:\Users\Admin\Downloads\Grupo-2-VERSION 5.0-20201125T215635Z-001\Grupo-2-VERSION 5.0\Grupo-2\obj\Debug\Grupo-2.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\Grupo-2-VERSION 5.0-20201125T215635Z-001\Grupo-2-VERSION 5.0\Grupo-2\obj\Debug\Grupo-2.exe
+C:\Users\Admin\Downloads\Grupo-2-VERSION 5.0-20201125T215635Z-001\Grupo-2-VERSION 5.0\Grupo-2\obj\Debug\Grupo-2.pdb
+C:\Users\Admin\Downloads\Grupo-2-VERSION 7.0-20201126T010058Z-001\Grupo-2-VERSION 7.0\Grupo-2\bin\Debug\Grupo-2.exe.config
+C:\Users\Admin\Downloads\Grupo-2-VERSION 7.0-20201126T010058Z-001\Grupo-2-VERSION 7.0\Grupo-2\bin\Debug\Grupo-2.exe
+C:\Users\Admin\Downloads\Grupo-2-VERSION 7.0-20201126T010058Z-001\Grupo-2-VERSION 7.0\Grupo-2\bin\Debug\Grupo-2.pdb
+C:\Users\Admin\Downloads\Grupo-2-VERSION 7.0-20201126T010058Z-001\Grupo-2-VERSION 7.0\Grupo-2\obj\Debug\Grupo-2.csprojAssemblyReference.cache
+C:\Users\Admin\Downloads\Grupo-2-VERSION 7.0-20201126T010058Z-001\Grupo-2-VERSION 7.0\Grupo-2\obj\Debug\Grupo_2.Menu_inicio.resources
+C:\Users\Admin\Downloads\Grupo-2-VERSION 7.0-20201126T010058Z-001\Grupo-2-VERSION 7.0\Grupo-2\obj\Debug\Grupo_2.Properties.Resources.resources
+C:\Users\Admin\Downloads\Grupo-2-VERSION 7.0-20201126T010058Z-001\Grupo-2-VERSION 7.0\Grupo-2\obj\Debug\Grupo-2.csproj.GenerateResource.cache
+C:\Users\Admin\Downloads\Grupo-2-VERSION 7.0-20201126T010058Z-001\Grupo-2-VERSION 7.0\Grupo-2\obj\Debug\Grupo-2.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\Grupo-2-VERSION 7.0-20201126T010058Z-001\Grupo-2-VERSION 7.0\Grupo-2\obj\Debug\Grupo-2.exe
+C:\Users\Admin\Downloads\Grupo-2-VERSION 7.0-20201126T010058Z-001\Grupo-2-VERSION 7.0\Grupo-2\obj\Debug\Grupo-2.pdb
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Versión 7.0 v2.0\Versión 7.0\Grupo-2-VERSION 7.0\Grupo-2\obj\Debug\Grupo-2.csprojAssemblyReference.cache
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Versión 7.0 v2.0\Versión 7.0\Grupo-2-VERSION 7.0\Grupo-2\obj\Debug\Grupo_2.Menu_inicio.resources
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Versión 7.0 v2.0\Versión 7.0\Grupo-2-VERSION 7.0\Grupo-2\obj\Debug\Grupo_2.Properties.Resources.resources
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Versión 7.0 v2.0\Versión 7.0\Grupo-2-VERSION 7.0\Grupo-2\obj\Debug\Grupo-2.csproj.GenerateResource.cache
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Versión 7.0 v2.0\Versión 7.0\Grupo-2-VERSION 7.0\Grupo-2\obj\Debug\Grupo-2.csproj.CoreCompileInputs.cache
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Versión 7.0 v2.0\Versión 7.0\Grupo-2-VERSION 7.0\Grupo-2\obj\Debug\Grupo-2.exe
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Versión 7.0 v2.0\Versión 7.0\Grupo-2-VERSION 7.0\Grupo-2\obj\Debug\Grupo-2.pdb
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Versión 7.0 v2.0\Versión 7.0\Grupo-2-VERSION 7.0\Grupo-2\bin\Debug\Grupo-2.exe.config
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Versión 7.0 v2.0\Versión 7.0\Grupo-2-VERSION 7.0\Grupo-2\bin\Debug\Grupo-2.exe
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\Versión 7.0 v2.0\Versión 7.0\Grupo-2-VERSION 7.0\Grupo-2\bin\Debug\Grupo-2.pdb
+C:\Users\Admin\Downloads\Grupo-2-VERSION 7.0-20201126T132817Z-001\Grupo-2-VERSION 7.0\Grupo-2\obj\Debug\Grupo-2.csprojAssemblyReference.cache
+C:\Users\Admin\Downloads\Grupo-2-VERSION 7.0-20201126T132817Z-001\Grupo-2-VERSION 7.0\Grupo-2\obj\Debug\Grupo_2.Menu_inicio.resources
+C:\Users\Admin\Downloads\Grupo-2-VERSION 7.0-20201126T132817Z-001\Grupo-2-VERSION 7.0\Grupo-2\obj\Debug\Grupo_2.Properties.Resources.resources
+C:\Users\Admin\Downloads\Grupo-2-VERSION 7.0-20201126T132817Z-001\Grupo-2-VERSION 7.0\Grupo-2\obj\Debug\Grupo-2.csproj.GenerateResource.cache
+C:\Users\Admin\Downloads\Grupo-2-VERSION 7.0-20201126T132817Z-001\Grupo-2-VERSION 7.0\Grupo-2\obj\Debug\Grupo-2.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\Grupo-2-VERSION 7.0-20201126T132817Z-001\Grupo-2-VERSION 7.0\Grupo-2\obj\Debug\Grupo-2.exe
+C:\Users\Admin\Downloads\Grupo-2-VERSION 7.0-20201126T132817Z-001\Grupo-2-VERSION 7.0\Grupo-2\obj\Debug\Grupo-2.pdb
+C:\Users\Admin\Downloads\Grupo-2-VERSION 7.0-20201126T132817Z-001\Grupo-2-VERSION 7.0\Grupo-2\bin\Debug\Grupo-2.exe.config
+C:\Users\Admin\Downloads\Grupo-2-VERSION 7.0-20201126T132817Z-001\Grupo-2-VERSION 7.0\Grupo-2\bin\Debug\Grupo-2.exe
+C:\Users\Admin\Downloads\Grupo-2-VERSION 7.0-20201126T132817Z-001\Grupo-2-VERSION 7.0\Grupo-2\bin\Debug\Grupo-2.pdb
+C:\Users\mlyon\Desktop\pollo\Grupo-2-VERSION  FINAL 1.0\Grupo-2\bin\Debug\Grupo-2.exe.config
+C:\Users\mlyon\Desktop\pollo\Grupo-2-VERSION  FINAL 1.0\Grupo-2\bin\Debug\Grupo-2.exe
+C:\Users\mlyon\Desktop\pollo\Grupo-2-VERSION  FINAL 1.0\Grupo-2\bin\Debug\Grupo-2.pdb
+C:\Users\mlyon\Desktop\pollo\Grupo-2-VERSION  FINAL 1.0\Grupo-2\obj\Debug\Grupo-2.csprojAssemblyReference.cache
+C:\Users\mlyon\Desktop\pollo\Grupo-2-VERSION  FINAL 1.0\Grupo-2\obj\Debug\Grupo_2.Menu_inicio.resources
+C:\Users\mlyon\Desktop\pollo\Grupo-2-VERSION  FINAL 1.0\Grupo-2\obj\Debug\Grupo_2.Properties.Resources.resources
+C:\Users\mlyon\Desktop\pollo\Grupo-2-VERSION  FINAL 1.0\Grupo-2\obj\Debug\Grupo-2.csproj.GenerateResource.cache
+C:\Users\mlyon\Desktop\pollo\Grupo-2-VERSION  FINAL 1.0\Grupo-2\obj\Debug\Grupo-2.csproj.CoreCompileInputs.cache
+C:\Users\mlyon\Desktop\pollo\Grupo-2-VERSION  FINAL 1.0\Grupo-2\obj\Debug\Grupo-2.exe
+C:\Users\mlyon\Desktop\pollo\Grupo-2-VERSION  FINAL 1.0\Grupo-2\obj\Debug\Grupo-2.pdb
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\VERSION FINAL\Grupo-2-VERSION  FINAL 2.0\Grupo-2\bin\Debug\Grupo-2.exe.config
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\VERSION FINAL\Grupo-2-VERSION  FINAL 2.0\Grupo-2\bin\Debug\Grupo-2.exe
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\VERSION FINAL\Grupo-2-VERSION  FINAL 2.0\Grupo-2\bin\Debug\Grupo-2.pdb
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\VERSION FINAL\Grupo-2-VERSION  FINAL 2.0\Grupo-2\obj\Debug\Grupo-2.csprojAssemblyReference.cache
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\VERSION FINAL\Grupo-2-VERSION  FINAL 2.0\Grupo-2\obj\Debug\Grupo_2.Menu_inicio.resources
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\VERSION FINAL\Grupo-2-VERSION  FINAL 2.0\Grupo-2\obj\Debug\Grupo_2.Properties.Resources.resources
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\VERSION FINAL\Grupo-2-VERSION  FINAL 2.0\Grupo-2\obj\Debug\Grupo-2.csproj.GenerateResource.cache
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\VERSION FINAL\Grupo-2-VERSION  FINAL 2.0\Grupo-2\obj\Debug\Grupo-2.csproj.CoreCompileInputs.cache
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\VERSION FINAL\Grupo-2-VERSION  FINAL 2.0\Grupo-2\obj\Debug\Grupo-2.exe
+C:\Users\jmzeg_ibef1f0\OneDrive\Desktop\VERSION FINAL\Grupo-2-VERSION  FINAL 2.0\Grupo-2\obj\Debug\Grupo-2.pdb
+C:\Users\mlyon\Desktop\Grupo-2-VERSION  FINAL 3.0\Grupo-2\bin\Debug\Grupo-2.exe.config
+C:\Users\mlyon\Desktop\Grupo-2-VERSION  FINAL 3.0\Grupo-2\bin\Debug\Grupo-2.exe
+C:\Users\mlyon\Desktop\Grupo-2-VERSION  FINAL 3.0\Grupo-2\bin\Debug\Grupo-2.pdb
+C:\Users\mlyon\Desktop\Grupo-2-VERSION  FINAL 3.0\Grupo-2\obj\Debug\Grupo-2.csprojAssemblyReference.cache
+C:\Users\mlyon\Desktop\Grupo-2-VERSION  FINAL 3.0\Grupo-2\obj\Debug\Grupo_2.Menu_inicio.resources
+C:\Users\mlyon\Desktop\Grupo-2-VERSION  FINAL 3.0\Grupo-2\obj\Debug\Grupo_2.Properties.Resources.resources
+C:\Users\mlyon\Desktop\Grupo-2-VERSION  FINAL 3.0\Grupo-2\obj\Debug\Grupo-2.csproj.GenerateResource.cache
+C:\Users\mlyon\Desktop\Grupo-2-VERSION  FINAL 3.0\Grupo-2\obj\Debug\Grupo-2.csproj.CoreCompileInputs.cache
+C:\Users\mlyon\Desktop\Grupo-2-VERSION  FINAL 3.0\Grupo-2\obj\Debug\Grupo-2.exe
+C:\Users\mlyon\Desktop\Grupo-2-VERSION  FINAL 3.0\Grupo-2\obj\Debug\Grupo-2.pdb
